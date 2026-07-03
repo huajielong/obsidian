@@ -1,0 +1,19 @@
+# 自动检测文本文件并进行 LF 规范化
+* text=auto
+
+# Obsidian Markdown
+*.md text diff=markdown
+
+# 脚本文件保持 LF，Windows/Mac 通用
+*.sh text eol=lf
+
+# JSON 配置文件
+*.json text
+
+# YAML frontmatter
+*.yaml text
+*.yml text
+
+# CSS / JS 前端文件
+*.css text
+*.js text

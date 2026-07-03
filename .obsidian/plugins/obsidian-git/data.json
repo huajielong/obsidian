@@ -1,0 +1,16 @@
+{
+  "autoSaveInterval": 60,
+  "autoCommitMessage": "📝 vault sync: {{date}}",
+  "autoCommitInterval": 60,
+  "autoPullInterval": 30,
+  "autoPushInterval": 30,
+  "autoBackupAfterFileChange": true,
+  "syncMethod": "rebase",
+  "showStatusBar": true,
+  "gitPath": "",
+  "commitMessage": "vault sync: {{date}}",
+  "splitFilename": false,
+  "dateTimeFormatOptions": "date",
+  "dateTimeTimezone": "Asia/Shanghai",
+  "authorDisplay": "username"
+}
