@@ -1,5 +1,5 @@
-# Claude Code 个人配置
-.claude/
+# Claude Code 个人配置（排除本地设置，保留技能）
+.claude/settings.local.json
 
 # Claudian 会话数据
 .claudian/
