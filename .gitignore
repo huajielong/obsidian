@@ -4,9 +4,8 @@
 # Claudian 会话数据
 .claudian/
 
-# Obsidian 编辑器本地配置
+# Obsidian 编辑器本地配置（排除工作区布局，同步插件）
 .obsidian/workspace.json
-.obsidian/plugins/
 
 # 操作系统文件
 .DS_Store
