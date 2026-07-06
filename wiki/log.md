@@ -22,3 +22,25 @@
   - 更新 [[Claude_Code]], [[AGENT_MD]], [[index.md]]
 - **冲突**: 无（新知识独立或已合并到现有页面）
 - **归档**: 所有 raw/01-articles 文件已移至 raw/09-archive/
+
+## [2026-07-06] lint | 知识库健康检查
+
+- **新增**: [[Codex]], [[Nx]], [[Turborepo]] (修复 3 个死链)
+- **修复**: 为 [[Agent_First_Engineering]], [[Claude_Code_Skills]], [[摘要-agentic-ai-roadmap]], [[摘要-claude-code-hud]] 添加反向链接 (修复 4 个孤岛)
+- **已解决**: [[Harness_Engineering]] 中的知识冲突无需干预 (已标注对比)
+- **结果**: 0 死链、0 孤岛、1 处知识冲突已标注
+
+## [2026-07-06] lint | 知识库健康检查（二次验证）
+
+- **变更**: 无新增页面
+- **死链**: 0 个 — 所有 [[wikilink]] 均正确解析
+- **孤岛**: 0 个 — 38 个内容页面均有 >=1 个反向链接
+- **知识冲突**: 1 处 — [[Harness_Engineering.md]] 中已标注，无需干预
+- **目录完整性**: 全部 38 个文件均在 [[wiki/index]] 中列出，无遗漏
+- **微小问题**: [[摘要-openai-harness-engineering]] 有重复链接区块；[[Claude_Code_Workflow]] 中 [[Claude_Code]] 链接重复 — **已修复**
+- **结果**: 知识库健康状态良好
+
+## [2026-07-06] ingest | 引入 AI 大模型驾驭进阶罗盘
+
+- **变更**: 新增 [[AI_Mastery_Compass]]；更新 [[index.md]]
+- **冲突**: 无（全新概念，与传统 Prompt 模板收藏路线无直接冲突）

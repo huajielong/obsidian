@@ -21,6 +21,9 @@
 - [[OpenClaw]] — 开源 AI Agent 平台，1700+ Skills 插件生态
 - [[Boris_Cherny]] — 公开 Claude Code + Opus 4.7 最佳实践的行业专家
 - [[GSD_Core]] — 基于 Claude Code 的全生命周期项目开发框架
+- [[Codex]] — OpenAI 编码智能体，Harness Engineering 的核心执行引擎
+- [[Nx]] — 智能 Monorepo 构建系统
+- [[Turborepo]] — Vercel 高性能 Monorepo 构建系统
 
 ## Concepts
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
@@ -37,6 +40,7 @@
 - [[Feature_Branch_Workflow]] — 强制分支隔离与保护的 Agent 开发工作流
 - [[AGENT_MD]] — AI Agent 行为规范入口文件
 - [[Monorepo]] — 单仓库策略在 Agentic Coding 场景下的优势与挑战
+- [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘：从目标锚定到六技落地的闭环方法论
 - [[Claude_Code_Slash_Commands]] — Claude Code 斜杠命令体系
 - [[Claude_Code_Memory_System]] — Claude Code 三层持久记忆机制
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论

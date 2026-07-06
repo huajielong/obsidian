@@ -65,15 +65,9 @@ OpenAI 官方于 2026 年 2 月 11 日发布的实验报告，记录了团队在
 - **枯燥的技术更受智能体青睐** — 可组合、API 稳定、在训练集中表现好
 - **品味编码化** — 人类品味通过文档更新或直接编码为工具规则持续反馈到系统中
 
-## 关联概念
-
+## 关联连接
 - [[Agentic_Coding]] — AI Agent 自主驱动编程范式
 - [[AGENT_MD]] — AI Agent 行为规范入口文件
 - [[Harness_Engineering]] — 驾驭工程核心概念
 - [[Codex]] — OpenAI 编码智能体
-
-## 关联连接
-- [[Agentic_Coding]]
-- [[AGENT_MD]]
-- [[Harness_Engineering]]
-- [[Monorepo]]
+- [[Monorepo]] — 单仓库策略对 Harness 工程实践的支撑

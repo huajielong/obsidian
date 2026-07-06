@@ -63,9 +63,8 @@ Shift+Tab × 1 → 进入 Auto-Accept 模式
 
 ## 关联连接
 
-- [[Claude_Code]] — 工作流所使用的工具
+- [[Claude_Code]] — 工作流所使用的工具（含三种工作模式：Default/Auto-Accept/Plan）
 - [[Claude_Code_Slash_Commands]] — 工作流中使用的命令集
 - [[Claude_Code_Memory_System]] — 第一步和第六步涉及的三层记忆体系
-- [[Claude_Code]] — 三种工作模式（Default/Auto-Accept/Plan）详见实体页面
 - [[AGENT_MD]] — /init 生成和 /memory 编辑的项目记忆文件
 - [[摘要-claude-code-guide]] — 来源文章

@@ -95,6 +95,7 @@ Harness（马具/缰绳）的本意是控制马匹的器具。驾驭工程的本
 
 ## 关联连接
 - [[Agentic_Coding]] — AI Agent 自主驱动编程
+- [[Agent_First_Engineering]] — Harness Engineering 的具体 7 步落地方法论
 - [[AGENT_MD]] — AI Agent 行为规范入口文件
 - [[摘要-openai-harness-engineering]] — OpenAI 官方实验报告摘要
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
