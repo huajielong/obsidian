@@ -44,3 +44,30 @@
 
 - **变更**: 新增 [[AI_Mastery_Compass]]；更新 [[index.md]]
 - **冲突**: 无（全新概念，与传统 Prompt 模板收藏路线无直接冲突）
+
+## [2026-07-06] lint | 修复死链和孤儿页面
+
+- **新增**: [[Prompt_Engineering]] (修复 AI_Mastery_Compass 中的死链)
+- **修复**: 为 [[AI_Mastery_Compass]] 在 [[Agentic_Coding]], [[Agent_Loop]], [[Harness_Engineering]], [[Claude_Code_Skills]] 中添加反向链接 (修复 1 个孤岛)
+- **结果**: 1 死链已修复, 1 孤岛已消除; 知识库健康状态良好
+
+## [2026-07-06] ingest | 引入 Google ADK Skill 系统文章并修复位置违规
+
+- **变更**: 
+  - **迁移**: 修复违规，将 `developers-guide-to-building-adk-agents-with-skills.md` 从 vault 根目录移至 [[wiki/sources/摘要-adk-agents-with-skills.md]]
+  - **新增**: 实体 [[ADK]]; 概念 [[Progressive_Disclosure]], [[Skill_Factory]]
+  - **更新**: 为 [[Claude_Code_Skills]], [[Harness_Engineering]], [[Agentic_Coding]] 添加反向链接
+  - **更新**: [[wiki/index.md]] 总目录
+  - **归档**: 原始内容同时保存至 `raw/09-archive/`
+- **冲突**: 无（新增概念与现有知识互补，无直接冲突）
+
+## [2026-07-06] ingest | 引入 Karpathy GPT 从零构建视频教程
+
+- **变更**: 
+  - 新增源 [[摘要-gpt-from-scratch]] — Andrej Karpathy 的 Zero to Hero 系列 GPT 构建教程
+  - 新增实体 [[Andrej_Karpathy]] — AI 研究科学家与教育者
+  - 新增概念 [[GPT]], [[Transformer_Architecture]], [[Self_Attention]] — Transformer 核心知识体系
+  - 更新 [[index.md]] 总目录
+  - 为 [[Andrej_Karpathy]], [[GPT]], [[Transformer_Architecture]], [[Self_Attention]] 建立双向链接网络
+- **冲突**: 无（全新领域知识，与现有 Agentic Coding 知识体系互补）
+- **源**: YouTube 视频 https://www.youtube.com/watch?v=kCc8FmEb1nY

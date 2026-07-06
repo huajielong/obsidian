@@ -11,6 +11,8 @@
 - [[摘要-agent-loop-guide]] — Agent Loop 设计从 ReAct 到生产级闭环的完整指南
 - [[摘要-openclaw-info]] — OpenClaw AI Agent 平台信息库与变现案例
 - [[摘要-agentic-ai-roadmap]] — Agentic AI 从零到入门系统学习路线
+- [[摘要-adk-agents-with-skills]] — Google ADK 渐进式披露架构与四种 Skill 构建模式详解
+- [[摘要-gpt-from-scratch]] — Andrej Karpathy 从零用 PyTorch 构建 GPT 的视频教程
 
 ## Entities
 - [[TRAE_ai]] — 火山引擎旗下的 AI 开发平台，本文作者的所属组织
@@ -24,6 +26,8 @@
 - [[Codex]] — OpenAI 编码智能体，Harness Engineering 的核心执行引擎
 - [[Nx]] — 智能 Monorepo 构建系统
 - [[Turborepo]] — Vercel 高性能 Monorepo 构建系统
+- [[ADK]] — Google Agent Development Kit，渐进式披露与 Skill 工厂模式的 Agent 开发框架
+- [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
 
 ## Concepts
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
@@ -43,4 +47,10 @@
 - [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘：从目标锚定到六技落地的闭环方法论
 - [[Claude_Code_Slash_Commands]] — Claude Code 斜杠命令体系
 - [[Claude_Code_Memory_System]] — Claude Code 三层持久记忆机制
+- [[Prompt_Engineering]] — 提示词工程的基础技巧层，[[AI_Mastery_Compass]] 是对其的系统化升级
+- [[GPT]] — 生成式预训练 Transformer，自回归 Decoder-only 语言模型
+- [[Transformer_Architecture]] — 基于 Self-Attention 的深度神经网络架构，现代 AI 的基石
+- [[Self_Attention]] — Transformer 的核心机制，Token 之间通过 Q/K/V 加权通信
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
+- [[Progressive_Disclosure]] — 渐进式披露架构，按需加载 L1/L2/L3 知识的三层模式
+- [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式

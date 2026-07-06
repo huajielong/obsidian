@@ -54,3 +54,7 @@ Claude Code Skills（技能）是给 AI 的专业说明书和操作手册，让 
 - [[Claude_Code]] — Claude Code 实体
 - [[GSD_Core]] — GSD Core（流程型 Skills 实践）
 - [[AGENT_MD]] — Agent 行为规范
+- [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘，罗盘方法论的具体工程化实现
+- [[Progressive_Disclosure]] — 渐进式披露架构，Skill 系统实现三层知识加载的核心设计模式
+- [[ADK]] — Google Agent Development Kit，同属 agentskills.io 生态的 Agent 框架
+- [[Skill_Factory]] — 元 Skill / Skill Factory，Agent 自我扩展的设计模式

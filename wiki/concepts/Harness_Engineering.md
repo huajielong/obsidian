@@ -100,3 +100,7 @@ Harness（马具/缰绳）的本意是控制马匹的器具。驾驭工程的本
 - [[摘要-openai-harness-engineering]] — OpenAI 官方实验报告摘要
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
 - [[Monorepo]] — 单仓库策略
+- [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘，与 Harness 工程的"角色设定"和"迭代优化"互为补充
+- [[Progressive_Disclosure]] — 渐进式披露架构，Harness Engineering 中"AGENTS.md 是地图而非百科全书"原则的理论基础
+- [[ADK]] — Google Agent Development Kit，Harness Engineering 方法论的具体实现框架之一
+- [[Skill_Factory]] — 元 Skill / Skill Factory，Agent 自我扩展的高级编排模式

@@ -89,3 +89,4 @@ Agent Loop 可建模为控制系统：`u(k) = Kp·e(k) + Ki·Σe(j) + Kd·(e(k)-
 - [[摘要-agent-loop-guide]] — Agent Loop 完整指南源摘要
 - [[OpenClaw]] — OpenClaw 实体（Agent Loop 实践案例）
 - [[Agentic_Coding]] — AI Agent 编程范式
+- [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘，Agent Loop 的 ReAct 循环与其理念相通
