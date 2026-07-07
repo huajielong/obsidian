@@ -18,6 +18,20 @@ Create and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark an
 
 > When choosing between wikilinks and Markdown links: use `[[wikilinks]]` for notes within the vault (Obsidian tracks renames automatically) and `[text](url)` for external URLs only.
 
+## Formatting Constraints
+
+Strictly adhere to the following structural and stylistic rules when generating content:
+
+| Constraint Category | Execution Rule |
+| :--- | :--- |
+| **Code Blocks** | Wrap all output Markdown code blocks in five backticks (`````) to prevent breaking the outer formatting layer. |
+| **Emojis** | Zero usage. Emojis are strictly prohibited under any circumstances. |
+| **Headings** | Do not use H1 (`#`). Restrict structural hierarchy to H2 (`##`), H3 (`###`), and H4 (`####`). Use **bold** text for inline emphasis. |
+| **Lists** | Minimize the use of unordered and ordered lists. Nested lists are strictly prohibited. |
+| **Information Density** | Maximize content density by utilizing tables, blockquotes, and code blocks for at-a-glance comparisons. |
+| **Structural Compactness** | Keep the contextual structure highly compact. Refrain from using decorative filler words or unnecessary empty lines that dilute the core information. |
+
+
 ## Internal Links (Wikilinks)
 
 ```markdown

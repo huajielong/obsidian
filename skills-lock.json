@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "tutor": {
+      "source": "RoundTable02/tutor-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tutor/SKILL.md",
+      "computedHash": "5641294ffc6812393e7220782946ccd8fd82b12a52facc662b76905d603c40c0"
+    },
+    "tutor-setup": {
+      "source": "RoundTable02/tutor-skills",
+      "sourceType": "github",
+      "skillPath": "skills/tutor-setup/SKILL.md",
+      "computedHash": "6c6f1f1a9ca713a68e27f71e0256214209f316fca7ba7774eada84c453ff6a72"
+    }
+  }
+}
