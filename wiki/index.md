@@ -18,6 +18,7 @@
 - [[TRAE_ai]] — 火山引擎旗下的 AI 开发平台，本文作者的所属组织
 - [[Jujutsu]] — 以变更为中心的版本控制系统，Google 内部大规模使用
 - [[GitButler]] — 虚拟分支版本控制客户端，a16z 领投 2200 万美元
+- [[Naval_Ravikant]] — 硅谷顶级天使投资人、思想家和[[Naval_Rapid_Research_Method|极速研究法]]创始人
 - [[Claude_Code]] — Anthropic 推出的终端 AI 编码助手
 - [[Anthropic]] — AI 研究与部署公司，Claude 系列模型的开发商
 - [[OpenClaw]] — 开源 AI Agent 平台，1700+ Skills 插件生态
@@ -44,6 +45,7 @@
 - [[Feature_Branch_Workflow]] — 强制分支隔离与保护的 Agent 开发工作流
 - [[AGENT_MD]] — AI Agent 行为规范入口文件
 - [[Monorepo]] — 单仓库策略在 Agentic Coding 场景下的优势与挑战
+- [[Naval_Rapid_Research_Method]] — 纳瓦尔 7 步"极速研究法"，从零快速掌握任意新领域的系统方法论
 - [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘：从目标锚定到六技落地的闭环方法论
 - [[Claude_Code_Slash_Commands]] — Claude Code 斜杠命令体系
 - [[Claude_Code_Memory_System]] — Claude Code 三层持久记忆机制

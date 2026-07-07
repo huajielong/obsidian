@@ -61,6 +61,15 @@
   - **归档**: 原始内容同时保存至 `raw/09-archive/`
 - **冲突**: 无（新增概念与现有知识互补，无直接冲突）
 
+## [2026-07-07] ingest | 引入纳瓦尔极速研究法
+
+- **变更**:
+  - 新增概念 [[Naval_Rapid_Research_Method]] — 纳瓦尔 7 步从零掌握任意新领域的方法论
+  - 新增实体 [[Naval_Ravikant]] — 硅谷天使投资人与思想家
+  - 更新 [[index.md]] 总目录，为 [[Naval_Ravikant]] 和 [[Naval_Rapid_Research_Method]] 建立条目
+- **冲突**: 无（全新知识，与现有学习方法论框架互补）
+- **关联**: 与 [[AI_Mastery_Compass]]（同为系统框架）、[[Andrej_Karpathy]]（同为硅谷思想家）、[[Feynman_Technique]]（内嵌于第 5 步）建立双向链接
+
 ## [2026-07-06] ingest | 引入 Karpathy GPT 从零构建视频教程
 
 - **变更**: 
