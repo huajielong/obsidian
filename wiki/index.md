@@ -12,6 +12,7 @@
 - [[摘要-openclaw-info]] — OpenClaw AI Agent 平台信息库与变现案例
 - [[摘要-agentic-ai-roadmap]] — Agentic AI 从零到入门系统学习路线
 - [[摘要-adk-agents-with-skills]] — Google ADK 渐进式披露架构与四种 Skill 构建模式详解
+- [[摘要-ollama-local-llm-python]] — Windows 下四种方式调用 Ollama 本地 LLM 的完整实践与踩坑记录
 - [[摘要-gpt-from-scratch]] — Andrej Karpathy 从零用 PyTorch 构建 GPT 的视频教程
 
 ## Entities
@@ -28,6 +29,9 @@
 - [[Nx]] — 智能 Monorepo 构建系统
 - [[Turborepo]] — Vercel 高性能 Monorepo 构建系统
 - [[ADK]] — Google Agent Development Kit，渐进式披露与 Skill 工厂模式的 Agent 开发框架
+- [[Ollama]] — 本地大语言模型运行工具，支持 Llama/Qwen 等多种开源模型
+- [[Qwen]] — 阿里云通义千问开源大语言模型系列
+- [[Llama]] — Meta 开源大语言模型系列
 - [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
 
 ## Concepts
@@ -56,3 +60,5 @@
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
 - [[Progressive_Disclosure]] — 渐进式披露架构，按需加载 L1/L2/L3 知识的三层模式
 - [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式
+- [[OpenAI_Compatible_API]] — OpenAI 兼容 API 标准，已成为 LLM 行业的事实标准接口规范
+- [[本地_LLM_推理]] — 在本地硬件上运行大语言模型的数据隐私优先方案

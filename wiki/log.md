@@ -70,6 +70,19 @@
 - **冲突**: 无（全新知识，与现有学习方法论框架互补）
 - **关联**: 与 [[AI_Mastery_Compass]]（同为系统框架）、[[Andrej_Karpathy]]（同为硅谷思想家）、[[Feynman_Technique]]（内嵌于第 5 步）建立双向链接
 
+## [2026-07-08] ingest | 引入 Ollama 本地 LLM Python 调用实战
+
+- **变更**:
+  - 新增源 [[摘要-ollama-local-llm-python]] — 四种 API 调用方式与 Windows 踩坑记录
+  - 新增实体 [[Ollama]] — 本地大语言模型运行工具
+  - 新增实体 [[Qwen]] — 阿里云通义千问开源模型系列
+  - 新增实体 [[Llama]] — Meta 开源大语言模型系列
+  - 新增概念 [[OpenAI_Compatible_API]] — 已成为 LLM 行业事实标准的接口规范
+  - 新增概念 [[本地_LLM_推理]] — 在本地硬件上运行 LLM 的数据隐私优先方案
+  - 更新 [[index.md]] 总目录
+- **冲突**: 无（新知识独立，与已有实体/概念无直接冲突）
+- **网络**: [[OpenAI_Compatible_API]] 与 [[GPT]] 建立链接；[[Ollama]]/[[Qwen]]/[[Llama]] 三者互链
+
 ## [2026-07-06] ingest | 引入 Karpathy GPT 从零构建视频教程
 
 - **变更**: 
