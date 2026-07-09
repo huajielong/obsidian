@@ -1,3 +1,21 @@
+## [2026-07-09] ingest | 增量合并实验系列更新版（云端数据补全）
+
+- **变更**:
+  - 更新 [[摘要-ollama-style-comparison]] — 补全 DeepSeek + 豆包云端实际数据（原为"待补充"）
+  - 更新 [[摘要-ollama-experiment-index]] — 补充云端 API 对比结论
+  - 更新 [[DeepSeek]] — 增加 V4 Pro 风格对比基准 + 辩论式结构描述
+  - 更新 [[Doubao]] — 增加风格对比基准数据 + 条理清晰描述
+- **冲突**: 模型名称差异（实验五用 DeepSeek V4 Flash，实验七用 V4 Pro）→ 已在 DeepSeek 页面标注说明，两者分属不同版本
+- **网络**: [[DeepSeek]] 和 [[Doubao]] 新增风格对比数据，与 [[Ollama]]/[[Llama]]/[[Qwen]] 对比更完整
+
+## [2026-07-09] lint | 知识库健康巡检与修复
+
+- **结果**:
+  - 修复 1 个死链：新建 [[Feynman_Technique]]（被 [[Naval_Rapid_Research_Method]]、[[Naval_Ravikant]] 引用）
+  - 消除 9 个孤儿页面：在 [[Ollama]]、[[DeepSeek]]、[[Doubao]]、[[BPE_Tokenizer]]、[[Temperature_Parameter]]、[[Model_Fine_Tuning]] 中追加来源摘要反链
+  - 修复 1 处格式：`[[Harness_Engineering.md]]` → `[[Harness_Engineering]]`
+- **当前状态**: 0 死链、0 孤岛、0 知识冲突
+
 ## [2026-07-03] ingest | 引入 AI 时代 Git 版本管理文章
 
 - **变更**: 新增 [[摘要-ai-era-git-management]]; 新增实体 [[TRAE_ai]], [[Jujutsu]], [[GitButler]]; 新增概念 [[Agentic_Coding]], [[Agent_Aware_Commit]], [[Atomic_Commit]], [[Checkpoint_Commit]], [[Commit_Trailer]], [[Stacked_PR]], [[Virtual_Branch]], [[Feature_Branch_Workflow]], [[AGENT_MD]], [[Monorepo]]; 更新 [[index.md]]
@@ -35,7 +53,7 @@
 - **变更**: 无新增页面
 - **死链**: 0 个 — 所有 [[wikilink]] 均正确解析
 - **孤岛**: 0 个 — 38 个内容页面均有 >=1 个反向链接
-- **知识冲突**: 1 处 — [[Harness_Engineering.md]] 中已标注，无需干预
+- **知识冲突**: 1 处 — [[Harness_Engineering]] 中已标注，无需干预
 - **目录完整性**: 全部 38 个文件均在 [[wiki/index]] 中列出，无遗漏
 - **微小问题**: [[摘要-openai-harness-engineering]] 有重复链接区块；[[Claude_Code_Workflow]] 中 [[Claude_Code]] 链接重复 — **已修复**
 - **结果**: 知识库健康状态良好

@@ -40,6 +40,9 @@ last_updated: 2026-07-09
 - **需要多样性时推荐**：temperature=0.7 + top_p=0.9 组合使用
 
 ## 关联连接
+- [[摘要-ollama-temperature-scan]] — 温度参数 0.0~1.5 扫描实验来源
+- [[摘要-ollama-determinism-test]] — 温度=0 确定性 20/20 验证来源
+- [[摘要-ollama-temperature-fluctuation]] — 温度=0.7 Token 波动分析来源
 - [[BPE_Tokenizer]] — Tokenizer 影响 Token 消耗，温度影响 Token 生成
 - [[本地_LLM_推理]] — 本地推理时温度参数的实践指南
 - [[Model_Fine_Tuning]] — Fine-tuning 决定模型基线行为，温度在此基础上调节

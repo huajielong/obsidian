@@ -41,6 +41,8 @@ last_updated: 2026-07-09
 llama3.2 在中文回复中混入英文词（flexible/office/remote work），而 qwen3.5 是纯中文。这是因为 llama3.2 的预训练数据英文占主导，中文是微调阶段加入的，模型在某些概念上"更习惯"用英文表达。
 
 ## 关联连接
+- [[摘要-ollama-tokenizer-personality]] — Tokenizer 效率与模型性格实验来源
+- [[摘要-ollama-style-comparison]] — 多模型回答风格对比实验来源
 - [[Temperature_Parameter]] — 温度在 fine-tuning 确定的基线行为上调节多样性
 - [[BPE_Tokenizer]] — Tokenizer 效率影响 Token 消耗，与实际输出风格共同决定总延迟
 - [[Ollama]] — 运行经过 fine-tuning 的本地模型
