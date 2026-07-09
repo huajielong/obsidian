@@ -13,6 +13,14 @@
 - [[摘要-agentic-ai-roadmap]] — Agentic AI 从零到入门系统学习路线
 - [[摘要-adk-agents-with-skills]] — Google ADK 渐进式披露架构与四种 Skill 构建模式详解
 - [[摘要-ollama-local-llm-python]] — Windows 下四种方式调用 Ollama 本地 LLM 的完整实践与踩坑记录
+- [[摘要-ollama-experiment-index]] — Ollama LLM 实验系列总索引，含 7 项实验与综合结论
+- [[摘要-ollama-token-diff]] — 中英文 Token 差异实验，中文每字 ≈ 3~4 Token
+- [[摘要-ollama-temperature-scan]] — 温度参数扫描实验，0.0~1.5 八档温度对比
+- [[摘要-ollama-determinism-test]] — 温度=0 确定性验证，20/20 次输出完全一致
+- [[摘要-ollama-temperature-fluctuation]] — 温度=0.7 Token 波动分析，极差 333（28 倍）
+- [[摘要-ollama-cost-comparison]] — 跨平台成本对比（本地 vs DeepSeek vs 豆包）
+- [[摘要-ollama-tokenizer-personality]] — Tokenizer 效率差异与模型"性格"分析
+- [[摘要-ollama-style-comparison]] — 多模型回答风格对比，qwen 长篇 vs llama 简洁
 - [[摘要-gpt-from-scratch]] — Andrej Karpathy 从零用 PyTorch 构建 GPT 的视频教程
 
 ## Entities
@@ -33,6 +41,8 @@
 - [[Qwen]] — 阿里云通义千问开源大语言模型系列
 - [[Llama]] — Meta 开源大语言模型系列
 - [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
+- [[DeepSeek]] — 深度求索 AI 公司，云端 MoE 模型 API 服务商
+- [[Doubao]] — 字节跳动豆包 LLM 产品，以低延迟高性价比著称
 
 ## Concepts
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
@@ -62,3 +72,6 @@
 - [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式
 - [[OpenAI_Compatible_API]] — OpenAI 兼容 API 标准，已成为 LLM 行业的事实标准接口规范
 - [[本地_LLM_推理]] — 在本地硬件上运行大语言模型的数据隐私优先方案
+- [[BPE_Tokenizer]] — 字节对编码分词算法，导致中英文 Token 效率差异的根因
+- [[Temperature_Parameter]] — LLM 温度参数，控制输出确定性与多样性的核心参数
+- [[Model_Fine_Tuning]] — 模型微调，决定模型"性格"和回复风格的关键因素

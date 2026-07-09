@@ -83,6 +83,26 @@
 - **冲突**: 无（新知识独立，与已有实体/概念无直接冲突）
 - **网络**: [[OpenAI_Compatible_API]] 与 [[GPT]] 建立链接；[[Ollama]]/[[Qwen]]/[[Llama]] 三者互链
 
+## [2026-07-09] ingest | 引入 Ollama LLM 实验系列（7 项实验 + 索引）
+
+- **变更**:
+  - 新增源 [[摘要-ollama-experiment-index]] — 实验系列总索引
+  - 新增源 [[摘要-ollama-token-diff]] — 中英文 Token 差异分析
+  - 新增源 [[摘要-ollama-temperature-scan]] — 温度参数 0.0~1.5 扫描
+  - 新增源 [[摘要-ollama-determinism-test]] — 温度=0 确定性 20/20 验证
+  - 新增源 [[摘要-ollama-temperature-fluctuation]] — 温度=0.7 Token 波动分析
+  - 新增源 [[摘要-ollama-cost-comparison]] — 本地 vs 云端成本对比
+  - 新增源 [[摘要-ollama-tokenizer-personality]] — Tokenizer 效率与模型性格
+  - 新增源 [[摘要-ollama-style-comparison]] — 多模型回答风格对比
+  - 新增实体 [[DeepSeek]] — 云端 MoE 模型 API 服务商
+  - 新增实体 [[Doubao]] — 字节跳动低延迟高性价比 LLM 产品
+  - 新增概念 [[BPE_Tokenizer]] — 中英文 Token 差异的底层算法根因
+  - 新增概念 [[Temperature_Parameter]] — 确定性与多样性的核心控制参数
+  - 新增概念 [[Model_Fine_Tuning]] — 模型性格与回复风格的塑造因素
+  - 更新 [[index.md]] 总目录
+- **冲突**: 无（新知识独立，与现有 LLM 基础概念互补）
+- **网络**: [[BPE_Tokenizer]] ↹ [[GPT]]/[[Transformer_Architecture]]；[[Temperature_Parameter]] ↹ [[OpenAI_Compatible_API]]；[[Model_Fine_Tuning]] ↹ [[Ollama]]/[[Qwen]]/[[Llama]]
+
 ## [2026-07-06] ingest | 引入 Karpathy GPT 从零构建视频教程
 
 - **变更**: 
