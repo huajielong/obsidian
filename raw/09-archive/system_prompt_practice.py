@@ -10,11 +10,15 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 import os
 from openai import OpenAI
 
-os.environ["DEEPSEEK_API_KEY"] = "sk-92517a9c52f84be3a4d4ee7e87bdb5cc"
+# ⚠️ API Key 必须通过环境变量设置，不得硬编码
+# 设置方式: export DEEPSEEK_API_KEY="sk-你的key"
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+if not DEEPSEEK_API_KEY:
+    raise ValueError("请设置环境变量 DEEPSEEK_API_KEY")
 BASE_URL = "https://api.deepseek.com"
 MODEL = "deepseek-v4-pro"
 
-client = OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"], base_url=BASE_URL)
+client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url=BASE_URL)
 
 # ====================================
 # 同一个 user message

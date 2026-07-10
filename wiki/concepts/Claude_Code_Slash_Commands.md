@@ -2,28 +2,37 @@
 title: "Claude Code 斜杠命令"
 type: concept
 tags: [Claude, 开发工具, 命令行, 工作流]
-sources: [raw/01-articles/Claude Code 完全指南 - 阿里云开发者社区.md]
-last_updated: 2026-07-03
+sources: 
+  - raw/01-articles/Claude Code 完全指南 - 阿里云开发者社区.md
+  - raw/01-articles/05-claude-code-ecosystem.md
+last_updated: 2026-07-10
 ---
 
 ## 定义
 
 Claude Code 斜杠命令（Slash Commands）是 [[Claude_Code]] 终端的核心交互方式，通过在对话中输入以 `/` 开头的命令来控制 AI 助手的行为、管理上下文、查看状态和配置环境。
 
-## 命令速查
+## 必备命令速查
 
-| 命令 | 作用 | 典型场景 |
-|---|---|---|
-| `/init` | 初始化项目记忆，生成 CLAUDE.md 初稿 | 新项目首次使用 Claude Code |
-| `/memory` | 编辑 CLAUDE.md 记忆文件（项目/用户/自动） | 修改项目规则或个人偏好 |
-| `/compact` | 压缩对话上下文，保留核心摘要 | 对话过长 token 超限时 |
-| `/clear` | 清空所有对话历史，全新开始 | 切换到完全不同的任务时 |
+| 命令 | 用途 | 何时用 |
+|------|------|--------|
+| `/help` | 列出所有可用命令 | 不知道有什么指令时 |
+| `/clear` | 清空对话历史（保留 System Context） | Session 太长、想重启逻辑 |
+| `/compact` | 自动摘要对话、释放 Context Window | Context 接近用满 |
+| `/plan` | 进入 Plan Mode（Read-only、先规划才动手） | 大改动前先让 Claude 列计划 |
+| `/model` | 切换模型（Sonnet / Haiku / Opus） | 改成更便宜模型省 Token |
+| `/agents` | 列/管理 Subagent | 看哪些 Subagent 可用、Debug |
+| `/plugin install <name>@<marketplace>` | 安装 Plugin | 加新功能 |
+| `/permissions` | 看/改当前 Session 权限 | 太多 Permission Prompt 想精简 |
+| `/resume` | 恢复前次 Session | 接续昨天工作 |
+| `/bg` | 把当前 Session 背景化（移到 Agent View） | 想同时跑多任务 |
+| `/init` | 初始化项目记忆，生成 CLAUDE.md 初稿 | 新项目首次使用 |
+| `/memory` | 编辑 CLAUDE.md 记忆文件 | 修改项目规则或个人偏好 |
 | `/status` | 查看会话状态（目录、模型、记忆等） | 确认当前环境配置 |
 | `/cost` | 显示令牌使用量和预估费用 | 掌控 API 使用成本 |
 | `/config` | 交互式查看和修改配置 | 设置主题、编辑模式等 |
-| `/model` | 切换 AI 模型版本 | 需要更强/更快模型时 |
 | `/doctor` | 环境健康检查 | 排查工具调用异常 |
-| `/help` | 查看所有可用命令 | 新手入门或忘记命令 |
+| `/rewind` | 回退或总结（Esc × 2） | 回滚 AI 操作 |
 
 ## 快捷键参考
 

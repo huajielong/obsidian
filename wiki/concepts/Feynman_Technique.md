@@ -2,6 +2,7 @@
 title: "Feynman_Technique"
 type: concept
 tags: [学习方法, 费曼, 理解, 教学]
+sources: []
 last_updated: 2026-07-09
 ---
 

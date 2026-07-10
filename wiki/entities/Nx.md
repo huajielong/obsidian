@@ -2,6 +2,7 @@
 title: "Nx"
 type: entity
 tags: [Monorepo, 构建工具, 开发工具]
+sources: []
 last_updated: 2026-07-03
 ---
 

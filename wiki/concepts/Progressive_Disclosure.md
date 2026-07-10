@@ -47,10 +47,34 @@ last_updated: 2026-07-06
 - **响应质量下降**：无关信息稀释模型对关键指令的关注度
 - **扩展受限**：在功能丰富度和响应准确性之间难取舍
 
+## OpenAI 视角：Entry Point + Navigation
+
+OpenAI 的 Progressive Disclosure 强调两个互补机制：
+
+1. **Small Entry Point** — 入门 Prompt 像书的目录、不是整本书（AGENTS.md 100 行，只放最高层的项目结构）
+2. **Navigation 机制** — 教 Agent"之后去哪查"（Skill `references/` 机制、`@-import` 语法、task brief 指向法）
+
+> "Agents start with a small, stable entry point and are taught where to look next, rather than being overwhelmed up front." — OpenAI
+
+与 [[System_of_Record]] 的配对关系：**SoR 提供目的地，PD 是导航机制**，两者必须一起设计。
+
+## 跨 Vendor 对照
+
+| 来源 | 实现 | 关键词 |
+|------|------|--------|
+| **Google ADK** | L1 Metadata → L2 Instruction → L3 Resource 三层 | 懒加载（Lazy Load） |
+| **OpenAI Codex** | AGENTS.md entry map + `@-import` | 导航机制 + 分批揭露 |
+| **Anthropic Skills** | SKILL.md + `references/` 子目录 | Progressive Disclosure（同词）|
+
+三方虽然用词和分层细节不同，但核心精神一致：**能晚一刻塞 Context、就晚一刻**。
+
 ## 关联连接
 
 - [[Skill_Factory]] — 元 Skill / Skill Factory，基于渐进式披露的自我扩展模式
 - [[ADK]] — Google Agent Development Kit，渐进式披露的具体实现框架
 - [[Claude_Code_Skills]] — Claude Code 的 Skill 系统，也遵循类似的能力组织原则
-- [[摘要-adk-agents-with-skills]] — 该概念的来源文章摘要
+- [[System_of_Record]] — 与 PD 配对的另一原则：SoR 提供目的地，PD 是导航
+- [[Legibility]] — PD 需要 Legibility 确保 Agent 能读懂导航指引
+- [[摘要-adk-agents-with-skills]] — Google ADK 来源文章摘要
+- [[摘要-awesome-agentic-ai-zh-advanced-concepts]] — OpenAI Harness Engineering 视角补充
 - [[Harness_Engineering]] — Agent 系统工程实践，渐进式披露是其中的上下文管理策略

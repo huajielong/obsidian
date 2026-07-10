@@ -1,6 +1,9 @@
 # Wiki Index
 
 ## Sources
+- [[摘要-awesome-agentic-ai-zh-for-developer]] — Agentic AI 学习路线开发者延伸分支：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × 3 个 Workflow Recipe
+- [[摘要-awesome-agentic-ai-zh-agent-frameworks]] — Agentic AI 学习路线 Stage 4：Multi-agent 框架全览，5 种编排模式与 16 个框架分级对比
+- [[摘要-awesome-agentic-ai-zh-agent-interfaces]] — Agentic AI 学习路线 Stage 8 共用 hub：Computer Use / Browser Use / Code Sandbox 三层智能体接口与 2026 前沿工具对比
 - [[摘要-ai-era-git-management]] — AI Agent 编程范式下的 Git 版本管理最佳实践，涵盖四大核心挑战与十一项应对策略
 - [[摘要-claude-code-guide]] — Claude Code 终端 AI 编码助手的全面使用指南
 - [[摘要-openai-harness-engineering]] — OpenAI Harness Engineering 官方实验：5个月100万行代码全部由 Codex 生成
@@ -22,13 +25,37 @@
 - [[摘要-ollama-tokenizer-personality]] — Tokenizer 效率差异与模型"性格"分析
 - [[摘要-ollama-style-comparison]] — 多模型回答风格对比，qwen 长篇 vs llama 简洁
 - [[摘要-gpt-from-scratch]] — Andrej Karpathy 从零用 PyTorch 构建 GPT 的视频教程
+- [[摘要-awesome-agentic-ai-zh-prompt-engineering]] — Agentic AI 学习路线 Stage 2：结构化提示词、Few-shot、CoT 与迭代优化的完整动手教程
+- [[摘要-awesome-agentic-ai-zh-llm-basics]] — Agentic AI 学习路线 Stage 1：LLM 三大核心概念、主流模型家族全景对比与第一次 API 调用实践
+- [[摘要-awesome-agentic-ai-zh-foundations]] — Agentic AI 学习路线 Stage 0：Python/Git/CLI/API/YAML 五项先修基础
+- [[摘要-awesome-agentic-ai-zh-tool-use]] — Agentic AI 学习路线 Stage 3：Function Calling、ReAct 循环与从零构建第一个 Agent 的完整动手教程
+- [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] — Claude Code 生态系全景：MCP/Skills/Plugins/Subagents 四层堆栈与 7-Layer Architecture
+- [[摘要-awesome-agentic-ai-zh-memory-rag]] — Context Engineering 核心：RAG 基础与进阶、Memory 系统设计、Chunking 与 Reflexion 持久记忆
+- [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — Multi-Agent & Production 最终章：Harness 8 核心元件、Eval/Observability/Cost 优化、Benchmark Landscape
+- [[摘要-awesome-agentic-ai-zh-advanced-concepts]] — 进阶 Agentic 概念地图（Stage 7.5）：12 进阶概念、四层工作边界、跨供应商 Harness 原则框架、Opus 4.8 Dynamic Workflows
+- [[摘要-deepseek-api-error-handling]] — DeepSeek API 错误处理实战：认证失败、上下文溢出与指数退避重试策略
+- [[摘要-few-shot-experiment]] — Few-Shot 跨模型对比实验：大模型 vs 小模型的 few-shot 效果差距
+- [[摘要-system-prompt-experiment]] — System Prompt 控制力实验：三种人格输出对比
 
 ## Entities
+- [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
+- [[Aider]] — git-aware CLI pair-programmer，44k★ 开源，"git-native AI 编辑"模板
+- [[Cline]] — VS Code autonomous in-IDE agent，61k★，tool use + browser + step-by-step approval
+- [[Continue_Dev]] — source-controlled AI checks，33k★，可在 CI 强制执行
+- [[OpenHands]] — 开源自主软件开发 agent，72k★，整 issue 丢给它解
+- [[Goose_AI]] — 开源可扩展 AI agent，43k★，install/execute/edit/test + 三接口（desktop/CLI/API）
+- [[Roo_Code]] — VS Code multi-mode coding agent，23k★，与 Cline 的单一 agent flow 形成对比
+- [[Repomix]] — 打包整个 codebase 成单个 AI-friendly 文件，26k★，Track A 必备 daily-driver
+- [[superpowers_obra]] — obra 的 20+ 实战 Skill 集合，含 code-review/debug/TDD skill
+- [[LangGraph]] — 图式 Agent 编排框架，Production 级 Multi-agent 首选（支持 checkpointing + time-travel debug）
+- [[CrewAI]] — 角色驱动 Multi-agent 框架，~20 行完成 Crew 定义，快速雏形首选
+- [[AutoGen]] — Microsoft 对话式 Multi-agent 框架，专攻 Debate / Peer Review / GroupChat 模式
+- [[OpenAI_Agents_SDK]] — OpenAI 官方 Agent SDK，Agent Hand-off + 结构化输出，2026-04 起内建 sandbox
 - [[TRAE_ai]] — 火山引擎旗下的 AI 开发平台，本文作者的所属组织
 - [[Jujutsu]] — 以变更为中心的版本控制系统，Google 内部大规模使用
 - [[GitButler]] — 虚拟分支版本控制客户端，a16z 领投 2200 万美元
 - [[Naval_Ravikant]] — 硅谷顶级天使投资人、思想家和[[Naval_Rapid_Research_Method|极速研究法]]创始人
-- [[Claude_Code]] — Anthropic 推出的终端 AI 编码助手
+- [[Claude_Code]] — Anthropic 推出的终端 AI 编码助手，[[Developer_Agentic_Workflow]] 中 Tier 1-3 核心工具
 - [[Anthropic]] — AI 研究与部署公司，Claude 系列模型的开发商
 - [[OpenClaw]] — 开源 AI Agent 平台，1700+ Skills 插件生态
 - [[Boris_Cherny]] — 公开 Claude Code + Opus 4.7 最佳实践的行业专家
@@ -37,18 +64,43 @@
 - [[Nx]] — 智能 Monorepo 构建系统
 - [[Turborepo]] — Vercel 高性能 Monorepo 构建系统
 - [[ADK]] — Google Agent Development Kit，渐进式披露与 Skill 工厂模式的 Agent 开发框架
+- [[OpenAI]] — GPT 系列模型开发商，OpenAI 兼容 API 标准的制定者
 - [[Ollama]] — 本地大语言模型运行工具，支持 Llama/Qwen 等多种开源模型
 - [[Qwen]] — 阿里云通义千问开源大语言模型系列
 - [[Llama]] — Meta 开源大语言模型系列
 - [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
-- [[DeepSeek]] — 深度求索 AI 公司，云端 MoE 模型 API 服务商
+- [[DeepSeek]] — 深度求索 AI 公司，MoE 架构云端 API，含 API 错误处理与实验基准数据
 - [[Doubao]] — 字节跳动豆包 LLM 产品，以低延迟高性价比著称
+- [[Claude_Agent_SDK]] — Anthropic 官方 Agent Python SDK，程序化控制 Agent Loop/Tool Dispatch/Memory
+- [[Hamel_Husain]] — AI 实践者，"Evals are everything" 理念倡导者
+- [[langfuse]] — 开源 LLM 可观测性与评估平台（★ 28k+）
+- [[OpenRouter]] — 统一 LLM API 路由与网关服务，支持 Model Routing 与 Fallback
+- [[promptfoo]] — 开源 LLM 评估标准化工具，YAML 配置驱动的 CI Eval（★ 22k+）
 
 ## Concepts
+- [[Multi_Agent_System]] — 多 Agent 系统核心概念：Workflow vs Agent / Single vs Multi 分类矩阵，何时该（不该）使用 Multi-agent 的决策框架
+- [[RAG]] — 检索增强生成架构：基础流水线、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型
+- [[LightRAG]] — 轻量级 Graph RAG 检索框架（★ 35.1k），增强跨文档实体推理
+- [[ragas]] — 开源 RAG 评估框架，提供 8+ 标准化指标（Retrieval Recall / Faithfulness / Relevance）
+- [[Memory_Agent]] — Agent 记忆系统：Working/Long-term Memory、CoALA 四层分类、三种设计模式与 Production Memory Layer
+- [[Chunking]] — 文档分块策略：固定长度/递归/语义切割，影响 RAG 检索质量的关键步骤
+- [[Reflexion]] — 反思机制：基于持久 Episodic Memory 的跨 trial 经验累积，与 Self-Refine 的区别
+- [[DSPy]] — Programming-not-Prompting 范式：自动优化 Prompt + Retriever 的编译器框架
+- [[Agent_Orchestration_Patterns]] — Multi-agent 五大编排模式：Routing/Handoff、Sequential、Parallel、Supervisor-Worker、Debate/Society
+- [[Chain_of_Thought]] — 思维链推理增强技术，引导 LLM 显式展示中间推理步骤
+- [[Few_Shot_Prompting]] — 少样本提示技术，通过输入输出范例引导模型理解任务模式
+- [[Feynman_Technique]] — 费曼学习法：通过教别人来验证自己是否真正理解
+- [[Context_Engineering]] — LLM 三层工程堆栈的中间层，工程上下文窗口的信息组装
+- [[Context_Window]] — LLM 单次推理能处理的最大 token 数量上限，决定对话记忆与信息容量
+- [[Cost_Optimization]] — LLM 成本与延迟优化：Prompt Caching / Model Routing / Thinking Budget / Batching / Semantic Caching，[[Harness_Engineering]] 第 8 核心元件
+- [[Developer_Agentic_Workflow]] — 开发者 Agentic AI 工作流框架：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × Workflow Recipe
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
-- [[Harness_Engineering]] — 为 AI 智能体设计约束机制、反馈回路与工作流控制的系统工程实践
+- [[Harness_Engineering]] — 为 AI 智能体设计约束机制、反馈回路与工作流控制的系统工程实践（含 8 核心元件框架、OpenAI 5 原则展开、跨供应商对照、Eval Rigor 与 Bitter Lesson）
+- [[Eval_Harness]] — Agent 自动化评估流水线：Benchmark Landscape / Reward-Hacking 警告 / pass^k / [[Harness_Engineering]] 第 7 核心元件
 - [[Agent_First_Engineering]] — Agent-First Engineering 智能体优先工程的 7 步实操方法论
+- [[Agent_Interfaces]] — 三层智能体接口模型：Computer Use（计算机操控）/ Browser Use（浏览器操控）/ Code Sandbox（代码沙箱），2024-2026 Agent 与非 API 世界交互的核心基础设施
 - [[Agent_Loop]] — AI 智能体自主完成任务的核心运行机制（ReAct → 生产级八步循环）
+- [[Agent_Observability]] — 智能体可观测性：Tracing / Logging / Token Counting / Cost Tracking，[[Harness_Engineering]] 第 6 核心元件
 - [[Claude_Code_Skills]] — Claude Code 技能系统架构与扩展机制
 - [[Agent_Aware_Commit]] — 通过 Commit Trailer 记录 AI Agent 决策过程的提交规范
 - [[Atomic_Commit]] — 一个提交只表达一个可解释、可回滚、可验证语义变化的策略
@@ -68,10 +120,30 @@
 - [[Transformer_Architecture]] — 基于 Self-Attention 的深度神经网络架构，现代 AI 的基石
 - [[Self_Attention]] — Transformer 的核心机制，Token 之间通过 Q/K/V 加权通信
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
-- [[Progressive_Disclosure]] — 渐进式披露架构，按需加载 L1/L2/L3 知识的三层模式
+- [[Progressive_Disclosure]] — 渐进式披露架构：按需加载 L1/L2/L3 知识的三层模式（Google ADK），与 OpenAI 的 Small Entry Point + Navigation 机制互补
 - [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式
 - [[OpenAI_Compatible_API]] — OpenAI 兼容 API 标准，已成为 LLM 行业的事实标准接口规范
 - [[本地_LLM_推理]] — 在本地硬件上运行大语言模型的数据隐私优先方案
 - [[BPE_Tokenizer]] — 字节对编码分词算法，导致中英文 Token 效率差异的根因
 - [[Temperature_Parameter]] — LLM 温度参数，控制输出确定性与多样性的核心参数
 - [[Model_Fine_Tuning]] — 模型微调，决定模型"性格"和回复风格的关键因素
+- [[MCP]] — Model Context Protocol，标准化 LLM 工具调用的开放协议，三层抽象（Tools/Resources/Prompts）
+- [[Claude_Code_Hooks]] — Claude Code L3 控制层事件钩子，在 PreToolUse/PostToolUse 等时机拦截
+- [[Claude_Code_Subagent]] — Claude Code 原生 Multi-Agent 机制，独立 Context Window 的子 Agent
+- [[Claude_Code_Dynamic_Workflows]] — Opus 4.8+ 让 Claude 自生成 Workflow 脚本的编排机制
+- [[Claude_Code_Plugins]] — Claude Code Plugin 打包发布与 Marketplace 生态
+- [[Claude_Code_Harness]] — Claude Code 7-Layer Architecture Map 与 Harness Engineering Reference
+- [[Work_Boundary]] — Agent 工作边界纪律：Types → Config → Repo → Service 四层自主权模型，跨所有层的根概念
+- [[Legibility]] — OpenAI Harness 五原则之一：为 Agent（而非人类）优化 Codebase / Tool 可读性
+- [[System_of_Record]] — OpenAI Harness 五原则之二：知识权威来源，所有真实知识住 docs、不住 prompt
+- [[Taste_Invariants]] — OpenAI Harness 五原则之四：将工程美学（可维护性/一致性）转化为 Lint 规则
+- [[Autonomy_Gradient]] — 自主权梯度/信任层：Suggest → Propose → Execute 三段授权模型
+- [[Contract_Driven_Handoffs]] — 契约驱动的 Agent 交接：上游承诺 Artifacts，下游 Schema 验证
+- [[Agent_As_Judge]] — Agent 评审机制：一个 Agent 按 Constitution 评审另一个 Agent 输出
+- [[Hierarchical_Task_Decomposition]] — 层级任务分解：Supervisor → Worker → Sub-worker 多层递归编排
+- [[Cost_Aware_Budget_Gates]] — 成本感知预算门控：超 $ 预算自动停或升级审核（不只是 Token 上限）
+- [[Failure_Injection_Chaos_Eval]] — 故障注入 / 混沌评估：故意给 Broken Input 测试 Agent 容错
+- [[Self_Organizing_Teams]] — 自组织团队：Agent 运行时动态协商分工而非预先分配 Role
+- [[Spec_Driven_Development]] — 规范驱动开发：Task 由 Formal Spec（YAML/JSON Schema）定义
+- [[Graceful_Degradation]] — 优雅降级路径：Frontier Model 挂掉时回退到便宜 Model 不直接 Crash
+- [[Exponential_Backoff]] — 指数退避重试策略：分布式系统中提升可靠性的标准错误恢复模式

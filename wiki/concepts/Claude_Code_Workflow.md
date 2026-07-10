@@ -1,9 +1,11 @@
 ---
 title: "Claude Code 开发工作流"
 type: concept
-tags: [Claude, AI编程, 方法论, 最佳实践]
-sources: [raw/01-articles/Claude Code 完全指南 - 阿里云开发者社区.md]
-last_updated: 2026-07-03
+tags: [Claude, AI编程, 方法论, 最佳实践, 工作流]
+sources: 
+  - raw/01-articles/Claude Code 完全指南 - 阿里云开发者社区.md
+  - raw/01-articles/05-claude-code-ecosystem.md
+last_updated: 2026-07-10
 ---
 
 ## 定义
@@ -46,6 +48,18 @@ Shift+Tab × 1 → 进入 Auto-Accept 模式
 ```
 把项目经验写进 CLAUDE.md，供后续任务和团队成员复用。
 
+## Skills 增强工作流
+
+在六步工作流之上，使用 [[Claude_Code_Skills]] 可将特定情境的流程自动化。当遇到 Skill description 匹配的情境时，Skill 自动加载到 Context，按预设流程执行——无需每次手动描述步骤。
+
+## Subagent 并行工作流
+
+对于大 Context 任务（如跨文件 Review、全量 Codebase 分析），使用 [[Claude_Code_Subagent]] 将任务 Delegate 给独立 Context 的子 Agent，保护主 Session 不被污染。
+
+## Dynamic Workflows（自动编排）
+
+在 Opus 4.8+ 中，[[Claude_Code_Dynamic_Workflows]] 允许 Claude 自己生成 Workflow 脚本并执行——适用于大型迁移、穷举 Bug 搜索、跨文件批量转换等需要确定控制流的场景。详见 [[Claude_Code_Dynamic_Workflows]]。
+
 ## 模式与模型选用原则
 
 | 阶段 | 模式 | 推荐模型 |
@@ -66,5 +80,10 @@ Shift+Tab × 1 → 进入 Auto-Accept 模式
 - [[Claude_Code]] — 工作流所使用的工具（含三种工作模式：Default/Auto-Accept/Plan）
 - [[Claude_Code_Slash_Commands]] — 工作流中使用的命令集
 - [[Claude_Code_Memory_System]] — 第一步和第六步涉及的三层记忆体系
+- [[Claude_Code_Skills]] — Skills 增强工作流
+- [[Claude_Code_Subagent]] — Subagent 并行工作流
+- [[Claude_Code_Dynamic_Workflows]] — 自动编排工作流
+- [[Claude_Code_Hooks]] — 事件驱动 Hook 流程
 - [[AGENT_MD]] — /init 生成和 /memory 编辑的项目记忆文件
 - [[摘要-claude-code-guide]] — 来源文章
+- [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] — Skills/Subagent/DW 的工作流扩展来源

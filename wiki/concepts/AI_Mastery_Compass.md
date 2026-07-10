@@ -2,6 +2,7 @@
 title: "AI 大模型驾驭进阶罗盘"
 type: concept
 tags: [AI交互方法论, 提示词工程, 模型驾驭, 框架]
+sources: []
 last_updated: 2026-07-06
 ---
 ![[Pasted image 20260706174748.png]]
@@ -105,5 +106,5 @@ last_updated: 2026-07-06
 
 ## 关联连接
 
-- [[wiki/index]] — 返回总目录
-- [[wiki/log]] — 查看操作日志
+- [[index]] — 返回总目录
+- [[log]] — 查看操作日志

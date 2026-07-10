@@ -21,11 +21,15 @@ from typing import Optional
 # ============================================================
 # 配置
 # ============================================================
-os.environ["DEEPSEEK_API_KEY"] = "sk-92517a9c52f84be3a4d4ee7e87bdb5cc"
-REAL_KEY = "sk-92517a9c52f84be3a4d4ee7e87bdb5cc"
-WRONG_KEY = "sk-fake-key-12345"
+# ⚠️ API Key 必须通过环境变量设置，不得硬编码
+# 设置方式: export DEEPSEEK_API_KEY="sk-你的key"
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+if not DEEPSEEK_API_KEY:
+    raise ValueError("请设置环境变量 DEEPSEEK_API_KEY")
+REAL_KEY = DEEPSEEK_API_KEY
+WRONG_KEY = "sk-fake-key-12345"  # 故意错误的 key，用于测试认证失败
 BASE_URL = "https://api.deepseek.com"
-MODEL = "deepseek-v4-pro"  # 修正为正确的模型名
+MODEL = "deepseek-v4-pro"
 
 client_ok = OpenAI(api_key=REAL_KEY, base_url=BASE_URL)
 client_bad = OpenAI(api_key=WRONG_KEY, base_url=BASE_URL)

@@ -63,7 +63,7 @@ Layer 3: Semantic Memory — 结构化存储，按需检索
 ```
 
 ### 失败处理策略
-- **Transient**（瞬态）：网络抖动、限流 → 指数退避重试
+- **Transient**（瞬态）：网络抖动、限流 → [[Exponential_Backoff|指数退避重试]]
 - **Recoverable**（可恢复）：接口不可用 → 切换备用方案
 - **Fatal**（致命）：权限拒绝 → 早停并上报人工
 
@@ -85,8 +85,11 @@ Agent Loop 可建模为控制系统：`u(k) = Kp·e(k) + Ki·Σe(j) + Kd·(e(k)-
 | 复杂协同任务 | Hierarchical / Multi-Agent |
 
 ## 关联连接
+- [[Multi_Agent_System]] — 从 Single-agent Loop 扩展到多 Agent 协作
+- [[Agent_Orchestration_Patterns]] — Multi-agent 编排模式，与单 Agent Loop 互补
 - [[Harness_Engineering]] — 驾驭工程体系
 - [[摘要-agent-loop-guide]] — Agent Loop 完整指南源摘要
 - [[OpenClaw]] — OpenClaw 实体（Agent Loop 实践案例）
 - [[Agentic_Coding]] — AI Agent 编程范式
 - [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘，Agent Loop 的 ReAct 循环与其理念相通
+- [[摘要-awesome-agentic-ai-zh-tool-use]] — Agentic AI 学习路线 Stage 3，包含从零实现 ReAct 循环的 6 个动手练习
