@@ -12,10 +12,10 @@ Reflexion 是一种让 Agent 通过反思自身过往成败来持续改进的机
 
 ## Reflexion 完整版 vs Self-Refine
 
-| 版本 | 会话内保留内容 | 跨 Session 保留 | 需要的 Memory 模式 |
-|------|-------------|----------------|-------------------|
-| **Self-Refine**（Madaan 2023） | 上一轮的 answer + critic feedback | ❌ 不保留 | 无需（Pattern 1 Buffer 即可） |
-| **Reflexion 完整版**（Shinn 2023） | 同上 | ✅ 将过去 trial 的反思摘要存入 Episodic Memory | **需要** Pattern 3 Vector Store 或 Pattern 2 Summary |
+| 版本                            | 会话内保留内容                       | 跨 Session 保留                        | 需要的 Memory 模式                                     |
+| ----------------------------- | ----------------------------- | ----------------------------------- | ------------------------------------------------- |
+| **Self-Refine**（Madaan 2023）  | 上一轮的 answer + critic feedback | ❌ 不保留                               | 无需（Pattern 1 Buffer 即可）                           |
+| **Reflexion 完整版**（Shinn 2023） | 同上                            | ✅ 将过去 trial 的反思摘要存入 Episodic Memory | **需要** Pattern 3 Vector Store 或 Pattern 2 Summary |
 
 > **关键区别**：Self-Refine 是单 session 内的 in-context 循环（无外部存储），Reflexion 完整版是跨 trial 的持久 Episodic Memory 存储 + 检索（从过往经验中学习）。
 

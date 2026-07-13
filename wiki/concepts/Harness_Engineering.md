@@ -74,16 +74,16 @@ Harness（马具/缰绳）的本意是控制马匹的器具。驾驭工程的本
 
 一个可部署的 Agent Runtime 包含以下 8 个核心元件。前 6 个是 Runtime 内建，第 7 个 Eval 是外挂工具，第 8 个 Cost/Latency 是跨层议题：
 
-| # | 元件 | 做什么 | 对应练习 |
-|---|------|--------|---------|
-| 1 | **Agent Loop** | "LLM → Tool → Result → LLM" 循环、稳定处理多轮 | 练习 1 Multi-Agent 辩论 |
-| 2 | **Tool Registry** | 动态 tool dispatch、permission gate、sandboxing | 在每个 Framework/SDK 都有 |
-| 3 | **Context Manager** | message history 管理、context window 控制、auto-compact | 练习 4 SDK 进阶 |
-| 4 | **Safety Layer** | permission prompts、sandboxed exec、destructive op 拦截 | SDK 可自定义 |
-| 5 | **Retry / Recovery** | tool fail 怎么处理（exception vs LLM 自己看 error 反思） | 练习 4 SDK 进阶 |
-| 6 | **Telemetry / Observability** | metrics、logging、token counting、trace export | **练习 3 Observability** |
-| 7 | **Eval Harness** | regression test、quality gate、A/B test | **练习 2 Eval** |
-| 8 | **Cost / Latency** ⭐ | prompt caching、model routing、thinking budget、batching、semantic cache | **练习 6 Cost Optimization** |
+| #   | 元件                            | 做什么                                                                  | 对应练习                       |
+| --- | ----------------------------- | -------------------------------------------------------------------- | -------------------------- |
+| 1   | **Agent Loop**                | "LLM → Tool → Result → LLM" 循环、稳定处理多轮                                | 练习 1 Multi-Agent 辩论        |
+| 2   | **Tool Registry**             | 动态 tool dispatch、permission gate、sandboxing                          | 在每个 Framework/SDK 都有       |
+| 3   | **Context Manager**           | message history 管理、context window 控制、auto-compact                    | 练习 4 SDK 进阶                |
+| 4   | **Safety Layer**              | permission prompts、sandboxed exec、destructive op 拦截                  | SDK 可自定义                   |
+| 5   | **Retry / Recovery**          | tool fail 怎么处理（exception vs LLM 自己看 error 反思）                        | 练习 4 SDK 进阶                |
+| 6   | **Telemetry / Observability** | metrics、logging、token counting、trace export                          | **练习 3 Observability**     |
+| 7   | **Eval Harness**              | regression test、quality gate、A/B test                                | **练习 2 Eval**              |
+| 8   | **Cost / Latency** ⭐          | prompt caching、model routing、thinking budget、batching、semantic cache | **练习 6 Cost Optimization** |
 
 > **Framework vs Harness 关键差别**：Framework（Agent 框架）规范 **API**——你调用的接口长什么样；Harness 规范 **Runtime**——怎么跑、怎么 recovery、怎么观测。
 
@@ -91,12 +91,12 @@ Harness（马具/缰绳）的本意是控制马匹的器具。驾驭工程的本
 
 Agent 变强靠的是**把反馈送回循环**，不是把开头那段提示写得更完美。反馈可以在四个时机进来：
 
-| 时机 | 白话 | 工程上长什么样 |
-|------|------|---------------|
-| **1. 工具返回值** | 工具吐回的那段话本身就是写给 Agent 看的反馈 | 把错误信息、提示、下一步建议"写清楚"，别只丢一个 stack trace |
-| **2. 执行中插话** | 在 Agent 两次思考之间塞一句话调整方向 | 中途注入消息（steering），不用等它整轮跑完才修正 |
-| **3. 单轮结束的验收** | 一轮做完，由"另一个人"对着目标检查 | 用独立的验收者（Evaluator）比对目标，而不是让 Agent 自己打分 |
-| **4. 外层 Loop** | 对着同一个目标反复叫 Agent，直到完成 | 目标导向的重跑（如 OpenAI Codex 的 `/goal`、或 cron 定时重跑）|
+| 时机             | 白话                        | 工程上长什么样                                       |
+| -------------- | ------------------------- | --------------------------------------------- |
+| **1. 工具返回值**   | 工具吐回的那段话本身就是写给 Agent 看的反馈 | 把错误信息、提示、下一步建议"写清楚"，别只丢一个 stack trace         |
+| **2. 执行中插话**   | 在 Agent 两次思考之间塞一句话调整方向    | 中途注入消息（steering），不用等它整轮跑完才修正                  |
+| **3. 单轮结束的验收** | 一轮做完，由"另一个人"对着目标检查        | 用独立的验收者（Evaluator）比对目标，而不是让 Agent 自己打分        |
+| **4. 外层 Loop** | 对着同一个目标反复叫 Agent，直到完成     | 目标导向的重跑（如 OpenAI Codex 的 `/goal`、或 cron 定时重跑） |
 
 > 📌 **为什么第 3 个（独立验收）特别重要**：Anthropic 实验发现，叫 Agent 检查自己的成品几乎都会"自我称赞"。把"做东西的 Agent"和"验收的 Agent"拆开，比让同一个 Agent"对自己更严格"容易得多。
 
