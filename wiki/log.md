@@ -1,3 +1,8 @@
+## [2026-07-14] ingest | 创建 LangChain 专有页面
+- **变更**: 新增 [[LangChain]]（entities）；更新 [[index]]（Entities 章节添加 LangChain）
+- **冲突**: 无（新知识独立，与已有 [[LangGraph]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Memory_Agent]]/[[Chunking]]/[[Reflexion]]/[[Agent_Observability]] 互补，通过双向链接深度整合）
+- **网络**: [[LangChain]] 与 [[LangGraph]]/[[CrewAI]]/[[AutoGen]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Memory_Agent]]/[[RAG]]/[[Chunking]]/[[Reflexion]] 形成密集双向链接网络
+
 ## [2026-07-14] sync | 新增 mattpocock/skills 中文速查表
 - **变更**: 新增 [[matt-pocock-skills-cheatsheet]]（syntheses）；更新 [[index]]（添加 Syntheses 章节）
 - **冲突**: 无

@@ -47,6 +47,7 @@
 - [[Roo_Code]] — VS Code multi-mode coding agent，23k★，与 Cline 的单一 agent flow 形成对比
 - [[Repomix]] — 打包整个 codebase 成单个 AI-friendly 文件，26k★，Track A 必备 daily-driver
 - [[superpowers_obra]] — obra 的 20+ 实战 Skill 集合，含 code-review/debug/TDD skill
+- [[LangChain]] — LLM 应用开发框架，Harness Engineering 集大成者，LangGraph/LangSmith/LangMem 生态母框架
 - [[LangGraph]] — 图式 Agent 编排框架，Production 级 Multi-agent 首选（支持 checkpointing + time-travel debug）
 - [[CrewAI]] — 角色驱动 Multi-agent 框架，~20 行完成 Crew 定义，快速雏形首选
 - [[AutoGen]] — Microsoft 对话式 Multi-agent 框架，专攻 Debate / Peer Review / GroupChat 模式
