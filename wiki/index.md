@@ -77,6 +77,9 @@
 - [[OpenRouter]] — 统一 LLM API 路由与网关服务，支持 Model Routing 与 Fallback
 - [[promptfoo]] — 开源 LLM 评估标准化工具，YAML 配置驱动的 CI Eval（★ 22k+）
 
+## Syntheses
+- [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
+
 ## Concepts
 - [[Multi_Agent_System]] — 多 Agent 系统核心概念：Workflow vs Agent / Single vs Multi 分类矩阵，何时该（不该）使用 Multi-agent 的决策框架
 - [[RAG]] — 检索增强生成架构：基础流水线、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型

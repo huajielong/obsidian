@@ -1,3 +1,7 @@
+## [2026-07-14] sync | 新增 mattpocock/skills 中文速查表
+- **变更**: 新增 [[matt-pocock-skills-cheatsheet]]（syntheses）；更新 [[index]]（添加 Syntheses 章节）
+- **冲突**: 无
+
 ## [2026-07-10] lint | 全面健康检查 — 死链/孤岛/Frontmatter/结构
 
 - **修复**:
