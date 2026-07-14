@@ -55,12 +55,37 @@ Multi-agent 的理解需要先理清两个正交维度：
 
 | 维度 | Framework 路线 | Claude Code Subagent 路线 |
 |---|---|---|
-| 启动方式 | Python orchestration code | 写 `.claude/agents/<name>.md` |
-| Runtime | 跨 LLM provider | 只在 Claude Code runtime 内 |
-| Context 隔离 | 需手动实现 | 天生隔离 |
+| 安装方式 | `pip install langgraph / crewai / autogen` + Python orchestration code | 写 `.claude/agents/<name>.md` |
+| 核心框架 | LangGraph / CrewAI / AutoGen / Swarm / Strands | Claude Code 内置 Subagent / Agent Team |
+| 编程范式 | Python 主程序（orchestrator），每个 sub-agent 是程序中的一个对象 | Markdown 配置文件，Claude Code runtime 管理生命周期 |
+| Runtime | **跨 LLM provider**（GPT + Claude + Gemini 混用） | 只在 Claude Code runtime 内 |
+| Context 隔离 | 需手动实现（shared state / message passing） | 天生独立 Context Window |
 | Provider lock-in | 无 | Anthropic Claude 限定 |
-| 学习曲线 | 中高（需学 framework API）| 低（写 markdown 即可）|
-| Checkpoint / Audit | 完善（LangGraph checkpointing）| 依赖 Claude Code 内置 |
+| 学习曲线 | 中高（需学 framework API + Python 编排逻辑） | 低（写 markdown 即可）|
+| Checkpoint / Audit | 完善（LangGraph checkpointing / time-travel debug）| 依赖 Claude Code 内置 |
+| 封装集成 | 可包进别的应用程序（Flask/FastAPI 服务 / SaaS / Library） | 仅限 Claude Code CLI 环境 |
+
+### Framework 路线详解
+
+Framework 路线的本质：**你用 Python 写一支主程序（orchestrator）来调度，每个 sub-agent 都是这支程序中的对象**。框架负责把 orchestration boilerplate（角色定义、Handoff、State 管理、Retry、Checkpoint、HITL pause）抽象出来，开发者只需写角色定义和任务描述。
+
+**何时选择 Framework 路线：**
+
+1. **跨 LLM provider 混用** — 需要 GPT + Claude + Gemini 在同一系统中协同（如 GPT 做推理、Claude 做写作、Gemini 做多模态），Framework 路线是唯一选择
+2. **包装进应用程序** — 需要把 multi-agent 逻辑嵌入 Flask/FastAPI 服务、SaaS 产品、或作为 Library 分发，Python 对象模型天然适合嵌入
+3. **需要高级 Debug 能力** — LangGraph 的 checkpointing + time-travel debug 在生产排错中极其有用，远超手动日志排查
+4. **已有 LangChain 生态投资** — 如果已经在用 LangChain/LangSmith/LangMem，LangGraph 是自然延伸
+
+**代表框架速览：**
+
+| 框架 | 出品方 | 核心范式 | 最佳场景 |
+|---|---|---|---|
+| [[LangGraph]] | LangChain | 图式 State Graph 编排 | Production 级首选，支持 checkpointing + time-travel debug |
+| [[CrewAI]] | CrewAI | 角色驱动（Role/Goal/Backstory） | 快速雏形，~20 行完成 Crew 定义 |
+| [[AutoGen]] | Microsoft | Group-Chat 对话式编排 | Debate / Peer Review / 多视角收敛 |
+| [[OpenAI_Agents_SDK]] | OpenAI | Agent Hand-off + Structured Output | OpenAI 生态、干净 API 设计 |
+| Swarm | OpenAI（实验） | 轻量 Handoff 模式 | 极简场景、Handoff 原型验证 |
+| Strands | Google | 待补充 | 待补充 |
 
 ## Claude Code 的三种 Multi-Agent 机制
 

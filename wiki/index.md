@@ -91,6 +91,7 @@
 - [[Reflexion]] — 反思机制：基于持久 Episodic Memory 的跨 trial 经验累积，与 Self-Refine 的区别
 - [[DSPy]] — Programming-not-Prompting 范式：自动优化 Prompt + Retriever 的编译器框架
 - [[Agent_Orchestration_Patterns]] — Multi-agent 五大编排模式：Routing/Handoff、Sequential、Parallel、Supervisor-Worker、Debate/Society
+- [[AgentParadigms]] — Agent 五种部署范式：IDE 集成 / Terminal 结对编程 / BYO-LLM CLI / 云端部署 / 边缘部署的全景分类框架
 - [[Chain_of_Thought]] — 思维链推理增强技术，引导 LLM 显式展示中间推理步骤
 - [[Few_Shot_Prompting]] — 少样本提示技术，通过输入输出范例引导模型理解任务模式
 - [[Feynman_Technique]] — 费曼学习法：通过教别人来验证自己是否真正理解
@@ -101,6 +102,7 @@
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
 - [[Harness_Engineering]] — 为 AI 智能体设计约束机制、反馈回路与工作流控制的系统工程实践（含 8 核心元件框架、OpenAI 5 原则展开、跨供应商对照、Eval Rigor 与 Bitter Lesson）
 - [[Eval_Harness]] — Agent 自动化评估流水线：Benchmark Landscape / Reward-Hacking 警告 / pass^k / [[Harness_Engineering]] 第 7 核心元件
+- [[Orchestration_Code_Examples]] — 编排编程示例：同一 Research→Write→Review 场景在纯 Python / LangGraph / CrewAI / AutoGen / OpenAI Agents SDK 五个路线中的代码对比
 - [[Agent_First_Engineering]] — Agent-First Engineering 智能体优先工程的 7 步实操方法论
 - [[Agent_Interfaces]] — 三层智能体接口模型：Computer Use（计算机操控）/ Browser Use（浏览器操控）/ Code Sandbox（代码沙箱），2024-2026 Agent 与非 API 世界交互的核心基础设施
 - [[Agent_Loop]] — AI 智能体自主完成任务的核心运行机制（ReAct → 生产级八步循环）

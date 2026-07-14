@@ -1,3 +1,18 @@
+## [2026-07-14] sync | 新增编排编程示例页面
+- **变更**: 新增 [[Orchestration_Code_Examples]]（concepts）；更新 [[index]]（Concepts 章节添加 Orchestration_Code_Examples）
+- **冲突**: 无
+- **网络**: [[Orchestration_Code_Examples]] 与 [[Agent_Orchestration_Patterns]]/[[Multi_Agent_System]]/[[LangGraph]]/[[CrewAI]]/[[AutoGen]]/[[OpenAI_Agents_SDK]]/[[Agent_Loop]]/[[Harness_Engineering]] 形成密集双向链接网络
+
+## [2026-07-14] sync | 扩展 Multi_Agent_System Framework 路线详解
+- **变更**: 大幅更新 [[Multi_Agent_System]] — 扩展"两条实现路线"比较表（添加 安装方式/核心框架/编程范式/封装集成 维度 + 框架列表），新增 Framework 路线详解章节（本质定义、4 个选型场景、代表框架速查表）
+- **冲突**: 无（增量补充，与现有 Subagent 路线内容互补无矛盾）
+- **网络**: [[Multi_Agent_System]] 新增 Swarm/Strands 框架引用
+
+## [2026-07-14] sync | 新增 AgentParadigms 概念页面
+- **变更**: 新增 [[AgentParadigms]]（concepts）；更新 [[index]]（Concepts 章节添加 AgentParadigms）
+- **冲突**: 无
+- **网络**: [[AgentParadigms]] 与 [[Harness_Engineering]]/[[Agent_Interfaces]]/[[Agent_Loop]]/[[Claude_Code_Subagent]]/[[Multi_Agent_System]]/[[Agent_Orchestration_Patterns]]/[[Autonomy_Gradient]]/[[Cost_Aware_Budget_Gates]]/[[Context_Engineering]] 等形成密集双向链接网络
+
 ## [2026-07-14] ingest | 创建 LangChain 专有页面
 - **变更**: 新增 [[LangChain]]（entities）；更新 [[index]]（Entities 章节添加 LangChain）
 - **冲突**: 无（新知识独立，与已有 [[LangGraph]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Memory_Agent]]/[[Chunking]]/[[Reflexion]]/[[Agent_Observability]] 互补，通过双向链接深度整合）
