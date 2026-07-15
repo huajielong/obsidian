@@ -1,3 +1,8 @@
+## [2026-07-15] sync | 新增 "从无代码到Agent范式的转移" 概念页
+- **变更**: 新增 [[From_NoCode_To_Agent_Paradigm]]（concepts）；更新 [[index]]（Concepts 章节添加条目）
+- **冲突**: 无（新概念独立，与 [[Harness_Engineering]]/[[Claude_Code_Skills]]/[[Claude_Code_Workflow]] 互补无矛盾）
+- **网络**: [[From_NoCode_To_Agent_Paradigm]] 链接到 [[Harness_Engineering]]/[[Claude_Code_Skills]]/[[Claude_Code_Workflow]]/[[Claude_Code_Dynamic_Workflows]]/[[Developer_Agentic_Workflow]]/[[Agent_Orchestration_Patterns]]/[[Claude_Code_Harness]]/[[Progressive_Disclosure]]/[[Work_Boundary]] 形成密集双向链接网络
+
 ## [2026-07-15] ingest | 摄入多步骤推理任务文章
 - **变更**: 新增 [[摘要-多步骤推理任务-连续-tool-调用]]（sources）；更新 [[Tool_Calling]]（新增"多步调用的依赖链"章节）；更新 [[Agent_Loop]]（新增"多步依赖陷阱"提示）；更新 [[index]]（Sources + Concepts 章节）
 - **冲突**: 无（新知识独立，与现有 [[Tool_Calling]]/[[Agent_Loop]] 内容互补无矛盾）

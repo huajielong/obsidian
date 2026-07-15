@@ -85,6 +85,7 @@
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
 
 ## Concepts
+- [[From_NoCode_To_Agent_Paradigm]] — 从传统无代码平台（Zion 类）到 Skill+CLI+Workflow Agent 范式的范式转移分析
 - [[Multi_Agent_System]] — 多 Agent 系统核心概念：Workflow vs Agent / Single vs Multi 分类矩阵，何时该（不该）使用 Multi-agent 的决策框架
 - [[RAG]] — 检索增强生成架构：基础流水线、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型
 - [[LightRAG]] — 轻量级 Graph RAG 检索框架（★ 35.1k），增强跨文档实体推理
