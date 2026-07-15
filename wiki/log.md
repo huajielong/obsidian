@@ -1,3 +1,14 @@
+## [2026-07-15] ingest | 摄入多步骤推理任务文章
+- **变更**: 新增 [[摘要-多步骤推理任务-连续-tool-调用]]（sources）；更新 [[Tool_Calling]]（新增"多步调用的依赖链"章节）；更新 [[Agent_Loop]]（新增"多步依赖陷阱"提示）；更新 [[index]]（Sources + Concepts 章节）
+- **冲突**: 无（新知识独立，与现有 [[Tool_Calling]]/[[Agent_Loop]] 内容互补无矛盾）
+- **网络**: [[摘要-多步骤推理任务-连续-tool-调用]] 链接到 [[Tool_Calling]]/[[Agent_Loop]]/[[Ollama]]/[[Qwen]]/[[摘要-llm-tool-calling-practice]]；[[Tool_Calling]] 新增与 [[摘要-多步骤推理任务-连续-tool-调用]] 双向链接；[[Agent_Loop]] 新增跨页面锚点链接到 [[Tool_Calling#多步调用的依赖链]]
+- **归档**: 1 个 raw/01-articles 文件 → raw/09-archive/
+
+## [2026-07-15] sync | 新增 LiteLLM 实体页面
+- **变更**: 新增 [[LiteLLM]]（entities）；更新 [[index]]（Entities 章节添加 LiteLLM）
+- **冲突**: 无（新知识独立，与 [[OpenRouter]]/[[OpenAI_Compatible_API]]/[[MCP]] 互补无矛盾）
+- **网络**: [[LiteLLM]] 链接到 [[Harness_Engineering]]/[[OpenAI_Compatible_API]]/[[OpenRouter]]/[[MCP]]/[[Cost_Optimization]]/[[Graceful_Degradation]]/[[Agent_Observability]]/[[langfuse]]/[[Claude_Code]]/[[Ollama]]
+
 ## [2026-07-15] ingest | 摄入 LLM Tool Calling 动手实践四连
 - **变更**: 新增源 [[摘要-llm-tool-calling-practice]]（sources）；新增概念 [[Tool_Calling]]（concepts）；大幅更新 [[Agent_Loop]]（新增手写 ReAct 实现参考章节、更新 sources/关联连接）；更新 [[index]]（Sources + Concepts）
 - **冲突**: 无（新知识独立，[[Tool_Calling]] 为全新概念；[[Agent_Loop]] 增量补充无矛盾）

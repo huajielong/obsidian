@@ -3,7 +3,7 @@ title: "Agent Loop"
 type: concept
 tags: [智能体, 循环设计, ReAct, 控制系统, Agent]
 sources: [raw/01-articles/技术资源库/Agent Loop 设计完整指南.md, raw/01-articles/从零实现 ReAct 循环.md, raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md]
-last_updated: 2026-07-03
+last_updated: 2026-07-15
 ---
 
 # Agent Loop（智能体循环）
@@ -110,6 +110,8 @@ for step in range(5):
 1. LLM 输出必须追回 messages — `role: "assistant"` 保留 `content` + `tool_calls`
 2. 工具结果必须追回 messages — `role: "tool"` + 匹配的 `tool_call_id`
 3. 没有 tool_calls 就是终止 — `msg.content` 即最终答案
+
+**多步依赖陷阱**：当多个工具有数据依赖链时（如 `calculator` 依赖 `get_population` 的结果），小模型可能**并行预测所有工具调用**，导致下游工具在上游未完成时就被调用。详见 [[Tool_Calling#多步调用的依赖链]]。
 
 详见 [[摘要-llm-tool-calling-practice]] 中的完整实现（含多步骤推理链和多工具并行调用示例）。
 

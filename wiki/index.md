@@ -2,6 +2,7 @@
 
 ## Sources
 - [[摘要-llm-tool-calling-practice]] — LLM Tool Calling 动手实践四连：入门对比、Description 边界互斥实验、从零实现 ReAct、多步骤推理链
+- [[摘要-多步骤推理任务-连续-tool-调用]] — 多步骤 Tool Calling 数据依赖链实践：小模型"跳跃"问题与代码层依赖校验
 - [[摘要-awesome-agentic-ai-zh-for-developer]] — Agentic AI 学习路线开发者延伸分支：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × 3 个 Workflow Recipe
 - [[摘要-awesome-agentic-ai-zh-agent-frameworks]] — Agentic AI 学习路线 Stage 4：Multi-agent 框架全览，5 种编排模式与 16 个框架分级对比
 - [[摘要-awesome-agentic-ai-zh-agent-interfaces]] — Agentic AI 学习路线 Stage 8 共用 hub：Computer Use / Browser Use / Code Sandbox 三层智能体接口与 2026 前沿工具对比
@@ -50,6 +51,7 @@
 - [[superpowers_obra]] — obra 的 20+ 实战 Skill 集合，含 code-review/debug/TDD skill
 - [[LangChain]] — LLM 应用开发框架，Harness Engineering 集大成者，LangGraph/LangSmith/LangMem 生态母框架
 - [[LangGraph]] — 图式 Agent 编排框架，Production 级 Multi-agent 首选（支持 checkpointing + time-travel debug）
+- [[LiteLLM]] — 统一 LLM API 网关（AI Gateway），OpenAI 兼容接口调用 100+ 模型，内建路由/费用追踪/护栏/可观测性
 - [[CrewAI]] — 角色驱动 Multi-agent 框架，~20 行完成 Crew 定义，快速雏形首选
 - [[AutoGen]] — Microsoft 对话式 Multi-agent 框架，专攻 Debate / Peer Review / GroupChat 模式
 - [[OpenAI_Agents_SDK]] — OpenAI 官方 Agent SDK，Agent Hand-off + 结构化输出，2026-04 起内建 sandbox

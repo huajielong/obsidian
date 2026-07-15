@@ -2,7 +2,7 @@
 title: "Tool_Calling"
 type: concept
 tags: [工具调用, function calling, LLM, Agent, 协议, Schema设计]
-sources: [raw/01-articles/LLM工具调用入门实践.md, raw/01-articles/Tool Description 边界互斥实验.md]
+sources: [raw/01-articles/LLM工具调用入门实践.md, raw/01-articles/Tool Description 边界互斥实验.md, raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md]
 last_updated: 2026-07-15
 ---
 
@@ -102,6 +102,48 @@ args = tc.input                              # {"city": "台北"}（已解析）
 4. 是否包含输入输出的提示（如"返回 JSON 数组"）？
 5. 小模型实测验证过了吗？
 
+## 多步调用的依赖链
+
+当多个 Tool Call 之间存在**数据依赖关系**时，模型可能不按依赖顺序执行——尤其是小模型。
+
+### 数据依赖链模式
+
+```
+Step 1: get_population("台北")    →  250      ← 无依赖
+Step 2: get_population("纽约")    →  833      ← 无依赖（可与 Step 1 并行）
+Step 3: calculator("250/833")     →  0.3001   ← 依赖 Step 1 & 2 的结果
+Step 4: convert_to_percentage(0.3001) → 30.01% ← 依赖 Step 3 的结果
+```
+
+### 小模型的"跳跃"问题
+
+由于 OpenAI 兼容协议支持单次返回多个 `tool_calls`，小模型（如 qwen2.5:3b）倾向于"一股脑全预测出来"，导致：
+
+```
+查台北 → 查纽约 → convert_to_percentage(0.3)  ← ❌ 还没算呢！
+```
+
+`convert_to_percentage` 被提前调用，用猜测值 `0.3` 而非真实计算结果 `0.30012`，且后续即使 `calculator` 返回正确结果，模型也**不会重新调用**转换工具。
+
+### 依赖链的调用时序约束
+
+| 类型 | 能否并行 | 示例 |
+|------|---------|------|
+| **独立工具** | ✅ 可并行调用 | 多个 `get_population` 查询不同城市 |
+| **数据依赖工具** | ❌ 必须串行 | `calculator` 必须等人口数据 |
+| **链式依赖工具** | ❌ 必须按序 | `convert_to_percentage` 必须等 `calculator` |
+
+### 缓解方案
+
+| 方案 | 适用场景 |
+|------|---------|
+| **加大模型**（7b/14b） | 一次性解决，大模型规划更准确 |
+| **System Prompt 强调顺序** | 零成本改进，如"未计算前不得调用 convert_to_percentage" |
+| **调整 description 暗示依赖** | 巧妙方案，如"接收计算结果作为输入" |
+| **代码层拦截** | 检测到前置依赖未满足时拒绝执行 |
+
+> **核心经验**：小模型做多步骤推理，必须在代码层做依赖校验，不能全指望模型自己规划。详细代码示例见 [[摘要-多步骤推理任务-连续-tool-调用]]。
+
 ## Schema 设计最佳实践
 
 | 改进项 | 说明 |
@@ -128,6 +170,7 @@ Thought（分析）→ Action（Tool Calling）→ Observation（工具结果反
 
 - [[Agent_Loop]] — ReAct 循环依赖 Tool Calling 实现 Action 阶段
 - [[摘要-llm-tool-calling-practice]] — 本概念的核心来源（动手实践系列）
+- [[摘要-多步骤推理任务-连续-tool-调用]] — 多步骤 Tool Calling 数据依赖链实践
 - [[摘要-awesome-agentic-ai-zh-tool-use]] — Stage 3 理论版本，含 Schema 设计 4 项改进
 - [[OpenAI_Compatible_API]] — 已成为行业事实标准的接口规范
 - [[Anthropic]] — Anthropic 原生 tool use 格式的提供商
