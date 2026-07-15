@@ -36,6 +36,8 @@
 - [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — Multi-Agent & Production 最终章：Harness 8 核心元件、Eval/Observability/Cost 优化、Benchmark Landscape
 - [[摘要-awesome-agentic-ai-zh-advanced-concepts]] — 进阶 Agentic 概念地图（Stage 7.5）：12 进阶概念、四层工作边界、跨供应商 Harness 原则框架、Opus 4.8 Dynamic Workflows
 - [[摘要-deepseek-api-error-handling]] — DeepSeek API 错误处理实战：认证失败、上下文溢出与指数退避重试策略
+- [[摘要-tool-error-is-data]] — Tool Error 是 Data 不是 Exception：Agent 工具调用中结构化错误返回与两层 Retry 机制
+- [[摘要-function-schema-design]] — Function Schema 设计从 Bad 到 Good：4 项关键改进与 5 条黄金规则，小模型 vs 大模型敏感度对比
 - [[摘要-few-shot-experiment]] — Few-Shot 跨模型对比实验：大模型 vs 小模型的 few-shot 效果差距
 - [[摘要-system-prompt-experiment]] — System Prompt 控制力实验：三种人格输出对比
 

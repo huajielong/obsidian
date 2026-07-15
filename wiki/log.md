@@ -1,3 +1,8 @@
+## [2026-07-15] ingest | 摄入 Tool Error 处理 + Function Schema 设计两篇实践文章
+- **变更**: 新增 [[摘要-tool-error-is-data]]（sources）；新增 [[摘要-function-schema-design]]（sources）；大幅更新 [[Tool_Calling]]（新增"错误处理模式"完整章节 + "Schema 设计深度指南"替换原有简表 + sources 更新 + 关联连接新增 2 个来源引用）；更新 [[index]]（Sources 章节添加 2 个条目）
+- **冲突**: 无（新知识独立，[[Tool_Calling]] 已有 Schema 简表与 Description 原则，新增的"深度指南"和"错误处理"为互补增量合并无矛盾）
+- **网络**: [[摘要-tool-error-is-data]] 链接到 [[Tool_Calling]]/[[Agent_Loop]]/[[Ollama]]/[[摘要-多步骤推理任务-连续-tool-调用]]/[[摘要-llm-tool-calling-practice]]；[[摘要-function-schema-design]] 链接到 [[Tool_Calling]]/[[Prompt_Engineering]]/[[Ollama]]/[[摘要-llm-tool-calling-practice]]/[[摘要-多步骤推理任务-连续-tool-调用]]/[[摘要-tool-error-is-data]]；[[Tool_Calling]] 新增与两个来源摘要的双向链接
+
 ## [2026-07-15] sync | 新增 "从无代码到Agent范式的转移" 概念页
 - **变更**: 新增 [[From_NoCode_To_Agent_Paradigm]]（concepts）；更新 [[index]]（Concepts 章节添加条目）
 - **冲突**: 无（新概念独立，与 [[Harness_Engineering]]/[[Claude_Code_Skills]]/[[Claude_Code_Workflow]] 互补无矛盾）

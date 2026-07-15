@@ -2,7 +2,7 @@
 title: "Tool_Calling"
 type: concept
 tags: [工具调用, function calling, LLM, Agent, 协议, Schema设计]
-sources: [raw/01-articles/LLM工具调用入门实践.md, raw/01-articles/Tool Description 边界互斥实验.md, raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md]
+sources: [raw/01-articles/LLM工具调用入门实践.md, raw/01-articles/Tool Description 边界互斥实验.md, raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md, raw/01-articles/错误处理 — Tool Error 是 Data 不是 Exception.md, raw/01-articles/Function Schema 设计 — Bad Schema 修到 Good.md]
 last_updated: 2026-07-15
 ---
 
@@ -144,15 +144,182 @@ Step 4: convert_to_percentage(0.3001) → 30.01% ← 依赖 Step 3 的结果
 
 > **核心经验**：小模型做多步骤推理，必须在代码层做依赖校验，不能全指望模型自己规划。详细代码示例见 [[摘要-多步骤推理任务-连续-tool-调用]]。
 
-## Schema 设计最佳实践
+## Schema 设计深度指南
 
-| 改进项 | 说明 |
-|--------|------|
-| **`name` 要具体** | `get_population` 优于 `get_data` |
-| **`description` 写"何时用"而非"做什么"** | "查询城市人口，单位万人"优于"人口查询函数" |
-| **`type` 强制 `number`** | 避免 LLM 传字符串导致下游解析异常 |
-| **加 `required` + `enum`** | 约束参数取值范围，减少幻觉参数 |
-| **参数名自解释** | `city` 优于 `param1`，`expression` 优于 `input` |
+> **写 Schema 的功夫能省下换大模型的成本。** 相同 Bad Schema 在 Claude 上可能还能猜对，在 qwen2.5:3b 上几乎必错。如果 Production 打算用小模型节省成本，Schema 质量就是必须补的欠债。
+
+### 4 个关键改进项
+
+| 改进项 | Bad | Good |
+|--------|-----|------|
+| **name 带领域信息** | `convert`（笼统） | `convert_temperature`（带领域信息） |
+| **description 写"何时用"** | `"Convert a value."`（像注释） | `"当用户要求温度转换时使用"`（路由判断条件） |
+| **type 用对** | `value: string` | `value: number` |
+| **required + enum** | 无 required, `unit: string` | `required: ["value","unit"]`, `unit: enum["celsius","fahrenheit"]` |
+
+### 问题 1：Name 笼统
+
+```
+Bad:  "name": "convert"
+      → LLM 看到"温度转换"不知道 convert 跟它有啥关系
+Good: "name": "convert_temperature"
+      → LLM 看到"温度"就匹配上了
+```
+
+更致命的是——太笼统的 name 会**污染整个工具集的选择**。实测中 BAD schema 的 `convert` 导致天气查询也失败（LLM 无法做出路由决策）。
+
+### 问题 2：Description 写得像函数注释
+
+```
+Bad:  "description": "Convert a value."
+      → LLM："转换什么值？什么时候用？跟问题有什么关系？"
+
+Good: "description": "当用户要求在不同温度单位（摄氏/华氏）之间转换时使用"
+      → LLM："这个匹配！用户问的就是温度转换"
+```
+
+**把 description 想成路由判断条件**——LLM 看到用户问题，拿 description 逐一比对，第一个命中率最高的就是正确工具。详见 [[Tool_Calling#Description 三要素|Description 优化四原则]]。
+
+### 问题 3：Type 全用 string
+
+```
+Bad:  "value": {"type": "string"}    → LLM 传 "100"（字符串）
+Good: "value": {"type": "number"}    → LLM 传 100（数字）
+```
+
+BAD schema 传了 `"100"` 字符串——函数内用 `float()` 转换所以没崩，但如果 value 带单位如 `"100°F"`，`float()` 就会报错。
+
+### 问题 4：没写 Required + 没写 Enum
+
+```
+Bad:  没写 required → LLM 可能跳过某些参数
+     unit: string（无约束） → LLM 自由发挥，传了 "Fahrenheit" "Celsius"
+
+Good: required: ["value", "unit"] → LLM 知道必须传这两个
+     unit: enum["celsius", "fahrenheit"] → 只能传小写标准名
+```
+
+实际运行中 BAD schema 传的 `"Fahrenheit"` 和 `"Celsius"` 最典型——LLM 按口语习惯首字母大写，没有 enum 约束就没人阻止它。
+
+### 5 条黄金规则
+
+| 规则 | 说明 |
+|------|------|
+| **1. Name 带领域信息** | `convert` → `convert_temperature` |
+| **2. Description 写"何时用"** | 不是写"做什么"，是写"什么场景下 LLM 该选我" |
+| **3. Type 用对** | number / boolean / enum / array，不要全 string |
+| **4. Required + Enum** | required 防止漏传，enum 防止非法值 |
+| **5. Error 回传 dict** | 见下方 [[Tool_Calling#错误处理模式\|错误处理模式]] |
+
+### 5 个常见 Anti-Pattern
+
+| # | Anti-Pattern | 坏例子 | 好例子 |
+|---|-------------|--------|--------|
+| 1 | 所有参数塞到 "data" 对象 | `data: {"type": "string"}` | 展开成独立字段 |
+| 2 | 被动语态 | `"The temperature is converted"` | 祈使句 |
+| 3 | 参数名缩写 | `"val"`, `"tmp"` | `"value"`, `"temperature"` |
+| 4 | Enum 值跟用户说法脱节 | `enum: ["c", "f"]` | `enum: ["celsius", "fahrenheit"]` |
+| 5 | 不写 required | 自由发挥 | `required: ["value", "unit"]` |
+
+### 小模型 vs 大模型的 Schema 敏感度
+
+相同 Bad Schema 在不同模型上的表现差异：
+
+| 模型 | 结果 |
+|------|------|
+| **qwen2.5:3b** | ❌ 温度转换全部失败（大小写问题）+ 天气查询也不调用工具 |
+| **qwen2.5:14b** | 🟡 可能好一些，但仍然受 enum 缺失影响 |
+| **Claude Haiku** | 🟡 可能传正确的单位名（大小写碰运气） |
+| **GPT-4 / Claude Sonnet/Opus** | ✅ 基本能猜对大小写和类型 |
+
+> **Bad Schema 在很多大模型上被"猜对"了，这掩盖了 Schema 设计问题。** 如果 Production 打算用小模型节省成本，Schema 质量就是必须补的欠债。
+
+### 实际运行对比速览
+
+| 问题 | BAD Schema | GOOD Schema |
+|------|-----------|-------------|
+| 100°F → °C | ❌ `convert("Fahrenheit")` 失败两次 | ✅ `convert_temperature(fahrenheit)` → 37.8°C |
+| 37°C → °F | ❌ `convert("Celsius")` 失败 | ✅ `convert_temperature(celsius)` → 98.6°F |
+| 北京天气 | ❌ 空回答，未调用任何工具 | ✅ `get_weather("北京")` → 晴，30°C |
+
+## 错误处理模式
+
+> **Tool Error 是 Data 不是 Exception。** 这是 Agent 工程从"函数调用"走向"LLM 驱动"的关键一步。
+
+### 核心观念翻转
+
+工具函数出错时，不应抛出 Exception 中断循环，而应返回结构化 dict——让 LLM **自己看到错误信息后自主决策**重试/改参数/放弃。
+
+```python
+# Bad：raise 中断 loop，LLM 没机会 recover
+def fetch_weather(city):
+    if network_failed():
+        raise Exception("network timeout")
+
+# Good：return dict，LLM 看到结构化错误后自己决定怎么办
+def fetch_weather(city):
+    if network_failed():
+        return {"error": "network timeout",
+                "category": "transient",
+                "retry_hint": "try again in 1s"}
+```
+
+### 结构化错误设计
+
+```python
+# 成功
+{"status": "ok", "forecast": "rain", "temperature_c": 24}
+
+# transient — 可重试（LLM 可自主选择重试）
+{"error": "网络连接超时", "category": "transient", "retry_hint": "稍后重试"}
+
+# fatal — 不可重试（LLM 应直接放弃）
+{"error": "城市不在覆盖范围", "category": "fatal", "retry_hint": "检查城市名称"}
+```
+
+### 两种 Retry 机制
+
+```
+Layer 1：LLM 层（业务语义层）
+  LLM 看到 category = transient → 自主决定重试
+  LLM 看到 category = fatal    → 直接放弃
+
+Layer 2：Python 层（安全护栏层）
+  retry_counts[name] > RETRY_LIMIT(3)
+  → 强行返回 fatal，LLM 必须终止
+```
+
+**关键区别**：Production 的 retry 不在 Python 层、而在 LLM 层——这个 mental flip 是核心。
+
+### 四种错误回传方式对比
+
+| 方案 | LLM 能否 recover | 信息量 | 推荐 |
+|------|-----------------|--------|------|
+| raise Exception | ❌ 崩溃 | 低 | ❌ |
+| `return "failed"` | ❌ 看不懂 | 极低 | ❌ |
+| `return "网络超时"` | 🟡 可能 | 中 | ⚠️ |
+| `return {dict}` | ✅ 完全可理解 | 高 | ✅ |
+
+结构化 dict 的字段名本身就是提示词——LLM 看字段名就知道含义。小模型尤其受益于此。
+
+### 三层错误处理架构
+
+| 层级 | 职责 | 示例 |
+|------|------|------|
+| **工具层** | 返回结构化 dict，不 raise | `return {"error":"...","category":"transient"}` |
+| **LLM 层** | 看 dict 判断是否重试 | "这是 transient，再试一次" |
+| **Python 层** | 兜底护栏 | retry_limit=3, max_steps=8 |
+
+决策分配表：
+
+| 场景 | 谁管 | 判断依据 |
+|------|------|---------|
+| 同一工具连续失败 | **LLM 层** | 看到 category=transient，自己决定再试 |
+| 超过重试配额 | **Python 层** | retry_counts > LIMIT，强制 fatal |
+| 用户输入无效 | **LLM 层** | 看到 category=fatal，告诉用户 |
+| 全局死循环 | **Python 层** | max_steps 兜底 |
+| 是否换参数重试 | **LLM 层** | 根据 retry_hint 改 query |
+| 是否彻底放弃 | **LLM 层** | 综合判断后输出 Answer |
 
 ## 与 Agent Loop 的关系
 
@@ -171,6 +338,8 @@ Thought（分析）→ Action（Tool Calling）→ Observation（工具结果反
 - [[Agent_Loop]] — ReAct 循环依赖 Tool Calling 实现 Action 阶段
 - [[摘要-llm-tool-calling-practice]] — 本概念的核心来源（动手实践系列）
 - [[摘要-多步骤推理任务-连续-tool-调用]] — 多步骤 Tool Calling 数据依赖链实践
+- [[摘要-tool-error-is-data]] — Tool Error 作为结构化 Data 返回的错误处理范式（练习 5）
+- [[摘要-function-schema-design]] — Bad Schema 到 Good Schema 的 4 项改进与 5 条黄金规则
 - [[摘要-awesome-agentic-ai-zh-tool-use]] — Stage 3 理论版本，含 Schema 设计 4 项改进
 - [[OpenAI_Compatible_API]] — 已成为行业事实标准的接口规范
 - [[Anthropic]] — Anthropic 原生 tool use 格式的提供商
