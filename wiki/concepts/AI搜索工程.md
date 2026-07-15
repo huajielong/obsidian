@@ -258,4 +258,6 @@ score(d) = Σ 1 / (k + rank_i(d))
 - [[DeepSeek]] — DeepSeek 公司实体页面
 - [[摘要-deepseek-harness-team-jd]] — 同公司 Harness 团队对比
 - [[摘要-deepseek-service-engineer-jd]] — 同公司服务端工程团队对比
+
+- [[多模态理解研究]] — 场景融合：多模态搜索是 AI 搜索从文本到图文维度的进化方向
 - [[摘要-预训练数据工程师-jd]] — 同公司预训练数据团队对比

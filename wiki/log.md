@@ -540,3 +540,49 @@
 - **网络**:
   - [[摘要-ai-creative-data-pm-jd]] 链接到 [[AI创作数据工程]]/[[Agent数据产品工程]]/[[专业领域数据工程]]/[[AI产品工程]]/[[AI搜索工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[预训练数据工程]]/[[DeepSeek]]
   - [[AI创作数据工程]] 链接到 [[摘要-ai-creative-data-pm-jd]]/[[Agent数据产品工程]]/[[专业领域数据工程]]/[[AI产品工程]]/[[AI搜索工程]]/[[Eval_Harness]]/[[预训练数据工程]]/[[Agent沙箱工程]]/[[Harness_Engineering]]/[[DeepSeek]]
+
+## [2026-07-15] sync | 新增情感智能数据产品经理 JD + 情感智能数据工程概念（第十四份 JD，评测数据四象限最终章：情感温度层）
+- **变更**: 新增 [[摘要-emotional-intelligence-data-pm-jd]]（sources）；新增 [[情感智能数据工程]]（concepts——评测数据四象限最终章：以人类情感认知为基准提升 AI 互动温度）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[情感智能数据工程]] 与 [[Agent数据产品工程]]/[[专业领域数据工程]]/[[AI创作数据工程]] 构成"评测数据四象限"——同一方法论框架/四个不同质量维度；与 [[AI产品工程]] 为产品协作关系——情感陪伴功能的产品体验设计需要本层数据支撑）
+- **网络**:
+  - [[摘要-emotional-intelligence-data-pm-jd]] 链接到 [[情感智能数据工程]]/[[AI产品工程]]/[[AI创作数据工程]]/[[Agent数据产品工程]]/[[Agent能力工程]]/[[Harness_Engineering]]/[[Eval_Harness]]/[[DeepSeek]]
+  - [[情感智能数据工程]] 链接到 [[摘要-emotional-intelligence-data-pm-jd]]/[[Agent数据产品工程]]/[[AI创作数据工程]]/[[专业领域数据工程]]/[[AI产品工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[Prompt_Engineering]]/[[DeepSeek]]
+
+## [2026-07-15] sync | 新增 Frontier 研究员 JD + Frontier 研究概念（第十五份 JD，范式层：整个堆栈的"种子层"）
+- **变更**: 新增 [[摘要-frontier-researcher-jd]]（sources）；新增 [[Frontier研究]]（concepts——范式探索层：超越当前 Scaling Law，寻找下一代范式）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[Frontier研究]] 与所有其他概念的关系不是上下游而是"范式→范式内实践"——如果新范式出现，所有当前概念下的实践都可能需要重新审视；与 [[Agent能力工程]] 为互补——前沿研究定义方向，能力工程师执行）
+- **网络**:
+  - [[摘要-frontier-researcher-jd]] 链接到 [[Frontier研究]]/[[Agent能力工程]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[知识冲突]]/[[DeepSeek]]
+  - [[Frontier研究]] 链接到 [[摘要-frontier-researcher-jd]]/[[Agent能力工程]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[AI基础设施硬件工程]]/[[Harness_Engineering]]/[[DeepSeek]]
+
+## [2026-07-16] sync | 新增预训练研究员 JD + 预训练研究概念（第16份 JD，当前范式引擎室层）
+- **变更**: 新增 [[摘要-pretraining-researcher-jd]]（sources）；新增 [[预训练研究]]（concepts，作为 Frontier 研究之下的"当前范式引擎室层"）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[预训练研究]] 与 [[Frontier研究]] 为"下一个范式 vs 当前范式做到极致"的互补关系——Frontier 质疑 Scaling Law 寻找突破，预训练研究使用 Scaling Law 科学规划；与 [[预训练数据工程]] 为"研究策略 vs 工程实现"的互补关系——前者关注数据与智能的映射关系，后者关注数据处理管线的工程实现；与 [[AI训练推理系统工程]] 为"算法创新 vs 工程化落地"的上下游关系）
+- **网络**:
+  - [[摘要-pretraining-researcher-jd]] 链接到 [[预训练研究]]/[[预训练数据工程]]/[[Frontier研究]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[Agent能力工程]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[DeepSeek]]
+  - [[预训练研究]] 链接到 [[摘要-pretraining-researcher-jd]]/[[预训练数据工程]]/[[Frontier研究]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[Agent能力工程]]/[[AI创作数据工程]]/[[情感智能数据工程]]/[[专业领域数据工程]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[DeepSeek]]
+
+## [2026-07-16] sync | 新增后训练研究员 JD + 后训练研究概念（第17份 JD，基座模型释放层）
+- **变更**: 新增 [[摘要-posttraining-researcher-jd]]（sources）；新增 [[后训练研究]]（concepts，作为预训练研究之下的"基座模型释放层"——通过 RL 算法、后训练数据与评测三元组释放 Base 模型潜力）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[后训练研究]] 与 [[预训练研究]] 为"基座模型生产 vs 潜力释放"的上下游关系——预训练产生知识渊博的 Base 模型，后训练使其可用、可靠、可控；与 [[Agent能力工程]] 为"教练 vs 训练营"的互补关系——能力工程构建 RL 训练环境，后训练研究提供训练算法和数据策略；与 [[AI训练推理系统工程]] 为"算法设计 vs 工程化落地"的上下游关系）
+- **网络**:
+  - [[摘要-posttraining-researcher-jd]] 链接到 [[后训练研究]]/[[预训练研究]]/[[Agent能力工程]]/[[AI训练推理系统工程]]/[[Agent数据产品工程]]/[[AI产品工程]]/[[AI创作数据工程]]/[[情感智能数据工程]]/[[专业领域数据工程]]/[[Frontier研究]]/[[Harness_Engineering]]/[[Eval_Harness]]/[[DeepSeek]]
+  - [[后训练研究]] 链接到 [[摘要-posttraining-researcher-jd]]/[[预训练研究]]/[[Agent能力工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[AI创作数据工程]]/[[情感智能数据工程]]/[[专业领域数据工程]]/[[Frontier研究]]/[[Harness_Engineering]]/[[Eval_Harness]]/[[Context_Engineering]]/[[DeepSeek]]
+
+## [2026-07-16] sync | 新增多模态理解研究员 JD + 多模态理解研究概念（第18份 JD，与文本体系平行的多模态维度）
+- **变更**: 新增 [[摘要-multimodal-understanding-researcher-jd]]（sources）；新增 [[多模态理解研究]]（concepts，作为与文本模型体系平行的"多模态维度"——视觉编码器/VLM/多模态预训练与后训练/多模态数据与评测全链路）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[多模态理解研究]] 与所有现有概念不是"上下游"关系而是"平行维度"关系——多模态共享文本体系的基础设施（训练框架/计算/集群/存储），但在架构设计、训练方法、数据策略、评测标准上有其独特性；与 [[预训练数据工程]] 的多模态数据处理章节为"研究策略 vs 工程实现"的互补）
+- **网络**:
+  - [[摘要-multimodal-understanding-researcher-jd]] 链接到 [[多模态理解研究]]/[[预训练数据工程]]/[[后训练研究]]/[[Agent能力工程]]/[[Agent_Interfaces]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[AI搜索工程]]/[[预训练研究]]/[[Frontier研究]]/[[Harness_Engineering]]/[[DeepSeek]]
+  - [[多模态理解研究]] 链接到 [[摘要-multimodal-understanding-researcher-jd]]/[[预训练数据工程]]/[[后训练研究]]/[[预训练研究]]/[[Agent能力工程]]/[[Agent_Interfaces]]/[[AI产品工程]]/[[Agent数据产品工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[AI搜索工程]]/[[Frontier研究]]/[[AI创作数据工程]]/[[情感智能数据工程]]/[[Harness_Engineering]]/[[Eval_Harness]]/[[DeepSeek]]
+
+## [2026-07-16] lint | 修复 15 个死链 + 创建 2 个缺失页面 + 索引对齐
+- **修复死链**:
+  - 10 处 `[[DeepSeek五份JD全景对比]]` → `[[DeepSeek四份JD全景对比]]`（AI产品工程/AI存储工程/AI计算引擎工程/AI训练推理系统工程/超算集群工程 + 5 个源摘要）
+  - 1 处 `[[Agentic Coding]]` → `[[Agentic_Coding]]`（Agent能力工程）
+  - 2 处 `[[Hermes Agent]]` → `[[Hermes_Agent]]`（Slack/Telegram）
+- **创建缺失页面**: 新增 [[知识冲突]]（concepts——知识库中已有的冲突管理实践理论化文档化）；新增 [[API设计]]（entities——预留链接完整化）
+- **索引对齐**: [[知识冲突]] 注册到 Concepts 章节；[[API设计]] 注册到 Entities 章节
+- **其他修复**: 图片引用（[[Pasted image 20260706174748.png]]）排除为非死链；`\`结尾转义问题（GPT/Self_Attention/Transformer_Architecture）确认为正则匹配边界限制而非真实死链；已合并 1 处锚点链接触达（摘要-多模态理解研究 -> 预训练数据工程#3. 多模态数据处理）
+- **结果**: 0 死链、0 孤岛、0 未同步索引、知识库健康状态良好
+- **冲突**: 无

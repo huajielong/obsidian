@@ -58,6 +58,11 @@
 - [[摘要-agent-general-data-pm-jd]] — 通用Agent数据产品经理职位描述：办公/生活/搜索场景的评测体系设计与数据生产管线
 - [[摘要-domain-data-product-manager-jd]] — 专业领域数据产品经理职位描述：小语种/医学/法律等学科的专业评测体系构建与高质量数据生产
 - [[摘要-ai-creative-data-pm-jd]] — AI创作数据产品经理职位描述：文艺写作与功能写作方向的评测体系构建与数据质量标准
+- [[摘要-emotional-intelligence-data-pm-jd]] — 情感智能数据产品经理职位描述：角色扮演与情感陪伴场景的情感交互质量优化与 Badcase 归因分析
+- [[摘要-frontier-researcher-jd]] — Frontier（持续学习/自进化/新范式）研究员职位描述：超越 Scaling Law，寻找下一代模型架构与学习算法
+- [[摘要-pretraining-researcher-jd]] — 预训练（数据/算法）研究员职位描述：算法架构创新与数据策略研究的双核驱动，在当前范式内将预训练技术推向极致
+- [[摘要-posttraining-researcher-jd]] — 后训练（数据/算法）研究员职位描述：通过 RL 算法（RLHF/RLVR/PPO/GRPO）、后训练数据与评测的三元组驱动，最大化释放 Base 模型潜力
+- [[摘要-multimodal-understanding-researcher-jd]] — 多模态理解（数据/算法）研究员职位描述：视觉编码器优化/多模态预训练/多模态后训练/评测全链路，与文本体系平行的多模态维度研究
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -103,6 +108,7 @@
 - [[Hermes_Agent]] — Nous Research 的开源自主 CLI Agent，213k+★，Cloud-deployed 范式代表
 - [[Telegram]] — 跨平台即时通讯软件，Agent 的聊天界面接口
 - [[Slack]] — 企业协作通讯平台，Agent 的聊天界面接口
+- [[API设计]] — API 设计工程实践：定义软件系统之间交互接口的规范、协议、错误处理与开发者体验设计
 
 ## Syntheses
 - [[DeepSeek四份JD全景对比]] — DeepSeek 五份招聘 JD（Harness 团队/服务端工程/预训练数据/AI 搜索/Agent Infra）的全方位横向对比：团队定位、技术栈光谱、工程模型归属、工程文化、面试准备关联图
@@ -110,6 +116,11 @@
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
 
 ## Concepts
+- [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
+- [[预训练研究]] — 预训练研究体系：算法创新（模型架构/优化器/Scaling Law/加速）与数据策略（治理/配比/合成/垂类）双核驱动，当前范式的"引擎室"
+- [[后训练研究]] — 后训练研究体系：通过 RL 算法（RLHF/RLVR/PPO/GRPO）、后训练数据与评测的三元组驱动，最大化释放 Base 模型潜力；基座模型释放层
+- [[多模态理解研究]] — 多模态理解研究体系：视觉编码器/VLM/多模态预训练与后训练/多模态数据与评测全链路，与文本模型体系平行的"多模态维度"
+
 - [[From_NoCode_To_Agent_Paradigm]] — 从传统无代码平台（Zion 类）到 Skill+CLI+Workflow Agent 范式的范式转移分析
 - [[Multi_Agent_System]] — 多 Agent 系统核心概念：Workflow vs Agent / Single vs Multi 分类矩阵，何时该（不该）使用 Multi-agent 的决策框架
 - [[RAG]] — 检索增强生成架构：基础流水线、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型
@@ -188,6 +199,7 @@
 - [[Agent数据产品工程]] — Agent 数据产品工程体系：通过评测体系设计与数据生产管线构建，连接产品体验与模型能力；聚焦办公/生活/搜索等通用场景
 - [[专业领域数据工程]] — 专业领域数据工程体系：通过领域专家判断力构建评测体系与高质量数据，将人类专业知识注入模型；覆盖小语种/医学/法律等学科
 - [[AI创作数据工程]] — AI 创作数据工程体系：将人类审美标准转化为可操作的评测体系与数据管线，驱动模型在文学创作与实用写作领域的能力提升
+- [[情感智能数据工程]] — 情感智能数据工程体系：以人类情感认知为基准，通过 Badcase 挖掘与归因分析，提升 AI 在情感陪伴与角色扮演场景中的互动真实感与沉浸度
 - [[AI产品工程]] — AI 产品工程体系：站在模型与世界之间，将 AI 技术能力转化为用户体验的产品化工程层；含 AI 产品与 Agent Harness 产品两大方向
 - [[预训练数据工程]] — 预训练数据全生命周期工程体系：数据采集、语料清洗、多模态处理、数据基建，横跨 Context Engineering 与 Harness Engineering 的 LLM 基础设施层
 - [[超算集群工程]] — AI 超算集群工程体系：万卡→数十万卡异构计算集群的设计、调度、网络、调优与运营
@@ -198,3 +210,4 @@
 - [[AI数据中心工程]] — AI 数据中心工程体系：供配电、液冷、现场运营与规划设计
 - [[AI存储工程]] — AI 存储工程体系：KV Cache 存储系统、分布式文件系统与对象存储三大存储系统
 - [[Exponential_Backoff]] — 指数退避重试策略：分布式系统中提升可靠性的标准错误恢复模式
+- [[知识冲突]] — 知识冲突管理方法论：在知识库长期演进中系统化识别、记录和消解新旧知识矛盾与张力的工程实践
