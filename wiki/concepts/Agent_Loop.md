@@ -2,7 +2,7 @@
 title: "Agent Loop"
 type: concept
 tags: [智能体, 循环设计, ReAct, 控制系统, Agent]
-sources: [raw/01-articles/技术资源库/Agent Loop 设计完整指南.md]
+sources: [raw/01-articles/技术资源库/Agent Loop 设计完整指南.md, raw/01-articles/从零实现 ReAct 循环.md, raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md]
 last_updated: 2026-07-03
 ---
 
@@ -84,6 +84,35 @@ Agent Loop 可建模为控制系统：`u(k) = Kp·e(k) + Ki·Σe(j) + Kd·(e(k)-
 | 有明确成败判断 | Reflexion 自校验 |
 | 复杂协同任务 | Hierarchical / Multi-Agent |
 
+## 手写 ReAct 实现参考
+
+理解 ReAct 循环的最佳方式是手写一遍。核心是一个 `for` 循环 + 原生 `tools` 参数：
+
+```python
+for step in range(5):
+    response = client.chat.completions.create(
+        model="qwen2.5:3b",
+        tools=TOOLS,
+        messages=messages,
+    )
+    msg = response.choices[0].message
+    messages.append({"role": "assistant", "content": msg.content, "tool_calls": msg.tool_calls})
+
+    if not msg.tool_calls:     # 没有 tool_calls = 终止
+        break
+
+    for tc in msg.tool_calls:
+        observation = TOOL_IMPL[tc.function.name](json.loads(tc.function.arguments))
+        messages.append({"role": "tool", "tool_call_id": tc.id, "content": str(observation)})
+```
+
+**三条核心规则：**
+1. LLM 输出必须追回 messages — `role: "assistant"` 保留 `content` + `tool_calls`
+2. 工具结果必须追回 messages — `role: "tool"` + 匹配的 `tool_call_id`
+3. 没有 tool_calls 就是终止 — `msg.content` 即最终答案
+
+详见 [[摘要-llm-tool-calling-practice]] 中的完整实现（含多步骤推理链和多工具并行调用示例）。
+
 ## 关联连接
 - [[Multi_Agent_System]] — 从 Single-agent Loop 扩展到多 Agent 协作
 - [[Agent_Orchestration_Patterns]] — Multi-agent 编排模式，与单 Agent Loop 互补
@@ -93,3 +122,5 @@ Agent Loop 可建模为控制系统：`u(k) = Kp·e(k) + Ki·Σe(j) + Kd·(e(k)-
 - [[Agentic_Coding]] — AI Agent 编程范式
 - [[AI_Mastery_Compass]] — AI 大模型驾驭进阶罗盘，Agent Loop 的 ReAct 循环与其理念相通
 - [[摘要-awesome-agentic-ai-zh-tool-use]] — Agentic AI 学习路线 Stage 3，包含从零实现 ReAct 循环的 6 个动手练习
+- [[摘要-llm-tool-calling-practice]] — 手写 ReAct 循环的完整代码实现（含多步骤推理链）
+- [[Tool_Calling]] — Tool Calling 协议格式与 Schema 设计，ReAct 中 Action 阶段的技术基础

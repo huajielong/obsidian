@@ -1,3 +1,9 @@
+## [2026-07-15] ingest | 摄入 LLM Tool Calling 动手实践四连
+- **变更**: 新增源 [[摘要-llm-tool-calling-practice]]（sources）；新增概念 [[Tool_Calling]]（concepts）；大幅更新 [[Agent_Loop]]（新增手写 ReAct 实现参考章节、更新 sources/关联连接）；更新 [[index]]（Sources + Concepts）
+- **冲突**: 无（新知识独立，[[Tool_Calling]] 为全新概念；[[Agent_Loop]] 增量补充无矛盾）
+- **网络**: [[摘要-llm-tool-calling-practice]] 链接到 [[Tool_Calling]]/[[Agent_Loop]]/[[Ollama]]/[[Qwen]]/[[Anthropic]]/[[OpenAI_Compatible_API]]/[[摘要-awesome-agentic-ai-zh-tool-use]]；[[Tool_Calling]] 链接到 [[Agent_Loop]]/[[OpenAI_Compatible_API]]/[[Anthropic]]/[[Ollama]]/[[Orchestration_Code_Examples]]；[[Agent_Loop]] 新增与 [[摘要-llm-tool-calling-practice]]/[[Tool_Calling]] 双向链接
+- **归档**: 4 个 raw/01-articles 文件 → raw/09-archive/
+
 ## [2026-07-14] sync | 新增编排编程示例页面
 - **变更**: 新增 [[Orchestration_Code_Examples]]（concepts）；更新 [[index]]（Concepts 章节添加 Orchestration_Code_Examples）
 - **冲突**: 无

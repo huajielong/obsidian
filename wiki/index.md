@@ -1,6 +1,7 @@
 # Wiki Index
 
 ## Sources
+- [[摘要-llm-tool-calling-practice]] — LLM Tool Calling 动手实践四连：入门对比、Description 边界互斥实验、从零实现 ReAct、多步骤推理链
 - [[摘要-awesome-agentic-ai-zh-for-developer]] — Agentic AI 学习路线开发者延伸分支：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × 3 个 Workflow Recipe
 - [[摘要-awesome-agentic-ai-zh-agent-frameworks]] — Agentic AI 学习路线 Stage 4：Multi-agent 框架全览，5 种编排模式与 16 个框架分级对比
 - [[摘要-awesome-agentic-ai-zh-agent-interfaces]] — Agentic AI 学习路线 Stage 8 共用 hub：Computer Use / Browser Use / Code Sandbox 三层智能体接口与 2026 前沿工具对比
@@ -103,6 +104,7 @@
 - [[Harness_Engineering]] — 为 AI 智能体设计约束机制、反馈回路与工作流控制的系统工程实践（含 8 核心元件框架、OpenAI 5 原则展开、跨供应商对照、Eval Rigor 与 Bitter Lesson）
 - [[Eval_Harness]] — Agent 自动化评估流水线：Benchmark Landscape / Reward-Hacking 警告 / pass^k / [[Harness_Engineering]] 第 7 核心元件
 - [[Orchestration_Code_Examples]] — 编排编程示例：同一 Research→Write→Review 场景在纯 Python / LangGraph / CrewAI / AutoGen / OpenAI Agents SDK 五个路线中的代码对比
+- [[Tool_Calling]] — LLM 工具调用核心概念：OpenAI vs Anthropic 协议格式对比、Schema 设计、Description 优化四原则
 - [[Agent_First_Engineering]] — Agent-First Engineering 智能体优先工程的 7 步实操方法论
 - [[Agent_Interfaces]] — 三层智能体接口模型：Computer Use（计算机操控）/ Browser Use（浏览器操控）/ Code Sandbox（代码沙箱），2024-2026 Agent 与非 API 世界交互的核心基础设施
 - [[Agent_Loop]] — AI 智能体自主完成任务的核心运行机制（ReAct → 生产级八步循环）
