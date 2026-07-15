@@ -1,8 +1,14 @@
 ---
-title: "摘要-deepseek-api-error-handling"
+title: 摘要-deepseek-api-error-handling
 type: source
-tags: [来源, DeepSeek, API, 错误处理, 指数退避]
-sources: [raw/01-articles/DeepSeek-API-错误处理实战.md]
+tags:
+  - 来源
+  - DeepSeek
+  - API
+  - 错误处理
+  - 指数退避
+sources:
+  - raw/01-articles/DeepSeek-API-错误处理实战.md
 last_updated: 2026-07-10
 ---
 

@@ -36,10 +36,20 @@
 - [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — Multi-Agent & Production 最终章：Harness 8 核心元件、Eval/Observability/Cost 优化、Benchmark Landscape
 - [[摘要-awesome-agentic-ai-zh-advanced-concepts]] — 进阶 Agentic 概念地图（Stage 7.5）：12 进阶概念、四层工作边界、跨供应商 Harness 原则框架、Opus 4.8 Dynamic Workflows
 - [[摘要-deepseek-api-error-handling]] — DeepSeek API 错误处理实战：认证失败、上下文溢出与指数退避重试策略
+- [[摘要-deepseek-agent-infra-jd]] — DeepSeek Agent Infra 研发工程师职位描述：DSec 沙箱云平台，虚拟化/容器/存储/网络/可观测性，Agent 执行环境的物理基础设施层
+- [[摘要-deepseek-ai-search-jd]] — DeepSeek AI 搜索算法/架构工程师职位描述：LLM 与搜索引擎深度融合，两个方向（算法/架构），成本-延迟-效果三元平衡
+- [[摘要-预训练数据工程师-jd]] — 预训练数据工程师职位描述：数据采集 Pipeline、语言数据处理、多模态数据、数据基建四个方向的全景 JD
+- [[摘要-deepseek-harness-team-jd]] — DeepSeek Harness 团队职位描述：四个方向（研究/工程/产品/PM）、技术知识图谱、三层工程模型行业应用
+- [[摘要-deepseek-service-engineer-jd]] — DeepSeek 服务端工程师职位描述：三层生产 AI 系统架构（线上核心服务/Agent 后端/数据仓库）、Agent 执行环境快照、数据反哺模型
 - [[摘要-tool-error-is-data]] — Tool Error 是 Data 不是 Exception：Agent 工具调用中结构化错误返回与两层 Retry 机制
 - [[摘要-function-schema-design]] — Function Schema 设计从 Bad 到 Good：4 项关键改进与 5 条黄金规则，小模型 vs 大模型敏感度对比
 - [[摘要-few-shot-experiment]] — Few-Shot 跨模型对比实验：大模型 vs 小模型的 few-shot 效果差距
 - [[摘要-system-prompt-experiment]] — System Prompt 控制力实验：三种人格输出对比
+- [[摘要-hpc-cluster-engineer-jd]] — 超算集群研发工程师职位描述：万卡→数十万卡集群的系统架构、调度、网络与性能优化
+- [[摘要-hpc-cluster-reliability-jd]] — AI 算力集群性能与可靠性工程师职位描述：十万卡集群的故障管理、可观测性与自动化运维
+- [[摘要-hpc-distributed-storage-jd]] — 高性能分布式存储工程师职位描述：KV Cache 存储系统与分布式文件系统/对象存储
+- [[摘要-hpc-operator-comm-compiler-jd]] — 高性能算子/通信/编译器工程师职位描述：AGI 与物理芯片之间的最后一层软件
+- [[摘要-training-inference-framework-jd]] — 大模型训练/推理框架工程师职位描述：分布式训练、RL 训练、推理服务等系统
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -82,8 +92,13 @@
 - [[langfuse]] — 开源 LLM 可观测性与评估平台（★ 28k+）
 - [[OpenRouter]] — 统一 LLM API 路由与网关服务，支持 Model Routing 与 Fallback
 - [[promptfoo]] — 开源 LLM 评估标准化工具，YAML 配置驱动的 CI Eval（★ 22k+）
+- [[Hermes_Agent]] — Nous Research 的开源自主 CLI Agent，213k+★，Cloud-deployed 范式代表
+- [[Telegram]] — 跨平台即时通讯软件，Agent 的聊天界面接口
+- [[Slack]] — 企业协作通讯平台，Agent 的聊天界面接口
 
 ## Syntheses
+- [[DeepSeek四份JD全景对比]] — DeepSeek 五份招聘 JD（Harness 团队/服务端工程/预训练数据/AI 搜索/Agent Infra）的全方位横向对比：团队定位、技术栈光谱、工程模型归属、工程文化、面试准备关联图
+- [[预训练数据四方向对比]] — 预训练数据工程师四个方向的横向对比分析：技术栈梯度、工程定位光谱、职业发展路径、与 DeepSeek Harness 团队的交叉对比
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
 
 ## Concepts
@@ -159,4 +174,12 @@
 - [[Self_Organizing_Teams]] — 自组织团队：Agent 运行时动态协商分工而非预先分配 Role
 - [[Spec_Driven_Development]] — 规范驱动开发：Task 由 Formal Spec（YAML/JSON Schema）定义
 - [[Graceful_Degradation]] — 优雅降级路径：Frontier Model 挂掉时回退到便宜 Model 不直接 Crash
+- [[Agent沙箱工程]] — Agent 沙箱执行环境工程：虚拟化/容器隔离、临时存储、虚拟网络、可观测性，Harness Engineering Safety Layer 的物理基础设施实现
+- [[AI搜索工程]] — AI 原生搜索工程：LLM 与搜索引擎深度融合的工程体系，涵盖 Query 理解、多路召回、级联排序、混合检索等核心技术，是 Context Engineering 在搜索引擎尺度的独立展开
+- [[预训练数据工程]] — 预训练数据全生命周期工程体系：数据采集、语料清洗、多模态处理、数据基建，横跨 Context Engineering 与 Harness Engineering 的 LLM 基础设施层
+- [[超算集群工程]] — AI 超算集群工程体系：万卡→数十万卡异构计算集群的设计、调度、网络、调优与运营
+- [[AI计算引擎工程]] — AI 计算引擎工程体系：高性能算子、集合通信与 DSL 编译器三大技术栈
+- [[AI训练推理系统工程]] — AI 训练推理系统工程体系：分布式训练、RL 训练、多模态训练、推理服务四大系统
+- [[AI集群可靠性工程]] — AI 超算集群可靠性工程体系：故障管理、可观测性、自动化自愈与硬件验收
+- [[AI存储工程]] — AI 存储工程体系：KV Cache 存储系统、分布式文件系统与对象存储三大存储系统
 - [[Exponential_Backoff]] — 指数退避重试策略：分布式系统中提升可靠性的标准错误恢复模式

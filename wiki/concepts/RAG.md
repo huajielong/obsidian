@@ -126,3 +126,5 @@ Vanilla chunk 会丢失原始文档上下文。Anthropic 提出用 LLM 为每个
 - [[DSPy]] — 自动优化 RAG Prompt + Retriever 设置的 Path 3 范式
 - [[Agent_Loop]] — ReAct 循环中 RAG 作为 Tool 被调用
 - [[摘要-awesome-agentic-ai-zh-memory-rag]] — 本概念的来源资料
+- [[AI搜索工程]] — AI 原生搜索工程，RAG 在搜索引擎尺度的独立展开（多路召回、级联排序、Hybrid Search）
+- [[摘要-deepseek-ai-search-jd]] — DeepSeek AI 搜索 JD，RAG 技术在大规模搜索系统中的应用实践

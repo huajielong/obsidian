@@ -30,7 +30,7 @@ last_updated: 2026-07-14
 | **1. IDE-coupled** | [[Cursor]] / [[Cline]] / Windsurf | IDE 内部 | IDE 侧边栏 | 多 provider | ❌ | $0–20 |
 | **2. Terminal pair-programmer** | [[Claude_Code]] / [[Codex]] / Gemini CLI | 终端 | terminal REPL | 绑定特定厂商 | ❌ | $20 订阅或 API 用量 |
 | **3. BYO-LLM CLI** | [[Aider]] / OpenCode / [[Goose_AI]] | 终端 | terminal REPL | 自帶 API Key | ❌ | API 用量 |
-| **4. Cloud-deployed** | [[Hermes Agent]] | VPS / 云端 | [[Telegram]] / [[Slack]] / 任一 chat app | 200+ provider 路由 | ❌ | ~$5 server + API |
+| **4. Cloud-deployed** | [[Hermes_Agent]] | VPS / 云端 | [[Telegram]] / [[Slack]] / 任一 chat app | 200+ provider 路由 | ❌ | ~$5 server + API |
 | **5. Edge-deployed** | [[OpenClaw]] / ClawBox | Jetson 板子 / Raspberry Pi | local chat / SSH | 本机 [[Ollama]]（[[Qwen]] / [[Llama]] / Mistral）| ✅ | 硬件 €549、之后 ≈ $0 |
 
 ---
@@ -93,7 +93,7 @@ last_updated: 2026-07-14
 
 **典型工作流**：设定 provider 和 model（如 `--model deepseek/deepseek-reasoner`）→ 设环境变量 `OPENROUTER_API_KEY` → 运行 agent，git-aware，自动写 commit message。
 
-**代表项目**：[[Aider]]、OpenCode、[[Goose_AI]]、[[Hermes Agent]]（CLI 模式）
+**代表项目**：[[Aider]]、OpenCode、[[Goose_AI]]、[[Hermes_Agent]]（CLI 模式）
 
 **关键特性**：
 - Cost-sensitive，可灵活选择性价比模型
@@ -119,7 +119,7 @@ last_updated: 2026-07-14
 
 **典型工作流**：你在地铁上用手机打 Telegram → 对 agent 发指令（如"整理今天 arXiv 新 paper"）→ agent 自主调用多模型完成 → 传回结果。全程无需碰 laptop。
 
-**代表项目**：[[Hermes Agent]]（Nous Research，★ 213k+）
+**代表项目**：[[Hermes_Agent]]（Nous Research，★ 213k+）
 
 **5 大核心特性**：
 

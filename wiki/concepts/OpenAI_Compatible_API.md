@@ -45,4 +45,5 @@ OpenAI 兼容 API（OpenAI-Compatible API）是指遵循 OpenAI 官方 `chat/com
 - [[Qwen]] — 部分 Qwen 模型在此接口下存在已知 Bug
 - [[Llama]] — 在此接口下表现稳定
 - [[GPT]] — OpenAI 兼容 API 所参照的原始接口定义来源
+- [[LiteLLM]] — 统一 LLM API 网关，基于 OpenAI 兼容接口标准
 - [[本地_LLM_推理]] — 使用本地推理工具调用 LLM 的实践

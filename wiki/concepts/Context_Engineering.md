@@ -77,3 +77,7 @@ Agent 需要两种 Context 能力：
 - [[Claude_Code_Memory_System]] — Claude Code 中的 Memory 实现
 - [[摘要-awesome-agentic-ai-zh-prompt-engineering]] — 来源资料（Stage 2）
 - [[摘要-awesome-agentic-ai-zh-memory-rag]] — 来源资料（Stage 6）
+- [[预训练数据工程]] — 预训练数据工程的核心工作（语料清洗、去重、质量筛选、数据组织）属于 Context Engineering 的"Select"子问题前置步骤
+- [[摘要-预训练数据工程师-jd]] — 预训练数据工程师 JD 中语言数据处理方向和多模态数据方向的内容与 Context Engineering 直接相关
+- [[预训练数据四方向对比]] — 综合报告中详细分析了各方向与三层工程模型的对应关系
+- [[AI搜索工程]] — AI 搜索工程是 Context Engineering "Select"子问题在搜索引擎尺度的独立展开

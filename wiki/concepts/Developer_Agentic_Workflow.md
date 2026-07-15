@@ -100,4 +100,5 @@ aider --model anthropic/claude-sonnet-5
 - [[Goose_AI]] — 多接口自主 agent
 - [[Roo_Code]] — VS Code multi-mode agent
 - [[Repomix]] — 必备 daily-driver 工具
+- [[From_NoCode_To_Agent_Paradigm]] — Agent 范式下开发工作流替代传统无代码搭建
 - [[superpowers_obra]] — Skill 参考实现

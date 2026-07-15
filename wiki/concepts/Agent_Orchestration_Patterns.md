@@ -96,4 +96,5 @@ Framework 提供的三个进阶 Tool Pattern，需 Framework 抽象层才写得�
 - [[Eval_Harness]] — 编排模式的质量评估
 - [[Agent_Observability]] — 编排模式的运行时观测
 - [[Cost_Optimization]] — Multi-agent 编排的成本控制
+- [[Self_Organizing_Teams]] — Agent 运行时动态协商分工的高级编排模式
 - [[Multi_Agent_System]] — Production 化注意事项

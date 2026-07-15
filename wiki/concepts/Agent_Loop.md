@@ -72,8 +72,19 @@ Agent Loop 可建模为控制系统：`u(k) = Kp·e(k) + Ki·Σe(j) + Kd·(e(k)-
 - `e(k)` = 质量误差（目标质量 - 当前质量）
 - 质量演化：`y(k+1) = y(k) + G·u(k) + w(k)`
 
-### 状态持久化
+### 状态持久化与执行环境快照
+
 每完成一个 Action，持久化 `(step_id, state_snapshot, decision_log)`，支持中断恢复。
+
+**执行环境快照（Execution Environment Snapshot）**进一步将 Agent 运行时的完整状态序列化存储，包括：
+- 上下文历史（message history）
+- 工具调用轨迹（tool call traces）
+- 中间结果（intermediate outputs）
+- 环境变量与配置（runtime environment）
+
+这为超长程任务提供断点续传、回放调试、状态迁移和审计合规能力。DeepSeek 的 Agent 后端方向将执行环境快照作为核心工程课题之一。
+
+> 详见 [[摘要-deepseek-service-engineer-jd]] — Agent 后端工程实践
 
 ## Loop 范式选择指南
 

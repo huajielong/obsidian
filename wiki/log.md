@@ -1,3 +1,38 @@
+## [2026-07-15] sync | 新增 Agent 沙箱工程体系 + 扩展 DeepSeek 全景对比至五 JD
+- **变更**: 新增 [[摘要-deepseek-agent-infra-jd]]（sources）；新增 [[Agent沙箱工程]]（concepts）；大幅更新 [[DeepSeek四份JD全景对比]]（标题从"四份"→"五份"、新增 Agent Infra 一行、更新团队定位图/对比矩阵/产业链图/技术栈/三层模型归属/面试图/关联连接）；更新 [[index]]（Sources + Concepts + Syntheses 各添加条目）
+- **冲突**: 无（[[Agent沙箱工程]] 作为 [[Harness_Engineering]] Safety Layer 的物理实现层，是互补的垂直分层关系；[[DeepSeek四份JD全景对比]] 更新为五 JD 版本为增量扩充无矛盾）
+- **网络**: 
+  - [[摘要-deepseek-agent-infra-jd]] 链接到 [[Agent沙箱工程]]/[[DeepSeek四份JD全景对比]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[摘要-预训练数据工程师-jd]]/[[摘要-deepseek-ai-search-jd]]
+  - [[Agent沙箱工程]] 链接到 [[摘要-deepseek-agent-infra-jd]]/[[DeepSeek四份JD全景对比]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[Context_Window]]/[[Agent_Interfaces]]/[[Work_Boundary]]/[[Graceful_Degradation]]/[[Failure_Injection_Chaos_Eval]]/[[DeepSeek]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[摘要-预训练数据工程师-jd]]/[[摘要-deepseek-ai-search-jd]]
+
+## [2026-07-15] sync | 新增 AI 搜索工程体系 + DeepSeek 四 JD 全景对比
+- **变更**: 新增 [[摘要-deepseek-ai-search-jd]]（sources）；新增 [[AI搜索工程]]（concepts）；新增 [[DeepSeek四份JD全景对比]]（syntheses）；更新 [[index]]（Sources + Concepts + Syntheses 各添加条目）
+- **冲突**: 无（全新知识领域；[[AI搜索工程]] 与现有 [[RAG]]/[[Context_Engineering]] 为互补拓展关系——RAG 是检索增强生成，AI 搜索工程是搜索引擎原生架构，两者互为补充无矛盾）
+- **网络**: 
+  - [[摘要-deepseek-ai-search-jd]] 链接到 [[AI搜索工程]]/[[DeepSeek四份JD全景对比]]/[[RAG]]/[[Context_Engineering]]/[[Harness_Engineering]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[摘要-预训练数据工程师-jd]]/[[DeepSeek]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[Agent_Loop]]/[[Agent_Interfaces]]
+  - [[AI搜索工程]] 链接到 [[摘要-deepseek-ai-search-jd]]/[[DeepSeek四份JD全景对比]]/[[RAG]]/[[Context_Engineering]]/[[Harness_Engineering]]/[[Context_Window]]/[[Cost_Optimization]]/[[Eval_Harness]]/[[Agent_Interfaces]]/[[Agent_Loop]]/[[Chunking]]/[[LightRAG]]/[[Memory_Agent]]/[[DeepSeek]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[摘要-预训练数据工程师-jd]]
+  - [[DeepSeek四份JD全景对比]] 链接到 [[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[摘要-预训练数据工程师-jd]]/[[摘要-deepseek-ai-search-jd]]/[[DeepSeek]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[RAG]]/[[AI搜索工程]]/[[预训练数据工程]]/[[预训练数据四方向对比]]/[[Agent_Loop]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[Agent_Observability]]/[[Agent_Interfaces]]
+
+## [2026-07-15] sync | 新增预训练数据工程体系：来源 + 概念 + 综合报告
+- **变更**: 新增 [[摘要-预训练数据工程师-jd]]（sources）；新增 [[预训练数据工程]]（concepts）；新增 [[预训练数据四方向对比]]（syntheses）；更新 [[index]]（Sources + Concepts + Syntheses 章节各添加一条目）
+- **冲突**: 无（全新知识领域，与现有知识体系无矛盾；[[预训练数据工程]] 概念与 [[Harness_Engineering]]/[[Context_Engineering]] 的关联在页面中已建立）
+- **网络**: 
+  - [[摘要-预训练数据工程师-jd]] 链接到 [[预训练数据工程]]/[[预训练数据四方向对比]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[DeepSeek]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[RAG]]/[[Agent_Loop]]/[[Eval_Harness]]
+  - [[预训练数据工程]] 链接到 [[摘要-预训练数据工程师-jd]]/[[预训练数据四方向对比]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[RAG]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[Eval_Harness]]/[[Agent_Loop]]/[[DeepSeek]]/[[Llama]]/[[Qwen]]
+  - [[预训练数据四方向对比]] 链接到 [[摘要-预训练数据工程师-jd]]/[[预训练数据工程]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[DeepSeek]]/[[RAG]]/[[Eval_Harness]]/[[Prompt_Engineering]]/[[Agent_Loop]]
+
+## [2026-07-15] lint | 修复 3 个死链 + 消解 5 个孤岛
+- **死链修复**: 新建 [[Hermes_Agent]]、[[Telegram]]、[[Slack]] 三个实体页面（被 [[AgentParadigms]] 引用）
+- **孤岛消解**: 
+  - [[LiteLLM]] → 在 [[Cost_Optimization]]、[[Graceful_Degradation]]、[[OpenAI_Compatible_API]] 添加反向链接
+  - [[AgentParadigms]] → 在 [[Agent_Interfaces]]、[[Claude_Code_Subagent]] 添加反向链接
+  - [[From_NoCode_To_Agent_Paradigm]] → 在 [[Harness_Engineering]]、[[Claude_Code_Workflow]]、[[Claude_Code_Skills]]、[[Developer_Agentic_Workflow]] 添加反向链接
+  - [[Self_Organizing_Teams]] → 在 [[Agent_Orchestration_Patterns]]、[[Multi_Agent_System]] 添加反向链接
+  - [[matt-pocock-skills-cheatsheet]] → 在 [[Claude_Code_Skills]] 添加反向链接
+- **格式修复**: [[AgentParadigms]] 中 `[[Hermes Agent]]` → `[[Hermes_Agent]]`（TitleCase 规范对齐）
+- **结果**: 0 死链、0 孤岛、知识库健康状态良好
+- **冲突**: 无
+
 ## [2026-07-15] ingest | 摄入 Tool Error 处理 + Function Schema 设计两篇实践文章
 - **变更**: 新增 [[摘要-tool-error-is-data]]（sources）；新增 [[摘要-function-schema-design]]（sources）；大幅更新 [[Tool_Calling]]（新增"错误处理模式"完整章节 + "Schema 设计深度指南"替换原有简表 + sources 更新 + 关联连接新增 2 个来源引用）；更新 [[index]]（Sources 章节添加 2 个条目）
 - **冲突**: 无（新知识独立，[[Tool_Calling]] 已有 Schema 简表与 Description 原则，新增的"深度指南"和"错误处理"为互补增量合并无矛盾）
@@ -388,3 +423,66 @@
 - **冲突**: 无（新增知识独立，[[Agent_Interfaces]] 为全新概念，[[Harness_Engineering]] 中的 Sandbox 提及已存在但无矛盾）
 - **网络**: [[Agent_Interfaces]] 与 [[Harness_Engineering]]/[[Agent_Loop]]/[[MCP]]/[[Claude_Agent_SDK]]/[[Codex]]/[[OpenAI_Agents_SDK]] 建立双向链接
 - **路线图**: [[摘要-awesome-agentic-ai-zh-foundations]] → [[摘要-awesome-agentic-ai-zh-llm-basics]] → [[摘要-awesome-agentic-ai-zh-prompt-engineering]] → [[摘要-awesome-agentic-ai-zh-tool-use]] → [[摘要-awesome-agentic-ai-zh-agent-frameworks]] → [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] → [[摘要-awesome-agentic-ai-zh-memory-rag]] → [[摘要-awesome-agentic-ai-zh-multi-agent-production]] → [[摘要-awesome-agentic-ai-zh-advanced-concepts]] → **[[摘要-awesome-agentic-ai-zh-agent-interfaces]]** — **路线图 Stage 0→1→2→3→4→5→6→7→7.5→8 全部收录完成 🎉**
+
+## [2026-07-15] ingest | DeepSeek Harness 团队职位描述 — 行业角色光谱与知识图谱
+- **变更**:
+  - **新增源摘要**: [[摘要-deepseek-harness-team-jd]] — DeepSeek Harness 团队 JD 全方向整理，含四个角色方向、技术知识图谱、三层工程模型行业验证、各方向特色技能、关键洞察
+  - **大幅更新**: [[DeepSeek]] — 新增 "Harness 团队" 完整章节（团队使命、四个招聘方向与技术知识体系）；新增 tags（Harness、Agent、招聘）；更新 sources 和关联连接
+  - **大幅更新**: [[Harness_Engineering]] — 新增 "行业视角：DeepSeek" 章节（行业验证表新增 DeepSeek 行、团队使命与公式、四角色光谱、全角色共享知识要求）；新增 "角色光谱" 章节（研究→工程→产品→PM 从科研深度到执行宽度的连续体）；新增 "Agent Harness 知识图谱" 表格（基础机制层 + 三层工程模型 + 应用层角色差异化 + AI 辅助开发能力 + 高强度用户门槛）
+  - **更新 [[index]]** — 新增 [[摘要-deepseek-harness-team-jd]] 到 Sources 章节
+- **冲突**: 无（新知识独立或补充现有页面；[[Harness_Engineering]] 已有"行业验证"表和"Harness 工程师"章节，新内容为互补增量合并无矛盾；[[DeepSeek]] 新增 Harness 团队章节为全新信息，与已有模型/API/实验数据内容互补无矛盾）
+- **网络**:
+  - [[摘要-deepseek-harness-team-jd]] 链接到 [[DeepSeek]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[Agent_Loop]]/[[MCP]]/[[Multi_Agent_System]]/[[Memory_Agent]]/[[Tool_Calling]]/[[Claude_Code_Subagent]]/[[Claude_Code_Skills]]/[[Skill_Factory]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Work_Boundary]] — 形成与现有概念/实体体系的密集双向链接
+  - [[DeepSeek]] 新增 ↹ [[摘要-deepseek-harness-team-jd]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[Prompt_Engineering]]
+  - [[Harness_Engineering]] 新增 ↹ [[摘要-deepseek-harness-team-jd]]/[[DeepSeek]]
+
+## [2026-07-15] ingest | DeepSeek 服务端工程师职位描述 — 生产 AI 系统三层架构与 Agent 后端工程实践
+- **变更**:
+  - **新增源摘要**: [[摘要-deepseek-service-engineer-jd]] — DeepSeek 服务端工程团队 JD 三个方向：线上核心服务（API 架构/性能优化）、Agent 后端（执行环境快照/框架评测/数据生成）、数据仓库（管道/流批/稳定性）；Agent 执行环境快照概念定义；三层生产 AI 系统架构模型；"工程即作品"哲学
+  - **大幅更新**: [[DeepSeek]] — 新增 "服务端工程团队" 完整章节（团队使命、三个方向、Agent 后端课题拆解、Harness 团队 vs 工程团队对照表）；补充 tags（工程、后端、数据）；更新 sources 和关联连接
+  - **大幅更新**: [[Harness_Engineering]] — 在"行业视角：DeepSeek"下新增"服务端工程团队"子章节（团队对照表、三层生产系统架构图、Agent 后端三个工程课题与 Harness 元件对照）；更新关联连接
+  - **增量更新**: [[Agent_Loop]] — 扩展"状态持久化"为"状态持久化与执行环境快照"（新增执行环境快照定义、存储内容清单、DeepSeek 实践引用）
+  - **更新 [[index]]** — 新增 [[摘要-deepseek-service-engineer-jd]] 到 Sources 章节
+- **冲突**: 无（新知识独立或补充现有页面；[[DeepSeek]] 的服务端工程团队与已有 Harness 团队章节为互补对照关系无矛盾；[[Harness_Engineering]] 新增子章节与已有 DeepSeek 章节互补；[[Agent_Loop]] 的状态持久化内容扩展无矛盾）
+- **网络**:
+  - [[摘要-deepseek-service-engineer-jd]] 链接到 [[DeepSeek]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Eval_Harness]]/[[Memory_Agent]]/[[Checkpoint_Commit]]/[[Multi_Agent_System]]/[[Agent_Interfaces]]/[[Context_Engineering]]/[[Agent_Observability]]/[[摘要-deepseek-harness-team-jd]] — 形成与两个 DeepSeek 团队的完整知识网络
+  - [[DeepSeek]] 服务端工程团队章节 <-> [[摘要-deepseek-service-engineer-jd]]/[[Harness_Engineering]]/[[Agent_Loop]]/[[Eval_Harness]]/[[Memory_Agent]]/[[Checkpoint_Commit]]/[[Agent_Observability]]/[[Agent_Interfaces]]
+  - [[Harness_Engineering]] 新增 <-> [[摘要-deepseek-service-engineer-jd]]
+  - [[Agent_Loop]] 新增 "执行环境快照" <-> [[摘要-deepseek-service-engineer-jd]]
+
+## [2026-07-15] sync | 新增超算集群工程体系：来源 + 概念
+- **变更**: 新增 [[摘要-hpc-cluster-engineer-jd]]（sources）；新增 [[超算集群工程]]（concepts）；更新 [[index]]（Sources + Concepts 章节各添加一条目）
+- **冲突**: 无（全新知识领域，与现有 [[Harness_Engineering]] 为互补关系——超算集群工程是 Harness Engineering 的物理基础设施底座层；与 [[Agent沙箱工程]] 构成"单机沙箱→集群底座"互补；与 [[预训练数据工程]] 无矛盾）
+- **网络**:
+  - [[摘要-hpc-cluster-engineer-jd]] 链接到 [[超算集群工程]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Agent_Loop]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[Agent_Observability]]
+  - [[超算集群工程]] 链接到 [[摘要-hpc-cluster-engineer-jd]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Agent_Loop]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[Agent_Observability]]/[[Context_Engineering]]/[[Agent_Interfaces]]/[[Work_Boundary]]
+
+## [2026-07-15] sync | 新增 AI 计算引擎工程体系：来源 + 概念
+- **变更**: 新增 [[摘要-hpc-operator-comm-compiler-jd]]（sources）；新增 [[AI计算引擎工程]]（concepts）；更新 [[超算集群工程]]（三层定位补充 AI 计算引擎对比、关联连接新增）；更新 [[index]]（Sources + Concepts 章节各添加一条目）
+- **冲突**: 无（全新知识领域；[[AI计算引擎工程]] 与 [[超算集群工程]] 构成"怎么算 vs 在哪儿算"的垂直互补关系；与 [[Harness_Engineering]] 为 Cost/Latency #8 的底层依赖关系）
+- **网络**:
+  - [[摘要-hpc-operator-comm-compiler-jd]] 链接到 [[AI计算引擎工程]]/[[超算集群工程]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Cost_Optimization]]/[[Eval_Harness]]
+  - [[AI计算引擎工程]] 链接到 [[摘要-hpc-operator-comm-compiler-jd]]/[[超算集群工程]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Cost_Optimization]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Prompt_Engineering]]
+  - [[超算集群工程]] 新增关联连接 [[AI计算引擎工程]]；三层定位新增对比表
+
+## [2026-07-15] sync | 新增 AI 训练推理系统工程体系：来源 + 概念
+- **变更**: 新增 [[摘要-training-inference-framework-jd]]（sources）；新增 [[AI训练推理系统工程]]（concepts）；更新 [[AI计算引擎工程]]（定位图增加 AI训练推理系统工程层、对比表改为三维）；更新 [[超算集群工程]]（定位图同步更新为四层体系、比较表更新、结论更新）；更新 [[index]]（Sources + Concepts 各添加一条目）
+- **冲突**: 无（[[AI训练推理系统工程]] 位于 [[AI计算引擎工程]] 之上、[[Harness_Engineering]] 之下，形成"怎么训练/推理 → 怎么算 → 在哪儿跑"的垂直三层依赖；与现有页面为互补增量关系无矛盾）
+- **网络**:
+  - [[摘要-training-inference-framework-jd]] 链接到 [[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Cost_Optimization]]/[[Eval_Harness]]/[[Agent_Loop]]
+  - [[AI训练推理系统工程]] 链接到 [[摘要-training-inference-framework-jd]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Cost_Optimization]]/[[Eval_Harness]]/[[Agent_Loop]]/[[Context_Window]]/[[Agent_Observability]]
+  - [[AI计算引擎工程]] 定位图新增 AI训练推理系统工程层，对比表全面更新
+  - [[超算集群工程]] 定位图同步更新为四层体系，对比表和结论同步刷新
+
+## [2026-07-15] sync | 新增 AI 存储工程体系：来源 + 概念（横向底座层）
+- **变更**: 新增 [[摘要-hpc-distributed-storage-jd]]（sources）；新增 [[AI存储工程]]（concepts，作为横向底座层）；更新 [[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[Agent沙箱工程]]（关联连接各新增 AI存储工程 引用）；更新 [[index]]（Sources + Concepts 各添加一条目，修复 Sources 误覆盖）
+- **冲突**: 无（[[AI存储工程]] 与前五个基础设施概念不同——它是**横向底座层**而非垂直层，与所有现有概念为互补支撑关系）
+- **网络**:
+  - [[摘要-hpc-distributed-storage-jd]] 链接到 [[AI存储工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Cost_Optimization]]/[[Harness_Engineering]]
+  - [[AI存储工程]] 链接到 [[摘要-hpc-distributed-storage-jd]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[DeepSeek五份JD全景对比]]/[[Harness_Engineering]]/[[Cost_Optimization]]/[[Eval_Harness]]/[[Agent_Loop]]/[[Memory_Agent]]
+  - [[AI训练推理系统工程]] 等 4 个概念页面各新增 [[AI存储工程]] 关联连接
+
+## [2026-07-15] sync | 新增 AI 集群可靠性工程体系：来源 + 概念（Build vs Run）
+- **变更**: 新增 [[摘要-hpc-cluster-reliability-jd]]（sources）；新增 [[AI集群可靠性工程]]（concepts，作为超算集群工程的 Run 面）；更新 [[超算集群工程]]（定位图增加 AI集群可靠性工程层、新增 Build vs Run 对比表、结论更新）；更新 [[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[AI存储工程]]/[[Agent沙箱工程]]（关联连接各新增 AI集群可靠性工程 引用）；更新 [[index]]（Sources + Concepts 各添加一条目）
+- **冲突**: 无（[[AI集群可靠性工程]] 与 [[超算集群工程]] 构成"Build vs Run"互补，与所有现有概念为互补关系）
+- **网络**: 六工程概念页面全部与 [[AI集群可靠性工程]] 建立双向关联连接

@@ -108,4 +108,5 @@ You are a senior code reviewer. When invoked:
 - [[Claude_Code_Dynamic_Workflows]] — 建立在 Subagent 之上的更高层编排
 - [[Claude_Code_Harness]] — 7-Layer Architecture，Subagent 位于 L5 Coordination
 - [[Claude_Code_Hooks]] — Subagent 也受 Hook 影响
+- [[AgentParadigms]] — Subagent 是 BYO-LLM CLI 范式的关键组件
 - [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] — 核心来源

@@ -69,4 +69,5 @@ Cost / Latency Optimization 是 [[Harness_Engineering]] 的 **第 8 个核心元
 - [[Agent_Loop]] — Agent Loop 的每一步都消耗 token
 - [[Multi_Agent_System]] — Multi-agent 的 3-10× token 成本更需要优化
 - [[Prompt_Engineering]] — 更好的 prompt 也是降本手段（减少 retry）
+- [[LiteLLM]] — 统一 API 网关，内建 Model Routing + Cost Tracking
 - [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — 本概念的核心来源（Stage 7 练习 6）

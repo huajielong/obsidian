@@ -1,9 +1,9 @@
 ---
 title: "DeepSeek"
 type: entity
-tags: [公司, 模型, API, 云端, MoE, 推理]
-sources: [raw/01-articles/05-跨平台成本对比本地vs云端.md, raw/01-articles/07-多模型回答风格对比.md, raw/01-articles/Ollama LLM 实验系列索引.md, raw/01-articles/awesome-agentic-ai-zh-stage-01-llm-basics.md, raw/01-articles/DeepSeek-API-错误处理实战.md, raw/01-articles/Few-Shot-实验对比.md, raw/01-articles/System-Prompt-实验对比.md]
-last_updated: 2026-07-10
+tags: [公司, 模型, API, 云端, MoE, 推理, Harness, Agent, 招聘, 工程, 后端, 数据]
+sources: []
+last_updated: 2026-07-15
 ---
 
 ## 定义
@@ -98,12 +98,75 @@ def estimate_tokens(text: str) -> int:
 
 > 详见 [[Exponential_Backoff]] — 指数退避重试的通用实现
 
+## Harness 团队
+
+DeepSeek 设有专门的 Agent Harness 团队，致力于将模型能力转化为前沿的 Agent 产品与科研突破。团队使命遵循核心公式：
+
+> **Model + Harness = Agent**
+
+### 四个招聘方向
+
+| 方向 | 定位 | 核心要求 |
+|------|------|---------|
+| **Agent Harness 研究** | 探索 Agent Harness 研究前沿 | 科研经验、0→1 推动能力、Benchmark 设计、实验迭代 |
+| **Agent Harness 研发/工程** | 解决下一代 Agent Harness 工程难题 | 技术架构、AI 辅助开发、快速迭代、开发者体验 |
+| **Agent Harness 产品** | 定义下一代 Agent 产品形态 | 产品路线图、UX/UI 设计、数据驱动决策、社区运营 |
+| **Agent Harness 项目经理**（实习）| 推动项目高效运转 | 沟通协调、进度跟踪、执行力 |
+
+### 技术知识体系
+
+DeepSeek Harness 团队要求全方向成员掌握以下知识：
+
+- **基础机制**：LLM API、KV Cache、Agent Loop、Tool Use、Reasoning、Planning、Skills、MCP、Memory、Subagent、Multi-Agent
+- **三层工程模型**：[[Prompt_Engineering]]、[[Context_Engineering]]、[[Harness_Engineering]]
+- **进阶机制**：自进化 Agent、超长程任务、沙箱执行、Observability
+
+> 详见 [[摘要-deepseek-harness-team-jd]] — 完整职位描述与知识图谱
+
+## 服务端工程团队
+
+DeepSeek 的服务端工程团队承担与 Harness 团队互补的角色——将模型智能落地为数千万日活用户可用的生产服务。
+
+> **团队使命**：与智能共演化，让工程即作品。
+>
+> 对内：与资深研究员合作构建提升模型智能边界的工程基建
+> 对外：深度参与 AI 产品的创新迭代，让智能触达亿万用户
+
+### 三个方向
+
+| 方向 | 核心职责 | 技术挑战 |
+|------|---------|---------|
+| **线上核心服务** | 大模型应用与 API 服务架构、性能优化、研发效能工具 | 数千万日活、高吞吐低延迟、可靠性 |
+| **Agent 后端** | Agent 执行环境快照、框架集成评测、Agent 数据生成 | 状态持久化、评测自动化、数据反哺模型 |
+| **数据仓库** | 数据管道、离线/实时计算、架构稳定性 | 大规模数据处理、流批一体、资源优化 |
+
+### Agent 后端方向：Harness 的工程实现层
+
+Agent 后端方向是三个方向中与 [[Harness_Engineering]] 关系最密切的，涵盖三个独特工程课题：
+
+1. **Agent 执行环境快照系统** — 将 Agent 运行时的完整状态（上下文、工具调用轨迹、中间结果）序列化存储，实现断点续传、回放调试、状态迁移
+2. **Agent 框架集成与评测** — 接入各类 Agent 框架，构建高效的评测基础设施
+3. **Agent 数据生成** — 用 Agent 执行轨迹作为训练数据反哺模型，实现模型与 Harness 的共同进化
+
+> 详见 [[摘要-deepseek-service-engineer-jd]] — 完整职位描述与三层架构
+
+### 团队对照
+
+| 维度 | Harness 团队 | 服务端工程团队 |
+|------|-------------|---------------|
+| 聚焦 | Agent 运行时设计 | 基础设施与生产服务 |
+| 产出 | Harness 原则、机制、原型 | 在线服务、数据管道、工程平台 |
+| 协作对象 | 研究员、产品经理、工程师 | 研究员（对内）、亿万用户（对外） |
+| 工程重心 | Loop / Tool / Memory / Subagent | 性能、可靠性、可观测性、可维护性 |
+
 ## 关联连接
 - [[摘要-ollama-cost-comparison]] — 成本对比实验数据来源
 - [[摘要-ollama-style-comparison]] — 风格对比实验数据来源
 - [[摘要-deepseek-api-error-handling]] — API 错误处理实战来源
 - [[摘要-few-shot-experiment]] — Few-Shot 实验来源
 - [[摘要-system-prompt-experiment]] — System Prompt 实验来源
+- [[摘要-deepseek-harness-team-jd]] — DeepSeek Harness 团队职位描述与知识要求
+- [[摘要-deepseek-service-engineer-jd]] — DeepSeek 服务端工程团队职位描述（线上核心服务/Agent 后端/数据仓库）
 - [[Exponential_Backoff]] — 指数退避重试通用实现
 - [[BPE_Tokenizer]] — Token 估算方法的底层算法
 - [[Ollama]] — 本地对比方案
@@ -111,3 +174,16 @@ def estimate_tokens(text: str) -> int:
 - [[Llama]] — 本地模型对比对象
 - [[Qwen]] — 本地模型对比对象
 - [[OpenAI_Compatible_API]] — DeepSeek 使用的 API 标准
+- [[Harness_Engineering]] — Harness Engineering 核心概念
+- [[Context_Engineering]] — 三层工程模型的中间层
+- [[Prompt_Engineering]] — 三层工程模型的基础层
+- [[Agent_Loop]] — Agent 核心运行机制，执行环境快照的关联概念
+- [[Eval_Harness]] — Agent 框架集成评测的关联概念
+- [[Memory_Agent]] — Agent 状态与记忆持久化
+- [[Checkpoint_Commit]] — 类比：版本控制中的快照概念
+- [[Agent_Observability]] — 可观测性基础设施
+- [[Agent_Interfaces]] — 智能体接口模型（含 Code Sandbox）
+- [[摘要-预训练数据工程师-jd]] — 预训练数据工程师 JD，数据供给侧团队
+- [[摘要-deepseek-ai-search-jd]] — AI 搜索工程师 JD，检索推理侧团队
+- [[AI搜索工程]] — AI 原生搜索工程概念
+- [[DeepSeek四份JD全景对比]] — 全部四份 JD 的横向对比分析
