@@ -127,6 +127,8 @@ for step in range(5):
 详见 [[摘要-llm-tool-calling-practice]] 中的完整实现（含多步骤推理链和多工具并行调用示例）。
 
 ## 关联连接
+- [[Agent数据产品工程]] — 评测数据桥梁层：通过评测体系设计与数据生产管线构建，连接产品体验与模型能力；聚焦办公/生活/搜索等通用场景
+- [[Agent能力工程]] — 能力构建层：通过 RL 环境构建、评测任务设计和能力短板补齐，系统性地提升模型 Agent 能力
 - [[Multi_Agent_System]] — 从 Single-agent Loop 扩展到多 Agent 协作
 - [[Agent_Orchestration_Patterns]] — Multi-agent 编排模式，与单 Agent Loop 互补
 - [[Harness_Engineering]] — 驾驭工程体系

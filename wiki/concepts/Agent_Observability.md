@@ -64,6 +64,8 @@ OTel-native 推荐：**Arize Phoenix**（★ 10k+）。
 
 ## 关联连接
 
+- [[Agent数据产品工程]] — 评测数据桥梁层：通过评测体系设计与数据生产管线构建，连接产品体验与模型能力；聚焦办公/生活/搜索等通用场景
+- [[Agent能力工程]] — 能力构建层：通过 RL 环境构建、评测任务设计和能力短板补齐，系统性地提升模型 Agent 能力
 - [[Harness_Engineering]] — Observability 是 Harness 的第 6 个核心元件
 - [[Eval_Harness]] — Observability 与 Eval 互补覆盖离线+在线评估
 - [[Cost_Optimization]] — Observability 是成本优化的前提（先测量才能优化）

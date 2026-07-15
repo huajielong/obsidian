@@ -486,3 +486,57 @@
 - **变更**: 新增 [[摘要-hpc-cluster-reliability-jd]]（sources）；新增 [[AI集群可靠性工程]]（concepts，作为超算集群工程的 Run 面）；更新 [[超算集群工程]]（定位图增加 AI集群可靠性工程层、新增 Build vs Run 对比表、结论更新）；更新 [[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[AI存储工程]]/[[Agent沙箱工程]]（关联连接各新增 AI集群可靠性工程 引用）；更新 [[index]]（Sources + Concepts 各添加一条目）
 - **冲突**: 无（[[AI集群可靠性工程]] 与 [[超算集群工程]] 构成"Build vs Run"互补，与所有现有概念为互补关系）
 - **网络**: 六工程概念页面全部与 [[AI集群可靠性工程]] 建立双向关联连接
+
+## [2026-07-15] sync | 新增 AI 平台运维工程体系：来源 + 概念扩展（运维开发方向）
+- **变更**: 新增 [[摘要-hpc-ops-platform-jd]]（sources，与前一份可靠性 JD 同团队）；扩展 [[AI集群可靠性工程]]（新增"内部双轨：集群运维 × 运维开发"定位、第 5 核心能力"运维开发平台工程"、挑战中的"快与稳平衡"；更新 frontmatter tags 和 sources）；更新 [[index]]（Sources 新增条目、Concepts 描述更新）
+- **冲突**: 无（本 JD 的集群运维方向与现有 [[AI集群可靠性工程]] 冗余但无害；运维开发方向为全新内容，与 [[Harness_Engineering]] 的 Tool Registry/Observability 有直接交集，已在源摘要中标注对应关系）
+- **网络**:
+  - [[摘要-hpc-ops-platform-jd]] 链接到 [[AI集群可靠性工程]]/[[摘要-hpc-cluster-reliability-jd]]/[[超算集群工程]]/[[AI训练推理系统工程]]/[[Harness_Engineering]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Cost_Optimization]]
+  - [[AI集群可靠性工程]] 新增 sources、tags；新增运维开发平台工程完整章节
+
+## [2026-07-15] sync | 新增 AI 基础设施硬件工程体系：来源 + 概念（物理底层）
+- **变更**: 新增 [[摘要-it-infrastructure-jd]]（sources，系统硬件&网络 / IT桌面&信息化双方向）；新增 [[AI基础设施硬件工程]]（concepts，作为物理硬件最底层）；更新 [[超算集群工程]]/[[AI集群可靠性工程]]/[[AI存储工程]]（关联连接各新增 AI基础设施硬件工程 引用）；更新 [[index]]（Sources + Concepts 各添加一条目）
+- **冲突**: 无（[[AI基础设施硬件工程]] 位于整个技术栈的最底层——低于超算集群工程和 AI 集群可靠性工程，高于 Agent 沙箱工程；IT 桌面方向为通用 ITIL 内容，仅在源摘要中记录不创建概念页面）
+- **网络**:
+  - [[摘要-it-infrastructure-jd]] 链接到 [[AI基础设施硬件工程]]/[[超算集群工程]]/[[AI集群可靠性工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[AI存储工程]]/[[Agent沙箱工程]]/[[Harness_Engineering]]
+  - [[AI基础设施硬件工程]] 链接到 [[摘要-it-infrastructure-jd]]/[[超算集群工程]]/[[AI集群可靠性工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[AI存储工程]]/[[Agent沙箱工程]]/[[Harness_Engineering]]/[[Cost_Optimization]]
+
+## [2026-07-15] sync | 新增 AI 数据中心工程体系：来源 + 概念（最底层物理设施）
+- **变更**: 新增 [[摘要-idc-datacenter-jd]]（sources，供配电/液冷/设计/运营/现场三方向）；新增 [[AI数据中心工程]]（concepts，作为物理建筑设施最底层）；更新 [[超算集群工程]]/[[AI集群可靠性工程]]/[[AI存储工程]]/[[AI基础设施硬件工程]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[Agent沙箱工程]]（关联连接各新增 AI数据中心工程 引用）；更新 [[index]]（Sources + Concepts 各添加一条目）
+- **冲突**: 无（[[AI数据中心工程]] 位于整个技术栈的最底部——低于 AI 基础设施硬件工程，与所有现有概念为"承载与被承载"的物理支撑关系）
+- **网络**: 全部 8 个基础设施概念页面均与 [[AI数据中心工程]] 建立双向关联连接
+
+## [2026-07-15] sync | 新增 AI 产品经理 JD + AI产品工程概念（最上层：产品化层）
+- **变更**: 新增 [[摘要-ai-product-manager-jd]]（sources）；新增 [[AI产品工程]]（concepts——最上层产品化层）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[AI产品工程]] 作为"站在模型与世界之间"的最上层，与现有 [[Harness_Engineering]]/[[Prompt_Engineering]]/[[Context_Engineering]] 等技术层为互补的"产品化/技术化"分层关系；六个工程概念 [[AI产品工程]]→[[AI训练推理系统工程]]→[[AI计算引擎工程]]→[[超算集群工程]]→[[AI集群可靠性工程]]→[[AI基础设施硬件工程]]→[[AI数据中心工程]]→[[AI存储工程]]→[[Agent沙箱工程]] 形成完整的"从产品到设施"的纵向全栈体系无矛盾）
+- **网络**:
+  - [[摘要-ai-product-manager-jd]] 链接到 [[AI产品工程]]/[[Harness_Engineering]]/[[Agent沙箱工程]]/[[AI训练推理系统工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[超算集群工程]]/[[AI集群可靠性工程]]/[[DeepSeek五份JD全景对比]]/[[DeepSeek]]
+  - [[AI产品工程]] 链接到 [[摘要-ai-product-manager-jd]]/[[Harness_Engineering]]/[[AI训练推理系统工程]]/[[AI计算引擎工程]]/[[超算集群工程]]/[[AI集群可靠性工程]]/[[AI存储工程]]/[[AI基础设施硬件工程]]/[[AI数据中心工程]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[预训练数据工程]]/[[Prompt_Engineering]]/[[Context_Engineering]]/[[DeepSeek五份JD全景对比]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Cost_Optimization]]/[[DeepSeek]]
+
+## [2026-07-15] sync | 新增 Code Agent 数据工程师 JD + Agent能力工程概念（第十份 JD，能力构建层）
+- **变更**: 新增 [[摘要-code-agent-data-engineer-jd]]（sources）；新增 [[Agent能力工程]]（concepts——横跨数据/训练/评估三层的 Agent 能力塑造层）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[Agent能力工程]] 与 [[预训练数据工程]] 为互补关系——预训练数据是静态文本/Rt 训练环境是动态交互；与 [[Eval_Harness]] 为内容供给关系——Eval Harness 是评测框架/本层是评测内容；与 [[AI训练推理系统工程]] 为使用者关系——RL 训练系统是基础设施/本层是训练内容；与 [[Agent沙箱工程]] 为依赖关系——RL 环境需要在沙箱中安全执行）
+- **网络**:
+  - [[摘要-code-agent-data-engineer-jd]] 链接到 [[Agent能力工程]]/[[预训练数据工程]]/[[AI训练推理系统工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[AI产品工程]]/[[Agent沙箱工程]]/[[DeepSeek四份JD全景对比]]/[[DeepSeek]]
+  - [[Agent能力工程]] 链接到 [[摘要-code-agent-data-engineer-jd]]/[[预训练数据工程]]/[[AI训练推理系统工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[AI产品工程]]/[[Agent沙箱工程]]/[[AI搜索工程]]/[[DeepSeek四份JD全景对比]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Context_Window]]/[[DeepSeek]]/[[摘要-deepseek-harness-team-jd]]/[[预训练数据四方向对比]]
+
+## [2026-07-15] sync | 新增通用Agent数据产品经理 JD + Agent数据产品工程概念（第十一份 JD，评测数据桥梁层）
+- **变更**: 新增 [[摘要-agent-general-data-pm-jd]]（sources）；新增 [[Agent数据产品工程]]（concepts——产品层与能力构建层之间的评测数据桥梁层）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[Agent数据产品工程]] 与 [[AI产品工程]] 为上下游关系——产品层定义用户体验方向/本层提供数据驱动评测；与 [[Agent能力工程]] 为互补关系——能力工程构建底层能力/本层定义通用场景评测与数据；与 [[Eval_Harness]] 为内容供给关系——Eval_Harness 是评测框架/本层是评测内容和标准；与 [[预训练数据工程]] 为数据形态互补——静态文本 vs 动态交互数据）
+- **网络**:
+  - [[摘要-agent-general-data-pm-jd]] 链接到 [[Agent数据产品工程]]/[[AI产品工程]]/[[Agent能力工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[AI搜索工程]]/[[预训练数据工程]]/[[Agent沙箱工程]]/[[DeepSeek]]
+  - [[Agent数据产品工程]] 链接到 [[摘要-agent-general-data-pm-jd]]/[[AI产品工程]]/[[Agent能力工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[AI搜索工程]]/[[预训练数据工程]]/[[AI训练推理系统工程]]/[[Agent沙箱工程]]/[[Prompt_Engineering]]/[[Agent_Loop]]/[[Agent_Observability]]/[[DeepSeek]]
+
+## [2026-07-15] sync | 新增专业领域数据产品经理 JD + 专业领域数据工程概念（第十二份 JD，专业领域评测数据层）
+- **变更**: 新增 [[摘要-domain-data-product-manager-jd]]（sources）；新增 [[专业领域数据工程]]（concepts——专业领域评测数据层，[[Agent数据产品工程]] 在专业领域的展开）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[专业领域数据工程]] 与 [[Agent数据产品工程]] 为"方法论框架 vs 专业展开"关系——共享同一套评测+数据方法论但面向不同场景；与 [[预训练数据工程]] 为数据形态互补——大规模网络文本 vs 小批量专家质控；与 [[Agent能力工程]] 为维度互补——通用底层能力构建 vs 专业领域评测数据注入）
+- **网络**:
+  - [[摘要-domain-data-product-manager-jd]] 链接到 [[专业领域数据工程]]/[[Agent数据产品工程]]/[[AI产品工程]]/[[Agent能力工程]]/[[Eval_Harness]]/[[预训练数据工程]]/[[Harness_Engineering]]/[[DeepSeek]]
+  - [[专业领域数据工程]] 链接到 [[摘要-domain-data-product-manager-jd]]/[[Agent数据产品工程]]/[[AI产品工程]]/[[Agent能力工程]]/[[Eval_Harness]]/[[预训练数据工程]]/[[Harness_Engineering]]/[[AI训练推理系统工程]]/[[Prompt_Engineering]]/[[Agent沙箱工程]]/[[DeepSeek]]
+
+## [2026-07-15] sync | 新增 AI创作数据产品经理 JD + AI创作数据工程概念（第十三份 JD，评测数据三部曲最终章：创作审美层）
+- **变更**: 新增 [[摘要-ai-creative-data-pm-jd]]（sources）；新增 [[AI创作数据工程]]（concepts——评测数据三部曲最终章：将人类审美标准转化为可操作的评测体系与数据管线）；更新 [[index]]（Sources + Concepts 各添加条目）
+- **冲突**: 无（全新知识领域；[[AI创作数据工程]] 与 [[Agent数据产品工程]]/[[专业领域数据工程]] 构成"评测数据产品三部曲"——同一方法论框架、不同领域展开；与 [[AI搜索工程]] 为协同关系——搜索摘要文本质量依赖本层的写作标准）
+- **网络**:
+  - [[摘要-ai-creative-data-pm-jd]] 链接到 [[AI创作数据工程]]/[[Agent数据产品工程]]/[[专业领域数据工程]]/[[AI产品工程]]/[[AI搜索工程]]/[[Eval_Harness]]/[[Harness_Engineering]]/[[预训练数据工程]]/[[DeepSeek]]
+  - [[AI创作数据工程]] 链接到 [[摘要-ai-creative-data-pm-jd]]/[[Agent数据产品工程]]/[[专业领域数据工程]]/[[AI产品工程]]/[[AI搜索工程]]/[[Eval_Harness]]/[[预训练数据工程]]/[[Agent沙箱工程]]/[[Harness_Engineering]]/[[DeepSeek]]
