@@ -282,6 +282,39 @@ RL 训练比传统训练更难 Scale：
 - 低延迟 + 高质量 → 大模型 + 高精度 → 成本高
 - 低成本 + 高质量 → 大模型 + 强量化 → 延迟高
 
+#### 推理引擎横向对比
+
+| 维度 | **vLLM** | **TGI (Text Generation Inference)** | **SGLang** | **TensorRT-LLM** | **llama.cpp** |
+|------|----------|--------------------------------------|------------|-----------------|---------------|
+| **创建方** | UC Berkeley | Hugging Face | Stanford LMSys | NVIDIA | ggerganov (社区) |
+| **开源** | ✅ | ✅ | ✅ | ✅ (部分) | ✅ |
+| **核心技术** | PagedAttention | 连续批处理 + Flash Attention | RadixAttention + 结构化生成 | 图优化 + 算子融合 + FP8 | GGUF 量化 + CPU/GPU 混合 |
+| **批处理** | ⭐⭐⭐ 连续批处理 | ⭐⭐⭐ 连续批处理 | ⭐⭐⭐ RadixAttention 前缀感知批处理 | ⭐⭐⭐ 连续批处理 + In-flight 批处理 | ⭐⭐ 简单批处理 |
+| **KV Cache 优化** | ⭐⭐⭐ PagedAttention | ⭐⭐⭐ Prefix Caching | ⭐⭐⭐⭐ RadixAttention（Tree-structured，前缀缓存效率最高） | ⭐⭐⭐ 自定义显存管理 | ⭐⭐ 无需 KV Cache 管理（CPU 卸载） |
+| **量化支持** | AWQ, GPTQ, FP8, INT4 | AWQ, GPTQ, FP8, bitsandbytes | FP8, INT8, AWQ | **FP8, INT4, INT8, INT4-FP8**（最全面） | GGUF 格式所有量化级别 |
+| **多模态** | ⭐⭐ 支持 LLaVA, Phi-3V | ⭐⭐ 支持 Idefics, LLaVA | ⭐⭐ 支持 LLaVA | ⭐ 有限 | ⭐ 有限 |
+| **结构化输出** | ⭐ 基础（Outlines 集成） | ⭐⭐ 基础（JSON 模式） | ⭐⭐⭐⭐ **原生结构化生成**（约束解码引擎） | ⭐ 基础 | ⭐ 有限 |
+| **吞吐（基准）** | 高（连续批处理 + V1/V2 引擎） | 中 | 高（结构化生成场景最高） | **最高**（图优化编译） | 低（CPU/GPU 混合） |
+| **延迟（基准）** | 中 | 中 | 低（RadixAttention 共享前缀） | **低**（算子融合） | 高 |
+| **兼容性** | ⭐⭐⭐ OpenAI 兼容 API | ⭐⭐⭐ 兼容性高 | ⭐⭐⭐ OpenAI 兼容 API | ⭐⭐ 需 NVIDIA 生态 | ⭐ 需 GGUF 格式转换 |
+| **HW 需求** | NVIDIA GPU (Volta+) | NVIDIA GPU (Volta+) | NVIDIA GPU (Ampere+) | NVIDIA GPU (Ampere+) | CPU + GPU (任何 GPU) |
+| **最佳场景** | 通用生产级推理，社区最活跃（★42k+） | Hugging Face 生态无缝集成 | 结构化输出 + 前缀共享场景（代码/多轮对话） | 极致性能，有耗时的编译优化成本 | 消费级硬件本地推理 |
+
+**选型建议**：
+
+```
+你的推理场景？
+├─ 需要最大化吞吐
+│  ├─ NVIDIA 生态？→ TensorRT-LLM（最高性能，但需编译耗费时间）
+│  └─ 社区支持优先？→ vLLM（★42k，最活跃，开箱即用）
+├─ 需要结构化输出（JSON mode / Grammar约束）
+│  └─ SGLang（原生约束解码引擎，结构化生成场景吞吐最高）
+├─ 已用 Hugging Face 生态
+│  └─ TGI（无缝集成 transformers 模型）
+└─ 消费级硬件 / 本地开发
+   └─ llama.cpp（GGUF 量化，CPU/GPU 混合推理）
+```
+
 ### 5. "擅长与 Code Agent 合作"对框架设计的影响
 
 写入核心要求的"与 Code Agent 合作"对框架工程本身有深远影响：

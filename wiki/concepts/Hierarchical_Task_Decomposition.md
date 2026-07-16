@@ -15,11 +15,11 @@ Hierarchical Task Decomposition 是一种 Multi-Agent 编排模式：通过 **Su
 
 ## 核心特征
 
-| 特征 | 说明 |
-|------|------|
+| 特征                   | 说明                                             |
+| -------------------- | ---------------------------------------------- |
 | **至少 2 层 Recursion** | Supervisor → Worker 还不够，需要 Worker → Sub-worker |
-| **逐层 Scope 缩减** | 每下一层任务范围更窄、Context 更聚焦 |
-| **结果向上汇总** | Sub-worker → Worker → Supervisor 逐层合并 |
+| **逐层 Scope 缩减**      | 每下一层任务范围更窄、Context 更聚焦                         |
+| **结果向上汇总**           | Sub-worker → Worker → Supervisor 逐层合并          |
 
 ## 解决的问题
 

@@ -1,3 +1,10 @@
+## [2026-07-16] sync | 新增 LlamaIndex 实体页 + 升级 RAG 文档解析对比
+- **变更**: 新增 [[LlamaIndex]]（entities）；更新 [[index]]（Entities 章节添加条目）；升级 [[RAG]]「文档解析工具对比」（从扁平工具列表→四维对比表含选型建议）
+- **冲突**: 无（LlamaIndex 作为新的 RAG 数据框架实体，与 [[LangChain]]/[[LangGraph]] 定位互补不冲突；与现有 [[RAG]]/[[Chunking]] 页面的引用形成正向双向链接）
+- **网络**: 
+  - [[LlamaIndex]] 链接到 [[LangChain]]/[[LangGraph]]/[[RAG]]/[[LightRAG]]/[[ragas]]/[[Chunking]]/[[Agent_Orchestration_Patterns]]/[[Agent_Loop]]/[[Memory_Agent]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[摘要-awesome-agentic-ai-zh-agent-frameworks]]/[[摘要-awesome-agentic-ai-zh-memory-rag]]/[[摘要-算法应用开发工程师-jd]]
+  - [[RAG]] 升级：新增文档解析工具对比表（[[LlamaIndex]] Loaders vs docling vs MarkItDown），含定位/强项/弱项/推荐场景四维对比 + 选型建议
+
 ## [2026-07-15] sync | 新增 Agent 沙箱工程体系 + 扩展 DeepSeek 全景对比至五 JD
 - **变更**: 新增 [[摘要-deepseek-agent-infra-jd]]（sources）；新增 [[Agent沙箱工程]]（concepts）；大幅更新 [[DeepSeek四份JD全景对比]]（标题从"四份"→"五份"、新增 Agent Infra 一行、更新团队定位图/对比矩阵/产业链图/技术栈/三层模型归属/面试图/关联连接）；更新 [[index]]（Sources + Concepts + Syntheses 各添加条目）
 - **冲突**: 无（[[Agent沙箱工程]] 作为 [[Harness_Engineering]] Safety Layer 的物理实现层，是互补的垂直分层关系；[[DeepSeek四份JD全景对比]] 更新为五 JD 版本为增量扩充无矛盾）
@@ -586,3 +593,21 @@
 - **其他修复**: 图片引用（[[Pasted image 20260706174748.png]]）排除为非死链；`\`结尾转义问题（GPT/Self_Attention/Transformer_Architecture）确认为正则匹配边界限制而非真实死链；已合并 1 处锚点链接触达（摘要-多模态理解研究 -> 预训练数据工程#3. 多模态数据处理）
 - **结果**: 0 死链、0 孤岛、0 未同步索引、知识库健康状态良好
 - **冲突**: 无
+
+## [2026-07-16] sync | 补齐算法应用开发工程师 JD 相关知识库缺口（3 实体 + 1 概念 + 2 扩展）
+- **变更**: 
+  - **新增概念**: [[Parameter_Efficient_Fine_Tuning]] — 参数高效微调（PEFT/LoRA/QLoRA/P-Tuning），JD 中模型微调要求的最大知识缺口
+  - **新增实体**: [[Weights_and_Biases]]、[[MLflow]]、[[Ray]] — MLOps 工具链三件套，JD 加分项
+  - **大幅更新**: [[RAG]] — 新增完整 Embedding 模型选型指南章节（主流 9 模型对比/选型决策树/维度分析/检索模式对比/评估指标）
+  - **大幅更新**: [[AI训练推理系统工程]] — 新增推理引擎横向对比表（vLLM/TGI/SGLang/TensorRT-LLM/llama.cpp 六大维度）
+  - **更新 [[index]]** — Concepts 章节新增 [[Parameter_Efficient_Fine_Tuning]]；Entities 章节新增 [[Weights_and_Biases]]、[[MLflow]]、[[Ray]]；[[RAG]] 和 [[AI训练推理系统工程]] 描述更新
+- **冲突**: 无（所有新内容为知识库增量补充，与现有页面无矛盾；[[Parameter_Efficient_Fine_Tuning]] 与 [[Model_Fine_Tuning]] 为"一般 vs 具体"的父子关系，[[Model_Fine_Tuning]] 侧重微调对模型性格的影响，[[Parameter_Efficient_Fine_Tuning]] 侧重参数高效微调的技术细节与工程实践，互补无矛盾）
+- **网络**: 
+  - [[Parameter_Efficient_Fine_Tuning]] 链接到 [[Model_Fine_Tuning]]/[[后训练研究]]/[[AI训练推理系统工程]]/[[预训练数据工程]]/[[RAG]]/[[Harness_Engineering]]/[[Cost_Optimization]]/[[摘要-算法应用开发工程师-jd]]
+  - [[Weights_and_Biases]] 链接到 [[MLflow]]/[[Ray]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[摘要-算法应用开发工程师-jd]]
+  - [[MLflow]] 链接到 [[Weights_and_Biases]]/[[Ray]]/[[Eval_Harness]]/[[Agent_Observability]]/[[AI训练推理系统工程]]/[[摘要-算法应用开发工程师-jd]]
+  - [[Ray]] 链接到 [[Weights_and_Biases]]/[[MLflow]]/[[AI训练推理系统工程]]/[[Eval_Harness]]/[[Cost_Optimization]]/[[Agent沙箱工程]]/[[摘要-算法应用开发工程师-jd]]
+- **变更**: 新增 [[摘要-算法应用开发工程师-jd]]（sources）；更新 [[index]]（Sources 章节添加条目）
+- **冲突**: 无（全新 JD，与已有 DeepSeek 系列 JD 形成"应用层 vs 基础设施/研究层"的垂直互补关系，无矛盾）
+- **网络**: 
+  - [[摘要-算法应用开发工程师-jd]] 链接到 [[Agent_Loop]]/[[Tool_Calling]]/[[RAG]]/[[Chunking]]/[[Context_Engineering]]/[[Harness_Engineering]]/[[Model_Fine_Tuning]]/[[Prompt_Engineering]]/[[Transformer_Architecture]]/[[Multi_Agent_System]]/[[Eval_Harness]]/[[Agent_Observability]]/[[Cost_Optimization]]/[[Agent_Orchestration_Patterns]]/[[LangChain]]/[[AutoGen]]/[[DeepSeek四份JD全景对比]]

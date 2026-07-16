@@ -1,0 +1,31 @@
+算法应用开发工程师
+
+职位描述
+【核心职责】
+1.AI Agent研发：负责智能体系统的架构设计与开发，
+实现复杂的任务规划、推理及外部工具调用（Function
+Calling），构建自主工作流。
+2.RAG链路优化：搭建高性能RAG系统，主导文档解
+析、切片策略（Chunking）、向量化（Embedding）
+及混合检索（Hybrid Search）的全链路优化，显著提
+升召回准确率。
+3.模型微调与迭代：基于私有业务数据，主导大语言
+模型（LLM）的微调（Fine-tuning）与对齐，持续提升
+模型在特定领域的表现。
+4.工程落地与运维：负责AI服务的高性能推理部署，
+建立模型监控与评估体系；与产品、后端团队紧密协
+作，确保AI能力无缝集成到业务产品中。
+
+
+【任职要求】
+1.基础背景：计算机相关专业本科及以上学历，6年以上机器学习/NLP工程经验，具备扎实的算法与数据结构基础。
+2.编程能力：精通Python，熟练掌握PyTorch、Hugging Face等主流框架，代码规范，工程能力强。
+3.有基于LangChain、LlamaIndex、AutoGen等框架开发并部署Agent的实战经验。
+4.深入理解RAG原理，熟练使用FAISS、Milvus、Pinecone等向量数据库，有处理大规模知识库的经验。
+5.有在私有数据集上进行LLM微调（LoRA/P-Tuning等）的成功落地案例。
+6.深刻理解Transformer架构、Embedding原理、Prompt Engineering及模型评估指标。
+
+加分项：
+1.熟悉多智能体（Multi-agent）系统设计与开发。
+2.有GPU显存/算力优化、分布式训练经验。
+3.掌握MLOps工具链（W&B, MLflow, Ray）及云原生技术（Docker/K8s）。

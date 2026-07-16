@@ -63,6 +63,7 @@
 - [[摘要-pretraining-researcher-jd]] — 预训练（数据/算法）研究员职位描述：算法架构创新与数据策略研究的双核驱动，在当前范式内将预训练技术推向极致
 - [[摘要-posttraining-researcher-jd]] — 后训练（数据/算法）研究员职位描述：通过 RL 算法（RLHF/RLVR/PPO/GRPO）、后训练数据与评测的三元组驱动，最大化释放 Base 模型潜力
 - [[摘要-multimodal-understanding-researcher-jd]] — 多模态理解（数据/算法）研究员职位描述：视觉编码器优化/多模态预训练/多模态后训练/评测全链路，与文本体系平行的多模态维度研究
+- [[摘要-算法应用开发工程师-jd]] — 算法应用开发工程师职位描述：Agent/RAG/微调三核驱动的 AI 应用层工程落地，横跨 Prompt/Context/Harness 三层工程模型
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -77,6 +78,7 @@
 - [[LangChain]] — LLM 应用开发框架，Harness Engineering 集大成者，LangGraph/LangSmith/LangMem 生态母框架
 - [[LangGraph]] — 图式 Agent 编排框架，Production 级 Multi-agent 首选（支持 checkpointing + time-travel debug）
 - [[LiteLLM]] — 统一 LLM API 网关（AI Gateway），OpenAI 兼容接口调用 100+ 模型，内建路由/费用追踪/护栏/可观测性
+- [[LlamaIndex]] — LLM 数据框架，专注 RAG 数据路径（Ingest → Index → Retrieve → Synthesize），Workflows 事件驱动编排 + llama-deploy 生产运行时
 - [[CrewAI]] — 角色驱动 Multi-agent 框架，~20 行完成 Crew 定义，快速雏形首选
 - [[AutoGen]] — Microsoft 对话式 Multi-agent 框架，专攻 Debate / Peer Review / GroupChat 模式
 - [[OpenAI_Agents_SDK]] — OpenAI 官方 Agent SDK，Agent Hand-off + 结构化输出，2026-04 起内建 sandbox
@@ -109,6 +111,9 @@
 - [[Telegram]] — 跨平台即时通讯软件，Agent 的聊天界面接口
 - [[Slack]] — 企业协作通讯平台，Agent 的聊天界面接口
 - [[API设计]] — API 设计工程实践：定义软件系统之间交互接口的规范、协议、错误处理与开发者体验设计
+- [[Weights_and_Biases]] — MLOps 实验追踪与模型监控平台，W&B 自动记录训练/系统指标，Sweeps 超参搜索，Weave Agent 全链路可观测性
+- [[MLflow]] — Databricks 开源的 ML 生命周期管理平台，实验追踪/模型注册/模型部署三件套，Apache 2.0 完全开源
+- [[Ray]] — UC Berkeley 开源的分布式计算框架（AI 领域的"分布式操作系统"），Ray Train/Serve/Tune/RLlib/AIR 生态
 
 ## Syntheses
 - [[DeepSeek四份JD全景对比]] — DeepSeek 五份招聘 JD（Harness 团队/服务端工程/预训练数据/AI 搜索/Agent Infra）的全方位横向对比：团队定位、技术栈光谱、工程模型归属、工程文化、面试准备关联图
@@ -123,7 +128,7 @@
 
 - [[From_NoCode_To_Agent_Paradigm]] — 从传统无代码平台（Zion 类）到 Skill+CLI+Workflow Agent 范式的范式转移分析
 - [[Multi_Agent_System]] — 多 Agent 系统核心概念：Workflow vs Agent / Single vs Multi 分类矩阵，何时该（不该）使用 Multi-agent 的决策框架
-- [[RAG]] — 检索增强生成架构：基础流水线、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型
+- [[RAG]] — 检索增强生成架构：基础流水线、Embedding 模型选型指南、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型
 - [[LightRAG]] — 轻量级 Graph RAG 检索框架（★ 35.1k），增强跨文档实体推理
 - [[ragas]] — 开源 RAG 评估框架，提供 8+ 标准化指标（Retrieval Recall / Faithfulness / Relevance）
 - [[Memory_Agent]] — Agent 记忆系统：Working/Long-term Memory、CoALA 四层分类、三种设计模式与 Production Memory Layer
@@ -174,6 +179,7 @@
 - [[BPE_Tokenizer]] — 字节对编码分词算法，导致中英文 Token 效率差异的根因
 - [[Temperature_Parameter]] — LLM 温度参数，控制输出确定性与多样性的核心参数
 - [[Model_Fine_Tuning]] — 模型微调，决定模型"性格"和回复风格的关键因素
+- [[Parameter_Efficient_Fine_Tuning]] — 参数高效微调（PEFT）：LoRA/QLoRA/P-Tuning 等只更新 0.01-2% 参数的微调方法，在保持预训练能力的同时适配下游任务
 - [[MCP]] — Model Context Protocol，标准化 LLM 工具调用的开放协议，三层抽象（Tools/Resources/Prompts）
 - [[Claude_Code_Hooks]] — Claude Code L3 控制层事件钩子，在 PreToolUse/PostToolUse 等时机拦截
 - [[Claude_Code_Subagent]] — Claude Code 原生 Multi-Agent 机制，独立 Context Window 的子 Agent
@@ -204,7 +210,7 @@
 - [[预训练数据工程]] — 预训练数据全生命周期工程体系：数据采集、语料清洗、多模态处理、数据基建，横跨 Context Engineering 与 Harness Engineering 的 LLM 基础设施层
 - [[超算集群工程]] — AI 超算集群工程体系：万卡→数十万卡异构计算集群的设计、调度、网络、调优与运营
 - [[AI计算引擎工程]] — AI 计算引擎工程体系：高性能算子、集合通信与 DSL 编译器三大技术栈
-- [[AI训练推理系统工程]] — AI 训练推理系统工程体系：分布式训练、RL 训练、多模态训练、推理服务四大系统
+- [[AI训练推理系统工程]] — AI 训练推理系统工程体系：分布式训练、RL 训练、多模态训练、推理服务（含五大推理引擎横向对比）四大系统
 - [[AI集群可靠性工程]] — AI 超算集群可靠性工程体系：集群运维与运维开发（平台工程）双轨，故障管理、可观测性、自动化自愈
 - [[AI基础设施硬件工程]] — AI 基础设施硬件工程体系：硬件选型、固件基线、基准压测与物理网络运维
 - [[AI数据中心工程]] — AI 数据中心工程体系：供配电、液冷、现场运营与规划设计
