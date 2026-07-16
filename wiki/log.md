@@ -651,3 +651,12 @@
   - [[Backpropagation]] 链接到 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Micrograd]]/[[Autograd]]/[[Computation_Graph]]/[[AI训练推理系统工程]]/[[预训练研究]]/[[后训练研究]]/[[Agent能力工程]]
   - [[Autograd]] 链接到 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Micrograd]]/[[Backpropagation]]/[[Computation_Graph]]/[[AI训练推理系统工程]]
   - [[Computation_Graph]] 链接到 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Micrograd]]/[[Backpropagation]]/[[Autograd]]/[[AI训练推理系统工程]]
+
+## [2026-07-17] query | 整理四位AI教育者（吴恩达/李宏毅/李沐/Karpathy）综合对比
+- **变更**: 新增 [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]]（syntheses）；新增 [[Andrew_Ng]]、[[Hung_yi_Lee]]、[[Mu_Li]]（entities）；更新 [[index]]（Entities 添加 3 条目 + Syntheses 添加 1 条目）
+- **冲突**: 无（三位教育者知识域独立，与 Karpathy 已有实体形成互补关系）
+- **网络**:
+  - [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] 链接到 [[Andrew_Ng]]/[[Hung_yi_Lee]]/[[Mu_Li]]/[[Andrej_Karpathy]]/[[GPT]]/[[Transformer_Architecture]]/[[Backpropagation]]/[[Micrograd]]/[[摘要-gpt-from-scratch]]/[[摘要-karpathy-micrograd-neural-networks-backpropagation]]
+  - [[Andrew_Ng]] 链接到 [[Mu_Li]]/[[Andrej_Karpathy]]/[[Hung_yi_Lee]]
+  - [[Hung_yi_Lee]] 链接到 [[Andrew_Ng]]/[[Andrej_Karpathy]]/[[Mu_Li]]
+  - [[Mu_Li]] 链接到 [[Andrew_Ng]]/[[Andrej_Karpathy]]/[[Hung_yi_Lee]]

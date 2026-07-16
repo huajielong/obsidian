@@ -101,6 +101,9 @@
 - [[Ollama]] — 本地大语言模型运行工具，支持 Llama/Qwen 等多种开源模型
 - [[Qwen]] — 阿里云通义千问开源大语言模型系列
 - [[Llama]] — Meta 开源大语言模型系列
+- [[Andrew_Ng]] — 吴恩达，AI 教育之父，Coursera & DeepLearning.AI 创始人，ML/DL 课程全球最受欢迎
+- [[Hung_yi_Lee]] — 李宏毅，台湾大学教授，中文圈公认体验最好的 ML/DL 课程主讲人
+- [[Mu_Li]] — 李沐，亚马逊 AWS 首席科学家，《动手学深度学习》作者，B站最强 AI 实战导师
 - [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
 - [[DeepSeek]] — 深度求索 AI 公司，MoE 架构云端 API，含 API 错误处理与实验基准数据
 - [[Dify]] — 开源 LLM 应用开发平台，可视化 Workflow 编排、内置 RAG Pipeline、多租户团队协作
@@ -124,6 +127,7 @@
 - [[预训练数据四方向对比]] — 预训练数据工程师四个方向的横向对比分析：技术栈梯度、工程定位光谱、职业发展路径、与 DeepSeek Harness 团队的交叉对比
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
 - [[智能体研发工程师JD对标分析]] — 智能体研发工程师 JD 的全方位对标分析：技术栈光谱、知识库概念匹配矩阵、与同类 JD 横向对比、能力差距诊断与补全建议
+- [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] — 四位顶级 AI 教育者（吴恩达/李宏毅/李沐/Karpathy）全景对比：人物简介、核心课程、观看地址、学习路径匹配指南
 
 ## Concepts
 - [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
