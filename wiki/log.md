@@ -660,3 +660,10 @@
   - [[Andrew_Ng]] 链接到 [[Mu_Li]]/[[Andrej_Karpathy]]/[[Hung_yi_Lee]]
   - [[Hung_yi_Lee]] 链接到 [[Andrew_Ng]]/[[Andrej_Karpathy]]/[[Mu_Li]]
   - [[Mu_Li]] 链接到 [[Andrew_Ng]]/[[Andrej_Karpathy]]/[[Hung_yi_Lee]]
+
+## [2026-07-17] query | 补充李飞飞（Fei-Fei Li）至 AI 教育者对比文档
+- **变更**: 新增 [[Fei-Fei_Li]]（entities）；大幅更新 [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]]（新增李飞飞人物简介、课程对照列、CS231n 详情章节、人群匹配、风格对比 — 从四→五位教育者）；更新 [[Andrej_Karpathy]]（关联连接添加 [[Fei-Fei_Li]]）；更新 [[index]]（Entities + Syntheses 更新）
+- **冲突**: 无（李飞飞知识域独立，与 Karpathy 的师生关系已在双方页面标注）
+- **网络**:
+  - [[Fei-Fei_Li]] 链接到 [[Andrej_Karpathy]]/[[Andrew_Ng]]/[[Mu_Li]]/[[Hung_yi_Lee]]/[[Transformer_Architecture]]/[[GPT]]
+  - [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] 新增 [[Fei-Fei_Li]] 链接
