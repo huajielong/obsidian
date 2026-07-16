@@ -634,3 +634,20 @@
 - **冲突**: 无（全新 JD，与已有 DeepSeek 系列 JD 形成"应用层 vs 基础设施/研究层"的垂直互补关系，无矛盾）
 - **网络**: 
   - [[摘要-算法应用开发工程师-jd]] 链接到 [[Agent_Loop]]/[[Tool_Calling]]/[[RAG]]/[[Chunking]]/[[Context_Engineering]]/[[Harness_Engineering]]/[[Model_Fine_Tuning]]/[[Prompt_Engineering]]/[[Transformer_Architecture]]/[[Multi_Agent_System]]/[[Eval_Harness]]/[[Agent_Observability]]/[[Cost_Optimization]]/[[Agent_Orchestration_Patterns]]/[[LangChain]]/[[AutoGen]]/[[DeepSeek四份JD全景对比]]
+
+## [2026-07-16] sync | 从 YouTube 转录 Karpathy micrograd 视频，生成 Obsidian 笔记 + Canvas 概念图
+- **变更**: 新增 [[raw/01-articles/Karpathy_micrograd_neural_networks_backpropagation]]（sources——Karpathy micrograd 视频的结构化笔记，含 frontmatter/WikiLinks/Callouts）；新增 [[raw/01-articles/micrograd_concept_map]]（canvas——micrograd 概念关系可视化图）
+- **冲突**: 无（笔记内容为教学性理论知识，与现有概念体系互补无矛盾——[[AI训练推理系统工程]]/[[预训练研究]]/[[后训练研究]]/[[Agent能力工程]]/[[Harness_Engineering]] 等均与本笔记建立关联）
+- **网络**:
+  - [[raw/01-articles/Karpathy_micrograd_neural_networks_backpropagation]] 链接到 [[AI训练推理系统工程]]/[[预训练研究]]/[[后训练研究]]/[[Agent能力工程]]/[[Prompt_Engineering]]/[[Harness_Engineering]]/[[预训练数据工程]]/[[Frontier研究]]
+  - [[raw/01-articles/micrograd_concept_map]] 是 micrograd 的概念可视化 Canvas，呈现 Value 类 → 神经网络 → 训练循环 → 现实世界映射四层架构
+
+## [2026-07-16] ingest | 摄入 Karpathy micrograd 文章 — 反向传播/自动求导/计算图
+- **变更**: 新增 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]（sources）；新增 [[Micrograd]]（entities）；新增 [[Backpropagation]]、[[Autograd]]、[[Computation_Graph]]（concepts）；更新 [[Andrej_Karpathy]]（补充 micrograd 项目 + 新来源引用）；更新 [[index]]（Sources + Entities + Concepts 各添加条目）
+- **冲突**: 无（所有新概念均为首次引入的知识域，与现有概念体系互补无矛盾——[[Backpropagation]] 是 [[AI训练推理系统工程]]/[[预训练研究]]/[[后训练研究]] 的底层数学机制；[[Autograd]] 与 [[Micrograd]] 互为实现与抽象；[[Computation_Graph]] 是 [[Backpropagation]] 的数据结构基础）
+- **网络**:
+  - [[摘要-karpathy-micrograd-neural-networks-backpropagation]] 链接到 [[Micrograd]]/[[Andrej_Karpathy]]/[[Backpropagation]]/[[Autograd]]/[[Computation_Graph]]/[[AI训练推理系统工程]]/[[预训练研究]]/[[后训练研究]]/[[Agent能力工程]]/[[Harness_Engineering]]/[[Prompt_Engineering]]/[[预训练数据工程]]
+  - [[Micrograd]] 链接到 [[Andrej_Karpathy]]/[[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Backpropagation]]/[[Autograd]]/[[Computation_Graph]]/[[GPT]]/[[AI训练推理系统工程]]
+  - [[Backpropagation]] 链接到 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Micrograd]]/[[Autograd]]/[[Computation_Graph]]/[[AI训练推理系统工程]]/[[预训练研究]]/[[后训练研究]]/[[Agent能力工程]]
+  - [[Autograd]] 链接到 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Micrograd]]/[[Backpropagation]]/[[Computation_Graph]]/[[AI训练推理系统工程]]
+  - [[Computation_Graph]] 链接到 [[摘要-karpathy-micrograd-neural-networks-backpropagation]]/[[Micrograd]]/[[Backpropagation]]/[[Autograd]]/[[AI训练推理系统工程]]

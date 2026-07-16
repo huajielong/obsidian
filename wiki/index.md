@@ -26,6 +26,7 @@
 - [[摘要-ollama-cost-comparison]] — 跨平台成本对比（本地 vs DeepSeek vs 豆包）
 - [[摘要-ollama-tokenizer-personality]] — Tokenizer 效率差异与模型"性格"分析
 - [[摘要-ollama-style-comparison]] — 多模型回答风格对比，qwen 长篇 vs llama 简洁
+- [[摘要-karpathy-micrograd-neural-networks-backpropagation]] — Karpathy 从零构建 micrograd：反向传播与自动求导的直观理解
 - [[摘要-gpt-from-scratch]] — Andrej Karpathy 从零用 PyTorch 构建 GPT 的视频教程
 - [[摘要-awesome-agentic-ai-zh-prompt-engineering]] — Agentic AI 学习路线 Stage 2：结构化提示词、Few-shot、CoT 与迭代优化的完整动手教程
 - [[摘要-awesome-agentic-ai-zh-llm-basics]] — Agentic AI 学习路线 Stage 1：LLM 三大核心概念、主流模型家族全景对比与第一次 API 调用实践
@@ -115,6 +116,7 @@
 - [[API设计]] — API 设计工程实践：定义软件系统之间交互接口的规范、协议、错误处理与开发者体验设计
 - [[Weights_and_Biases]] — MLOps 实验追踪与模型监控平台，W&B 自动记录训练/系统指标，Sweeps 超参搜索，Weave Agent 全链路可观测性
 - [[MLflow]] — Databricks 开源的 ML 生命周期管理平台，实验追踪/模型注册/模型部署三件套，Apache 2.0 完全开源
+- [[Micrograd]] — Andrej Karpathy 开发的约 100 行标量 autograd 引擎，展示反向传播核心机制
 - [[Ray]] — UC Berkeley 开源的分布式计算框架（AI 领域的"分布式操作系统"），Ray Train/Serve/Tune/RLlib/AIR 生态
 
 ## Syntheses
@@ -175,6 +177,9 @@
 - [[GPT]] — 生成式预训练 Transformer，自回归 Decoder-only 语言模型
 - [[Transformer_Architecture]] — 基于 Self-Attention 的深度神经网络架构，现代 AI 的基石
 - [[Self_Attention]] — Transformer 的核心机制，Token 之间通过 Q/K/V 加权通信
+- [[Backpropagation]] — 神经网络训练核心算法，链式法则沿计算图的递归应用
+- [[Autograd]] — 自动求导技术，基于计算图的反向传播自动梯度计算
+- [[Computation_Graph]] — 计算图（DAG），表示数学表达式并支持逆向梯度传播的数据结构
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
 - [[Progressive_Disclosure]] — 渐进式披露架构：按需加载 L1/L2/L3 知识的三层模式（Google ADK），与 OpenAI 的 Small Entry Point + Navigation 机制互补
 - [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式

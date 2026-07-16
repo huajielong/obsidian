@@ -8,13 +8,13 @@
       "computedHash": "e39b39f19d681ef05e3d8e7fc6eabbbc0a9260f4512a5bb51fbb04b1e56c8664"
     },
     "tutor": {
-      "source": "RoundTable02/tutor-skills",
+      "source": "roundtable02/tutor-skills",
       "sourceType": "github",
       "skillPath": "skills/tutor/SKILL.md",
       "computedHash": "5641294ffc6812393e7220782946ccd8fd82b12a52facc662b76905d603c40c0"
     },
     "tutor-setup": {
-      "source": "RoundTable02/tutor-skills",
+      "source": "roundtable02/tutor-skills",
       "sourceType": "github",
       "skillPath": "skills/tutor-setup/SKILL.md",
       "computedHash": "6c6f1f1a9ca713a68e27f71e0256214209f316fca7ba7774eada84c453ff6a72"

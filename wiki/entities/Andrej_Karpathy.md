@@ -4,6 +4,7 @@ type: entity
 tags: [AI学者, 深度学习, OpenAI, Tesla, 教育者]
 sources: 
   - "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+  - "raw/01-articles/Karpathy_micrograd_neural_networks_backpropagation.md"
 last_updated: 2026-07-06
 ---
 
@@ -20,6 +21,7 @@ Andrej Karpathy 是 AI 领域知名的研究科学家和教育者，以在计算
 - **教育**：斯坦福大学博士（师从 Fei-Fei Li）
 - **知名项目**：
   - **nanoGPT** — 最简化的 GPT 训练/推理代码库
+  - **micrograd** — 约 100 行的标量 autograd 引擎，从头实现反向传播
   - **Zero to Hero 系列** — 从零到进阶的深度学习教学视频
   - **makemore** — 自回归语言模型教学系列
   - **minbpe** — 最小化的 BPE Tokenizer 实现
@@ -38,5 +40,8 @@ Andrej Karpathy 是 AI 领域知名的研究科学家和教育者，以在计算
 - [[Transformer_Architecture]] — 架构基础
 - [[Self_Attention]] — 教学视频深入讲解的机制
 - [[摘要-gpt-from-scratch]] — 其最著名的教学视频摘要
+- [[摘要-karpathy-micrograd-neural-networks-backpropagation]] — micrograd 深度解读
+- [[Micrograd]] — 标量 autograd 引擎项目
+- [[Backpropagation]] — 反向传播核心算法
 - [[Codex]] — 同为 AI 编码智能体，Karpathy 在视频中演示了 Copilot 的 Meta 用法
 - [[Anthropic]] — 同为 AI 研究机构（Karpathy 曾短暂加入后又离开）
