@@ -1,3 +1,26 @@
+## [2026-07-16] sync | 补全智能体研发工程师 JD 的六大知识缺口
+- **变更**: 新增 [[Dify]]（entities）；新增 [[微服务与API网关设计]]、[[多租户SaaS架构]]、[[企业系统集成模式]]、[[Skills权限管理]]、[[Agent实例生命周期管理]]（concepts）；更新 [[index]]（Entities 添加 1 条目 + Concepts 添加 5 条目）
+- **冲突**: 无（新概念均为新增知识域，与既有概念互补无矛盾——[[微服务与API网关设计]] 是 [[Harness_Engineering]] 的底层基础设施支撑；[[多租户SaaS架构]] 与 [[Memory_Agent]] 形成数据隔离的上下文参照；[[企业系统集成模式]] 与 [[MCP]]、[[Agent_Interfaces]] 形成"协议→接口→集成"三层互补关系；[[Skills权限管理]] 是 [[Claude_Code_Skills]] 的治理扩展；[[Agent实例生命周期管理]] 是 [[Agent_Loop]] 的平台工程维度展开）
+- **网络**:
+  - [[Dify]] 链接到 [[LangChain]]/[[OpenClaw]]/[[Claude_Code_Skills]]/[[MCP]]/[[RAG]]/[[摘要-算法应用开发工程师-jd]]/[[摘要-智能体研发工程师-jd]]
+  - [[微服务与API网关设计]] 链接到 [[Harness_Engineering]]/[[Graceful_Degradation]]/[[Cost_Optimization]]/[[Agent_Observability]]/[[Agent_Loop]]/[[Claude_Code_Skills]]/[[MCP]]/[[Memory_Agent]]/[[OpenAI_Compatible_API]]/[[LiteLLM]]
+  - [[多租户SaaS架构]] 链接到 [[微服务与API网关设计]]/[[Harness_Engineering]]/[[Cost_Aware_Budget_Gates]]/[[Memory_Agent]]/[[Claude_Code_Skills]]/[[Agent_Observability]]/[[Graceful_Degradation]]
+  - [[企业系统集成模式]] 链接到 [[MCP]]/[[Agent_Interfaces]]/[[Slack]]/[[Telegram]]/[[微服务与API网关设计]]/[[多租户SaaS架构]]/[[Claude_Code_Skills]]/[[Harness_Engineering]]/[[摘要-智能体研发工程师-jd]]
+  - [[Skills权限管理]] 链接到 [[Claude_Code_Skills]]/[[MCP]]/[[多租户SaaS架构]]/[[Work_Boundary]]/[[Harness_Engineering]]/[[Claude_Code_Hooks]]/[[Agent_As_Judge]]/[[Claude_Code_Plugins]]
+  - [[Agent实例生命周期管理]] 链接到 [[Agent_Loop]]/[[Memory_Agent]]/[[多租户SaaS架构]]/[[微服务与API网关设计]]/[[Harness_Engineering]]/[[Agent_Observability]]/[[Cost_Aware_Budget_Gates]]/[[Work_Boundary]]/[[Graceful_Degradation]]
+
+## [2026-07-16] ingest | 摄入智能体研发工程师 JD
+- **变更**: 新增 [[摘要-智能体研发工程师-jd]]（sources）；更新 [[index]]（Sources 章节添加条目）
+- **冲突**: 无（全新知识领域，与 [[摘要-算法应用开发工程师-jd]] 形成互补——一个偏应用层算法落地，一个偏平台层架构设计，清晰区分无重叠矛盾）
+- **网络**:
+  - [[摘要-智能体研发工程师-jd]] 链接到 [[Harness_Engineering]]/[[Agent_Loop]]/[[Memory_Agent]]/[[Claude_Code_Skills]]/[[Claude_Code_Memory_System]]/[[MCP]]/[[RAG]]/[[Agent_Interfaces]]/[[Agent_Orchestration_Patterns]]/[[Multi_Agent_System]]/[[Hierarchical_Task_Decomposition]]/[[LangChain]]/[[AutoGen]]/[[OpenClaw]]/[[Graceful_Degradation]]/[[Slack]]/[[Telegram]]/[[摘要-算法应用开发工程师-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[DeepSeek四份JD全景对比]]
+
+## [2026-07-16] sync | 新增智能体研发工程师 JD 对标分析
+- **变更**: 新增 [[智能体研发工程师JD对标分析]]（syntheses）；更新 [[index]]（Syntheses 章节添加条目）
+- **冲突**: 无（全新综合分析，作为 [[DeepSeek四份JD全景对比]] 之外独立 JD 的补充对标）
+- **网络**:
+  - [[智能体研发工程师JD对标分析]] 链接到 [[摘要-智能体研发工程师-jd]]/[[摘要-算法应用开发工程师-jd]]/[[摘要-deepseek-service-engineer-jd]]/[[摘要-deepseek-harness-team-jd]]/[[摘要-deepseek-agent-infra-jd]]/[[摘要-openclaw-info]]/[[DeepSeek四份JD全景对比]]/[[Harness_Engineering]]/[[Claude_Code_Skills]]/[[MCP]]/[[Memory_Agent]]/[[Agent_Orchestration_Patterns]]/[[Agent_Loop]]/[[Agent_Interfaces]]/[[RAG]]/[[Multi_Agent_System]]/[[LangChain]]/[[AutoGen]]/[[OpenClaw]]/[[Graceful_Degradation]]
+
 ## [2026-07-16] sync | 新增 LlamaIndex 实体页 + 升级 RAG 文档解析对比
 - **变更**: 新增 [[LlamaIndex]]（entities）；更新 [[index]]（Entities 章节添加条目）；升级 [[RAG]]「文档解析工具对比」（从扁平工具列表→四维对比表含选型建议）
 - **冲突**: 无（LlamaIndex 作为新的 RAG 数据框架实体，与 [[LangChain]]/[[LangGraph]] 定位互补不冲突；与现有 [[RAG]]/[[Chunking]] 页面的引用形成正向双向链接）

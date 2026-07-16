@@ -1,0 +1,12 @@
+智能体研发工程师
+岗位职责:
+1.主导企业级高可用AIAgent平台架构设计
+3.规划Skills权限管理、Memory插件、和多用户多Agent架构
+4.制定Agent能力框架，推动各业务场景落地
+5.评估并集成外部工具链(钉钉、飞书、企业内部系统)
+任职要求:
+1.5年以上企业级平台或中间件架构经验
+2.熟悉LLM应用框架(LangChain/Dify/AutoGen/OpenClaw)
+3.精通微服务架构、API Gateway设计
+4.有企业级多租户SaaS平台建设经验
+5.了解Skills，CLI，RAG和MCP等Agent技术栈

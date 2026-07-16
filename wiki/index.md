@@ -64,6 +64,7 @@
 - [[摘要-posttraining-researcher-jd]] — 后训练（数据/算法）研究员职位描述：通过 RL 算法（RLHF/RLVR/PPO/GRPO）、后训练数据与评测的三元组驱动，最大化释放 Base 模型潜力
 - [[摘要-multimodal-understanding-researcher-jd]] — 多模态理解（数据/算法）研究员职位描述：视觉编码器优化/多模态预训练/多模态后训练/评测全链路，与文本体系平行的多模态维度研究
 - [[摘要-算法应用开发工程师-jd]] — 算法应用开发工程师职位描述：Agent/RAG/微调三核驱动的 AI 应用层工程落地，横跨 Prompt/Context/Harness 三层工程模型
+- [[摘要-智能体研发工程师-jd]] — 智能体研发工程师职位描述：企业级高可用 AI Agent 平台架构设计、Skills 权限管理、Memory 插件、多用户多 Agent 架构，横跨 Harness Engineering 的平台工程维度
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -101,6 +102,7 @@
 - [[Llama]] — Meta 开源大语言模型系列
 - [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
 - [[DeepSeek]] — 深度求索 AI 公司，MoE 架构云端 API，含 API 错误处理与实验基准数据
+- [[Dify]] — 开源 LLM 应用开发平台，可视化 Workflow 编排、内置 RAG Pipeline、多租户团队协作
 - [[Doubao]] — 字节跳动豆包 LLM 产品，以低延迟高性价比著称
 - [[Claude_Agent_SDK]] — Anthropic 官方 Agent Python SDK，程序化控制 Agent Loop/Tool Dispatch/Memory
 - [[Hamel_Husain]] — AI 实践者，"Evals are everything" 理念倡导者
@@ -119,6 +121,7 @@
 - [[DeepSeek四份JD全景对比]] — DeepSeek 五份招聘 JD（Harness 团队/服务端工程/预训练数据/AI 搜索/Agent Infra）的全方位横向对比：团队定位、技术栈光谱、工程模型归属、工程文化、面试准备关联图
 - [[预训练数据四方向对比]] — 预训练数据工程师四个方向的横向对比分析：技术栈梯度、工程定位光谱、职业发展路径、与 DeepSeek Harness 团队的交叉对比
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
+- [[智能体研发工程师JD对标分析]] — 智能体研发工程师 JD 的全方位对标分析：技术栈光谱、知识库概念匹配矩阵、与同类 JD 横向对比、能力差距诊断与补全建议
 
 ## Concepts
 - [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
@@ -153,6 +156,7 @@
 - [[Agent_Interfaces]] — 三层智能体接口模型：Computer Use（计算机操控）/ Browser Use（浏览器操控）/ Code Sandbox（代码沙箱），2024-2026 Agent 与非 API 世界交互的核心基础设施
 - [[Agent_Loop]] — AI 智能体自主完成任务的核心运行机制（ReAct → 生产级八步循环）
 - [[Agent_Observability]] — 智能体可观测性：Tracing / Logging / Token Counting / Cost Tracking，[[Harness_Engineering]] 第 6 核心元件
+- [[Agent实例生命周期管理]] — Agent 实例从创建到销毁的全过程管控：状态管理、调度伸缩、休眠恢复、多租户隔离，有状态 Agent 的平台工程核心
 - [[Claude_Code_Skills]] — Claude Code 技能系统架构与扩展机制
 - [[Agent_Aware_Commit]] — 通过 Commit Trailer 记录 AI Agent 决策过程的提交规范
 - [[Atomic_Commit]] — 一个提交只表达一个可解释、可回滚、可验证语义变化的策略
@@ -197,8 +201,12 @@
 - [[Cost_Aware_Budget_Gates]] — 成本感知预算门控：超 $ 预算自动停或升级审核（不只是 Token 上限）
 - [[Failure_Injection_Chaos_Eval]] — 故障注入 / 混沌评估：故意给 Broken Input 测试 Agent 容错
 - [[Self_Organizing_Teams]] — 自组织团队：Agent 运行时动态协商分工而非预先分配 Role
+- [[Skills权限管理]] — Skills 全生命周期授权体系：创建/发现/使用/自动加载的权限模型，RBAC/ABAC/ReBAC 三种策略与执行拦截
 - [[Spec_Driven_Development]] — 规范驱动开发：Task 由 Formal Spec（YAML/JSON Schema）定义
 - [[Graceful_Degradation]] — 优雅降级路径：Frontier Model 挂掉时回退到便宜 Model 不直接 Crash
+- [[微服务与API网关设计]] — 微服务架构核心模式与 API Gateway 设计，含 Agent 平台的六项特殊要求（流式代理/Tool Schema 动态注册/Function Calling 适配）
+- [[多租户SaaS架构]] — 多租户隔离的数据三种模式与 Agent 平台特有维度（实例隔离/Memory 隔离/Skill 可见范围/资源配额）
+- [[企业系统集成模式]] — Agent 平台与 IM（钉钉/飞书）、ERP/CRM 等企业系统的集成架构，MCP 标准化接入与 Legacy 适配器模式
 - [[Agent沙箱工程]] — Agent 沙箱执行环境工程：虚拟化/容器隔离、临时存储、虚拟网络、可观测性，Harness Engineering Safety Layer 的物理基础设施实现
 - [[AI搜索工程]] — AI 原生搜索工程：LLM 与搜索引擎深度融合的工程体系，涵盖 Query 理解、多路召回、级联排序、混合检索等核心技术，是 Context Engineering 在搜索引擎尺度的独立展开
 - [[Agent能力工程]] — Agent 能力工程体系：通过 RL 环境构建、评测任务设计和能力短板补齐，系统性地提升模型在真实工程场景中的 Agent 能力；横跨 Code/网络安全/Science 三方向
