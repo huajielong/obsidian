@@ -68,3 +68,4 @@ MCP Server 返回的内容是**不可信输入**，可能引发 **Tool Poisoning
 - [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] — 核心来源
 - [[Context_Engineering]] — MCP 属于 Context Engineering 的范畴
 - [[OpenAI_Compatible_API]] — 同为 AI 行业的标准化接口规范
+- [[企业系统集成模式]] — MCP 作为企业系统集成的标准化协议层，与 Legacy 适配器模式互补

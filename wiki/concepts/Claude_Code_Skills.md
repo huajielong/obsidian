@@ -145,6 +145,7 @@ Skill 参考项目 [[superpowers_obra]]（obra 的 20+ 实战 Skill 集合）是
 - [[Progressive_Disclosure]] — Skill 系统实现三层知识加载的核心设计模式
 - [[ADK]] — Google ADK，同属 Agent 开发框架
 - [[Skill_Factory]] — 元 Skill / Agent 自我扩展的设计模式
+- [[Programmable_Skills]] — 可编程 Skill 系统：动态加载、热更新、版本管理、权限管控，Skills 的工程化治理进阶
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表
 - [[From_NoCode_To_Agent_Paradigm]] — Skill 作为 Agent 范式下"插件"的等价物
 - [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] — Skills 深度来源

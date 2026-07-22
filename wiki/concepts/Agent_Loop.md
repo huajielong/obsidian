@@ -139,3 +139,4 @@ for step in range(5):
 - [[摘要-awesome-agentic-ai-zh-tool-use]] — Agentic AI 学习路线 Stage 3，包含从零实现 ReAct 循环的 6 个动手练习
 - [[摘要-llm-tool-calling-practice]] — 手写 ReAct 循环的完整代码实现（含多步骤推理链）
 - [[Tool_Calling]] — Tool Calling 协议格式与 Schema 设计，ReAct 中 Action 阶段的技术基础
+- [[Agent实例生命周期管理]] — Agent 从创建到销毁的全生命周期管控，Agent Loop 在平台工程维度的扩展

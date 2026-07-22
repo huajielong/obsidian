@@ -218,7 +218,7 @@ last_updated: 2026-07-16
 | API Gateway | 🕳️ 无 | 可新增「API Gateway」概念页，含 AI Agent 场景特殊要求 |
 | 多租户 SaaS | 🕳️ 无 | 可新增「多租户SaaS架构」概念页 |
 | LLM 框架生态 | ✅ 完整 | [[LangChain]]/[[AutoGen]]/[[OpenClaw]] 已覆盖 |
-| Agent 技术栈 | ✅ 完整 | [[MCP]]/[[Skills]]/[[RAG]]/[[Agent_Interfaces]] 已覆盖 |
+| Agent 技术栈 | ✅ 完整 | [[MCP]]/[[Claude_Code_Skills]]/[[RAG]]/[[Agent_Interfaces]] 已覆盖 |
 | Memory 系统 | ✅ 完整 | [[Memory_Agent]]/[[Claude_Code_Memory_System]] 已覆盖 |
 | Multi-Agent | ✅ 完整 | [[Multi_Agent_System]]/[[Agent_Orchestration_Patterns]] 已覆盖 |
 | 外部集成 | ⚠️ 部分 | [[Agent_Interfaces]] 覆盖了接口模型，企业具体系统待补充 |

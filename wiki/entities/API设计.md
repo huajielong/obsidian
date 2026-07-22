@@ -73,4 +73,4 @@ SDK 层（开发者工具链）
 - [[摘要-deepseek-service-engineer-jd]] — 服务端工程中的 API 架构设计
 - [[OpenAI]] — OpenAI API 标准的开发者
 - [[Prompt_Engineering]] — API 参数（temperature/top_p）直接影响 Prompting 效果
-- [[Function_Calling]] — Tool Calling 的 API 协议格式设计
+- [[Tool_Calling]] — Tool Calling 的 API 协议格式设计（Function Calling 是其子集）

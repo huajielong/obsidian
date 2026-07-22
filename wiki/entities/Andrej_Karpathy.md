@@ -46,3 +46,4 @@ Andrej Karpathy 是 AI 领域知名的研究科学家和教育者，以在计算
 - [[Codex]] — 同为 AI 编码智能体，Karpathy 在视频中演示了 Copilot 的 Meta 用法
 - [[Fei-Fei_Li]] — 斯坦福博士导师
 - [[Anthropic]] — 同为 AI 研究机构（Karpathy 曾短暂加入后又离开）
+- [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] — 五位顶级 AI 教育者的全景对比，Karpathy 在其中代表"从零构建"的实践派路线

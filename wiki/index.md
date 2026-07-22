@@ -131,6 +131,8 @@
 - [[智能体研发工程师JD对标分析]] — 智能体研发工程师 JD 的全方位对标分析：技术栈光谱、知识库概念匹配矩阵、与同类 JD 横向对比、能力差距诊断与补全建议
 - [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] — 五位顶级 AI 教育者（吴恩达/李宏毅/李沐/李飞飞/Karpathy）全景对比：人物简介、核心课程、观看地址、**五层学习路径推荐**、人群匹配指南
 - [[Agent_Benchmark_Landscape]] — Agent 评测 Benchmark Landscape：SWE-bench / GAIA / AgentBench / WebArena / OSWorld / τ-bench / RE-bench 等主流 Agent 评测基准的深度对比与分析
+- [[DevOpsAI架构师JD全景对标分析]] — DevOps AI 架构师 JD 与知识库已有 5 份 JD 的全景横向对比：技术栈光谱、Harness 8 核心元件覆盖度、行业信号汇总、能力差距诊断、四象限定位图
+- [[DevOpsAI架构师面试深度准备]] — DevOps AI 架构师面试深度准备：伪代码级架构实现（CI Agent/智能排障/LLM Gateway）、工具选型对比（LiteLLM vs 自建）、成本数据参考、面试应答策略
 
 ## Concepts
 - [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
@@ -242,4 +244,8 @@
 - [[AI存储工程]] — AI 存储工程体系：KV Cache 存储系统、分布式文件系统与对象存储三大存储系统
 - [[KV_Cache_Storage_Systems]] — KV Cache 分布式存储系统：LLM 推理场景的分布式键值缓存基础设施，RDMA/SPDK/RocksDB 核心技术栈
 - [[Exponential_Backoff]] — 指数退避重试策略：分布式系统中提升可靠性的标准错误恢复模式
+- [[Vue在效能平台中的应用]] — Vue.js 在研发效能平台中的应用：CICD 管线可视化、效能仪表盘、排障交互界面、Agent 监控面板的前端技术栈
+- [[Redis在效能平台中的应用]] — Redis 在研发效能平台中的应用：构建缓存、实时状态推送、分布式锁、限流计数、Agent 协调等中间件职责
+- [[Kubernetes在效能平台中的应用]] — Kubernetes 在研发效能平台中的应用：CI Runner 集群、Agent 运行沙箱、动态扩缩容、Operator 模式与 Agent Loop 的对照
+- [[CICD平台对比与AI集成]] — CI/CD 平台对比与 AI 集成：Jenkins/GitLab CI/GitHub Actions 在 DevOps Agent 场景下的集成模式与选型建议
 - [[知识冲突]] — 知识冲突管理方法论：在知识库长期演进中系统化识别、记录和消解新旧知识矛盾与张力的工程实践

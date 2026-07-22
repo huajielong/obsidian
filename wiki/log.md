@@ -696,3 +696,42 @@
   - [[LLM_Gateway模式]] 链接到 [[Harness_Engineering]]/[[MCP]]/[[微服务与API网关设计]]/[[Cost_Optimization]]/[[Agent_Observability]]/[[Agent沙箱工程]]/[[摘要-devops-ai-architect-xiamen]]
   - [[AI驱动的CICD]] 链接到 [[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Orchestration_Patterns]]/[[Tool_Calling]]/[[MCP]]/[[Eval_Harness]]/[[Agent_Observability]]/[[Cost_Optimization]]/[[AI集群可靠性工程]]/[[摘要-devops-ai-architect-xiamen]]
   - [[智能排障系统]] 链接到 [[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Observability]]/[[AI集群可靠性工程]]/[[Tool_Calling]]/[[MCP]]/[[RAG]]/[[Cost_Optimization]]/[[摘要-devops-ai-architect-xiamen]]
+
+## [2026-07-22] sync | 补充两个知识缺口：Vue 在效能平台中的应用 / Redis 在效能平台中的应用
+- **变更**: 新增 [[Vue在效能平台中的应用]]、[[Redis在效能平台中的应用]]（concepts）；更新 [[index]]（Concepts 章节添加 2 条目）
+- **冲突**: 无（两个新概念均为 [[摘要-devops-ai-architect-xiamen]] 的标签补充，与既有概念体系互补——Vue 概念是效能平台的前端技术层展开；Redis 概念是中间件层展开，与 Cost_Optimization/微服务与API网关设计 形成缓存策略的完整链路）
+- **网络**:
+  - [[Vue在效能平台中的应用]] 链接到 [[AI驱动的CICD]]/[[智能排障系统]]/[[Agent_Observability]]/[[微服务与API网关设计]]/[[摘要-devops-ai-architect-xiamen]]
+  - [[Redis在效能平台中的应用]] 链接到 [[AI驱动的CICD]]/[[智能排障系统]]/[[LLM_Gateway模式]]/[[Cost_Optimization]]/[[Vue在效能平台中的应用]]/[[微服务与API网关设计]]/[[摘要-devops-ai-architect-xiamen]]
+
+## [2026-07-22] lint | 知识库健康检查
+- **变更**: 修复 [[摘要-devops-ai-architect-xiamen]] 中 1 个死链（[[LLM Gateway模式]] → [[LLM_Gateway模式]]）；移除 2 个不存在的链接引用
+- **冲突**: 无
+- **发现**:
+  - 索引一致性：✅ 所有链接均有对应文件，所有文件均已注册
+  - 全库死链 27 个（多数为节级锚点链接 `[[Page#Heading]]` 的语法误报，少量为确实不存在的页面如 [[知识管理]]、[[SWE-bench]]、[[Function_Calling]]）
+  - 孤儿页面 9 个（为近期新增的概念页，尚未被广泛引用）
+  - 知识冲突 20 个（均为既有、设计内的知识冲突记录，非新增问题）
+
+## [2026-07-22] sync | 新增 DevOps AI 架构师 JD 全景对标分析
+- **变更**: 新增 [[DevOpsAI架构师JD全景对标分析]]（syntheses）；更新 [[index]]（Syntheses 章节添加条目）
+- **冲突**: 无（该报告与 [[智能体研发工程师JD对标分析]] 和 [[DeepSeek四份JD全景对比]] 形成三足鼎立——分别覆盖 Agent 平台方向、DeepSeek 系列方向、DevOps AI 架构师方向）
+- **网络**:
+  - [[DevOpsAI架构师JD全景对标分析]] 链接到 [[摘要-devops-ai-architect-xiamen]]/[[摘要-智能体研发工程师-jd]]/[[摘要-算法应用开发工程师-jd]]/[[摘要-deepseek-harness-team-jd]]/[[DeepSeek四份JD全景对比]]/[[智能体研发工程师JD对标分析]]/[[Harness_Engineering]]
+
+## [2026-07-22] sync | 新增 DevOps AI 架构师面试深度准备
+- **变更**: 新增 [[DevOpsAI架构师面试深度准备]]（syntheses）；更新 [[index]]（Syntheses 章节添加条目）
+- **冲突**: 无（与 [[DevOpsAI架构师JD全景对标分析]] 形成互补——对标报告回答"这是什么岗位"，面试准备回答"怎么准备这个岗位的面试"）
+- **网络**:
+  - [[DevOpsAI架构师面试深度准备]] 链接到 [[摘要-devops-ai-architect-xiamen]]/[[DevOpsAI架构师JD全景对标分析]]/[[Harness_Engineering]]/[[AI驱动的CICD]]/[[智能排障系统]]/[[LLM_Gateway模式]]/[[Cost_Optimization]]/[[Graceful_Degradation]]/[[Agent_Loop]]/[[Agent_Observability]]/[[Vue在效能平台中的应用]]/[[Redis在效能平台中的应用]]
+
+## [2026-07-22] sync | 补全 K8s/CI-CD 平台知识 + 修复死链 + 打破孤儿页面
+- **变更**:
+  - **新增概念 (2)**: [[Kubernetes在效能平台中的应用]] — K8s 在 DevOps Agent 场景的核心应用（CI Runner 集群/Agent 沙箱/Operator 模式）；[[CICD平台对比与AI集成]] — Jenkins/GitLab CI/GitHub Actions 的对比与 AI 集成模式
+  - **新增概念 (1)**: [[知识管理]] — 知识管理基础方法论，与 [[知识冲突]] 形成互补
+  - **新增实体 (1)**: [[SWE-bench]] — 软件工程 Agent 评测基准
+  - **修复死链 (5)**: [[Function_Calling]]→[[Tool_Calling]]（API设计.md）；[[Skills]]→[[Claude_Code_Skills]]（智能体研发工程师JD对标分析）；[[摘要-预训练数据工程师-jd.md]]→[[摘要-预训练数据工程师-jd]]（预训练数据工程.md + 预训练数据四方向对比.md）；[[企业级LLM应用架构]]/[[效能研发工程师技能图谱]] 移除（摘要-devops-ai-architect-xiamen）
+  - **打破孤儿页面 (7)**: [[Agent_DX_Design]] ← Harness_Engineering；[[Agent实例生命周期管理]] ← Agent_Loop；[[Programmable_Skills]] ← Claude_Code_Skills；[[KV_Cache_Storage_Systems]] ← AI存储工程；[[Dify]] ← LangChain；[[Agent_Benchmark_Landscape]] ← Eval_Harness；[[四位AI教育者对比]] ← Andrej_Karpathy
+  - **修复孤岛交叉链接 (2)**: [[企业系统集成模式]] ← MCP + CICD平台对比与AI集成
+- **更新 [[index]]** — Concepts 添加 4 条目（K8s/CICD平台/Vue/Redis）+ Entities 添加 1 条目（SWE-bench）+ 修复 1 条死链（指数退避→Exponential_Backoff）
+- **冲突**: 无（所有新增页面均为既有框架的补充展开）
