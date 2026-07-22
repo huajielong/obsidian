@@ -667,3 +667,32 @@
 - **网络**:
   - [[Fei-Fei_Li]] 链接到 [[Andrej_Karpathy]]/[[Andrew_Ng]]/[[Mu_Li]]/[[Hung_yi_Lee]]/[[Transformer_Architecture]]/[[GPT]]
   - [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] 新增 [[Fei-Fei_Li]] 链接
+
+
+## [2026-07-22] sync | 补充五个知识缺口：KV Cache 存储系统/Plan-Execute 展开/可编程 Skills/Benchmark 对比/Agent DX 设计
+- **变更**:
+  - **新增概念 (3)**: [[KV_Cache_Storage_Systems]] — KV Cache 分布式存储独立概念页（从 [[AI存储工程]] 分离展开）；[[Programmable_Skills]] — Skill 动态加载/热更新/权限管控/生命周期管理等工程化治理；[[Agent_DX_Design]] — Agent 场景下的开发者体验设计六项核心要求
+  - **新增综合报告 (1)**: [[Agent_Benchmark_Landscape]] — SWE-bench/GAIA/AgentBench/WebArena/OSWorld/τ-bench/RE-bench 等 7 大主流 Agent 评测基准的深度对比分析
+  - **大幅扩展 (1)**: [[Hierarchical_Task_Decomposition]] — 追加完整的 Plan-Execute 工程实践章节（Plan 契约输出/Execute 执行模式对比/反馈循环与 Replan 触发/三种实现模式/常见陷阱）
+  - **更新 [[index]]** — Concepts 添加 3 条目 + Syntheses 添加 1 条目
+- **冲突**: 无（所有新增页面均为现有知识框架的补充展开，与既有概念互补无矛盾——KV_Cache_Storage_Systems 是 AI存储工程 子系统的独立深化；Programmable_Skills 是 Claude_Code_Skills 的工程化治理层，Skills权限管理 是其权限维度的子集；Agent_DX_Design 是 API设计 在 Agent 场景的扩展；Agent_Benchmark_Landscape 是 Eval_Harness 中 Benchmark Landscape 的独立展开；Hierarchical_Task_Decomposition 的 Plan-Execute 展开与 Agent_Loop/Spec_Driven_Development 互补无矛盾）
+- **网络**:
+  - [[KV_Cache_Storage_Systems]] 链接到 [[AI存储工程]]/[[AI训练推理系统工程]]/[[Harness_Engineering]]/[[Cost_Optimization]]/[[Agent_Loop]]/[[超算集群工程]]/[[AI搜索工程]]/[[Agent沙箱工程]]/[[摘要-hpc-distributed-storage-jd]]
+  - [[Programmable_Skills]] 链接到 [[Claude_Code_Skills]]/[[Skills权限管理]]/[[Skill_Factory]]/[[MCP]]/[[Claude_Code_Plugins]]/[[Claude_Code_Hooks]]/[[Claude_Code_Dynamic_Workflows]]/[[Progressive_Disclosure]]/[[Agent沙箱工程]]/[[Harness_Engineering]]/[[Claude_Code_Harness]]
+  - [[Agent_DX_Design]] 链接到 [[API设计]]/[[Progressive_Disclosure]]/[[Agent_Observability]]/[[Harness_Engineering]]/[[Claude_Code_Skills]]/[[Claude_Code_Hooks]]/[[Claude_Code_Subagent]]/[[MCP]]/[[Contract_Driven_Handoffs]]/[[Work_Boundary]]/[[Skills权限管理]]/[[From_NoCode_To_Agent_Paradigm]]/[[Agent沙箱工程]]
+  - [[Agent_Benchmark_Landscape]] 链接到 [[Eval_Harness]]/[[Harness_Engineering]]/[[Agent能力工程]]/[[Agent数据产品工程]]/[[后训练研究]]/[[Agent_Observability]]/[[Cost_Optimization]]/[[promptfoo]]/[[langfuse]]/[[AI产品工程]]
+  - [[Hierarchical_Task_Decomposition]] 新增链接到 [[Agent_Loop]]/[[Spec_Driven_Development]]/[[Cost_Aware_Budget_Gates]]/[[Claude_Code_Subagent]]/[[Tool_Calling]]/[[摘要-agent-loop-guide]]
+
+## [2026-07-22] ingest | 摄入 DevOps AI 架构师 JD（厦门）
+- **变更**: 新增 [[摘要-devops-ai-architect-xiamen]]（sources）；更新 [[index]]（Sources 章节添加条目）
+- **冲突**: 无（该 JD 聚焦 **LLM × DevOps 融合**方向，与已有 [[摘要-智能体研发工程师-jd]]（Agent Infra 平台）和 [[摘要-算法应用开发工程师-jd]]（算法落地）形成互补——三者覆盖 AI 工程化的三个不同截面：平台层、应用层、效能层）
+- **网络**:
+  - [[摘要-devops-ai-architect-xiamen]] 链接到 [[Harness_Engineering]]/[[企业级LLM应用架构]]/[[AI驱动的CICD]]/[[智能排障系统]]/[[LLM Gateway模式]]/[[Agent_Loop]]/[[Agent_Observability]]/[[MCP]]/[[Agent_Orchestration_Patterns]]/[[Multi_Agent_System]]/[[Tool_Calling]]/[[RAG]]/[[Cost_Optimization]]/[[摘要-智能体研发工程师-jd]]/[[摘要-算法应用开发工程师-jd]]/[[摘要-deepseek-agent-infra-jd]]
+
+## [2026-07-22] sync | 补充三个缺失概念：LLM Gateway 模式/AI 驱动 CICD/智能排障系统
+- **变更**: 新增 [[LLM_Gateway模式]]、[[AI驱动的CICD]]、[[智能排障系统]]（concepts）；更新 [[index]]（Concepts 章节添加 3 条目）
+- **冲突**: 无（三个新概念均为 [[摘要-devops-ai-architect-xiamen]] 中引用的知识域，与既有概念体系互补——LLM Gateway 模式是 Cost_Optimization/MCP 的基础设施承接层；AI驱动的CICD 是 Agent_Loop/Agent_Orchestration_Patterns 在 DevOps 场景的垂直实践；智能排障系统 是 Agent_Observability/AI集群可靠性工程 在故障处理场景的工程化展开）
+- **网络**:
+  - [[LLM_Gateway模式]] 链接到 [[Harness_Engineering]]/[[MCP]]/[[微服务与API网关设计]]/[[Cost_Optimization]]/[[Agent_Observability]]/[[Agent沙箱工程]]/[[摘要-devops-ai-architect-xiamen]]
+  - [[AI驱动的CICD]] 链接到 [[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Orchestration_Patterns]]/[[Tool_Calling]]/[[MCP]]/[[Eval_Harness]]/[[Agent_Observability]]/[[Cost_Optimization]]/[[AI集群可靠性工程]]/[[摘要-devops-ai-architect-xiamen]]
+  - [[智能排障系统]] 链接到 [[Harness_Engineering]]/[[Agent_Loop]]/[[Agent_Observability]]/[[AI集群可靠性工程]]/[[Tool_Calling]]/[[MCP]]/[[RAG]]/[[Cost_Optimization]]/[[摘要-devops-ai-architect-xiamen]]

@@ -66,6 +66,7 @@
 - [[摘要-multimodal-understanding-researcher-jd]] — 多模态理解（数据/算法）研究员职位描述：视觉编码器优化/多模态预训练/多模态后训练/评测全链路，与文本体系平行的多模态维度研究
 - [[摘要-算法应用开发工程师-jd]] — 算法应用开发工程师职位描述：Agent/RAG/微调三核驱动的 AI 应用层工程落地，横跨 Prompt/Context/Harness 三层工程模型
 - [[摘要-智能体研发工程师-jd]] — 智能体研发工程师职位描述：企业级高可用 AI Agent 平台架构设计、Skills 权限管理、Memory 插件、多用户多 Agent 架构，横跨 Harness Engineering 的平台工程维度
+- [[摘要-devops-ai-architect-xiamen]] — 效能研发工程师 / 架构师（DevOps AI 方向）职位描述：将 LLM 注入 DevOps 全生命周期，通过 AI 重构工具链打造智能化研发效能平台
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -129,6 +130,7 @@
 - [[matt-pocock-skills-cheatsheet]] — mattpocock/skills 全部技能的中文速查表（适用场景 × 提示写法 × 常见坑）
 - [[智能体研发工程师JD对标分析]] — 智能体研发工程师 JD 的全方位对标分析：技术栈光谱、知识库概念匹配矩阵、与同类 JD 横向对比、能力差距诊断与补全建议
 - [[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]] — 五位顶级 AI 教育者（吴恩达/李宏毅/李沐/李飞飞/Karpathy）全景对比：人物简介、核心课程、观看地址、**五层学习路径推荐**、人群匹配指南
+- [[Agent_Benchmark_Landscape]] — Agent 评测 Benchmark Landscape：SWE-bench / GAIA / AgentBench / WebArena / OSWorld / τ-bench / RE-bench 等主流 Agent 评测基准的深度对比与分析
 
 ## Concepts
 - [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
@@ -157,6 +159,7 @@
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
 - [[Harness_Engineering]] — 为 AI 智能体设计约束机制、反馈回路与工作流控制的系统工程实践（含 8 核心元件框架、OpenAI 5 原则展开、跨供应商对照、Eval Rigor 与 Bitter Lesson）
 - [[Eval_Harness]] — Agent 自动化评估流水线：Benchmark Landscape / Reward-Hacking 警告 / pass^k / [[Harness_Engineering]] 第 7 核心元件
+- [[AI驱动的CICD]] — AI 驱动的 CICD 体系：将 LLM Agent 嵌入 CI/CD 管线，实现集成/编译/测试/发布全流程智能编排，[[Harness_Engineering]] 在 DevOps 领域的核心实践
 - [[Orchestration_Code_Examples]] — 编排编程示例：同一 Research→Write→Review 场景在纯 Python / LangGraph / CrewAI / AutoGen / OpenAI Agents SDK 五个路线中的代码对比
 - [[Tool_Calling]] — LLM 工具调用核心概念：OpenAI vs Anthropic 协议格式对比、Schema 设计、Description 优化四原则
 - [[Agent_First_Engineering]] — Agent-First Engineering 智能体优先工程的 7 步实操方法论
@@ -195,6 +198,7 @@
 - [[Model_Fine_Tuning]] — 模型微调，决定模型"性格"和回复风格的关键因素
 - [[Parameter_Efficient_Fine_Tuning]] — 参数高效微调（PEFT）：LoRA/QLoRA/P-Tuning 等只更新 0.01-2% 参数的微调方法，在保持预训练能力的同时适配下游任务
 - [[MCP]] — Model Context Protocol，标准化 LLM 工具调用的开放协议，三层抽象（Tools/Resources/Prompts）
+- [[LLM_Gateway模式]] — LLM Gateway 模式：企业级 LLM 应用基础设施的统一接入层，解决多模型路由/流量治理/安全管控/成本追踪等共性问题
 - [[Claude_Code_Hooks]] — Claude Code L3 控制层事件钩子，在 PreToolUse/PostToolUse 等时机拦截
 - [[Claude_Code_Subagent]] — Claude Code 原生 Multi-Agent 机制，独立 Context Window 的子 Agent
 - [[Claude_Code_Dynamic_Workflows]] — Opus 4.8+ 让 Claude 自生成 Workflow 脚本的编排机制
@@ -207,11 +211,13 @@
 - [[Autonomy_Gradient]] — 自主权梯度/信任层：Suggest → Propose → Execute 三段授权模型
 - [[Contract_Driven_Handoffs]] — 契约驱动的 Agent 交接：上游承诺 Artifacts，下游 Schema 验证
 - [[Agent_As_Judge]] — Agent 评审机制：一个 Agent 按 Constitution 评审另一个 Agent 输出
+- [[Agent_DX_Design]] — Agent 场景下的开发者体验设计：渐进式披露、可调试性、Agent 感知 API 设计等六项核心 DX 要求
 - [[Hierarchical_Task_Decomposition]] — 层级任务分解：Supervisor → Worker → Sub-worker 多层递归编排
 - [[Cost_Aware_Budget_Gates]] — 成本感知预算门控：超 $ 预算自动停或升级审核（不只是 Token 上限）
 - [[Failure_Injection_Chaos_Eval]] — 故障注入 / 混沌评估：故意给 Broken Input 测试 Agent 容错
 - [[Self_Organizing_Teams]] — 自组织团队：Agent 运行时动态协商分工而非预先分配 Role
 - [[Skills权限管理]] — Skills 全生命周期授权体系：创建/发现/使用/自动加载的权限模型，RBAC/ABAC/ReBAC 三种策略与执行拦截
+- [[Programmable_Skills]] — 可编程 Skill 系统：动态加载、热更新、版本管理、权限管控、生命周期管理等 Skill 工程化治理实践
 - [[Spec_Driven_Development]] — 规范驱动开发：Task 由 Formal Spec（YAML/JSON Schema）定义
 - [[Graceful_Degradation]] — 优雅降级路径：Frontier Model 挂掉时回退到便宜 Model 不直接 Crash
 - [[微服务与API网关设计]] — 微服务架构核心模式与 API Gateway 设计，含 Agent 平台的六项特殊要求（流式代理/Tool Schema 动态注册/Function Calling 适配）
@@ -230,8 +236,10 @@
 - [[AI计算引擎工程]] — AI 计算引擎工程体系：高性能算子、集合通信与 DSL 编译器三大技术栈
 - [[AI训练推理系统工程]] — AI 训练推理系统工程体系：分布式训练、RL 训练、多模态训练、推理服务（含五大推理引擎横向对比）四大系统
 - [[AI集群可靠性工程]] — AI 超算集群可靠性工程体系：集群运维与运维开发（平台工程）双轨，故障管理、可观测性、自动化自愈
+- [[智能排障系统]] — 智能排障系统：利用 LLM Agent 对系统异常进行自动感知→归因分析→修复执行的闭环系统，Agent Loop 在故障处理场景的典型应用
 - [[AI基础设施硬件工程]] — AI 基础设施硬件工程体系：硬件选型、固件基线、基准压测与物理网络运维
 - [[AI数据中心工程]] — AI 数据中心工程体系：供配电、液冷、现场运营与规划设计
 - [[AI存储工程]] — AI 存储工程体系：KV Cache 存储系统、分布式文件系统与对象存储三大存储系统
+- [[KV_Cache_Storage_Systems]] — KV Cache 分布式存储系统：LLM 推理场景的分布式键值缓存基础设施，RDMA/SPDK/RocksDB 核心技术栈
 - [[Exponential_Backoff]] — 指数退避重试策略：分布式系统中提升可靠性的标准错误恢复模式
 - [[知识冲突]] — 知识冲突管理方法论：在知识库长期演进中系统化识别、记录和消解新旧知识矛盾与张力的工程实践
