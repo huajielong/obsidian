@@ -735,3 +735,9 @@
   - **修复孤岛交叉链接 (2)**: [[企业系统集成模式]] ← MCP + CICD平台对比与AI集成
 - **更新 [[index]]** — Concepts 添加 4 条目（K8s/CICD平台/Vue/Redis）+ Entities 添加 1 条目（SWE-bench）+ 修复 1 条死链（指数退避→Exponential_Backoff）
 - **冲突**: 无（所有新增页面均为既有框架的补充展开）
+
+## [2026-07-23] sync | 新增 Loop Engineering 第四层工程范式概念页
+- **变更**: 新增 [[Loop_Engineering]]（concepts）；更新 [[index]]（Concepts 章节添加条目）
+- **冲突**: 无（Loop Engineering 作为第四层工程范式，与 [[Harness_Engineering]] 形成上层补充关系；与 [[Agent_Loop]] 形成元层 vs 实现层的互补关系；与现有三层模型无矛盾）
+- **网络**:
+  - [[Loop_Engineering]] 链接到 [[Agent_Loop]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[摘要-agent-loop-guide]]/[[Tool_Calling]]/[[摘要-tool-error-is-data]]/[[Exponential_Backoff]]/[[Cost_Aware_Budget_Gates]]/[[Agent沙箱工程]]/[[Agent实例生命周期管理]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Agent_As_Judge]]/[[Multi_Agent_System]]/[[Agent_Orchestration_Patterns]]/[[Hierarchical_Task_Decomposition]]/[[Failure_Injection_Chaos_Eval]]/[[Claude_Code_Dynamic_Workflows]]

@@ -160,6 +160,7 @@
 - [[Developer_Agentic_Workflow]] — 开发者 Agentic AI 工作流框架：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × Workflow Recipe
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
 - [[Harness_Engineering]] — 为 AI 智能体设计约束机制、反馈回路与工作流控制的系统工程实践（含 8 核心元件框架、OpenAI 5 原则展开、跨供应商对照、Eval Rigor 与 Bitter Lesson）
+- [[Loop_Engineering]] — 第四层工程范式：设计 Agent 的迭代循环本身——目标、工具选择、上下文管理、终止条件、错误处理与收敛检测，让 Agent 稳定跑数百步、跨 Session 仍可靠
 - [[Eval_Harness]] — Agent 自动化评估流水线：Benchmark Landscape / Reward-Hacking 警告 / pass^k / [[Harness_Engineering]] 第 7 核心元件
 - [[AI驱动的CICD]] — AI 驱动的 CICD 体系：将 LLM Agent 嵌入 CI/CD 管线，实现集成/编译/测试/发布全流程智能编排，[[Harness_Engineering]] 在 DevOps 领域的核心实践
 - [[Orchestration_Code_Examples]] — 编排编程示例：同一 Research→Write→Review 场景在纯 Python / LangGraph / CrewAI / AutoGen / OpenAI Agents SDK 五个路线中的代码对比

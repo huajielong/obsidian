@@ -132,6 +132,7 @@ for step in range(5):
 - [[Multi_Agent_System]] — 从 Single-agent Loop 扩展到多 Agent 协作
 - [[Agent_Orchestration_Patterns]] — Multi-agent 编排模式，与单 Agent Loop 互补
 - [[Harness_Engineering]] — 驾驭工程体系
+- [[Loop_Engineering]] — 第四层工程范式，设计 Agent 循环的元层方法论
 - [[摘要-agent-loop-guide]] — Agent Loop 完整指南源摘要
 - [[OpenClaw]] — OpenClaw 实体（Agent Loop 实践案例）
 - [[Agentic_Coding]] — AI Agent 编程范式
