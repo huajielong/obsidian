@@ -741,3 +741,7 @@
 - **冲突**: 无（Loop Engineering 作为第四层工程范式，与 [[Harness_Engineering]] 形成上层补充关系；与 [[Agent_Loop]] 形成元层 vs 实现层的互补关系；与现有三层模型无矛盾）
 - **网络**:
   - [[Loop_Engineering]] 链接到 [[Agent_Loop]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[摘要-agent-loop-guide]]/[[Tool_Calling]]/[[摘要-tool-error-is-data]]/[[Exponential_Backoff]]/[[Cost_Aware_Budget_Gates]]/[[Agent沙箱工程]]/[[Agent实例生命周期管理]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Agent_As_Judge]]/[[Multi_Agent_System]]/[[Agent_Orchestration_Patterns]]/[[Hierarchical_Task_Decomposition]]/[[Failure_Injection_Chaos_Eval]]/[[Claude_Code_Dynamic_Workflows]]
+
+## [2026-07-23] query | 非框架方式实现 ReAct 编排
+- **输出**: 即时回答未保存
+- **引用页面**: [[Agent_Loop]]、[[摘要-llm-tool-calling-practice]]、[[摘要-awesome-agentic-ai-zh-tool-use]]、[[摘要-tool-error-is-data]]、[[Orchestration_Code_Examples]]、[[Tool_Calling]]
