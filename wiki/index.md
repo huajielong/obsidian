@@ -13,6 +13,7 @@
 - [[摘要-claude-code-boris-cherny]] — Boris Cherny Claude Code + Opus 4.7 最佳实践
 - [[摘要-claude-code-hud]] — claude-hud 终端状态监控插件
 - [[摘要-claude-code-gsd-core]] — GSD Core 全生命周期项目开发框架
+- [[摘要-claude-code-six-levels]] — Claude Code 六层境界：从提示工程师到规模化编排
 - [[摘要-agent-loop-guide]] — Agent Loop 设计从 ReAct 到生产级闭环的完整指南
 - [[摘要-openclaw-info]] — OpenClaw AI Agent 平台信息库与变现案例
 - [[摘要-agentic-ai-roadmap]] — Agentic AI 从零到入门系统学习路线
@@ -156,6 +157,7 @@
 - [[Feynman_Technique]] — 费曼学习法：通过教别人来验证自己是否真正理解
 - [[Context_Engineering]] — LLM 三层工程堆栈的中间层，工程上下文窗口的信息组装
 - [[Context_Window]] — LLM 单次推理能处理的最大 token 数量上限，决定对话记忆与信息容量
+- [[上下文腐败]] — 上下文窗口填充超 50-60% 后模型性能突然衰减的现象与管理策略
 - [[Cost_Optimization]] — LLM 成本与延迟优化：Prompt Caching / Model Routing / Thinking Budget / Batching / Semantic Caching，[[Harness_Engineering]] 第 8 核心元件
 - [[Developer_Agentic_Workflow]] — 开发者 Agentic AI 工作流框架：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × Workflow Recipe
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式
@@ -191,6 +193,7 @@
 - [[Backpropagation]] — 神经网络训练核心算法，链式法则沿计算图的递归应用
 - [[Autograd]] — 自动求导技术，基于计算图的反向传播自动梯度计算
 - [[Computation_Graph]] — 计算图（DAG），表示数学表达式并支持逆向梯度传播的数据结构
+- [[Claude_Code_六重境界]] — Claude Code 技能进阶六层框架：从提示工程师到规模化编排
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
 - [[Progressive_Disclosure]] — 渐进式披露架构：按需加载 L1/L2/L3 知识的三层模式（Google ADK），与 OpenAI 的 Small Entry Point + Navigation 机制互补
 - [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式
@@ -250,3 +253,4 @@
 - [[Kubernetes在效能平台中的应用]] — Kubernetes 在研发效能平台中的应用：CI Runner 集群、Agent 运行沙箱、动态扩缩容、Operator 模式与 Agent Loop 的对照
 - [[CICD平台对比与AI集成]] — CI/CD 平台对比与 AI 集成：Jenkins/GitLab CI/GitHub Actions 在 DevOps Agent 场景下的集成模式与选型建议
 - [[知识冲突]] — 知识冲突管理方法论：在知识库长期演进中系统化识别、记录和消解新旧知识矛盾与张力的工程实践
+- [[伊特萨姆学习法]] — 伊特萨姆三问学习法：MIT 研究生伊特沙姆·阿里提出的 AI 增强学习方法，通过三个关键问题（思维框架/领域格局/鉴别性测试）两天内深度掌握陌生领域

@@ -90,6 +90,21 @@ Claude Code 拥有**最完整的 7-Layer Stack**（其他 CLI Agent 如 Codex / 
 | L2 Tool Use | Function 调用协议 | Anthropic Tool Use（input_schema）|
 | L1 Foundation | LLM 本体 | Anthropic API |
 
+## 六重境界进阶路径
+
+[[Claude_Code_六重境界|Claude Code 六重境界]] 将用户技能划分为六个递进层次：
+
+| 层级 | 核心能力 | 与现有框架对齐 |
+|:----:|---------|---------------|
+| L1 · 提示工程师 | 基础提示词编写、输出质量评判 | [[Prompt_Engineering]] |
+| L2 · 规划者 | 计划模式、协作式提问 | — |
+| L3 · 上下文工程师 | 上下文窗口管理、腐败控制 | [[Context_Engineering]] + [[上下文腐败]] |
+| L4 · MCP/工具集成 | 外科手术式精准选配 MCP | [[MCP]] |
+| L5 · 技能/工作流 | Skill 编写与组合 | [[Claude_Code_Skills]] |
+| L6 · 规模化编排 | 多实例协调、Agent Teams | [[Claude_Code_Subagent]] + [[Multi_Agent_System]] |
+
+> 此框架提示了 Claude Code 的能力进阶远不止于工具操作——从"AI 工具使用者"到"AI 协作者"的思维转变是贯穿全文的核心主线。
+
 ## 并行运行方式
 
 - 多终端标签页 + 多副本

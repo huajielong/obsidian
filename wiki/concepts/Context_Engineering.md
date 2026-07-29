@@ -71,6 +71,7 @@ Agent 需要两种 Context 能力：
 - [[DSPy]] — 自动优化 Context Engineering 各环节的工具
 - [[Chain_of_Thought]] — 推理链的上下文组织
 - [[Context_Window]] — Context Engineering 的物理约束边界
+- [[上下文腐败]] — 上下文窗口效率衰减现象，Context Engineering 需要应对的核心约束
 - [[Agent_Loop]] — Context Engineering 的执行载体
 - [[Multi_Agent_System]] — Stage 7 涉及 Isolate Sub-problem
 - [[Andrej_Karpathy]] — Context Engineering 概念的共同推动者

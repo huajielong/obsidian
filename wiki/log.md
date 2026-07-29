@@ -742,6 +742,20 @@
 - **网络**:
   - [[Loop_Engineering]] 链接到 [[Agent_Loop]]/[[Harness_Engineering]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[摘要-agent-loop-guide]]/[[Tool_Calling]]/[[摘要-tool-error-is-data]]/[[Exponential_Backoff]]/[[Cost_Aware_Budget_Gates]]/[[Agent沙箱工程]]/[[Agent实例生命周期管理]]/[[Agent_Observability]]/[[Eval_Harness]]/[[Agent_As_Judge]]/[[Multi_Agent_System]]/[[Agent_Orchestration_Patterns]]/[[Hierarchical_Task_Decomposition]]/[[Failure_Injection_Chaos_Eval]]/[[Claude_Code_Dynamic_Workflows]]
 
+## [2026-07-28] ingest | Claude Code 六重境界
+- **变更**: 新增 [[摘要-claude-code-six-levels]]（sources）；新增 [[Claude_Code_六重境界]]、[[上下文腐败]]（concepts）；更新 [[Claude_Code]]（entities）+ [[Context_Window]]、[[Context_Engineering]]（concepts）+ [[index]]
+- **冲突**: 无（所有新增页面均与既有概念互补——六重境界框架是对 [[Claude_Code]] 实体能力的进阶路径展开；[[上下文腐败]] 是对 [[Context_Window]] 性能衰减机制的专门阐述，与 [[Context_Engineering]] 形成"约束 vs 工程"的互补关系）
+- **网络**:
+  - [[摘要-claude-code-six-levels]] 链接到 [[Claude_Code]]/[[Claude_Code_六重境界]]/[[上下文腐败]]/[[Context_Window]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[Claude_Code_Skills]]/[[Claude_Code_Subagent]]/[[Multi_Agent_System]]/[[MCP]]
+  - [[Claude_Code_六重境界]] 链接到 [[Claude_Code]]/[[上下文腐败]]/[[Context_Window]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[Harness_Engineering]]/[[Claude_Code_Skills]]/[[Claude_Code_Subagent]]/[[Claude_Code_Workflow]]/[[MCP]]/[[Multi_Agent_System]]/[[摘要-claude-code-six-levels]]
+  - [[上下文腐败]] 链接到 [[Context_Window]]/[[Context_Engineering]]/[[Claude_Code_六重境界]]/[[Claude_Code]]/[[Claude_Code_Memory_System]]/[[AGENT_MD]]/[[摘要-claude-code-six-levels]]
+
 ## [2026-07-23] query | 非框架方式实现 ReAct 编排
 - **输出**: 即时回答未保存
 - **引用页面**: [[Agent_Loop]]、[[摘要-llm-tool-calling-practice]]、[[摘要-awesome-agentic-ai-zh-tool-use]]、[[摘要-tool-error-is-data]]、[[Orchestration_Code_Examples]]、[[Tool_Calling]]
+
+## [2026-07-29] itsam | 创建伊特萨姆学习法技能与概念页
+- **变更**: 新增 [[伊特萨姆学习法]]（concepts）；新增 `.claude/skills/itsam/` 技能（用户可调用 `/itsam` 命令）；更新 [[index]]（Concepts 章节添加条目）
+- **冲突**: 无（伊特萨姆学习法与 [[Feynman_Technique]]、[[Naval_Rapid_Research_Method]] 形成"教学检验/信息搜集/对抗性盲区暴露"三者互补的 AI 时代学习方法矩阵）
+- **网络**:
+  - [[伊特萨姆学习法]] 链接到 [[Feynman_Technique]]/[[Naval_Rapid_Research_Method]]/[[AI_Mastery_Compass]]/[[Prompt_Engineering]]
