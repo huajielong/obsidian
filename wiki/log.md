@@ -759,3 +759,22 @@
 - **冲突**: 无（伊特萨姆学习法与 [[Feynman_Technique]]、[[Naval_Rapid_Research_Method]] 形成"教学检验/信息搜集/对抗性盲区暴露"三者互补的 AI 时代学习方法矩阵）
 - **网络**:
   - [[伊特萨姆学习法]] 链接到 [[Feynman_Technique]]/[[Naval_Rapid_Research_Method]]/[[AI_Mastery_Compass]]/[[Prompt_Engineering]]
+
+## [2026-08-03] ingest | 归档两份已摄取的 JD 原始文件
+- **变更**: 归档 `raw/01-articles/算法应用开发工程师-JD.txt`、`raw/01-articles/智能体研发工程师-JD.txt` → `raw/09-archive/`（两份 JD 已于 2026-07-16 完整摄入——[[摘要-算法应用开发工程师-jd]]、[[摘要-智能体研发工程师-jd]] 及关联实体/概念页均已创建、[[index]] 已登记；本次仅补齐遗漏的归档步骤）
+- **冲突**: 无（不涉及任何 wiki 内容变更，纯归档操作）
+- **归档**: 2 个 raw/01-articles 文件 → raw/09-archive/
+
+## [2026-08-03] ingest | 摄入吴恩达"人人AI"课程前 6 课转录
+- **变更**: 新增 [[摘要-ai-for-everyone-andrew-ng]]（sources）；新增 [[Supervised_Learning]]、[[Generative_AI]]、[[Artificial_General_Intelligence]]、[[Neural_Network]]、[[Data_Science]]、[[AI_Transformation_Playbook]]（concepts，6 个 AI 基础概念页）；增量更新 [[Andrew_Ng]]（补充 AI for Everyone 课程 + 6 个新概念链接 + sources 字段）；更新 [[index]]（Sources 添加 1 条目 + Concepts 添加 6 条目）
+- **冲突**: 无（全部为知识库缺失的 AI 基础概念层，与既有概念互补无矛盾——[[Supervised_Learning]] 是 [[GPT]]/[[Transformer_Architecture]] 的底层训练范式；[[Generative_AI]] 与 [[GPT]] 为一般 vs 具体的父子关系；[[Neural_Network]] 与 [[Backpropagation]]/[[Computation_Graph]] 为技术层级互补；[[AI_Transformation_Playbook]] 与 [[Harness_Engineering]] 为企业转型 vs 技术实现的双视角）
+- **网络**:
+  - [[摘要-ai-for-everyone-andrew-ng]] 链接到 [[Andrew_Ng]]/[[Supervised_Learning]]/[[Generative_AI]]/[[Artificial_General_Intelligence]]/[[Neural_Network]]/[[AI_Transformation_Playbook]]/[[Data_Science]]/[[GPT]]/[[Transformer_Architecture]]/[[Model_Fine_Tuning]]/[[Harness_Engineering]]/[[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]]
+  - [[Supervised_Learning]] 链接到 [[Generative_AI]]/[[Neural_Network]]/[[Data_Science]]/[[Artificial_General_Intelligence]]/[[GPT]]/[[Transformer_Architecture]]/[[Model_Fine_Tuning]]/[[AI_Transformation_Playbook]]/[[Andrew_Ng]]/[[摘要-ai-for-everyone-andrew-ng]]
+  - [[Generative_AI]] 链接到 [[Supervised_Learning]]/[[Artificial_General_Intelligence]]/[[GPT]]/[[Transformer_Architecture]]/[[Neural_Network]]/[[Andrew_Ng]]/[[摘要-ai-for-everyone-andrew-ng]]
+  - [[Artificial_General_Intelligence]] 链接到 [[Supervised_Learning]]/[[Generative_AI]]/[[Neural_Network]]/[[Andrew_Ng]]/[[摘要-ai-for-everyone-andrew-ng]]
+  - [[Neural_Network]] 链接到 [[Supervised_Learning]]/[[Generative_AI]]/[[Artificial_General_Intelligence]]/[[GPT]]/[[Transformer_Architecture]]/[[Self_Attention]]/[[Backpropagation]]/[[Model_Fine_Tuning]]/[[Andrew_Ng]]/[[摘要-ai-for-everyone-andrew-ng]]
+  - [[AI_Transformation_Playbook]] 链接到 [[Andrew_Ng]]/[[Supervised_Learning]]/[[Generative_AI]]/[[Data_Science]]/[[Harness_Engineering]]/[[摘要-ai-for-everyone-andrew-ng]]
+  - [[Data_Science]] 链接到 [[Supervised_Learning]]/[[Neural_Network]]/[[Generative_AI]]/[[AI_Transformation_Playbook]]/[[Andrew_Ng]]/[[摘要-ai-for-everyone-andrew-ng]]
+  - [[Andrew_Ng]] 增量：新增 AI for Everyone 课程 + 6 个基础概念反向链接
+- **归档**: 6 个 Clippings/ 文件 → raw/09-archive/

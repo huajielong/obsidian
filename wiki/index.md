@@ -68,6 +68,7 @@
 - [[摘要-算法应用开发工程师-jd]] — 算法应用开发工程师职位描述：Agent/RAG/微调三核驱动的 AI 应用层工程落地，横跨 Prompt/Context/Harness 三层工程模型
 - [[摘要-智能体研发工程师-jd]] — 智能体研发工程师职位描述：企业级高可用 AI Agent 平台架构设计、Skills 权限管理、Memory 插件、多用户多 Agent 架构，横跨 Harness Engineering 的平台工程维度
 - [[摘要-devops-ai-architect-xiamen]] — 效能研发工程师 / 架构师（DevOps AI 方向）职位描述：将 LLM 注入 DevOps 全生命周期，通过 AI 重构工具链打造智能化研发效能平台
+- [[摘要-ai-for-everyone-andrew-ng]] — 吴恩达"人人AI"非技术入门课程前 6 课：AI 价值三分法、监督学习 A→B 映射、数据获取与误用、AI 术语辨析、AI-first 公司与五步 AI 转型手册
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -187,6 +188,12 @@
 - [[Claude_Code_Slash_Commands]] — Claude Code 斜杠命令体系
 - [[Claude_Code_Memory_System]] — Claude Code 三层持久记忆机制
 - [[Prompt_Engineering]] — 提示词工程的基础技巧层，[[AI_Mastery_Compass]] 是对其的系统化升级
+- [[Supervised_Learning]] — 监督学习：学习 A→B（输入→输出）映射，机器学习最常用类型，LLM 的底层训练范式
+- [[Generative_AI]] — 生成式AI：生成文本/图像/音频的新技术，AI 三分法中价值初现的一环
+- [[Artificial_General_Intelligence]] — 人工通用智能（AGI）：能做任何人类智力任务的目标，当前仍非常遥远
+- [[Neural_Network]] — 神经网络与深度学习：学习 A→B 映射的高效技术，扩展规律（Scaling）驱动 LLM 突破
+- [[Data_Science]] — 数据科学：从数据中探索知识，输出图表/报告/决策建议，与机器学习互补
+- [[AI_Transformation_Playbook]] — AI 转型手册：Andrew Ng 提出的企业系统化转型为 AI 公司的五步方法论
 - [[GPT]] — 生成式预训练 Transformer，自回归 Decoder-only 语言模型
 - [[Transformer_Architecture]] — 基于 Self-Attention 的深度神经网络架构，现代 AI 的基石
 - [[Self_Attention]] — Transformer 的核心机制，Token 之间通过 Q/K/V 加权通信
