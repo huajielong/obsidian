@@ -788,3 +788,18 @@
   - [[Transfer_Learning]] 链接到 [[Model_Fine_Tuning]]（迁移学习→微调）；[[Reinforcement_Learning]] 链接到 [[后训练研究]]（RLHF/PPO/GRPO）；[[Knowledge_Graph]] 链接到 [[RAG]]/[[LightRAG]]（GraphRAG）；[[Computer_Vision]]/[[Natural_Language_Processing]] 链接到 [[多模态理解研究]]
   - [[AI_Bias]]/[[Adversarial_Attack]] 链接到 [[AI_Transformation_Playbook]]（企业治理风险）；[[AI_Project_Workflow]]/[[Data_Science_Workflow]] 链接到 [[Supervised_Learning]]/[[Data_Science]]
 - **归档**: 30 个 Clippings/ 文件 → raw/09-archive/AI-for-Everyone-吴恩达-p7-35/
+
+## [2026-08-03] ingest | 摄入 AI 转型手册官方 v8 原文（PDF）
+- **变更**: 新增 [[摘要-ai-transformation-playbook]]（sources，Landing AI 官方 PDF 12 页）；新增 [[Landing_AI]]（entities）；大幅增量更新 [[AI_Transformation_Playbook]]（补充官方 v8 独有细节：试点项目三特征、AI 单元四大职责、CLO/翻转课堂、护城河四方式、数据战略三要素、沟通五受众、历史注记）；增量更新 [[Andrew_Ng]]（补充 Landing AI CEO 身份 + 官方手册）；更新 [[index]]（Sources 添加 1 条目 + Entities 添加 1 条目）
+- **冲突**: 无（官方 v8 原文与课程版 [[AI_Transformation_Playbook]] 五步法完全一致，PDF 为增量细节补充无矛盾；"高管 4 小时/部门领导 12 小时/工程师 100 小时"培训时长在两来源中一致）
+- **网络**:
+  - [[摘要-ai-transformation-playbook]] 链接到 [[AI_Transformation_Playbook]]/[[Andrew_Ng]]/[[Landing_AI]]/[[摘要-ai-for-everyone-andrew-ng]]/[[AI_Bias]]/[[Supervised_Learning]]/[[Harness_Engineering]]
+  - [[Landing_AI]] 链接到 [[Andrew_Ng]]/[[AI_Transformation_Playbook]]/[[摘要-ai-transformation-playbook]]/[[摘要-ai-for-everyone-andrew-ng]]/[[Harness_Engineering]]
+  - [[AI_Transformation_Playbook]] 新增与 [[Landing_AI]]/[[摘要-ai-transformation-playbook]] 双向链接
+  - [[Andrew_Ng]] 新增与 [[Landing_AI]]/[[摘要-ai-transformation-playbook]] 双向链接
+- **归档**: 1 个 raw/01-articles PDF 文件 → raw/09-archive/
+
+## [2026-08-03] lint | 修复了 5 个问题
+- **变更**: 更新 [[index]]（Entities 注册 [[SWE-bench]]，Concepts 注册 [[知识管理]]）；修复 3 处死链（[[伊特萨姆学习法]]：[[NotebookLM]]→纯文本；[[Loop_Engineering]]：[[RLHF]]/[[RL]]→RLHF 纯文本 + 改链 [[Reinforcement_Learning|RL]]）；归一化 [[伊特萨姆学习法]] 4 处路径式链接为短名；更新 [[知识冲突]] 统计（18→19 个概念页 + 1 源摘要）
+- **冲突**: 无（全部为链接/索引维护，无知识内容变更）
+- **校验**: 摘要-gpt-from-scratch 表格内 `[[X\|别名]]` 3 处为 Obsidian 官方支持的转义写法，扫描器误报，确认功能正常后保留不改

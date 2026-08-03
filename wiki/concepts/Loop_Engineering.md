@@ -194,7 +194,7 @@ ReAct → 加 Verify → 加 Critique/Repair → 加 Plan/Decompose → 加跨 S
 ## 知识冲突
 
 - **与 [[Agent_Loop]] 的边界**：目前知识库中 [[Agent_Loop]] 已包含部分 Loop Engineering 的内容（如 PID 控制、状态持久化、终止条件）。Loop Engineering 作为第四层工程范式的独立概念，将这部分内容提升为**元层设计方法论**，而非 Agent Loop 的实现细节。二者是互补的上下层关系。
-- **与 [[RLHF]]/[[RL]] 的关系**：Loop Engineering 的"反馈循环"设计与强化学习的 Reward Signal 设计有概念交集。区别在于：RL 的反馈是**训练时**的梯度信号，Loop Engineering 的反馈是**推理时**的决策修正。二者可互补但不等同。
+- **与 RLHF/[[Reinforcement_Learning|RL]] 的关系**：Loop Engineering 的"反馈循环"设计与强化学习的 Reward Signal 设计有概念交集。区别在于：RL 的反馈是**训练时**的梯度信号，Loop Engineering 的反馈是**推理时**的决策修正。二者可互补但不等同。
 
 ## 关联连接
 - [[Agent_Loop]] — Agent 循环的运行时机制，Loop Engineering 的实现对象

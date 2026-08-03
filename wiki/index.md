@@ -69,6 +69,7 @@
 - [[摘要-智能体研发工程师-jd]] — 智能体研发工程师职位描述：企业级高可用 AI Agent 平台架构设计、Skills 权限管理、Memory 插件、多用户多 Agent 架构，横跨 Harness Engineering 的平台工程维度
 - [[摘要-devops-ai-architect-xiamen]] — 效能研发工程师 / 架构师（DevOps AI 方向）职位描述：将 LLM 注入 DevOps 全生命周期，通过 AI 重构工具链打造智能化研发效能平台
 - [[摘要-ai-for-everyone-andrew-ng]] — 吴恩达"人人AI"非技术入门课程完整 35 讲：AI 价值三分法、监督学习 A→B 映射、数据获取与误用、AI 术语辨析、AI 项目/数据科学工作流、AI 转型手册、AI 偏见与对抗性攻击等社会影响
+- [[摘要-ai-transformation-playbook]] — AI 转型手册官方 v8 原文（Landing AI）：五步企业转型方法论、试点项目三特征、AI 单元职责、护城河四方式、数据战略三要素、沟通五受众
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -105,6 +106,7 @@
 - [[Qwen]] — 阿里云通义千问开源大语言模型系列
 - [[Llama]] — Meta 开源大语言模型系列
 - [[Andrew_Ng]] — 吴恩达，AI 教育之父，Coursera & DeepLearning.AI 创始人，ML/DL 课程全球最受欢迎
+- [[Landing_AI]] — Andrew Ng 创立并任 CEO 的 AI 转型公司，AI Transformation Playbook 官方发布方
 - [[Hung_yi_Lee]] — 李宏毅，台湾大学教授，中文圈公认体验最好的 ML/DL 课程主讲人
 - [[Mu_Li]] — 李沐，亚马逊 AWS 首席科学家，《动手学深度学习》作者，B站最强 AI 实战导师
 - [[Fei-Fei_Li]] — 李飞飞，斯坦福终身教授，ImageNet 发起者，"计算机视觉教母"，CS231n 主讲人
@@ -117,6 +119,7 @@
 - [[langfuse]] — 开源 LLM 可观测性与评估平台（★ 28k+）
 - [[OpenRouter]] — 统一 LLM API 路由与网关服务，支持 Model Routing 与 Fallback
 - [[promptfoo]] — 开源 LLM 评估标准化工具，YAML 配置驱动的 CI Eval（★ 22k+）
+- [[SWE-bench]] — 软件工程 Agent 评测基准：真实 GitHub Issue→PR 驱动的端到端代码修复评测，SOTA 88.6%（SWE-bench Verified）
 - [[Hermes_Agent]] — Nous Research 的开源自主 CLI Agent，213k+★，Cloud-deployed 范式代表
 - [[Telegram]] — 跨平台即时通讯软件，Agent 的聊天界面接口
 - [[Slack]] — 企业协作通讯平台，Agent 的聊天界面接口
@@ -272,4 +275,5 @@
 - [[Kubernetes在效能平台中的应用]] — Kubernetes 在研发效能平台中的应用：CI Runner 集群、Agent 运行沙箱、动态扩缩容、Operator 模式与 Agent Loop 的对照
 - [[CICD平台对比与AI集成]] — CI/CD 平台对比与 AI 集成：Jenkins/GitLab CI/GitHub Actions 在 DevOps Agent 场景下的集成模式与选型建议
 - [[知识冲突]] — 知识冲突管理方法论：在知识库长期演进中系统化识别、记录和消解新旧知识矛盾与张力的工程实践
+- [[知识管理]] — 知识管理学科与实践：系统化捕获、组织、存储、共享和应用知识，将零散信息转化为结构化、可复用资产
 - [[伊特萨姆学习法]] — 伊特萨姆三问学习法：MIT 研究生伊特沙姆·阿里提出的 AI 增强学习方法，通过三个关键问题（思维框架/领域格局/鉴别性测试）两天内深度掌握陌生领域

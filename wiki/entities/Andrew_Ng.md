@@ -5,6 +5,7 @@ tags: [AI教育, 机器学习, 深度学习, 斯坦福大学, Coursera, DeepLear
 sources:
   - "raw/09-archive/AI for everyone 系列教程原声中文版【吴恩达】.md"
   - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI-Transformation-Playbook-v8.pdf"
 last_updated: 2026-08-03
 ---
 
@@ -15,13 +16,14 @@ last_updated: 2026-08-03
 ## 关键信息
 
 - **曾任**：百度首席科学家（领导百度 AI 研究院）、Google Brain 创始成员
-- **现任**：DeepLearning.AI 创始人、Coursera 联合创始人兼主席、斯坦福大学客座教授
+- **现任**：DeepLearning.AI 创始人、Coursera 联合创始人兼主席、斯坦福大学客座教授、[[Landing_AI]] 创始人兼 CEO（帮助传统企业完成 AI 转型，发布官方 [[AI_Transformation_Playbook]]）
 - **教育**：加州大学伯克利分校博士（AI/机器人方向），MIT 本科
 - **知名项目**：
   - **Coursera 机器学习课程（ML Course）** — AI 史上最经典的入门课
   - **深度学习专项课程（Deep Learning Specialization）** — Coursera 5 门核心课程
   - **CS230（斯坦福）** — 深度学习课程，每年秋季更新
   - **AI for Everyone（人人AI）** — 面向**非技术人群**的 AI 入门课，系统讲解 AI 价值、[[Supervised_Learning|监督学习]]、数据、神经网络、[[AI_Project_Workflow|AI 项目]]、[[AI_Transformation_Playbook|公司转型]]与 AI 社会影响；本知识库收录其**完整 35 讲**转录（[[摘要-ai-for-everyone-andrew-ng]]）
+  - **AI Transformation Playbook v8（官方原文）** — 通过 [[Landing_AI]] 发布的五步企业 AI 转型方法论（[[摘要-ai-transformation-playbook]]），源于其领导 Google Brain 与百度 AI 集团的实战经验
   - **DeepLearning.AI 短期课程系列** — 聚焦 LLM、RAG、AI Agents 等前沿主题
   - **The Batch 周刊** — AI 行业新闻与技术分析
 - **个人网站**：https://www.andrewng.org
@@ -46,5 +48,7 @@ last_updated: 2026-08-03
 - [[Artificial_General_Intelligence]] — 课程中关于 AGI 的观点
 - [[Neural_Network]] — 深度学习教育者
 - [[AI_Transformation_Playbook]] — 其提出的企业 AI 转型方法论
+- [[Landing_AI]] — 其创立并任 CEO 的公司，转型手册官方发布方
 - [[Data_Science]] — 课程术语辨析内容
-- [[摘要-ai-for-everyone-andrew-ng]] — 来源摘要
+- [[摘要-ai-for-everyone-andrew-ng]] — 课程转录来源摘要
+- [[摘要-ai-transformation-playbook]] — 转型手册官方原文来源摘要
