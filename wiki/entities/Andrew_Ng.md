@@ -3,7 +3,8 @@ title: "Andrew Ng"
 type: entity
 tags: [AI教育, 机器学习, 深度学习, 斯坦福大学, Coursera, DeepLearning.AI]
 sources:
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】.md"
 last_updated: 2026-08-03
 ---
 
@@ -20,7 +21,7 @@ last_updated: 2026-08-03
   - **Coursera 机器学习课程（ML Course）** — AI 史上最经典的入门课
   - **深度学习专项课程（Deep Learning Specialization）** — Coursera 5 门核心课程
   - **CS230（斯坦福）** — 深度学习课程，每年秋季更新
-  - **AI for Everyone（人人AI）** — 面向**非技术人群**的 AI 入门课，系统讲解 AI 价值、[[Supervised_Learning|监督学习]]、数据、神经网络、AI 公司与[[AI_Transformation_Playbook|转型手册]]；本知识库收录其前 6 课转录（[[摘要-ai-for-everyone-andrew-ng]]）
+  - **AI for Everyone（人人AI）** — 面向**非技术人群**的 AI 入门课，系统讲解 AI 价值、[[Supervised_Learning|监督学习]]、数据、神经网络、[[AI_Project_Workflow|AI 项目]]、[[AI_Transformation_Playbook|公司转型]]与 AI 社会影响；本知识库收录其**完整 35 讲**转录（[[摘要-ai-for-everyone-andrew-ng]]）
   - **DeepLearning.AI 短期课程系列** — 聚焦 LLM、RAG、AI Agents 等前沿主题
   - **The Batch 周刊** — AI 行业新闻与技术分析
 - **个人网站**：https://www.andrewng.org

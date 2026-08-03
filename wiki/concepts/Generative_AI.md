@@ -3,8 +3,8 @@ title: "生成式AI Generative AI"
 type: concept
 tags: [AI基础, 生成式, 内容生成, 核心概念]
 sources:
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】.md"
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】 1.md"
+  - "raw/09-archive/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 1.md"
 last_updated: 2026-08-03
 ---
 
@@ -37,10 +37,13 @@ last_updated: 2026-08-03
 - AI 领域存在大量炒作，原因之一是 ANI 与生成式AI 的急速进步被误读为"AGI 近在咫尺"
 - 媒体多报道成功案例、少报道失败案例，需对 AI 能力保持现实预期
 - 课程强调：即使 AGI 还很遥远，也无须过度焦虑，应聚焦当下可用技术创造价值
+- 课程总结（p27）：**[[Generative_Adversarial_Network|GAN]]** 是最具代表性的"从零生成新内容"的生成式技术（合成不存在的名人照片），与 LLM 同属生成式AI 谱系
 
 ## 关联连接
 - [[Supervised_Learning]] — LLM 的底层训练范式
 - [[Artificial_General_Intelligence]] — 与生成式AI 的边界区分
+- [[Generative_Adversarial_Network]] — 生成式AI 的另一代表技术
+- [[Machine_Learning]] — 生成式AI 所属的机器学习家族
 - [[GPT]] — 生成式AI 的典型代表
 - [[Transformer_Architecture]] — 底层架构
 - [[Neural_Network]] — 实现技术

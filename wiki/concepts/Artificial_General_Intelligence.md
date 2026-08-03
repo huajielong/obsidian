@@ -3,7 +3,8 @@ title: "人工通用智能 AGI"
 type: concept
 tags: [AI基础, AGI, 长期目标, 核心概念]
 sources:
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 23.md"
 last_updated: 2026-08-03
 ---
 
@@ -34,6 +35,11 @@ last_updated: 2026-08-03
 - 当前 AI 的价值引擎是 **ANI（窄 AI）**，而非 AGI
 - AGI 常被与"超级智能"混谈；课程将两者区分——AGI 是"能做任何人类智力任务"，超级智能是"超越人类能力"
 - 在企业 AI 落地语境下，应聚焦窄 AI 的可行性，而非等待 AGI
+
+### "金发姑娘法则"视角（p29）
+
+- 对 AI 的认知应取**中间状态**：既不过度乐观（不炒作"有感知的超级智能即将到来"、不为防御遥远威胁过度分配资源），也不过悲观（不因 AI 不能做所有事就预期"AI 寒冬"）
+- 由于 AI 正在创造真实经济价值且路径清晰，可预见未来将持续发展
 
 ## 关联连接
 - [[Supervised_Learning]] — 窄 AI 的核心实现

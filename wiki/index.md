@@ -68,7 +68,7 @@
 - [[摘要-算法应用开发工程师-jd]] — 算法应用开发工程师职位描述：Agent/RAG/微调三核驱动的 AI 应用层工程落地，横跨 Prompt/Context/Harness 三层工程模型
 - [[摘要-智能体研发工程师-jd]] — 智能体研发工程师职位描述：企业级高可用 AI Agent 平台架构设计、Skills 权限管理、Memory 插件、多用户多 Agent 架构，横跨 Harness Engineering 的平台工程维度
 - [[摘要-devops-ai-architect-xiamen]] — 效能研发工程师 / 架构师（DevOps AI 方向）职位描述：将 LLM 注入 DevOps 全生命周期，通过 AI 重构工具链打造智能化研发效能平台
-- [[摘要-ai-for-everyone-andrew-ng]] — 吴恩达"人人AI"非技术入门课程前 6 课：AI 价值三分法、监督学习 A→B 映射、数据获取与误用、AI 术语辨析、AI-first 公司与五步 AI 转型手册
+- [[摘要-ai-for-everyone-andrew-ng]] — 吴恩达"人人AI"非技术入门课程完整 35 讲：AI 价值三分法、监督学习 A→B 映射、数据获取与误用、AI 术语辨析、AI 项目/数据科学工作流、AI 转型手册、AI 偏见与对抗性攻击等社会影响
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -194,6 +194,18 @@
 - [[Neural_Network]] — 神经网络与深度学习：学习 A→B 映射的高效技术，扩展规律（Scaling）驱动 LLM 突破
 - [[Data_Science]] — 数据科学：从数据中探索知识，输出图表/报告/决策建议，与机器学习互补
 - [[AI_Transformation_Playbook]] — AI 转型手册：Andrew Ng 提出的企业系统化转型为 AI 公司的五步方法论
+- [[Machine_Learning]] — 机器学习：AI 核心子集，监督/无监督/强化三大学习范式，输出运行中的 AI 系统
+- [[Unsupervised_Learning]] — 无监督学习：无标注数据中发现结构（聚类），Google Cat 项目代表
+- [[Transfer_Learning]] — 迁移学习：跨任务知识迁移，任务 B 数据稀缺时的关键技术
+- [[Reinforcement_Learning]] — 强化学习：奖励信号驱动的试错学习范式，LLM 后训练（RLHF）的思想根源
+- [[Generative_Adversarial_Network]] — GAN：生成对抗网络，从零合成新图像（NVIDIA 合成名人）
+- [[Knowledge_Graph]] — 知识图谱：实体-属性-关系图结构数据库，GraphRAG 的基础
+- [[Computer_Vision]] — 计算机视觉：图像分类/人脸识别/物体检测/图像分割/视频跟踪
+- [[Natural_Language_Processing]] — NLP：文本分类/信息检索/命名实体识别/机器翻译
+- [[AI_Bias]] — AI 偏见：数据偏见机制（词向量类比）与治理方案（多样数据/审计/多元团队）
+- [[Adversarial_Attack]] — 对抗性攻击：微小扰动欺骗 AI 分类，物理世界攻击与防御军备竞赛
+- [[AI_Project_Workflow]] — 机器学习项目工作流：收集数据 → 训练模型 → 部署模型
+- [[Data_Science_Workflow]] — 数据科学项目工作流：收集 → 分析 → 假设行动 → 持续重析
 - [[GPT]] — 生成式预训练 Transformer，自回归 Decoder-only 语言模型
 - [[Transformer_Architecture]] — 基于 Self-Attention 的深度神经网络架构，现代 AI 的基石
 - [[Self_Attention]] — Transformer 的核心机制，Token 之间通过 Q/K/V 加权通信

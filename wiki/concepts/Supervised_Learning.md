@@ -3,8 +3,10 @@ title: "监督学习 Supervised Learning"
 type: concept
 tags: [机器学习, AI基础, A-B映射, 核心概念]
 sources:
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】 1.md"
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】 2.md"
+  - "raw/09-archive/AI for everyone 系列教程原声中文版【吴恩达】.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 1.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 2.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 21.md"
 last_updated: 2026-08-03
 ---
 
@@ -45,15 +47,22 @@ last_updated: 2026-08-03
 - **[[Generative_AI]]**：主要生成非结构化数据（文本/图像/音频）；监督学习对结构化与非结构化数据都能处理
 - **[[Data_Science]]**：监督学习输出**运行中的系统**（持续预测），数据科学输出**决策洞察**（图表/报告）
 - **[[Neural_Network]]**：实现监督学习最高效的技术手段
+- **[[Machine_Learning]]**：监督学习是机器学习三大范式（监督/无监督/强化）中最常用、经济价值最大的一支
+- **[[Unsupervised_Learning]]**：无需标注输出 B，让 AI 在数据中发现结构（聚类）——数据需求远小于监督学习
+- **[[Reinforcement_Learning]]**：靠奖励信号而非标注数据学习；目前经济价值仍低于监督学习
 
 ## 关联连接
+- [[Machine_Learning]] — 监督学习是机器学习的核心范式
 - [[Generative_AI]] — 生成式AI 的底层训练范式
 - [[Neural_Network]] — 实现监督学习的主流技术
 - [[Data_Science]] — 机器学习 vs 数据科学辨析
+- [[Unsupervised_Learning]] — 无标注学习范式对比
+- [[Reinforcement_Learning]] — 奖励信号学习范式对比
 - [[Artificial_General_Intelligence]] — 监督学习属于 ANI 范畴
 - [[GPT]] — 基于监督学习训练的 LLM 代表
 - [[Transformer_Architecture]] — LLM 底层架构
 - [[Model_Fine_Tuning]] — 监督学习的迁移应用
+- [[AI_Project_Workflow]] — 监督学习项目的落地步骤
 - [[AI_Transformation_Playbook]] — 企业应用监督学习的落地路径
 - [[Andrew_Ng]] — 概念推广者
 - [[摘要-ai-for-everyone-andrew-ng]] — 来源

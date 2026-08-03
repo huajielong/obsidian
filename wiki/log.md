@@ -778,3 +778,13 @@
   - [[Data_Science]] 链接到 [[Supervised_Learning]]/[[Neural_Network]]/[[Generative_AI]]/[[AI_Transformation_Playbook]]/[[Andrew_Ng]]/[[摘要-ai-for-everyone-andrew-ng]]
   - [[Andrew_Ng]] 增量：新增 AI for Everyone 课程 + 6 个基础概念反向链接
 - **归档**: 6 个 Clippings/ 文件 → raw/09-archive/
+
+## [2026-08-03] ingest | 补全吴恩达"人人AI"课程 p7-p35（第 2-4 周）转录
+- **变更**: 扩展 [[摘要-ai-for-everyone-andrew-ng]]（从"前 6 课"→完整 35 讲，新增第 2-4 周内容 + sources 更新为归档路径）；新增概念（12）：[[Machine_Learning]]、[[Unsupervised_Learning]]、[[Transfer_Learning]]、[[Reinforcement_Learning]]、[[Generative_Adversarial_Network]]、[[Knowledge_Graph]]、[[Computer_Vision]]、[[Natural_Language_Processing]]、[[AI_Bias]]、[[Adversarial_Attack]]、[[AI_Project_Workflow]]、[[Data_Science_Workflow]]；增量更新 [[Andrew_Ng]]、[[AI_Transformation_Playbook]]（五步法详解版）、[[Supervised_Learning]]、[[Neural_Network]]（需求预测/人脸识别直觉）、[[Data_Science]]（DS 工作流）、[[Generative_AI]]、[[Artificial_General_Intelligence]]（金发姑娘法则）；更新 [[index]]（Sources 更新 1 条目 + Concepts 新增 12 条目）
+- **冲突**: 无（全部为 AI 基础概念层的增量补全；[[AI_Transformation_Playbook]] 五步法详解为原有概述的展开、无矛盾；新概念与 [[Supervised_Learning]]/[[Data_Science]]/[[Model_Fine_Tuning]]/[[后训练研究]]/[[RAG]]/[[多模态理解研究]] 均为互补关系）
+- **网络**:
+  - [[摘要-ai-for-everyone-andrew-ng]] 新增与 12 个新概念页的双向链接，形成完整课程知识网
+  - [[Machine_Learning]] 链接到 [[Supervised_Learning]]/[[Unsupervised_Learning]]/[[Reinforcement_Learning]]/[[Neural_Network]]/[[Data_Science]]/[[Generative_AI]]/[[AI_Project_Workflow]]/[[AI_Transformation_Playbook]]/[[Andrew_Ng]]
+  - [[Transfer_Learning]] 链接到 [[Model_Fine_Tuning]]（迁移学习→微调）；[[Reinforcement_Learning]] 链接到 [[后训练研究]]（RLHF/PPO/GRPO）；[[Knowledge_Graph]] 链接到 [[RAG]]/[[LightRAG]]（GraphRAG）；[[Computer_Vision]]/[[Natural_Language_Processing]] 链接到 [[多模态理解研究]]
+  - [[AI_Bias]]/[[Adversarial_Attack]] 链接到 [[AI_Transformation_Playbook]]（企业治理风险）；[[AI_Project_Workflow]]/[[Data_Science_Workflow]] 链接到 [[Supervised_Learning]]/[[Data_Science]]
+- **归档**: 30 个 Clippings/ 文件 → raw/09-archive/AI-for-Everyone-吴恩达-p7-35/

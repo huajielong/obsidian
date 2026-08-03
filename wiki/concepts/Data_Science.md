@@ -3,8 +3,9 @@ title: "数据科学 Data Science"
 type: concept
 tags: [AI基础, 数据科学, 数据分析, 核心概念]
 sources:
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】 2.md"
-  - "Clippings/AI for everyone 系列教程原声中文版【吴恩达】 3.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 2.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 3.md"
+  - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】 6.md"
 last_updated: 2026-08-03
 ---
 
@@ -35,6 +36,15 @@ last_updated: 2026-08-03
 - Andrew Ng 的观点：数据科学是**使用 AI 工程与深度学习等工具**来产生洞察、引发业务讨论的领域
 - 数据科学是"数据驱动决策"的互补角色，与机器学习系统并行为企业创造价值
 
+### 数据科学项目工作流（[[Data_Science_Workflow]]）
+
+与机器学习项目（输出运行中的系统）不同，数据科学项目的输出是**一组可操作的见解**，促使业务采取不同做法。其工作流（课程 p12）：
+
+1. **收集数据**（如销售漏斗：用户访问/加入购物车/结账数据；工厂：批次/湿度/窑温数据）
+2. **分析数据**（数据科学团队多次迭代，产生大量关于影响因素的想法）
+3. **提出假设与行动**（提炼为少量假设 + 建议行动，如"将运费计入产品成本""午休期间减少广告支出"）
+4. **持续迭代**（部署更改后用户行为变化 → 继续收集新数据 → 定期重新分析）
+
 ### 数据的基础认知（来自课程）
 
 - 数据集 = A/B 表；A、B 的定义需按业务价值取舍（如房价预测中 A=尺寸/B=价格，或 A=预算/B=尺寸）
@@ -44,8 +54,11 @@ last_updated: 2026-08-03
 
 ## 关联连接
 - [[Supervised_Learning]] — 机器学习 vs 数据科学辨析
+- [[Data_Science_Workflow]] — 数据科学项目工作流
+- [[Machine_Learning]] — 机器学习的互补学科
 - [[Neural_Network]] — 数据科学使用的技术工具之一
 - [[Generative_AI]] — 另一类互补 AI 技术
+- [[AI_Project_Workflow]] — 机器学习项目工作流（对比）
 - [[AI_Transformation_Playbook]] — 数据驱动文化在企业转型中的角色
 - [[Andrew_Ng]] — 概念阐释者
 - [[摘要-ai-for-everyone-andrew-ng]] — 来源
