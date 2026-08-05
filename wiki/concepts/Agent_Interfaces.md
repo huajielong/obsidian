@@ -30,6 +30,8 @@ Agent Interfaces 是指 AI Agent 与非 API 世界（桌面应用、网页、操
 
 ## 2024-2026 突破时间线
 
+- **2017（前 LLM 时代）**：**World of Bits** 用 CNN 直接吃屏幕画面、输出鼠标/键盘动作，是 web-based agent 的雏形
+- **2023 夏**：**Mind2Web / WebArena / Visual WebArena** 等 web agent 出现——给模型看屏幕画面或 HTML 代码，自主决策完成任务（如订机票），与今天的 Operator 形态相近（《AI Agent 原理》讲义补充）
 - **2024-10 之前**：智能体只能与有 API 的世界互动
 - **2024-10**：Anthropic Computer Use beta → **智能体第一次能操作真实屏幕**
 - **2025-2026**：OpenAI（Atlas + Codex desktop）/ Google（Gemini in Chrome）全线入场 → 主流化
@@ -193,6 +195,7 @@ Agent 生成的代码不能在宿主环境直接运行—— Sandbox 提供安�
 - [[OpenAI_Agents_SDK]] — 2026-04 内建 sandbox 抽象层
 - [[AgentParadigms]] — Agent 五种部署范式，与 Interface 交互方式强相关
 - [[摘要-awesome-agentic-ai-zh-agent-interfaces]] — 本概念的源素材摘要
+- [[摘要-hung-yi-lee-ai-agent-原理]] — 本概念在《AI Agent 原理》中的历史脉络补充（World of Bits / Mind2Web / WebArena）
 
 - [[多模态理解研究]] — 内容来源：GUI Agent 属于 Computer Use 层，多模态理解研究为 Agent Interface 提供视觉感知基础
 - [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — 前置 Stage 7

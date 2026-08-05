@@ -2,8 +2,14 @@
 title: "Tool_Calling"
 type: concept
 tags: [工具调用, function calling, LLM, Agent, 协议, Schema设计]
-sources: [raw/01-articles/LLM工具调用入门实践.md, raw/01-articles/Tool Description 边界互斥实验.md, raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md, raw/01-articles/错误处理 — Tool Error 是 Data 不是 Exception.md, raw/01-articles/Function Schema 设计 — Bad Schema 修到 Good.md]
-last_updated: 2026-07-15
+sources:
+  - raw/01-articles/LLM工具调用入门实践.md
+  - raw/01-articles/Tool Description 边界互斥实验.md
+  - raw/01-articles/多步骤推理任务 — 连续 Tool 调用.md
+  - raw/01-articles/错误处理 — Tool Error 是 Data 不是 Exception.md
+  - raw/01-articles/Function Schema 设计 — Bad Schema 修到 Good.md
+  - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
+last_updated: 2026-08-04
 ---
 
 # Tool Calling（工具调用）
@@ -321,6 +327,41 @@ Layer 2：Python 层（安全护栏层）
 | 是否换参数重试 | **LLM 层** | 根据 retry_hint 改 query |
 | 是否彻底放弃 | **LLM 层** | 综合判断后输出 Answer |
 
+## 通用工具调用方法（Prompt 驱动）
+
+> 除了 OpenAI/Anthropic 的专用协议，还有**对所有能力较强的模型都通用的做法**——直接告诉模型怎么用工具。李宏毅《AI Agent 原理》讲义的系统描述：
+
+**核心思想**：工具 = 函数。模型不需要知道函数内部如何运作，只需知道输入输出接口 → 使用工具就是调用函数（Function Calling）。
+
+**通用格式**（把工具说明写进 System Prompt）：
+
+```
+工具使用方式：
+  - 需要调用工具时，把调用文本放在 [Tool] 标记中间
+  - 工具返回结果放在 [Output] 标记中间
+可用工具：
+  - temperature(地点, 时间)：查询某地某时气温
+  - 调用范例：Tool: temperature(台北, 2025-03-09)
+```
+
+**执行流程**：模型输出 `Tool` 包裹的调用文本 → 开发者写胶水脚本把它转成真实函数调用 → 把返回值塞进 `Output` → 模型继续文字接龙，给出用户可见的最终答案（工具调用过程可以完全隐藏）。
+
+**System Prompt vs User Prompt**：
+- **System Prompt**：开发者设定、每次相同、放在最前面的指令，**优先级最高**——与 User Prompt 冲突时模型听 System Prompt 的。
+- **User Prompt**：服务使用者每次输入的内容。
+
+### 工具生态的进阶洞察
+
+| 洞察 | 内容 |
+|------|------|
+| **工具选择模块** | 工具过多时（上百上千个）不能全读说明 → 把工具说明存入 Memory，用类似 RAG 的"工具选择模块"按当前状态挑出合适的工具 |
+| **模型自建工具** | 模型能自己写代码（函数），成功后放入工具库复用——与"把成功经验写入 Memory"本质相同 |
+| **搜索 = 最常用工具** | 使用搜索引擎 = RAG（Retrieval Augmented Generation） |
+| **模型不完全相信工具** | 内部知识（参数）与外部知识（工具输出）会"角力"；极端不合理输出（如气温 1 万度）会被模型识破 |
+| **工具不一定更高效** | 简单问题（3×4）人类心算快于按计算器；是否调用工具取决于模型自身能力 |
+| **语音任务 = 工具使用典型案例** | 文字模型 + 语音工具组（ASR/说话人验证/声音分类/情绪辨识）+ 最终 LLM 汇总，在 Dynamic-SUPER（55 个语音任务）上完胜"原生听语音"的模型 |
+| **工具的信任与说服力** | Google AI Overview 曾把 Reddit 玩笑当真（"起司黏不住就用无毒胶水"）→ 模型可能过度相信工具；但极端荒谬输出会被识破；外部知识与模型内部信念差距越小越容易被相信；模型倾向信"AI 同类"写的文章；越新的文章越容易被相信（metadata 影响）；好看的排版也会被偏好 |
+
 ## 与 Agent Loop 的关系
 
 Tool Calling 是 [[Agent_Loop|ReAct 循环]] 中 Action 阶段的技术基础：
@@ -341,6 +382,7 @@ Thought（分析）→ Action（Tool Calling）→ Observation（工具结果反
 - [[摘要-tool-error-is-data]] — Tool Error 作为结构化 Data 返回的错误处理范式（练习 5）
 - [[摘要-function-schema-design]] — Bad Schema 到 Good Schema 的 4 项改进与 5 条黄金规则
 - [[摘要-awesome-agentic-ai-zh-tool-use]] — Stage 3 理论版本，含 Schema 设计 4 项改进
+- [[摘要-hung-yi-lee-ai-agent-原理]] — 通用 Prompt 驱动调用方法 + 工具选择/自建工具/相信工具的来源
 - [[OpenAI_Compatible_API]] — 已成为行业事实标准的接口规范
 - [[Anthropic]] — Anthropic 原生 tool use 格式的提供商
 - [[Ollama]] — OpenAI 兼容格式的本地运行环境

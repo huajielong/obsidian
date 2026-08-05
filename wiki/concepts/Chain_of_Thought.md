@@ -2,8 +2,10 @@
 title: "Chain_of_Thought"
 type: concept
 tags: [提示词工程, 推理增强, CoT, reasoning]
-sources: [raw/01-articles/awesome-agentic-ai-zh-stage-02-prompt-engineering.md]
-last_updated: 2026-07-10
+sources:
+  - raw/01-articles/awesome-agentic-ai-zh-stage-02-prompt-engineering.md
+  - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
+last_updated: 2026-08-04
 ---
 
 # Chain-of-Thought（思维链）
@@ -35,8 +37,19 @@ Chain-of-Thought（CoT，思维链/思考链）是一种**引导 LLM 在给出�
 
 小模型对 CoT 的依赖性更高，教学价值更明显。
 
+## Reasoning 模型 = 脑内小剧场（Agent 场景视角）
+
+李宏毅《AI Agent 原理》讲义指出：有 **reasoning（思考）** 能力的模型，其所谓思考本质是"演脑内小剧场"——把中间推理步骤展开。当这些模型作为 Agent 时，脑内小剧场可能正好在做 **[[Model_Based_Planning|规划]]**：
+
+- DeepSeek-R1 面对叠积木问题时在"内心"做了约 1500 字搜索，先模拟（把蓝色拿开、放回桌面、再放橙色）找到最优解，才执行第一步——即思考内部模拟了 Tree Search + World Model。
+- 因此 reasoning 能力与 Agent 的规划能力有天然关联：**会思考的模型做 Agent 整体更好**。
+- 副作用：**[[Over_Thinking|过度思考]]**——想太多、行动太少（"思考的巨人、行动的矮子"），是当前待研究的关键课题。
+
 ## 关联连接
 
+- [[Model_Based_Planning]] — 脑内小剧场 = reasoning 模型的内部规划
+- [[Over_Thinking]] — reasoning 模型作为 Agent 的过度思考失效模式
+- [[Agent_Loop]] — 思考/规划在 Agent 循环中的位置
 - [[Prompt_Engineering]] — CoT 是 Prompt Engineering 的核心技术之一
 - [[Few_Shot_Prompting]] — CoT 常与 Few-shot 结合使用
 - [[Context_Engineering]] — 推理链的上下文组织

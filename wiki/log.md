@@ -803,3 +803,27 @@
 - **变更**: 更新 [[index]]（Entities 注册 [[SWE-bench]]，Concepts 注册 [[知识管理]]）；修复 3 处死链（[[伊特萨姆学习法]]：[[NotebookLM]]→纯文本；[[Loop_Engineering]]：[[RLHF]]/[[RL]]→RLHF 纯文本 + 改链 [[Reinforcement_Learning|RL]]）；归一化 [[伊特萨姆学习法]] 4 处路径式链接为短名；更新 [[知识冲突]] 统计（18→19 个概念页 + 1 源摘要）
 - **冲突**: 无（全部为链接/索引维护，无知识内容变更）
 - **校验**: 摘要-gpt-from-scratch 表格内 `[[X\|别名]]` 3 处为 Obsidian 官方支持的转义写法，扫描器误报，确认功能正常后保留不改
+
+## [2026-08-04] ingest | 摄入李宏毅《生成式AI時代下的機器學習(2025)》第二讲 AI Agent 原理转录
+- **变更**: 新增 [[摘要-hung-yi-lee-ai-agent-原理]]（sources）；新增 [[Agent_Memory_Architecture]]、[[Model_Based_Planning]]、[[Over_Thinking]]（concepts）；新增 [[AutoGPT]]、[[AIDE]]、[[Coscientist]]、[[AlphaGo]]（entities）；增量更新 [[Hung_yi_Lee]]、[[Memory_Agent]]、[[Tool_Calling]]、[[Hierarchical_Task_Decomposition]]、[[Chain_of_Thought]]、[[Agent_Benchmark_Landscape]]；更新 [[index]]（Sources + Entities + Concepts 各添加条目）
+- **冲突**: 无（全部为知识库缺失的 Agent 原理层/实体补充——[[Agent_Memory_Architecture]] 是 [[Memory_Agent]] 的落地范式展开、[[Model_Based_Planning]] 是 [[Hierarchical_Task_Decomposition]] 的规划增强路线、[[Over_Thinking]] 是 [[Chain_of_Thought]]/reasoning 模型的失效模式，均互补无矛盾；[[Memory_Agent]]/[[Tool_Calling]] 的增量合并与既有内容互补无冲突）
+- **网络**:
+  - [[摘要-hung-yi-lee-ai-agent-原理]] 链接到 [[Hung_yi_Lee]]/[[Agent_Loop]]/[[Memory_Agent]]/[[Agent_Memory_Architecture]]/[[RAG]]/[[Reflexion]]/[[Tool_Calling]]/[[Model_Based_Planning]]/[[Over_Thinking]]/[[Hierarchical_Task_Decomposition]]/[[Chain_of_Thought]]/[[Reinforcement_Learning]]/[[AutoGPT]]/[[AIDE]]/[[Coscientist]]/[[AlphaGo]]
+  - [[Agent_Memory_Architecture]] 链接到 [[Memory_Agent]]/[[RAG]]/[[Reflexion]]/[[Agent_Loop]]/[[Hierarchical_Task_Decomposition]]/[[Tool_Calling]]/[[摘要-hung-yi-lee-ai-agent-原理]]
+  - [[Model_Based_Planning]] 链接到 [[Agent_Loop]]/[[Hierarchical_Task_Decomposition]]/[[Chain_of_Thought]]/[[Over_Thinking]]/[[Reinforcement_Learning]]/[[Agent_Memory_Architecture]]/[[Tool_Calling]]/[[摘要-hung-yi-lee-ai-agent-原理]]
+  - [[Over_Thinking]] 链接到 [[Model_Based_Planning]]/[[Chain_of_Thought]]/[[Agent_Loop]]/[[摘要-hung-yi-lee-ai-agent-原理]]
+  - [[Hung_yi_Lee]]/[[Memory_Agent]]/[[Tool_Calling]]/[[Hierarchical_Task_Decomposition]]/[[Chain_of_Thought]]/[[Agent_Benchmark_Landscape]] 各新增与来源摘要/新概念的双向链接
+- **归档**: 1 个 Clippings/ 文件 → raw/09-archive/
+
+## [2026-08-04] ingest | 增量补录李宏毅《AI Agent 原理》转录稿遗漏细节
+- **变更**: 更新 [[摘要-hung-yi-lee-ai-agent-原理]]（新增：定义辨析与课程立场、LLM 下棋能力 BigBench/o1-vs-R1、现实应用实例（AI村莊/Minecraft/Computer Use/World of Bits/Mind2Web/AI训练AI/AI Co-scientist）、语音即时互动小节、记忆研究论文脉络、语音工具 Dynamic-SUPER 案例、工具信任与说服 AI 研究细节、规划表象与历史）；补充 [[Agent_Memory_Architecture]]（记忆研究脉络 2023-2025）；补充 [[Tool_Calling]]（语音任务案例 + 工具信任/说服力洞察）；补充 [[Agent_Interfaces]]（前 LLM 时代历史脉络 + 来源链接）；更新 [[index]]（Sources 描述）
+- **冲突**: 无（全部为增量补录，与既有内容互补无矛盾；未重复创建任何页面）
+- **网络**: [[摘要-hung-yi-lee-ai-agent-原理]] 新增链接到 [[Agent_Interfaces]]/[[Agent_Benchmark_Landscape]]；[[Agent_Interfaces]] 新增反向链接到来源摘要
+
+## [2026-08-04] query | 用户提问 Transformer 自注意力机制与 RNN 长序列对比
+- **输出**: 引用 [[Self_Attention]]、[[Transformer_Architecture]]、[[GPT]]、[[摘要-gpt-from-scratch]]、[[Frontier研究]]；即时回答未保存（已询问是否固化为 synthesis）
+
+## [2026-08-04] sync | 固化查询结果为 synthesis：Transformer 自注意力机制与 RNN 长序列对比
+- **变更**: 新增 [[Transformer自注意力机制与RNN长序列对比]]（syntheses）；更新 [[index]]（Syntheses 章节添加条目）
+- **冲突**: 无（综合既有 [[Self_Attention]]/[[Transformer_Architecture]]/[[GPT]]/[[摘要-gpt-from-scratch]] 内容，与 [[Frontier研究]] 的 O(L²) 局限论述互补；RNN 对比部分为通用知识补充，无矛盾）
+- **网络**: [[Transformer自注意力机制与RNN长序列对比]] 链接到 [[Self_Attention]]/[[Transformer_Architecture]]/[[GPT]]/[[摘要-gpt-from-scratch]]/[[Frontier研究]]/[[KV_Cache_Storage_Systems]]

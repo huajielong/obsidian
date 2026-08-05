@@ -2,8 +2,10 @@
 title: "Memory_Agent"
 type: concept
 tags: [memory, agent, CoALA, working memory, long-term memory, episodic memory]
-sources: [raw/01-articles/06-memory-rag.zh-Hans.md]
-last_updated: 2026-07-10
+sources:
+  - raw/01-articles/06-memory-rag.zh-Hans.md
+  - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
+last_updated: 2026-08-04
 ---
 
 # Memory（Agent 记忆系统）
@@ -93,8 +95,23 @@ Agent Memory 是让 Agent 能够跨对话、跨 session、跨任务保持状态�
 2. **📚 调查爆发** — "Memory in the Age of AI Agents"（3D 分类法 + benchmark）、"Memory for Autonomous LLM Agents"（形式化 write-manage-read 循环）
 3. **🛡 Memory 安全** — Cross-session poisoning / 未授权访问攻击（Memory Security survey）
 
+## Read / Write / Reflection 三模块架构（经验学习范式）
+
+李宏毅《AI Agent 原理》讲义提出的一种落地范式（详见 [[Agent_Memory_Architecture]]）：
+
+| 模块 | 职责 | 实现 |
+|------|------|------|
+| **Read** | 从长期记忆检索与当前问题相关的经验放入输入前 | 本质是 **RAG**（observation=query，memory=数据库），只是记忆来源是"自己的经历" |
+| **Write** | 判断哪些信息值得写入长期记忆，防止被琐事塞爆 | LLM 自问"这件事重要吗"；ChatGPT 记忆功能即此模块 |
+| **Reflection** | 对记忆做抽象整理、建立经验间关系 | LLM 提炼新想法 / 建 Knowledge Graph（GraphRAG、HippoRAG 手法） |
+
+**关键实验（StreamBench）**：让 Agent 依序解决有标准答案的问题并利用过往反馈学习。
+- RAG 式从 Memory 检索相关经验（粉线）正确率明显高于固定取 5 个例子（黄线）、远高于不学习（灰线）。
+- **正面例子 > 负面例子**：只给负面例子基本无帮助甚至有害；只给正面例子在所有数据集上都更好。→ "告诉模型要做什么"优于"告诉它不要做什么"。
+
 ## 关联连接
 
+- [[Agent_Memory_Architecture]] — 三模块架构（Read/Write/Reflection）的独立概念页
 - [[Context_Engineering]] — Memory 是 Context Engineering 的核心 Sub-problem（Write + Compress）
 - [[RAG]] — RAG 解决外部知识检索，与 Memory 互补而非替代
 - [[Reflexion]] — 典型的 Episodic Memory 应用，跨 trial 累积教训

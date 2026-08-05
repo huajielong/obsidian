@@ -5,7 +5,8 @@ tags: [agentic AI, 编排, 任务分解, 多层监督, supervisor, plan-execute,
 sources:
   - wiki/sources/摘要-awesome-agentic-ai-zh-advanced-concepts.md
   - wiki/sources/摘要-agent-loop-guide.md
-last_updated: 2026-07-22
+  - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
+last_updated: 2026-08-04
 ---
 
 # Hierarchical Task Decomposition（层级任务分解）
@@ -227,8 +228,22 @@ Supervisor Plan Agent
 
 ---
 
+## 规划能力评测现状（LLM 实际规划水平）
+
+李宏毅《AI Agent 原理》讲义用多个 Benchmark 检验纯 LLM 的规划能力（详见 [[Model_Based_Planning]]）：
+
+| Benchmark | 评估内容 | 结果 |
+|-----------|---------|------|
+| **PlanBench（Blocksworld）** | 叠积木规划（把橙色积木放到蓝色积木上等） | 普通问题模型能解；但网上已有大量训练数据，可能"照本宣科" |
+| **PlanBench（神秘方块世界）** | 奇怪规则（方块可吞噬/征服/渴望）防死记硬背 | 2023 年 GPT-4 仅 ~9%；2024 年 o1 等 reasoning 模型有希望 |
+| **旅行规划（TravelPlanner 类）** | 带预算/约束的行程规划 | 2024 年初纯 LLM 成功率 ~0%（GPT-4 Turbo 0.6%）；把约束交给 solver 工具后 90%+ |
+
+> **结论**：纯 LLM 规划能力"介乎有与没有之间"。两条增强路径：(1) **Replan**——每次看到新 observation 后重新规划（环境有随机性，初始 Plan 常被打破）；(2) **工具/模型内模拟辅助**——用现成 solver 或 [[Model_Based_Planning|脑内小剧场]] 补齐约束求解与路径探索。
+
 ## 关联连接
 
+- [[Model_Based_Planning]] — 强化规划的另一条路线（Tree Search/World Model）
+- [[Over_Thinking]] — 规划能力增强后的失效模式（想太多）
 - [[Agent_Orchestration_Patterns]] — 五大编排模式中的 Supervisor-Worker
 - [[Contract_Driven_Handoffs]] — 层级间的契约确保信息正确传递
 - [[Work_Boundary]] — 每层有自己的工作边界

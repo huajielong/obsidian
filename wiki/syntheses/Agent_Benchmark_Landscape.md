@@ -5,7 +5,8 @@ tags: [eval, benchmark, agent评测, SWE-bench, GAIA, AgentBench, 评估对比]
 sources:
   - wiki/sources/摘要-awesome-agentic-ai-zh-multi-agent-production.md
   - wiki/sources/摘要-awesome-agentic-ai-zh-advanced-concepts.md
-last_updated: 2026-07-22
+  - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
+last_updated: 2026-08-04
 ---
 
 # Agent 评测 Benchmark Landscape
@@ -241,6 +242,20 @@ Agent: [调用 modify_booking()] ✓  正确处理变更
 
 ---
 
+## 经验学习与规划能力 Benchmark（李宏毅讲义补充）
+
+李宏毅《AI Agent 原理》讲义补充了另一类 Agent Benchmark——**能力维度型**（经验学习/规划），而非任务场景型：
+
+| Benchmark | 评估维度 | 机制 | 关键发现 |
+|-----------|---------|------|---------|
+| **StreamBench** | 从经验中学习 | Agent 依序解决一系列有标准答案的问题，利用对/错反馈修正后续回答，以全程平均正确率衡量 | RAG 式记忆检索 >> 固定样例 >> 不学习；**正面例子 > 负面例子**（只给负面例子基本无帮助甚至有害） |
+| **PlanBench（Blocksworld）** | 规划能力 | 叠积木规划任务 | 普通问题模型能解，但训练数据已含此类问题 |
+| **PlanBench（神秘方块世界）** | 规划（防死记硬背） | 奇怪规则（方块可吞噬/征服/渴望），需读懂新规则再规划 | 2023 年 GPT-4 仅 ~9%；2024 年 o1 系列 reasoning 模型有希望 |
+| **旅行规划（TravelPlanner 类）** | 规划 + 约束满足 + 工具 | 带预算/日程约束的行程规划 | 2024 年初纯 LLM 成功率 ~0%（GPT-4 Turbo 0.6%）；把约束交给 solver 工具后 90%+ |
+| **Dynamic-SUPER** | 语音 Agent 能力 | 55 个语音相关任务平均分 | 文字模型"用工具组合"（ASR/情绪识别等）可完胜原生能听语音的模型 |
+
+> **启示**：Agent 评测不止"任务完成率"，还应覆盖**经验学习**与**规划**两个能力维度；这两类 Benchmark 也更难被单纯训练数据覆盖（神秘方块世界特意设计为训练集外）。
+
 ## Benchmark 选型指南
 
 ### 按评估目的选择
@@ -303,4 +318,5 @@ Agent: [调用 modify_booking()] ✓  正确处理变更
 - [[langfuse]] — 可观测平台，Eval + Tracing 一体化
 - [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — Benchmark Landscape 核心来源
 - [[摘要-awesome-agentic-ai-zh-advanced-concepts]] — Eval Rigor 和 Reward-Hacking 讨论来源
+- [[摘要-hung-yi-lee-ai-agent-原理]] — StreamBench/PlanBench/TravelPlanner/Dynamic-SUPER 补充来源
 - [[AI产品工程]] — 产品侧评测视角与 Benchmark 选型决策

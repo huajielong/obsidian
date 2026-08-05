@@ -70,6 +70,7 @@
 - [[摘要-devops-ai-architect-xiamen]] — 效能研发工程师 / 架构师（DevOps AI 方向）职位描述：将 LLM 注入 DevOps 全生命周期，通过 AI 重构工具链打造智能化研发效能平台
 - [[摘要-ai-for-everyone-andrew-ng]] — 吴恩达"人人AI"非技术入门课程完整 35 讲：AI 价值三分法、监督学习 A→B 映射、数据获取与误用、AI 术语辨析、AI 项目/数据科学工作流、AI 转型手册、AI 偏见与对抗性攻击等社会影响
 - [[摘要-ai-transformation-playbook]] — AI 转型手册官方 v8 原文（Landing AI）：五步企业转型方法论、试点项目三特征、AI 单元职责、护城河四方式、数据战略三要素、沟通五受众
+- [[摘要-hung-yi-lee-ai-agent-原理]] — 李宏毅一堂课讲透 AI Agent：经验调整行为/工具使用/做计划三大能力 + 记忆架构/RAG/工具调用/规划评测/语音即时互动/应用实例
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -81,6 +82,10 @@
 - [[Roo_Code]] — VS Code multi-mode coding agent，23k★，与 Cline 的单一 agent flow 形成对比
 - [[Repomix]] — 打包整个 codebase 成单个 AI-friendly 文件，26k★，Track A 必备 daily-driver
 - [[superpowers_obra]] — obra 的 20+ 实战 Skill 集合，含 code-review/debug/TDD skill
+- [[AIDE]] — 机器学习工程师 Agent 框架，用 multi-agent 解决数据科学竞赛
+- [[AutoGPT]] — 2023 年第一波 AI Agent 热潮的开源自主 Agent 项目
+- [[Coscientist]] — Google AI 科研助手 Agent，根据研究想法生成完整 Proposal
+- [[AlphaGo]] — DeepMind 围棋 AI，RL 驱动 Agent 的经典范例（observation/action/reward 循环）
 - [[LangChain]] — LLM 应用开发框架，Harness Engineering 集大成者，LangGraph/LangSmith/LangMem 生态母框架
 - [[LangGraph]] — 图式 Agent 编排框架，Production 级 Multi-agent 首选（支持 checkpointing + time-travel debug）
 - [[LiteLLM]] — 统一 LLM API 网关（AI Gateway），OpenAI 兼容接口调用 100+ 模型，内建路由/费用追踪/护栏/可观测性
@@ -138,6 +143,7 @@
 - [[Agent_Benchmark_Landscape]] — Agent 评测 Benchmark Landscape：SWE-bench / GAIA / AgentBench / WebArena / OSWorld / τ-bench / RE-bench 等主流 Agent 评测基准的深度对比与分析
 - [[DevOpsAI架构师JD全景对标分析]] — DevOps AI 架构师 JD 与知识库已有 5 份 JD 的全景横向对比：技术栈光谱、Harness 8 核心元件覆盖度、行业信号汇总、能力差距诊断、四象限定位图
 - [[DevOpsAI架构师面试深度准备]] — DevOps AI 架构师面试深度准备：伪代码级架构实现（CI Agent/智能排障/LLM Gateway）、工具选型对比（LiteLLM vs 自建）、成本数据参考、面试应答策略
+- [[Transformer自注意力机制与RNN长序列对比]] — Transformer 自注意力机制详解（Q/K/V 通信、公式、关键特性）与 RNN 长序列建模对比（并行计算/长程依赖/梯度问题）及 O(L²) 边界
 
 ## Concepts
 - [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
@@ -151,12 +157,15 @@
 - [[LightRAG]] — 轻量级 Graph RAG 检索框架（★ 35.1k），增强跨文档实体推理
 - [[ragas]] — 开源 RAG 评估框架，提供 8+ 标准化指标（Retrieval Recall / Faithfulness / Relevance）
 - [[Memory_Agent]] — Agent 记忆系统：Working/Long-term Memory、CoALA 四层分类、三种设计模式与 Production Memory Layer
+- [[Agent_Memory_Architecture]] — Agent 记忆三模块架构（Read/Write/Reflection），从经验调整行为而不更新模型参数
 - [[Chunking]] — 文档分块策略：固定长度/递归/语义切割，影响 RAG 检索质量的关键步骤
 - [[Reflexion]] — 反思机制：基于持久 Episodic Memory 的跨 trial 经验累积，与 Self-Refine 的区别
 - [[DSPy]] — Programming-not-Prompting 范式：自动优化 Prompt + Retriever 的编译器框架
 - [[Agent_Orchestration_Patterns]] — Multi-agent 五大编排模式：Routing/Handoff、Sequential、Parallel、Supervisor-Worker、Debate/Society
 - [[AgentParadigms]] — Agent 五种部署范式：IDE 集成 / Terminal 结对编程 / BYO-LLM CLI / 云端部署 / 边缘部署的全景分类框架
 - [[Chain_of_Thought]] — 思维链推理增强技术，引导 LLM 显式展示中间推理步骤
+- [[Model_Based_Planning]] — 基于模型的规划：脑内小剧场/Tree Search/World Model 强化 Agent 规划能力
+- [[Over_Thinking]] — 推理模型作为 Agent 的过度思考失效模式（思考的巨人、行动的矮子）
 - [[Few_Shot_Prompting]] — 少样本提示技术，通过输入输出范例引导模型理解任务模式
 - [[Feynman_Technique]] — 费曼学习法：通过教别人来验证自己是否真正理解
 - [[Context_Engineering]] — LLM 三层工程堆栈的中间层，工程上下文窗口的信息组装
