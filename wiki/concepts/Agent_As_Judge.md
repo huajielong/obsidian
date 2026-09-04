@@ -45,6 +45,7 @@ Constitutional AI 为 Agent-as-Judge 提供了"评审标准"的理论基础：
 
 ## 关联连接
 
+- [[AI_SDLC]] — AI-SDLC 的 spec/intent 评审门控可引入 Agent-as-Judge 自动化
 - [[Harness_Engineering]] — Quality 验证类别的核心实践
 - [[Eval_Harness]] — 自动评估流水线
 - [[Taste_Invariants]] — 评审标准可编码为 Invariants

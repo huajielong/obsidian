@@ -5,7 +5,8 @@ tags: [AI编程, 开发工具, Anthropic, 终端工具, Agent生态]
 sources: 
   - raw/01-articles/Claude Code 完全指南 - 阿里云开发者社区.md
   - raw/01-articles/05-claude-code-ecosystem.md
-last_updated: 2026-07-10
+  - raw/09-archive/The AI-Native SDLC playbook  Claude by Anthropic.md
+last_updated: 2026-09-04
 ---
 
 ## 定义
@@ -114,6 +115,15 @@ Claude Code 拥有**最完整的 7-Layer Stack**（其他 CLI Agent 如 Codex / 
 - GitHub Actions
 - 平台支持：跨平台（Windows / macOS / Linux）
 
+## 在 AI-Native SDLC 中的角色
+
+在 [[AI_SDLC|AI-Native SDLC]]（Anthropic Playbook）中，Claude Code 是横跨多个阶段的执行工具：
+
+- **Build**：Plan Mode 作为默认起点——先产出可提交的 `plan.md` 再实现；guardrails 成熟后在 Auto Mode 下对 routine 工作 auto-accept；配合 git worktree 跑并行会话、用 `.claude/agents/` 定义 verifier/simplifier/researcher 等 subagent。
+- **Deploy**：在 PR review loop 中以 `@claude` 处理 review 意见并推送修复；经 claude-code-action / `claude -p` 非交互式进入 CI/CD，负责 triage、changelog、review 修复等判断步骤（一切写入走分支保护、无直通 main 路径）。
+- **Maintain**：作为非交互式无状态步骤被确定性监控脚本触发（诊断写回 `intent.md`），或承载 Claude Security 补丁的 review 与应用。
+- **CLAUDE.md / Skills / Hooks** 三者构成其「制度知识 + 顾问性控制 + 确定性护栏」的组合，是组织级治理的载体。
+
 ## 开发者工作流定位
 
 在 [[Developer_Agentic_Workflow|开发者 Agentic AI 工作流]] 的 **Tier 升级路径** 中，Claude Code 横跨 **Tier 1（CLI agent 入门）** 到 **Tier 2（Skill/MCP 生态扩展）**：
@@ -135,6 +145,8 @@ Claude Code 拥有**最完整的 7-Layer Stack**（其他 CLI Agent 如 Codex / 
 ## 关联连接
 
 - [[Anthropic]] — Claude Code 的开发商（含 Claude Cowork 对比）
+- [[AI_SDLC]] — AI-Native SDLC 中 Claude Code 的执行角色（plan mode/auto mode/PR/CI）
+- [[摘要-ai-native-sdlc-playbook]] — Anthropic AI-Native SDLC Playbook 来源
 - [[Agentic_Coding]] — Claude Code 所属的 AI 编程范式
 - [[Developer_Agentic_Workflow]] — 开发者场景分类与 Tier 路径
 - [[MCP]] — Model Context Protocol，Claude Code 的 L2.5 Tool Provider

@@ -123,6 +123,7 @@ Boris Cherny 推荐在项目中强制维护 CLAUDE.md，作为 AI 的"项目宪�
 - [[Claude_Code_Memory_System]] — Claude Code 中的 Project Memory 即 CLAUDE.md 文件
 - [[Claude_Code]] — Claude Code 工具中 AGENT.md/CLAUDE.md 的实践应用
 - [[Boris_Cherny]] — 提供 CLAUDE.md 编写规范的行业专家
+- [[AI_SDLC]] — 同为流程规范文档工件：AGENT.md 约束行为，spec.md 约束交付物
 - [[摘要-ai-era-git-management]] — 来源文章
 - [[摘要-claude-code-guide]] — Claude Code 使用指南中的记忆系统说明
 - [[摘要-claude-code-boris-cherny]] — Boris Cherny 最佳实践

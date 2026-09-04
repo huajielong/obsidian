@@ -1,3 +1,11 @@
+## [2026-09-04] sync | 沉淀 AI-SDLC 文档驱动开发流程与 spec.md 技术规格
+- **变更**: 新增 [[AI_SDLC]]（concepts）；在 [[Spec_Driven_Development]]、[[Contract_Driven_Handoffs]]、[[Agent_As_Judge]]、[[Agent_First_Engineering]]、[[AGENT_MD]]（concepts）与 [[GSD_Core]]（entities）补充反向链接；更新 [[index]]（Concepts +1）
+- **冲突**: 无（AI-SDLC 的 spec.md 是文档层人类可读技术规格，与 [[Spec_Driven_Development]] 的 Formal Spec 可机读契约互补无矛盾；与 [[Agent_First_Engineering]]/[[Contract_Driven_Handoffs]] 为编排形态与概念层实例的关系）
+- **网络**:
+  - [[AI_SDLC]] 链接到 [[Spec_Driven_Development]]/[[Contract_Driven_Handoffs]]/[[Agent_First_Engineering]]/[[Agent_As_Judge]]/[[GSD_Core]]/[[AGENT_MD]]/[[System_of_Record]]/[[Harness_Engineering]]/[[Agentic_Coding]]
+  - 6 个关联页面各新增 1 条对 [[AI_SDLC]] 的反向链接，双向闭合
+- **来源**: 用户在 AI-SDLC 设计对话中提供的 spec.md 规范定义（对话输入、非 raw 素材），故新页 sources 置空
+
 ## [2026-08-05] ingest | 摄入李宏毅《生成式AI時代下的機器學習(2025)》第七讲（DeepSeek-R1 深度思考）
 - **变更**: 新增 [[摘要-hung-yi-lee-deepseek-r1-reasoning]]（sources）；新增实体 [[DeepSeek_R1]]；新增概念 [[Reasoning]]、[[Test_Time_Compute]]、[[Self_Consistency]]、[[Process_Verifier]]、[[Imitation_Learning]]、[[Knowledge_Distillation]]；增量更新 [[Chain_of_Thought]]、[[Reinforcement_Learning]]（concepts）与 [[DeepSeek]]、[[Hung_yi_Lee]]、[[AlphaGo]]（entities）；更新 [[index]]（Sources +1、Entities +1、Concepts +6）
 - **冲突**: 无（全新"打造推理模型"知识域，与既有页面互补增量——[[Chain_of_Thought]] 新增 Supervised/Long-Supervised CoT 为原 CoT 变体的展开；[[Reinforcement_Learning]] 新增推理 RL/RLVR/R1-Zero 为 [[后训练研究]] RL 应用在推理场景的具体化；[[DeepSeek]] 新增 R1 流水线与其 API/工程内容互补；[[AlphaGo]] 新增 Test-Time Compute 视角；新概念 [[Test_Time_Compute]] 与 [[Over_Thinking]]/[[Cost_Optimization]] 为"算力投入 vs 过度思考"的互补视角，无矛盾）
@@ -859,3 +867,12 @@
 - **变更**: 新增 [[Transformer自注意力机制与RNN长序列对比]]（syntheses）；更新 [[index]]（Syntheses 章节添加条目）
 - **冲突**: 无（综合既有 [[Self_Attention]]/[[Transformer_Architecture]]/[[GPT]]/[[摘要-gpt-from-scratch]] 内容，与 [[Frontier研究]] 的 O(L²) 局限论述互补；RNN 对比部分为通用知识补充，无矛盾）
 - **网络**: [[Transformer自注意力机制与RNN长序列对比]] 链接到 [[Self_Attention]]/[[Transformer_Architecture]]/[[GPT]]/[[摘要-gpt-from-scratch]]/[[Frontier研究]]/[[KV_Cache_Storage_Systems]]
+
+## [2026-09-04] ingest | 摄入 Anthropic《The AI-Native SDLC Playbook》
+- **变更**: 新增 [[摘要-ai-native-sdlc-playbook]]（sources）；重写扩展 [[AI_SDLC]]（概念：文档驱动线 → 六阶段闭环 + 工件链 intent/spec/plan + 治理三层 + 指标度量）；新增 [[Claude_Security]]、[[Claude_Tag]]（entities）；增量更新 [[Anthropic]]（新产品线 Claude Security/Tag/Design + Mythos 5 状态覆盖）、[[Claude_Code]]（AI-Native SDLC 角色段）；更新 [[index]]（Sources +1、Entities +2、Concepts 描述更新）
+- **冲突**: 1 处已解决——[[Anthropic]] 既有「Mythos 5 已于 2026-06-12 暂停存取」vs 新来源「Claude Security 运行在 Claude Mythos 5 上（Mythos 5 费率计费）」；按用户选择 **B（以新来源覆盖旧知识）**，重写模型注记，表行标注 Fable 5 状态存疑
+- **网络**:
+  - [[摘要-ai-native-sdlc-playbook]] 链接到 [[AI_SDLC]]/[[Anthropic]]/[[Claude_Code]]/[[Claude_Security]]/[[Claude_Tag]]/[[Harness_Engineering]]/[[System_of_Record]]/[[Claude_Code_Hooks]]/[[Claude_Code_Skills]]/[[Claude_Code_Subagent]]/[[Eval_Harness]]/[[AI驱动的CICD]]/[[Agent_Loop]]/[[Agent_Observability]]/[[MCP]]/[[Spec_Driven_Development]]/[[Contract_Driven_Handoffs]]/[[Developer_Agentic_Workflow]]
+  - [[AI_SDLC]] 反向链接扩至 [[Claude_Security]]/[[Claude_Tag]]/[[Claude_Code]]/[[Claude_Code_Hooks]]/[[Claude_Code_Skills]]/[[Eval_Harness]]/[[AI驱动的CICD]]/[[Agent_Loop]]/[[摘要-ai-native-sdlc-playbook]]/[[摘要-agent-first-engineering]]
+  - [[Anthropic]] 新增与 [[Claude_Security]]/[[Claude_Tag]]/[[AI_SDLC]]/[[摘要-ai-native-sdlc-playbook]] 双向链接；[[Claude_Code]] 新增与 [[AI_SDLC]]/[[摘要-ai-native-sdlc-playbook]] 双向链接
+- **归档**: 1 个 Clippings/ 文件 → raw/09-archive/

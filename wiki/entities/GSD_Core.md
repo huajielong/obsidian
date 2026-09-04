@@ -34,6 +34,7 @@ GSD Core（Get Stuff Done Core）是基于 Claude Code 的全生命周期项目�
 - 支持 Global（一次安装全局可用）和 Local（项目级隔离）
 
 ## 关联连接
+- [[AI_SDLC]] — 同类全生命周期 AI 开发流程对照（GSD 以命令/Agent 驱动，AI-SDLC 以文档工件驱动）
 - [[Claude_Code]] — Claude Code 实体
 - [[摘要-claude-code-gsd-core]] — GSD Core 源摘要
 - [[Claude_Code_Workflow]] — 工作流方法论

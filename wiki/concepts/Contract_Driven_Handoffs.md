@@ -30,6 +30,7 @@ Contract-driven Hand-offs 是一种 Agent 间协作模式：上游 Agent 承诺�
 
 ## 关联连接
 
+- [[AI_SDLC]] — spec.md 是 intent 与开发之间的文档层交接契约
 - [[Work_Boundary]] — 契约是工作边界的工程化定义
 - [[Agent_Orchestration_Patterns]] — Handoff 是五大编排模式之一
 - [[Spec_Driven_Development]] — 延伸：整个 Task 都由 Formal Spec 定义

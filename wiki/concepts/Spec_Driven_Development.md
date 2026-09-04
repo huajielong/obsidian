@@ -36,6 +36,7 @@ Spec-driven Development 是一种 Agent Task 定义范式：**Agent 的任务由
 
 ## 关联连接
 
+- [[AI_SDLC]] — 文档层技术规格：spec.md 与 Formal Spec 互补（前者定"做什么"，后者约束"怎么做"）
 - [[Contract_Driven_Handoffs]] — Spec 是契约的延伸
 - [[DSPy]] — Spec-driven 的核心框架实现
 - [[Work_Boundary]] — Spec 是工作边界的精确定义

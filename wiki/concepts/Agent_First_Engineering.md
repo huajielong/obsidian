@@ -38,6 +38,7 @@ Agent-First Engineering 是 [[Harness_Engineering]] 的具体实现方法论，�
 Agent-First Engineering 是 Harness Engineering 思想的具体落地步骤。Harness 提供控制系统和约束框架，Agent-First 提供端到端的工作流编排。
 
 ## 关联连接
+- [[AI_SDLC]] — 文档驱动的 AI-SDLC 是 Agent-First 流程的具体编排（intent/spec 为文档工件）
 - [[Harness_Engineering]] — 驾驭工程核心概念
 - [[摘要-agent-first-engineering]] — 实操指南源摘要
 - [[Agentic_Coding]] — AI Agent 编程范式

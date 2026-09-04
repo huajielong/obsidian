@@ -74,6 +74,7 @@
 - [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] — 李宏毅一堂课讲透生成式 AI 原理：LLM=文字接龙、Token/Vocabulary、概率采样、Chat Template/System Prompt、AI 幻觉与 RAG、生成式 AI 定义、Auto-Regressive Generation，含 Llama/Gemma 开源模型实操
 - [[摘要-hung-yi-lee-上下文工程-第2讲]] — 李宏毅讲透 Context Engineering：与 Prompt Engineering 的关系、完整 Context 的组成、三大招数（选择/压缩/Multi-Agent）、超长 context 失效的实验证据（Lost in the Middle / Context Rot）、Gemma 2 9B 工具调用实操
 - [[摘要-hung-yi-lee-deepseek-r1-reasoning]] — 李宏毅讲透 DeepSeek-R1 式"深度思考"（Reasoning）：四种打造推理模型的方法（更强 CoT / 推理工作流 / 模仿学习 / 结果导向 RL）、Test-Time Compute、R1-Zero 与 Aha moment、R1 真实训练流水线
+- [[摘要-ai-native-sdlc-playbook]] — Anthropic AI-Native SDLC Playbook：代码不再是瓶颈 → 六阶段闭环改造、工件链（intent/spec/plan→PR→incident）、治理三层（Skills/Hooks/审批门）+ 领先/滞后指标
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -129,6 +130,8 @@
 - [[Dify]] — 开源 LLM 应用开发平台，可视化 Workflow 编排、内置 RAG Pipeline、多租户团队协作
 - [[Doubao]] — 字节跳动豆包 LLM 产品，以低延迟高性价比著称
 - [[Claude_Agent_SDK]] — Anthropic 官方 Agent Python SDK，程序化控制 Agent Loop/Tool Dispatch/Memory
+- [[Claude_Security]] — Anthropic hosted 定时代码安全扫描（连 GitHub 仓库，Mythos 5 运行，findings 验证+置信度，补丁走 PR gate）
+- [[Claude_Tag]] — Anthropic Slack 值班/事件响应 Agent（以自身身份入频道，即时响应，频道即审计追踪）
 - [[Hamel_Husain]] — AI 实践者，"Evals are everything" 理念倡导者
 - [[langfuse]] — 开源 LLM 可观测性与评估平台（★ 28k+）
 - [[OpenRouter]] — 统一 LLM API 路由与网关服务，支持 Model Routing 与 Fallback
@@ -307,3 +310,4 @@
 - [[知识冲突]] — 知识冲突管理方法论：在知识库长期演进中系统化识别、记录和消解新旧知识矛盾与张力的工程实践
 - [[知识管理]] — 知识管理学科与实践：系统化捕获、组织、存储、共享和应用知识，将零散信息转化为结构化、可复用资产
 - [[伊特萨姆学习法]] — 伊特萨姆三问学习法：MIT 研究生伊特沙姆·阿里提出的 AI 增强学习方法，通过三个关键问题（思维框架/领域格局/鉴别性测试）两天内深度掌握陌生领域
+- [[AI_SDLC]] — AI-Native SDLC 六阶段闭环（Plan→Design→Build→Test→Deploy→Maintain）：工件链 intent.md→spec.md→plan.md→PR→incident、治理三层（Skills/Hooks/审批门）、领先/滞后指标度量
