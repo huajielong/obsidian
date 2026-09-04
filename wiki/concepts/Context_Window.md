@@ -2,7 +2,7 @@
 title: "Context_Window"
 type: concept
 tags: [LLM基础, context window, 上下文, token]
-sources: [raw/01-articles/awesome-agentic-ai-zh-stage-01-llm-basics.md]
+sources: [raw/01-articles/awesome-agentic-ai-zh-stage-01-llm-basics.md, raw/09-archive/【生成式人工智慧與機器學習導論2025】第 2 講：上下文工程 (Context Engineering) — AI Agent 背後的關鍵技術.md]
 last_updated: 2026-07-10
 ---
 
@@ -23,6 +23,17 @@ Context Window（上下文视窗）是 **LLM 单次推理能"看到"的最大 to
 
 > ⚠️ 中文效率注意：由于 Tokenizer 对中文的处理效率较低（约 1 字 ≈ 2 token，而非英文的 1 词 ≈ 1 token），中文实际可容纳内容量约为英文的 1/2~1/3。详见 [[BPE_Tokenizer]]。
 
+## 演进时间线（李宏毅第 2 讲）
+
+Context Window 上限近年快速膨胀，是 AI Agent 能长时间运行的前提：
+
+```
+GPT-4   ~3 万 token → Claude 系列  10 万 → Gemini  100 万 → Llama 4  号称 1000 万
+Gemini 1.5 号称 200 万 token ≈ 读完哈利波特全集 + 几乎 3 本魔戒
+```
+
+**关键洞察：「能输入」≠「能读懂」**。正如翻完哈利波特全集不一定记得全部内容，模型在**远未到达窗口上限时**就已对输入感到困惑——复制任务在约 10^4 token 时就急剧失准（详见 [[上下文腐败]]）。因此大窗口只是"可装下"，不保证"读得懂"，Context Engineering 依旧必要。
+
 ## 实际影响
 
 - **大窗口 ≠ 更好**：超过一定阈值后，模型对窗口中间内容的"注意力"会衰减，长上下文中的关键信息可能被忽略
@@ -38,3 +49,4 @@ Context Window（上下文视窗）是 **LLM 单次推理能"看到"的最大 to
 - [[GPT]] — GPT 系列的上下文窗口限制
 - [[Context_Engineering]] — 如何在有限的上下文窗口中高效组织信息
 - [[摘要-awesome-agentic-ai-zh-llm-basics]] — 来源资料
+- [[摘要-hung-yi-lee-上下文工程-第2讲]] — 演进时间线与"能输入≠能读懂"的来源

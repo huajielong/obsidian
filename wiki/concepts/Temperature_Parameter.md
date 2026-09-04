@@ -2,8 +2,8 @@
 title: "Temperature_Parameter"
 type: concept
 tags: [温度, 采样, 确定性, 多样性, LLM参数]
-sources: [raw/01-articles/02-温度参数扫描与取值范围.md, raw/01-articles/03-温度为零确定性验证.md, raw/01-articles/04-温度零点七的Token波动分析.md, raw/01-articles/Ollama LLM 实验系列索引.md]
-last_updated: 2026-07-09
+sources: [raw/01-articles/02-温度参数扫描与取值范围.md, raw/01-articles/03-温度为零确定性验证.md, raw/01-articles/04-温度零点七的Token波动分析.md, raw/01-articles/Ollama LLM 实验系列索引.md, raw/09-archive/【生成式人工智慧與機器學習導論2025】第１講：一堂課搞懂生成式人工智慧的原理.md]
+last_updated: 2026-08-05
 ---
 
 ## 定义
@@ -32,6 +32,15 @@ last_updated: 2026-07-09
 4. **温度 1.5 语言混入**：英文单词直接出现在中文上下文中
 5. **长度控制失效**：温度 0.7 时同一 Prompt 的 Token 极差可达 **333（28 倍）**
 
+### 采样机制（课程视角：概率分布 + 掷骰子）
+
+李宏毅《生成式人工智慧與機器學習導論(2025)》第一讲从机制上解释了温度/采样为何存在：
+
+- 语言模型的真实输出是**每个 Token 的概率分布**（给每个候选 Token 一个分数/概率），然后**按该分布"掷骰子"选下一个 Token**——这是"每次答案都不同"的根本原因。
+- **低概率 Token 的危险**：完全按概率采样时，即使概率极低的 Token 也有机会被掷到；一旦中途掷中，后续接龙全盘走偏（演示中"你是谁"接出乱码日文、XD）。
+- **工程对策 = Top-K 截断**：只允许概率排名**前 Top-K** 的 Token 参与掷骰子。Top-K=1 ≈ 贪婪解码（确定性，等价温度 0）；Top-K 设大 ≈ 不设；实践中常用 K=3 等较小值，兼顾多样性与稳定性。
+- 与温度参数的关系：Temperature 通过缩放 logits 改变概率分布的"陡峭程度"，Top-K 是**候选集裁剪**，二者常搭配使用（如 temperature=0.7 + top_k 较小值）。
+
 ### 注意事项
 
 - **温度 > 0 时输出长度不可预测**：同一 Prompt 的 Token 数波动可达 28 倍
@@ -48,3 +57,5 @@ last_updated: 2026-07-09
 - [[Model_Fine_Tuning]] — Fine-tuning 决定模型基线行为，温度在此基础上调节
 - [[OpenAI_Compatible_API]] — 温度参数是 OpenAI 兼容 API 的标准参数之一
 - [[GPT]] — LLM 基础概念中的温度采样机制
+- [[Auto_Regressive_Generation]] — 温度/采样作用的生成过程（逐 Token 接龙）
+- [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] — 采样机制与 Top-K 的教学视角来源

@@ -2,8 +2,8 @@
 title: "RAG"
 type: concept
 tags: [RAG, retrieval, embedding, vector DB, LLM, 上下文工程]
-sources: [raw/01-articles/06-memory-rag.zh-Hans.md]
-last_updated: 2026-07-16
+sources: [raw/01-articles/06-memory-rag.zh-Hans.md, raw/09-archive/【生成式人工智慧與機器學習導論2025】第１講：一堂課搞懂生成式人工智慧的原理.md]
+last_updated: 2026-08-05
 ---
 
 # RAG（Retrieval-Augmented Generation）
@@ -11,6 +11,15 @@ last_updated: 2026-07-16
 RAG（检索增强生成）是一种将 **外部知识检索** 与 **LLM 生成能力** 相结合的架构模式：在 LLM 生成回答之前，先从外部知识库中检索出与当前查询最相关的文档片段，然后将这些片段拼接进 prompt，让 LLM 基于检索到的信息生成回答。
 
 > 心智模型：RAG = retrieve 相关片段 → 塞进 prompt → 生成
+
+### 李宏毅课程视角：RAG 与 AI 幻觉
+
+[[Hung_yi_Lee]]《生成式人工智慧與機器學習導論(2025)》第一讲把 RAG 定位为**减少 AI 幻觉**的关键手段：
+
+- 语言模型背后**没有数据库**，一切答案都是文字接龙"梦"出来的 → 幻觉是内在属性。
+- **把搜索引擎搭配 AI 一起使用（RAG）** 可减少幻觉出现的可能性；主流平台（ChatGPT 等）**默认开启联网/RAG**，要复现幻觉需先关闭搜索功能。
+- 有搜索（RAG）也不保证答案正确——检索结果本身可能不可靠。
+- 该课程的作业二即为实现一个 RAG 系统。
 
 ## RAG 基础流水线
 
@@ -208,3 +217,5 @@ Vanilla chunk 会丢失原始文档上下文。Anthropic 提出用 LLM 为每个
 - [[摘要-awesome-agentic-ai-zh-memory-rag]] — 本概念的来源资料
 - [[AI搜索工程]] — AI 原生搜索工程，RAG 在搜索引擎尺度的独立展开（多路召回、级联排序、Hybrid Search）
 - [[摘要-deepseek-ai-search-jd]] — DeepSeek AI 搜索 JD，RAG 技术在大规模搜索系统中的应用实践
+- [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] — 李宏毅课程中 RAG 与 AI 幻觉的视角来源
+- [[AI_Hallucination]] — RAG 所针对的核心问题（减少幻觉）

@@ -2,8 +2,8 @@
 title: "Context_Engineering"
 type: concept
 tags: [上下文工程, RAG, memory, agent loop, context window, chunking]
-sources: [raw/01-articles/awesome-agentic-ai-zh-stage-02-prompt-engineering.md, raw/01-articles/06-memory-rag.zh-Hans.md]
-last_updated: 2026-07-10
+sources: [raw/01-articles/awesome-agentic-ai-zh-stage-02-prompt-engineering.md, raw/01-articles/06-memory-rag.zh-Hans.md, raw/09-archive/【生成式人工智慧與機器學習導論2025】第１講：一堂課搞懂生成式人工智慧的原理.md, raw/09-archive/【生成式人工智慧與機器學習導論2025】第 2 講：上下文工程 (Context Engineering) — AI Agent 背後的關鍵技術.md]
+last_updated: 2026-08-05
 ---
 
 # Context Engineering（上下文工程）
@@ -11,6 +11,10 @@ last_updated: 2026-07-10
 Context Engineering（上下文工程）是 **LLM-powered system 三层工程堆栈的第二层**，工程对象是 **每次 LLM 调用时上下文窗口中填充的信息**——包括 RAG 检索结果、对话历史、工具定义（Tool Definitions）、长期记忆等。
 
 > Karpathy 2025-06 原推文：Context Engineering 是"把 **刚好对下一步有用的信息** 填进 context window 的精细艺术。"
+
+[[Hung_yi_Lee]] 在《生成式人工智慧與機器學習導論(2025)》第一讲给出更直觉的教学定义：语言模型像"关在暗无天日小房间里只会接龙的人"，看不到外部世界，**人类的责任是确保输入 Prompt 的信息足够**，让模型有机会接出正确结果——这就是 Context Engineering。课程实例：平台把"今天是几月几号、模型叫什么名字"等信息通过 System Prompt 预先塞进对话最前面，模型才能正确回答日期类问题。
+
+李宏毅同一门课**第二讲**又给出另一层视角：把语言模型看作函数 `f`，训练是改 `f`（线上模型多为闭源、改不了），**Context Engineering 就是改输入 x**——自动化管理模型输入，让 `f(x)` 符合预期。其核心目标一句话：**「避免塞爆 context」**——把需要的东西放进去、把不需要的请出来。课程进一步拆解了一个完整 Context 的组成（User Prompt / System Prompt / 对话历史 / 长期记忆 / RAG 结果 / 工具结果 / 推理过程）与三大招数（选择 / 压缩 / Multi-Agent），见下两节。
 
 ## 三层工程堆栈
 
@@ -32,6 +36,31 @@ Context Engineering 拆解为四个正交的子问题：
 | **Write** | 要把 **哪些** 互动/教训写进长期记忆 | 用户"吃纯素" → 写进 memory，下次检索避免推肉食 | [[Memory_Agent]] |
 | **Compress** | 对话太长怎么压 | 50 轮超 200k token → 摘要前 40 轮，保留后 10 轮原文 | [[Memory_Agent]] Pattern 2 |
 | **Isolate** | 多 agent 各自窗口怎么分 | Supervisor 看全局，Worker 只看自己那段 | [[Multi_Agent_System]] Stage 7 |
+
+## 上下文（Context）应包含的组件（李宏毅第 2 讲）
+
+| 组件 | 说明 | 关键点 |
+|------|------|--------|
+| **User Prompt** | 任务 + 详细指引 + 前提 + 范例 | 模型不会读心术，前提讲清楚能大幅改变答案（曼谷水巨蜥例）；范例直接影响能力（火星文例） |
+| **System Prompt** | 开发者预设的固定输入（身份/日期/限制/风格） | Claude 3 Opus 的 System Prompt 公开且超 2500 字 |
+| **对话历史** | 短期记忆 | 多轮对话只是按历史继续接龙；单靠对话无法改变模型参数 |
+| **长期记忆** | 跨对话记忆（2024-09 后 ChatGPT 推出） | 植入在用户看不到的输入最前方 |
+| **搜索 / [[RAG]] 结果** | 外部资讯 | RAG 不保证正确（Google AI Overview 起司胶水例） |
+| **工具调用结果** | 工具输出回填 context | 需要开发者执行层（eval 循环）真正驱动工具，见 [[Tool_Calling]] |
+| **Reasoning 思考过程** | 模型自己产生的 context（脑内小剧场） | O 系列 / R 系列深度思考；可对用户隐藏，见 [[Model_Based_Planning]] |
+
+## 李宏毅三大招数与四个 Sub-problem 的对应
+
+课程给出的三大常用招数，可与上方 Lance Martin 四子问题互相印证（互补视角，非冲突）：
+
+| 李宏毅招数 | 对应 Sub-problem | 要点 |
+|-----------|-----------------|------|
+| **① 选择（Selection）** | Select | [[RAG]]、Reranking、Provence 句子级筛选（<300M 参数小模型）、工具版 RAG（工具多时只挑相关的）、记忆挑选（史丹佛小镇 recency/importance/relevance 三指标） |
+| **② 压缩（Compression）** | Compress | 递归式摘要（每 N 回合 / 90% 满 / 定时触发）；细节存硬盘 + RAG 取回；摘要里留"指针"避免检索错误 |
+| **③ Multi-Agent** | Isolate | 总召 agent 只记"餐厅订好了"一句话，隔离各 agent 的 context，见 [[Multi_Agent_System]] |
+| （隐含在"选择"中） | Write | 记忆挑选即 Write 的检索侧，见 [[Memory_Agent]] |
+
+> 课程的实证警示：**"能输入百万 token" ≠ "能读懂百万 token"**——在远未到达窗口上限时模型就已困惑（复制任务 10^4 token 即崩、RAG 资料越多正确率先升后降、Lost in the Middle、挤牙膏式提问拉低能力）。详见 [[上下文腐败]] 与 [[Context_Window]]。
 
 ## 核心区别
 
@@ -82,3 +111,7 @@ Agent 需要两种 Context 能力：
 - [[摘要-预训练数据工程师-jd]] — 预训练数据工程师 JD 中语言数据处理方向和多模态数据方向的内容与 Context Engineering 直接相关
 - [[预训练数据四方向对比]] — 综合报告中详细分析了各方向与三层工程模型的对应关系
 - [[AI搜索工程]] — AI 搜索工程是 Context Engineering "Select"子问题在搜索引擎尺度的独立展开
+- [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] — 李宏毅课程"确保 Prompt 信息足够"定义的来源
+- [[摘要-hung-yi-lee-上下文工程-第2讲]] — 李宏毅第 2 讲：上下文组件、三大招数、"避免塞爆 context"的来源
+- [[In_Context_Learning]] — 给范例（few-shot）改 context、不改参数的机制
+- [[System_Prompt]] — 注入基础信息（日期/身份）的具体实现手段

@@ -1,3 +1,35 @@
+## [2026-08-05] ingest | 摄入李宏毅《生成式AI時代下的機器學習(2025)》第七讲（DeepSeek-R1 深度思考）
+- **变更**: 新增 [[摘要-hung-yi-lee-deepseek-r1-reasoning]]（sources）；新增实体 [[DeepSeek_R1]]；新增概念 [[Reasoning]]、[[Test_Time_Compute]]、[[Self_Consistency]]、[[Process_Verifier]]、[[Imitation_Learning]]、[[Knowledge_Distillation]]；增量更新 [[Chain_of_Thought]]、[[Reinforcement_Learning]]（concepts）与 [[DeepSeek]]、[[Hung_yi_Lee]]、[[AlphaGo]]（entities）；更新 [[index]]（Sources +1、Entities +1、Concepts +6）
+- **冲突**: 无（全新"打造推理模型"知识域，与既有页面互补增量——[[Chain_of_Thought]] 新增 Supervised/Long-Supervised CoT 为原 CoT 变体的展开；[[Reinforcement_Learning]] 新增推理 RL/RLVR/R1-Zero 为 [[后训练研究]] RL 应用在推理场景的具体化；[[DeepSeek]] 新增 R1 流水线与其 API/工程内容互补；[[AlphaGo]] 新增 Test-Time Compute 视角；新概念 [[Test_Time_Compute]] 与 [[Over_Thinking]]/[[Cost_Optimization]] 为"算力投入 vs 过度思考"的互补视角，无矛盾）
+- **网络**:
+  - [[摘要-hung-yi-lee-deepseek-r1-reasoning]] 链接到 [[Hung_yi_Lee]]/[[DeepSeek_R1]]/[[DeepSeek]]/[[Reasoning]]/[[Test_Time_Compute]]/[[Chain_of_Thought]]/[[Self_Consistency]]/[[Process_Verifier]]/[[Imitation_Learning]]/[[Knowledge_Distillation]]/[[Reinforcement_Learning]]/[[Over_Thinking]]/[[AlphaGo]]/[[OpenAI]]/[[Anthropic]]/[[Hugging_Face]]/[[Llama]]/[[Gemma]]/[[Qwen]]
+  - [[DeepSeek_R1]] 链接到 [[DeepSeek]]/[[Reasoning]]/[[Reinforcement_Learning]]/[[Imitation_Learning]]/[[Knowledge_Distillation]]/[[Self_Consistency]]/[[Process_Verifier]]/[[Test_Time_Compute]]/[[Chain_of_Thought]]/[[Qwen]]/[[摘要-hung-yi-lee-deepseek-r1-reasoning]]
+  - 6 新概念互为网络：[[Reasoning]]（枢纽）↔ [[Test_Time_Compute]]/[[Chain_of_Thought]]/[[Self_Consistency]]/[[Process_Verifier]]/[[Imitation_Learning]]/[[Knowledge_Distillation]]/[[Reinforcement_Learning]]/[[Over_Thinking]]
+  - [[Chain_of_Thought]] 新增 Long/Short CoT 与 Supervised CoT；[[Reinforcement_Learning]] 新增推理 RL 小节；[[DeepSeek]] 新增 R1 小节；[[Hung_yi_Lee]] 新增第 7 讲课程条目与来源；[[AlphaGo]] 新增 Test-Time Compute/MCTS 小节
+- **归档**: 1 个 Clippings/ 文件 → raw/09-archive/
+
+## [2026-08-05] ingest | 摄入李宏毅《生成式人工智慧與機器學習導論2025》第二讲（上下文工程）
+- **变更**: 新增 [[摘要-hung-yi-lee-上下文工程-第2讲]]（sources）；新增概念 [[In_Context_Learning]]；增量更新 [[Context_Engineering]]、[[上下文腐败]]、[[Context_Window]]、[[Tool_Calling]]、[[Model_Based_Planning]]（concepts）与 [[Hung_yi_Lee]]、[[Gemma]]（entities）；更新 [[index]]
+- **冲突**: 无（第 2 讲与既有页面互补增量——[[Context_Engineering]] 的李宏毅三大招数与既有 Lance Martin 四子问题互为补充；[[上下文腐败]] 新增课程实验证据与既有"50-60% 阈值"说法互补无矛盾；[[In_Context_Learning]] 与 [[Few_Shot_Prompting]] 是机制/工程两个视角，不冲突）
+- **网络**:
+  - [[摘要-hung-yi-lee-上下文工程-第2讲]] 链接到 [[Hung_yi_Lee]]/[[Context_Engineering]]/[[Prompt_Engineering]]/[[Context_Window]]/[[上下文腐败]]/[[In_Context_Learning]]/[[RAG]]/[[Tool_Calling]]/[[Agent_Loop]]/[[Agentic_Coding]]/[[Model_Based_Planning]]/[[Memory_Agent]]/[[Multi_Agent_System]]/[[Chain_of_Thought]]/[[Gemma]]/[[Claude_Agent_SDK]]/[[Anthropic]]/[[摘要-hung-yi-lee-生成式AI-原理-第1讲]]/[[摘要-hung-yi-lee-ai-agent-原理]]
+  - [[In_Context_Learning]] 链接到 [[Few_Shot_Prompting]]/[[Context_Engineering]]/[[Chain_of_Thought]]/[[RAG]]/[[Model_Fine_Tuning]]/[[Hung_yi_Lee]]/[[摘要-hung-yi-lee-上下文工程-第2讲]]
+  - [[Context_Engineering]] 新增"上下文组件"表 + "三大招数 vs 四子问题"表 + 课程实证警示
+  - [[上下文腐败]] 新增课程实验证据（复制任务 / Lost in the Middle / 先升后降 / 挤牙膏式提问）
+  - [[Context_Window]] 新增窗口演进时间线与"能输入≠能读懂"
+  - [[Tool_Calling]] 新增 Gemma 2 9B 文本标记协议 + eval 执行环
+  - [[Model_Based_Planning]] 新增"推理输出 = 模型自己产生的 context"
+  - [[Hung_yi_Lee]] 新增第 2 讲课程条目；[[Gemma]] 新增工具调用演示角色
+- **归档**: 1 个 Clippings/ 文件 → raw/09-archive/
+
+## [2026-08-05] ingest | 摄入李宏毅《生成式人工智慧與機器學習導論2025》第一讲
+- **变更**: 新增 [[摘要-hung-yi-lee-生成式AI-原理-第1讲]]（sources）；新增概念 [[Auto_Regressive_Generation]]、[[AI_Hallucination]]、[[Chat_Template]]、[[System_Prompt]]、[[Diffusion_Model]]；新增实体 [[Hugging_Face]]、[[Gemma]]、[[WaveNet]]、[[Mistral]]、[[Jensen_Huang]]；增量更新 [[Hung_yi_Lee]]、[[Llama]]、[[Generative_AI]]、[[RAG]]、[[Context_Engineering]]、[[BPE_Tokenizer]]、[[Temperature_Parameter]]；更新 [[index]]
+- **冲突**: 无（新知识独立或与现有页面互补增量——[[Llama]] 新增 Llama-3.2-3B-Instruct 实操与既有 Ollama 视角互补无矛盾；[[Generative_AI]] 的李宏毅定义与吴恩达三分法定义互补；[[RAG]] 的"减少幻觉"视角与既有架构详解互补）
+- **网络**:
+  - [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] 链接到 [[Hung_yi_Lee]]/[[Generative_AI]]/[[Auto_Regressive_Generation]]/[[AI_Hallucination]]/[[Chat_Template]]/[[System_Prompt]]/[[Context_Engineering]]/[[RAG]]/[[BPE_Tokenizer]]/[[Temperature_Parameter]]/[[Diffusion_Model]]/[[Llama]]/[[Gemma]]/[[Hugging_Face]]/[[WaveNet]]/[[Mistral]]/[[Jensen_Huang]]/[[摘要-hung-yi-lee-ai-agent-原理]]
+  - 5 新概念 + 5 新实体全部与来源摘要双向链接；[[Hung_yi_Lee]] 新增第 1 讲课程条目；[[Llama]] 新增词汇表/Token 实操章节；[[Generative_AI]] 新增李宏毅定义；[[RAG]]/[[Context_Engineering]] 新增课程视角；[[BPE_Tokenizer]] 新增 Llama 词汇表实操；[[Temperature_Parameter]] 新增采样机制与 Top-K
+- **归档**: 1 个 Clippings/ 文件 → raw/09-archive/
+
 ## [2026-07-16] sync | 补全智能体研发工程师 JD 的六大知识缺口
 - **变更**: 新增 [[Dify]]（entities）；新增 [[微服务与API网关设计]]、[[多租户SaaS架构]]、[[企业系统集成模式]]、[[Skills权限管理]]、[[Agent实例生命周期管理]]（concepts）；更新 [[index]]（Entities 添加 1 条目 + Concepts 添加 5 条目）
 - **冲突**: 无（新概念均为新增知识域，与既有概念互补无矛盾——[[微服务与API网关设计]] 是 [[Harness_Engineering]] 的底层基础设施支撑；[[多租户SaaS架构]] 与 [[Memory_Agent]] 形成数据隔离的上下文参照；[[企业系统集成模式]] 与 [[MCP]]、[[Agent_Interfaces]] 形成"协议→接口→集成"三层互补关系；[[Skills权限管理]] 是 [[Claude_Code_Skills]] 的治理扩展；[[Agent实例生命周期管理]] 是 [[Agent_Loop]] 的平台工程维度展开）

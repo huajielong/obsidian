@@ -5,7 +5,8 @@ tags: [提示词工程, 推理增强, CoT, reasoning]
 sources:
   - raw/01-articles/awesome-agentic-ai-zh-stage-02-prompt-engineering.md
   - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
-last_updated: 2026-08-04
+  - wiki/sources/摘要-hung-yi-lee-deepseek-r1-reasoning.md
+last_updated: 2026-08-05
 ---
 
 # Chain-of-Thought（思维链）
@@ -22,6 +23,16 @@ Chain-of-Thought（CoT，思维链/思考链）是一种**引导 LLM 在给出�
 
 ### 3. Few-shot CoT（带范例）
 在提问前展示一个完整的"问题 → 推理步骤 → 答案"范例，引导模型遵循同样的推理格式。适合需要特定推理风格的场景。
+
+### 4. Supervised CoT（把思考流程写进 Prompt）
+不只叫模型 think step by step，而是**用人类知识把"怎么想"写进 prompt**（注意：不是机器学习里的 supervised learning，本质仍是 prompt 工程，不微调参数）。例如要求模型："回答前先深入解析题目要求、定出完整解题计划、列出子计划、每步多次验算、考量所有可能解法、思考过程放在 `think`/`/think` 标记中间"。李宏毅演示（GPT-4o 算 123×456）中，模型据此制定计划、分步计算并做了三次验算，甚至学会"发现某招没用就果断略过"。
+- **局限**：只适用于较强的模型——弱模型（如 Llama 3）读不懂复杂指令，无法照做多次验算。
+
+### Long CoT vs Short CoT（2025 视角）
+
+- 2022 年经典 CoT 的思考过程较短，如今被称为 **Short CoT**；现役推理模型（o 系列 / DeepSeek-R1 等）产生**很长的思考过程**，被称为 **Long CoT**。
+- 长/短没有固定的分界标准；"让思考变长"可以靠更精确的 prompt 指示实现（见 Supervised CoT），也可以靠后训练（[[Imitation_Learning]] / [[Reinforcement_Learning]]）让模型内生长思考能力。
+- Long CoT 是 **[[Test_Time_Compute|测试时计算]]** 的体现：在推理阶段投入更多算力换取更好的结果（"深度不够、长度来凑"）。
 
 ## 适用范围与注意事项
 
@@ -47,10 +58,15 @@ Chain-of-Thought（CoT，思维链/思考链）是一种**引导 LLM 在给出�
 
 ## 关联连接
 
+- [[Reasoning]] — CoT 是打造推理模型的方法一（更强的思维链）
+- [[Test_Time_Compute]] — Long CoT 是测试时计算的体现
 - [[Model_Based_Planning]] — 脑内小剧场 = reasoning 模型的内部规划
 - [[Over_Thinking]] — reasoning 模型作为 Agent 的过度思考失效模式
 - [[Agent_Loop]] — 思考/规划在 Agent 循环中的位置
 - [[Prompt_Engineering]] — CoT 是 Prompt Engineering 的核心技术之一
 - [[Few_Shot_Prompting]] — CoT 常与 Few-shot 结合使用
 - [[Context_Engineering]] — 推理链的上下文组织
+- [[Self_Consistency]] — CoT + 多次采样投票
+- [[Process_Verifier]] — 分步验证（step 标记）相关
 - [[摘要-awesome-agentic-ai-zh-prompt-engineering]] — 来源资料
+- [[摘要-hung-yi-lee-deepseek-r1-reasoning]] — Long/Short CoT、Supervised CoT 来源

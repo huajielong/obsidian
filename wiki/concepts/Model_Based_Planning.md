@@ -4,7 +4,8 @@ type: concept
 tags: [agent, planning, 规划, tree search, world model, 脑内小剧场, 梦境模拟]
 sources:
   - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
-last_updated: 2026-08-04
+  - raw/09-archive/【生成式人工智慧與機器學習導論2025】第 2 講：上下文工程 (Context Engineering) — AI Agent 背後的關鍵技術.md
+last_updated: 2026-08-05
 ---
 
 # Model-Based Planning（基于模型的规划 / 脑内小剧场）
@@ -62,6 +63,14 @@ Model-Based Planning 是一种强化 LLM Agent **规划能力**的范式：让�
 
 > 结论：纯 LLM 规划能力"介乎有与没有之间"，**工具辅助 + 模型内模拟**是两条主要增强路径。
 
+## 推理输出 = 模型自己产生的 Context（李宏毅第 2 讲视角）
+
+李宏毅在《生成式AI导论2025》第 2 讲从 [[Context_Engineering]] 角度补充了一个关键观察：**模型的深度思考过程（脑内小剧场）本身就是 context 的一部分**——只是它不是人类从外部塞进去的，而是**模型自己放进去的**；模型根据自己产生的 context 再做文字接龙，才给出最终答案。
+
+- "深度思考"模型（GPT 的 O 系列、DeepMind 的 R 系列、Gemini 家族）：先不直接给答案，先演"脑内小剧场"把各种解法演练一遍（A 解法→验算不对；B 解法→好像对；C 解法→不好），再据此解题。
+- 脑内小剧场**对用户可选择不看、甚至根本不能看**（ChatGPT 只给摘要）。
+- 与上表"Reasoning 模型的连接"一致：这类推理链就是模型在做 model-based planning 时"脑内搜索"的过程，只是它同时占用了 context 空间——这也是 Agent 场景中 context 消耗的隐性来源之一。
+
 ## 关联连接
 
 - [[Agent_Loop]] — 规划是 Agent 循环中"行动前"的显式步骤
@@ -72,3 +81,4 @@ Model-Based Planning 是一种强化 LLM Agent **规划能力**的范式：让�
 - [[Agent_Memory_Architecture]] — 记忆检索支撑规划所需的情境经验
 - [[Tool_Calling]] — 规划可调用 solver 等工具增强
 - [[摘要-hung-yi-lee-ai-agent-原理]] — 本概念的核心来源
+- [[摘要-hung-yi-lee-上下文工程-第2讲]] — "推理输出 = 模型自己产生的 context"视角的来源

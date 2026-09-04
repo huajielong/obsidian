@@ -71,6 +71,9 @@
 - [[摘要-ai-for-everyone-andrew-ng]] — 吴恩达"人人AI"非技术入门课程完整 35 讲：AI 价值三分法、监督学习 A→B 映射、数据获取与误用、AI 术语辨析、AI 项目/数据科学工作流、AI 转型手册、AI 偏见与对抗性攻击等社会影响
 - [[摘要-ai-transformation-playbook]] — AI 转型手册官方 v8 原文（Landing AI）：五步企业转型方法论、试点项目三特征、AI 单元职责、护城河四方式、数据战略三要素、沟通五受众
 - [[摘要-hung-yi-lee-ai-agent-原理]] — 李宏毅一堂课讲透 AI Agent：经验调整行为/工具使用/做计划三大能力 + 记忆架构/RAG/工具调用/规划评测/语音即时互动/应用实例
+- [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] — 李宏毅一堂课讲透生成式 AI 原理：LLM=文字接龙、Token/Vocabulary、概率采样、Chat Template/System Prompt、AI 幻觉与 RAG、生成式 AI 定义、Auto-Regressive Generation，含 Llama/Gemma 开源模型实操
+- [[摘要-hung-yi-lee-上下文工程-第2讲]] — 李宏毅讲透 Context Engineering：与 Prompt Engineering 的关系、完整 Context 的组成、三大招数（选择/压缩/Multi-Agent）、超长 context 失效的实验证据（Lost in the Middle / Context Rot）、Gemma 2 9B 工具调用实操
+- [[摘要-hung-yi-lee-deepseek-r1-reasoning]] — 李宏毅讲透 DeepSeek-R1 式"深度思考"（Reasoning）：四种打造推理模型的方法（更强 CoT / 推理工作流 / 模仿学习 / 结果导向 RL）、Test-Time Compute、R1-Zero 与 Aha moment、R1 真实训练流水线
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -110,6 +113,11 @@
 - [[Ollama]] — 本地大语言模型运行工具，支持 Llama/Qwen 等多种开源模型
 - [[Qwen]] — 阿里云通义千问开源大语言模型系列
 - [[Llama]] — Meta 开源大语言模型系列
+- [[Hugging_Face]] — 最大的开源模型/数据集平台，Transformers 套件开发者，被誉为"模型的 Facebook"
+- [[Gemma]] — Google 开源轻量级 LLM 系列，Gemma-3-4B-it 中文能力优于 Llama
+- [[Mistral]] — 法国开源大语言模型公司，与 Llama/Gemma 并列开源代表
+- [[WaveNet]] — Google DeepMind 采样点接龙语音合成模型，"语音合成问题被解决"的里程碑
+- [[Jensen_Huang]] — NVIDIA 创始人兼 CEO，2024 COMPUTEX 提出"万事万物都是 token"
 - [[Andrew_Ng]] — 吴恩达，AI 教育之父，Coursera & DeepLearning.AI 创始人，ML/DL 课程全球最受欢迎
 - [[Landing_AI]] — Andrew Ng 创立并任 CEO 的 AI 转型公司，AI Transformation Playbook 官方发布方
 - [[Hung_yi_Lee]] — 李宏毅，台湾大学教授，中文圈公认体验最好的 ML/DL 课程主讲人
@@ -117,6 +125,7 @@
 - [[Fei-Fei_Li]] — 李飞飞，斯坦福终身教授，ImageNet 发起者，"计算机视觉教母"，CS231n 主讲人
 - [[Andrej_Karpathy]] — AI 研究科学家、教育者，特斯拉前 AI 总监，Zero to Hero 系列作者
 - [[DeepSeek]] — 深度求索 AI 公司，MoE 架构云端 API，含 API 错误处理与实验基准数据
+- [[DeepSeek_R1]] — 深度求索推理增强模型系列：R1-Zero 纯 RL 产物与 Aha moment、R1 复杂训练流水线（四类方法全用上）、蒸馏对中小模型的增益
 - [[Dify]] — 开源 LLM 应用开发平台，可视化 Workflow 编排、内置 RAG Pipeline、多租户团队协作
 - [[Doubao]] — 字节跳动豆包 LLM 产品，以低延迟高性价比著称
 - [[Claude_Agent_SDK]] — Anthropic 官方 Agent Python SDK，程序化控制 Agent Loop/Tool Dispatch/Memory
@@ -164,9 +173,16 @@
 - [[Agent_Orchestration_Patterns]] — Multi-agent 五大编排模式：Routing/Handoff、Sequential、Parallel、Supervisor-Worker、Debate/Society
 - [[AgentParadigms]] — Agent 五种部署范式：IDE 集成 / Terminal 结对编程 / BYO-LLM CLI / 云端部署 / 边缘部署的全景分类框架
 - [[Chain_of_Thought]] — 思维链推理增强技术，引导 LLM 显式展示中间推理步骤
+- [[Reasoning]] — 推理/深度思考：模型给出答案前先产生长思考过程的行为，是 Test-Time Compute 的一种（"深度不够、长度来凑"）
+- [[Test_Time_Compute]] — 测试时计算/缩放：在推理阶段投入更多算力换更好结果，AlphaGo MCTS 为其早期案例
+- [[Self_Consistency]] — 自洽性/多数投票：从模型多次采样结果中选出正确答案的强基线方法
+- [[Process_Verifier]] — 过程验证器：对推理中间步骤打分验证，配合 Beam Search/MCTS 逐步择优
+- [[Imitation_Learning]] — 模仿学习：用"问题+答案+推理过程"数据教模型推理（含 Stream of Search / Journey Learning 知错能改）
+- [[Knowledge_Distillation]] — 知识蒸馏：直接向强推理模型学习推理过程，对中小模型比 RL 更有效
 - [[Model_Based_Planning]] — 基于模型的规划：脑内小剧场/Tree Search/World Model 强化 Agent 规划能力
 - [[Over_Thinking]] — 推理模型作为 Agent 的过度思考失效模式（思考的巨人、行动的矮子）
 - [[Few_Shot_Prompting]] — 少样本提示技术，通过输入输出范例引导模型理解任务模式
+- [[In_Context_Learning]] — 情境/上下文学习：在 context 中放范例改变输出而参数不变（GPT-3 定义 + Gemini 1.5 卡拉蒙语神迹），few-shot 背后的机制
 - [[Feynman_Technique]] — 费曼学习法：通过教别人来验证自己是否真正理解
 - [[Context_Engineering]] — LLM 三层工程堆栈的中间层，工程上下文窗口的信息组装
 - [[Context_Window]] — LLM 单次推理能处理的最大 token 数量上限，决定对话记忆与信息容量
@@ -202,6 +218,11 @@
 - [[Prompt_Engineering]] — 提示词工程的基础技巧层，[[AI_Mastery_Compass]] 是对其的系统化升级
 - [[Supervised_Learning]] — 监督学习：学习 A→B（输入→输出）映射，机器学习最常用类型，LLM 的底层训练范式
 - [[Generative_AI]] — 生成式AI：生成文本/图像/音频的新技术，AI 三分法中价值初现的一环
+- [[Auto_Regressive_Generation]] — 自回归生成（文字接龙）：逐 Token 预测并拼回输入直到 EOS，LLM 最基本的生成策略
+- [[AI_Hallucination]] — AI 幻觉：LLM 背后无数据库、全靠接龙"梦"出答案，RAG 是主要抑制手段
+- [[Chat_Template]] — 聊天模板：平台在输入前后追加角色包装，让只会接龙的模型"回答问题"
+- [[System_Prompt]] — 系统提示词：开发者预设注入日期/身份等基础信息的前缀，优先级最高
+- [[Diffusion_Model]] — 扩散模型：影像生成领域更常见的另一种生成策略（加噪-去噪）
 - [[Artificial_General_Intelligence]] — 人工通用智能（AGI）：能做任何人类智力任务的目标，当前仍非常遥远
 - [[Neural_Network]] — 神经网络与深度学习：学习 A→B 映射的高效技术，扩展规律（Scaling）驱动 LLM 突破
 - [[Data_Science]] — 数据科学：从数据中探索知识，输出图表/报告/决策建议，与机器学习互补

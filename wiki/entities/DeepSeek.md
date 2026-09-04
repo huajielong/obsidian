@@ -19,6 +19,15 @@ DeepSeek（深度求索）是中国 AI 公司，提供高性能大语言模型 A
 | **V3** | `deepseek-chat`（旧版通用）| 128k | 通用对话 |
 | **R1** | `deepseek-reasoner` | 128k | 推理增强，数学/代码/逻辑
 
+## R1 推理模型（深度思考）
+
+DeepSeek-R1 是深度思考（reasoning）模型代表：回答前先产生很长的思考过程（`think` 标记）再给答案。训练历程见 [[DeepSeek_R1]]，要点速览：
+
+- **R1-Zero**：DeepSeek-V3-Base 纯 RL 产物（正确率 + Format reward），AIME 逼近 o1，自发涌现 **Aha moment**，但推理过程难读、未上线。
+- **R1 流水线**：R1-Zero 生成数据 → 人工改写 → 模仿学习 → RL（语言一致性）→ 再生成 60 万条数据 → 模仿学习 → RL（safety/helpfulness）。四大打造推理模型的方法全部用上，"R1 只用 RL"是農場文简化。
+- **RL 只强化已有能力**：DeepSeek-V3（500B+）能被 RL 大幅强化，而 Qwen2.5-32B 直接 RL 提升有限——对中小模型蒸馏（[[Knowledge_Distillation]]）更有效。
+- 相关概念：[[Reasoning]]、[[Test_Time_Compute]]、[[Imitation_Learning]]、[[Reinforcement_Learning]]。
+
 ## 关键信息
 
 - **模型**：DeepSeek V4 Flash（云端 MoE）
@@ -160,6 +169,12 @@ Agent 后端方向是三个方向中与 [[Harness_Engineering]] 关系最密切�
 | 工程重心 | Loop / Tool / Memory / Subagent | 性能、可靠性、可观测性、可维护性 |
 
 ## 关联连接
+- [[DeepSeek_R1]] — R1 推理模型实体（R1-Zero / R1 训练流水线）
+- [[Reasoning]] — 深度思考/推理概念
+- [[Test_Time_Compute]] — 深度思考的理论框架
+- [[Imitation_Learning]] — R1 流水线中的重要环节
+- [[Knowledge_Distillation]] — 蒸馏 R1 给中小模型
+- [[摘要-hung-yi-lee-deepseek-r1-reasoning]] — R1 推理模型训练全解来源
 - [[摘要-ollama-cost-comparison]] — 成本对比实验数据来源
 - [[摘要-ollama-style-comparison]] — 风格对比实验数据来源
 - [[摘要-deepseek-api-error-handling]] — API 错误处理实战来源

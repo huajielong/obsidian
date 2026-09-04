@@ -9,7 +9,8 @@ sources:
   - raw/01-articles/错误处理 — Tool Error 是 Data 不是 Exception.md
   - raw/01-articles/Function Schema 设计 — Bad Schema 修到 Good.md
   - wiki/sources/摘要-hung-yi-lee-ai-agent-原理.md
-last_updated: 2026-08-04
+  - raw/09-archive/【生成式人工智慧與機器學習導論2025】第 2 講：上下文工程 (Context Engineering) — AI Agent 背後的關鍵技術.md
+last_updated: 2026-08-05
 ---
 
 # Tool Calling（工具调用）
@@ -362,6 +363,22 @@ Layer 2：Python 层（安全护栏层）
 | **语音任务 = 工具使用典型案例** | 文字模型 + 语音工具组（ASR/说话人验证/声音分类/情绪辨识）+ 最终 LLM 汇总，在 Dynamic-SUPER（55 个语音任务）上完胜"原生听语音"的模型 |
 | **工具的信任与说服力** | Google AI Overview 曾把 Reddit 玩笑当真（"起司黏不住就用无毒胶水"）→ 模型可能过度相信工具；但极端荒谬输出会被识破；外部知识与模型内部信念差距越小越容易被相信；模型倾向信"AI 同类"写的文章；越新的文章越容易被相信（metadata 影响）；好看的排版也会被偏好 |
 
+### 文本标记协议 + eval 执行环（李宏毅第 2 讲 Colab 实操）
+
+李宏毅用 **Gemma 2 9B** 在 Colab 完整演示了"文本标记式"工具调用的执行环，核心教训对理解一切 Tool Calling 都成立：
+
+- **模型永远只能输出文字**：`multiply(3,4)` 或 `<tool>...</tool>` 都是一串文字，**不发生任何效果**。必须由开发者的执行层（胶水脚本 / `eval()`）把 `<tool>` 内指令取出来真正执行——`eval('multiply(3,4)')` 才得到 12。
+- **不接执行环的"假调用"**：只把工具说明放进 prompt，模型会自己接龙出"工具调用 + 工具输出"的完整剧本（111×222 心算出 24642、24642÷777 心算出 32.258，正确答案 31.714）——**实际上一个工具都没调用**（"只呼叫了一个寂寞"），那些输出全是模型 hallucinate 的。
+- **正确的 while 循环**：
+  1. messages → pipeline → response
+  2. 含 `<tool>...</tool>` → 只撷取该指令，丢弃其余幻觉内容
+  3. `eval(command)` 真正执行 → 结果包进 `<tool_output>...</tool_output>`
+  4. 把"工具指令 + 工具输出"塞回 messages 继续接龙
+  5. 输出不再含 `<tool>` 标记 → 那才是最终答案
+- **协议细节**：Gemma **没有独立的 tool role**——工具输出若当成普通用户消息会被误判，所以要用 `<tool_output>` 专属标记让模型识别"这是工具的输出"。（类似地，OpenAI 格式用 `tool` 角色、Anthropic 用 `tool_result` block 解决同一问题。）
+- **工具调用过程可对用户完全隐藏**：用户只看到"111×222÷777=31.714"，以为模型会算数。
+- **模型不完全相信工具**：假工具返回"高雄气温比太阳表面还高"，模型会质疑"你是不是输入有误"；问"你好吗"时模型自己决定不调用工具。模型只在需要时用工具，对荒唐输出有一定识别力。
+
 ## 与 Agent Loop 的关系
 
 Tool Calling 是 [[Agent_Loop|ReAct 循环]] 中 Action 阶段的技术基础：
@@ -383,6 +400,7 @@ Thought（分析）→ Action（Tool Calling）→ Observation（工具结果反
 - [[摘要-function-schema-design]] — Bad Schema 到 Good Schema 的 4 项改进与 5 条黄金规则
 - [[摘要-awesome-agentic-ai-zh-tool-use]] — Stage 3 理论版本，含 Schema 设计 4 项改进
 - [[摘要-hung-yi-lee-ai-agent-原理]] — 通用 Prompt 驱动调用方法 + 工具选择/自建工具/相信工具的来源
+- [[摘要-hung-yi-lee-上下文工程-第2讲]] — Gemma 2 9B 文本标记协议 + eval 执行环实操的来源
 - [[OpenAI_Compatible_API]] — 已成为行业事实标准的接口规范
 - [[Anthropic]] — Anthropic 原生 tool use 格式的提供商
 - [[Ollama]] — OpenAI 兼容格式的本地运行环境
