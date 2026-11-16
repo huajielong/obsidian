@@ -191,8 +191,7 @@ Prompt Engineering         Context Engineering            Harness Engineering
 
 ---
 
-## 七、关联页面
-
+## 关联连接
 - [[摘要-devops-ai-architect-xiamen]] — 本 JD（分析主体）
 - [[摘要-智能体研发工程师-jd]] — Agent 平台方向 JD（横向对比）
 - [[摘要-算法应用开发工程师-jd]] — 算法落地方向 JD（横向对比）
@@ -200,3 +199,5 @@ Prompt Engineering         Context Engineering            Harness Engineering
 - [[DeepSeek四份JD全景对比]] — DeepSeek JD 系列全景分析（母报告）
 - [[智能体研发工程师JD对标分析]] — 智能体研发工程师对标分析（母报告）
 - [[Harness_Engineering]] — 三层工程模型的理论基础
+- [[CICD平台对比与AI集成]] — CICD 平台横向对比与 Agent 集成选型
+- [[DevOpsAI架构师面试深度准备]] — 本 JD 的面试深度准备（架构设计 + 工具选型）

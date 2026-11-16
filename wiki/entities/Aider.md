@@ -38,8 +38,7 @@ aider --model anthropic/claude-sonnet-5
 - 适合 **测试生成**：从 function signature + docstring 生成 pytest case
 - **Tier 1** 工具：适合想拥有干净 git 流程的开发者
 
-## 关联链接
-
+## 关联连接
 - [[Cursor]] — 编辑器集成 AI 工具（Tier 0）
 - [[Claude_Code]] — Anthropic 官方 agentic coding 助理（同为 CLI agent）
 - [[Cline]] — VS Code autonomous in-IDE agent

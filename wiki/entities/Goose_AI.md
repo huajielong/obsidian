@@ -19,8 +19,7 @@ last_updated: 2026-07-10
 - **三接口**: 同时提供 desktop app、CLI、API 三种交互方式
 - **全流程**: 不仅能写代码，还能安装依赖、执行、测试
 
-## 关联链接
-
+## 关联连接
 - [[OpenHands]] — 同为自主执行型 agent
 - [[Claude_Code]] — Anthropic 官方 coding 助理
 - [[Aider]] — git-aware CLI pair-programmer

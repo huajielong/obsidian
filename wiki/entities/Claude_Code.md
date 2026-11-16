@@ -5,8 +5,11 @@ tags: [AI编程, 开发工具, Anthropic, 终端工具, Agent生态]
 sources: 
   - raw/01-articles/Claude Code 完全指南 - 阿里云开发者社区.md
   - raw/01-articles/05-claude-code-ecosystem.md
+  - raw/01-articles/claude-code-ollama-local-setup.md
+  - raw/01-articles/Claude-Code-本地模型接入指南.md
+  - raw/01-articles/本地模型执行指南.md
   - raw/09-archive/The AI-Native SDLC playbook  Claude by Anthropic.md
-last_updated: 2026-09-04
+last_updated: 2026-11-02
 ---
 
 ## 定义
@@ -115,6 +118,38 @@ Claude Code 拥有**最完整的 7-Layer Stack**（其他 CLI Agent 如 Codex / 
 - GitHub Actions
 - 平台支持：跨平台（Windows / macOS / Linux）
 
+## 本地模型运行（claude-local）
+
+Claude Code 不只支持 Anthropic 官方模型。通过环境变量覆盖 API 端点，可以把 L1 Foundation 层换成本地模型，形成与云端并存的第二个命令。两条常见路径：
+
+| 路径 | 链路 | 本机实测 |
+|------|------|----------|
+| 代理 + llama.cpp | `claude` → [[Anthropic_Proxy|anthropic-proxy]] 8787 → [[LlamaCpp|llama.cpp]] 8081 | 约 65 tok/s |
+| 直连 Ollama | `claude` → [[Ollama]] 11434 | 约 6.6 tok/s |
+
+| 命令 | 模型来源 | 成本 | 数据 |
+|------|----------|------|------|
+| `claude` | Anthropic 云端（订阅） | 订阅/API 计费 | 上传云端 |
+| `claude-local` | 本地 Qwen3.6（经代理或 Ollama） | 免费 | 推理不出本机 |
+
+代理路径配置（本机推荐）：
+
+```bash
+ANTHROPIC_BASE_URL=http://127.0.0.1:8787 \
+ANTHROPIC_API_KEY=anything \
+ANTHROPIC_AUTH_TOKEN=anything \
+CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1 \
+claude --model claude-sonnet-4-6
+```
+
+- `ANTHROPIC_BASE_URL` 指向 anthropic-proxy 的 8787；代理把 Anthropic Messages 转成 OpenAI Chat Completions 后发给 llama.cpp 8081
+- `--model claude-sonnet-4-6` 是代理 `/v1/models` 暴露的 ID，实际映射到本机 `qwen`
+- 直连路径则设置 `ANTHROPIC_BASE_URL=http://localhost:11434`、`ANTHROPIC_AUTH_TOKEN=ollama`、`ANTHROPIC_API_KEY=""`
+- `claude-local` 与 `claude` 完全隔离，所有常规参数（如 `--dangerously-skip-permissions`）依然可用
+- Windows PowerShell 推荐用保存/恢复环境变量的函数；Git Bash 使用 alias
+
+接入细节、性能对比与能力边界见 [[Claude_Code_本地模型接入]]；协议层见 [[Anthropic_Compatible_API]]。
+
 ## 在 AI-Native SDLC 中的角色
 
 在 [[AI_SDLC|AI-Native SDLC]]（Anthropic Playbook）中，Claude Code 是横跨多个阶段的执行工具：
@@ -165,3 +200,13 @@ Claude Code 拥有**最完整的 7-Layer Stack**（其他 CLI Agent 如 Codex / 
 - [[摘要-claude-code-guide]] — Claude Code 完全指南
 - [[摘要-claude-code-hud]] — claude-hud 终端状态监控插件
 - [[摘要-awesome-agentic-ai-zh-claude-code-ecosystem]] — 生态系全景来源
+- [[Claude_Code_本地模型接入]] — 通过环境变量把 Claude Code 接到本地模型
+- [[Ollama]] — 直连路径的本地模型运行时
+- [[LlamaCpp]] — 代理路径的推理引擎
+- [[Anthropic_Proxy]] — Anthropic → OpenAI 协议转换代理
+- [[Anthropic_Compatible_API]] — 本地接入所依赖的接口契约
+- [[GLM]] — 通用教程推荐的本地模型系列
+- [[Qwen]] — 本机实际使用的本地模型系列
+- [[摘要-claude-code-ollama-local-setup]] — 通用安装指南来源
+- [[摘要-claude-code-本地模型接入指南]] — 本机实施记录来源
+- [[摘要-本地模型执行指南]] — 同机模型与调优手册

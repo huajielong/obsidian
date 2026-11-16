@@ -2,8 +2,10 @@
 title: "OpenAI_Compatible_API"
 type: concept
 tags: [API, 标准化, LLM, 兼容性]
-sources: [raw/01-articles/Ollama 本地 LLM 调用实战：四种 API 方式与踩坑记录.md]
-last_updated: 2026-07-08
+sources:
+  - raw/01-articles/Ollama 本地 LLM 调用实战：四种 API 方式与踩坑记录.md
+  - raw/01-articles/Claude-Code-本地模型接入指南.md
+last_updated: 2026-11-02
 ---
 
 ## 定义
@@ -36,6 +38,18 @@ OpenAI 兼容 API（OpenAI-Compatible API）是指遵循 OpenAI 官方 `chat/com
 | 迁移成本 | 需单独学习 | 已有 OpenAI 代码几乎无需修改 |
 | 模型兼容性 | 更稳定 | 部分模型存在兼容 Bug |
 
+### Anthropic 兼容 API 的对照
+
+OpenAI Chat Completions 也是本地推理的常用上游协议。[[Anthropic_Compatible_API|Anthropic 兼容 API]] 则面向 Claude Code 等客户端；当后端只有 OpenAI 兼容接口时，可以用 [[Anthropic_Proxy|anthropic-proxy]] 做协议转换：
+
+```
+Claude Code → anthropic-proxy 8787（Anthropic Messages）
+            → llama.cpp 8081（OpenAI Chat Completions）
+```
+
+- 两种“兼容”解决的是不同客户端的接入问题，不是互相替代
+- 转换层只保证协议形状，不保证模型能力或工具调用可靠性
+
 ## 知识冲突
 
 - **兼容性普遍性**：虽然 OpenAI 兼容 API 被称为"标准"，但不同工具对同一端口的实现细节存在差异。如 qwen3.5:0.8b 在 Ollama 的 OpenAI 兼容端口下 content 为空，而在原生 API 下正常。说明"兼容"不等于"完全一致"。
@@ -47,3 +61,6 @@ OpenAI 兼容 API（OpenAI-Compatible API）是指遵循 OpenAI 官方 `chat/com
 - [[GPT]] — OpenAI 兼容 API 所参照的原始接口定义来源
 - [[LiteLLM]] — 统一 LLM API 网关，基于 OpenAI 兼容接口标准
 - [[本地_LLM_推理]] — 使用本地推理工具调用 LLM 的实践
+- [[Anthropic_Compatible_API]] — 对照：面向 Anthropic 客户端的兼容接口
+- [[Anthropic_Proxy]] — OpenAI ↔ Anthropic 协议转换实现
+- [[LlamaCpp]] — 提供 OpenAI 兼容 `/v1` 上游的推理引擎

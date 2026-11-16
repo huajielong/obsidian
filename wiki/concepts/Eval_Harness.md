@@ -2,8 +2,10 @@
 title: "Eval_Harness"
 type: concept
 tags: [eval, harness-engineering, quality, production, agent, CI]
-sources: [raw/01-articles/07-multi-agent-production.zh-Hans.md]
-last_updated: 2026-07-10
+sources:
+  - "raw/01-articles/07-multi-agent-production.zh-Hans.md"
+  - "raw/09-archive/The AI Engineering Skills Map 人工智能工程技能图谱.md"
+last_updated: 2026-11-09
 ---
 
 # Eval Harness（评估框架）
@@ -17,6 +19,10 @@ Eval Harness 是 [[Harness_Engineering]] 的 **第 7 个核心元件**——为 
 Eval Harness ≠ Benchmark。Benchmark 告诉你"这个模型在标准化测试上的排名"，Eval Harness 告诉你"我的 Agent 在我的场景上表现得怎么样"。
 
 > ⚠️ **2026-04 UC Berkeley 发现 8 个主流 Agent Benchmark 全部可被 Reward-Hacking 到接近 100%**（SWE-bench / WebArena / OSWorld / GAIA / Terminal-Bench 等）。永远不要只看 Leaderboard 数字。
+
+## 作为 AI 工程核心技能
+
+吴恩达在 [[AI_Engineering_Skills|AI 工程技能图谱]] 中把「有纪律的 evals 与 error analysis 循环」（disciplined evals and error analysis loops）列为「构建与部署 AI 应用」这项核心技能的关键：AI 应用输出不可预测，必须用统计方法持续测量、引导与治理，才能让系统行为变得可预期。这为本页的评估实践提供了能力框架层面的依据。
 
 ## 评估层次
 
@@ -101,3 +107,5 @@ UC Berkeley RDI (2026-04-12) 系统性 audit 了 8 个主流 Benchmark，**每�
 
 - [[多模态理解研究]] — 评测内容来源：多模态评测需要运行在 Eval_Harness 之上，定义多模态场景的评测标准
 - [[摘要-awesome-agentic-ai-zh-multi-agent-production]] — 本概念的核心来源（Stage 7 练习 2 + Benchmark 章节）
+- [[AI_Engineering_Skills]] — 吴恩达技能图谱：「构建与部署 AI 应用」以纪律化 evals 为核心
+- [[摘要-ai-engineering-skills-map]] — 技能图谱来源摘要

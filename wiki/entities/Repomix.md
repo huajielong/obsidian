@@ -28,8 +28,7 @@ last_updated: 2026-07-10
 - **Refactoring**: 提供完整上下文给 refactor agent
 - **调试**: 给 Debug agent 完整项目视图
 
-## 关联链接
-
+## 关联连接
 - [[Claude_Code]] — Anthropic 官方 coding 助理（常与 Repomix 配合）
 - [[Codex]] — OpenAI 编码智能体
 - [[Aider]] — CLI pair-programmer

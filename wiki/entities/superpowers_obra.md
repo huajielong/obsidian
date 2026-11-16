@@ -25,8 +25,7 @@ last_updated: 2026-07-10
 - **Code review**: 专门的 code review skill 设计参考
 - **Skill 生态**: 是 [[Claude_Code_Skills]] 生态的重要组成部分
 
-## 关联链接
-
+## 关联连接
 - [[Claude_Code_Skills]] — Claude Code 技能系统
 - [[Claude_Code]] — 底层 AI coding 助理
 - [[Developer_Agentic_Workflow]] — 开发者工作流场景分类

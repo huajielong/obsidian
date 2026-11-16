@@ -1,3 +1,55 @@
+## [2026-11-10] sync | 扩充 Spec_Driven_Development：补充 SDD 方法论层与两种含义辨析
+- **变更**: 更新 [[Spec_Driven_Development]]（新增"两种含义辨析"、Spec Kit/Kiro 五阶段工作流与工件链、边界与风险；保留并重组 Formal Spec 契约层内容）；更新 [[index]] 描述
+- **冲突**: 无（原页面只覆盖任务契约层；本次为同一术语的范围扩展而非否定，两层并列呈现、互补不矛盾）
+- **网络**: [[Spec_Driven_Development]] 新增 [[Claude_Code_Slash_Commands]]/[[Harness_Engineering]] 关联，保留原有 [[AI_SDLC]]/[[AI_Engineering_Skills]]/[[Contract_Driven_Handoffs]]/[[DSPy]]/[[Work_Boundary]]/[[Taste_Invariants]] 链接
+- **来源**: GitHub Spec Kit / AWS Kiro 公开资料整理（对话输入、非 raw 素材），方法论层暂无 raw 源文件
+
+## [2026-11-09] query | 检索学习方法论
+- **输出**: 即时回答未保存（引用 [[Naval_Rapid_Research_Method]]、[[Feynman_Technique]]、[[伊特萨姆学习法]]、[[AI_Mastery_Compass]]、[[四位AI教育者对比-吴恩达-李宏毅-李沐-Karpathy]]、[[知识管理]]、[[摘要-agentic-ai-roadmap]]、[[摘要-awesome-agentic-ai-zh-foundations]]；已询问是否沉淀 synthesis）
+
+## [2026-11-04] ingest | 摄入 Annoy 代码逐行讲解
+- **变更**: 新增 [[摘要-annoy-代码逐行讲解]]（sources）；新增概念 [[近似最近邻检索]]（concepts）；增量更新 [[Annoy]]（新增四步建索引、随机投影树森林、load 查询与四个重要坑）；更新 [[index]]
+- **冲突**: 无（新内容是 [[Annoy]] 既有定位与持久化 API 的展开；[[摘要-向量数据库与向量索引库]] 讲“该选谁”，本笔记讲“怎么用”，视角互补不矛盾）
+- **网络**:
+  - [[摘要-annoy-代码逐行讲解]] 链接到 [[Annoy]]/[[近似最近邻检索]]/[[Vector_Index]]/[[Vector_Database]]/[[FAISS]]/[[RAG]]/[[摘要-向量数据库与向量索引库]]
+  - [[Annoy]] 新增 [[近似最近邻检索]]、[[摘要-annoy-代码逐行讲解]] 链接，并补充构建/查询/限制三节
+  - [[近似最近邻检索]] 链接到 [[Annoy]]/[[FAISS]]/[[Vector_Index]]/[[Vector_Database]]/[[RAG]]/[[Chunking]]/[[摘要-annoy-代码逐行讲解]]/[[摘要-向量数据库与向量索引库]]
+  - [[Vector_Index]]/[[FAISS]]/[[Vector_Database]] 各新增对 [[近似最近邻检索]] 的反向链接，双向闭合
+- **来源**: 用户在对话中粘贴的 Annoy 代码讲解（非 raw 文件），已按原文保存为 `raw/01-articles/annoy-代码逐行讲解.md` 并归档至 `raw/09-archive/`
+- **归档**: 1 个 raw/01-articles 文件 → raw/09-archive/
+
+## [2026-11-04] ingest | 摄入向量数据库与向量索引库课程笔记
+- **变更**: 新增 [[摘要-向量数据库与向量索引库]]（sources）；新增实体 [[Weaviate]]、[[FAISS]]、[[Annoy]]、[[Cohere]]；新增概念 [[Vector_Database]]、[[Vector_Index]]；增量更新 [[RAG]]（新增"向量数据库 vs 向量索引库"章节与反向链接）；更新 [[index]]
+- **冲突**: 无（[[RAG]] 原有的 Store 工具列表与新知识互补——原文只列 Weaviate 为 Vector DB，新笔记进一步区分"数据库 vs 索引库"，不矛盾；[[RAG]] 中 Cohere Embed v3 为 embedding 模型，新笔记明确 Cohere 不做存储检索，两者视角互补）
+- **网络**:
+  - [[摘要-向量数据库与向量索引库]] 链接到 [[Weaviate]]/[[FAISS]]/[[Annoy]]/[[Cohere]]/[[Vector_Database]]/[[Vector_Index]]/[[RAG]]
+  - [[Vector_Database]] ↔ [[Vector_Index]]/[[Weaviate]]/[[FAISS]]/[[Annoy]]/[[Cohere]]/[[RAG]]/[[Chunking]]/[[AI搜索工程]]
+  - [[Vector_Index]] ↔ [[FAISS]]/[[Annoy]]/[[Cohere]]/[[RAG]]/[[Chunking]]
+  - 四个实体页均反向链接来源摘要与 [[Vector_Database]]/[[Vector_Index]]；[[RAG]] 新增"向量数据库 vs 向量索引库"章节及 7 个反向链接
+- **来源**: 用户在对话中粘贴的课程笔记（非 raw 文件），已按原文保存为 `raw/01-articles/向量数据库与向量索引库-课程笔记.md` 并归档至 `raw/09-archive/`
+- **归档**: 1 个 raw/01-articles 文件 → raw/09-archive/
+
+## [2026-11-02] ingest | 摄入本机 Claude Code 本地模型接入与本地模型执行指南
+- **变更**: 新增 [[摘要-claude-code-本地模型接入指南]]、[[摘要-本地模型执行指南]]（sources）；新增实体 [[LlamaCpp]]、[[Anthropic_Proxy]]；新增概念 [[Anthropic_Compatible_API]]、[[本地推理性能调优]]；大幅更新 [[Claude_Code_本地模型接入]]；增量更新 [[Claude_Code]]、[[Ollama]]、[[Qwen]]、[[Gemma]]、[[本地_LLM_推理]]、[[GLM]]、[[OpenAI_Compatible_API]]；更新 [[index]]
+- **冲突**: 1 处已标注 — 通用教程称 `claude-local` 为“100% 私有”，本机实施记录指出推理虽在本地、但 Claude Code 本体可能联网；已在 [[Claude_Code_本地模型接入#知识冲突]] 保留双方说法，并在隐私表述上采用后者。另记录“GLM vs 本机 Qwen3.6”的实施差异（非冲突，原因：12GB 显存与用户要求）
+- **网络**:
+  - [[摘要-claude-code-本地模型接入指南]] 链接到 [[Claude_Code_本地模型接入]]/[[Claude_Code]]/[[LlamaCpp]]/[[Anthropic_Proxy]]/[[Anthropic_Compatible_API]]/[[Ollama]]/[[Qwen]]/[[GLM]]/[[本地_LLM_推理]]/[[本地推理性能调优]]/[[摘要-claude-code-ollama-local-setup]]/[[摘要-本地模型执行指南]]
+  - [[摘要-本地模型执行指南]] 链接到 [[本地推理性能调优]]/[[LlamaCpp]]/[[Ollama]]/[[Qwen]]/[[Gemma]]/[[Claude_Code_本地模型接入]]/[[本地_LLM_推理]]/[[摘要-claude-code-本地模型接入指南]]
+  - [[Anthropic_Compatible_API]] ↔ [[Anthropic_Proxy]]/[[Claude_Code_本地模型接入]]/[[Ollama]]/[[LlamaCpp]]/[[OpenAI_Compatible_API]]
+  - [[本地推理性能调优]] ↔ [[LlamaCpp]]/[[Ollama]]/[[Qwen]]/[[Gemma]]/[[Claude_Code_本地模型接入]]/[[本地_LLM_推理]]
+  - 既有页面 [[Claude_Code]]/[[Ollama]]/[[Qwen]]/[[Gemma]]/[[本地_LLM_推理]]/[[GLM]]/[[OpenAI_Compatible_API]] 均新增对来源摘要与新概念的反向链接，双向闭合
+- **归档**: 2 个 raw/01-articles 文件 → raw/09-archive/
+
+## [2026-11-02] ingest | 摄入 Claude Code + Ollama 完全本地化安装指南
+- **变更**: 新增 [[摘要-claude-code-ollama-local-setup]]（sources）；新增概念 [[Claude_Code_本地模型接入]]；新增实体 [[GLM]]；增量更新 [[Ollama]]、[[Claude_Code]]、[[本地_LLM_推理]]、[[Qwen]]；更新 [[index]]
+- **冲突**: 无（[[Ollama]] 原有的"原生 API + OpenAI 兼容 API"与新增的 `ANTHROPIC_BASE_URL` 接入为互补扩展；[[Claude_Code]] 原有官方模型列表与本地模型接入并存不矛盾）
+- **网络**:
+  - [[摘要-claude-code-ollama-local-setup]] 链接到 [[Claude_Code]]/[[Ollama]]/[[GLM]]/[[Qwen]]/[[Claude_Code_本地模型接入]]/[[本地_LLM_推理]]/[[OpenAI_Compatible_API]]
+  - [[Claude_Code_本地模型接入]] 链接到 [[Claude_Code]]/[[Ollama]]/[[GLM]]/[[Qwen]]/[[本地_LLM_推理]]/[[摘要-claude-code-ollama-local-setup]]/[[OpenAI_Compatible_API]]/[[Harness_Engineering]]/[[Claude_Code_Harness]]
+  - [[GLM]] 链接到 [[Ollama]]/[[Claude_Code]]/[[Claude_Code_本地模型接入]]/[[本地_LLM_推理]]/[[Qwen]]/[[摘要-claude-code-ollama-local-setup]]
+  - 4 个既有页面各新增对 [[Claude_Code_本地模型接入]] 与来源摘要的反向链接，双向闭合
+- **归档**: 1 个 raw/01-articles 文件 → raw/09-archive/
+
 ## [2026-09-04] sync | 沉淀 AI-SDLC 文档驱动开发流程与 spec.md 技术规格
 - **变更**: 新增 [[AI_SDLC]]（concepts）；在 [[Spec_Driven_Development]]、[[Contract_Driven_Handoffs]]、[[Agent_As_Judge]]、[[Agent_First_Engineering]]、[[AGENT_MD]]（concepts）与 [[GSD_Core]]（entities）补充反向链接；更新 [[index]]（Concepts +1）
 - **冲突**: 无（AI-SDLC 的 spec.md 是文档层人类可读技术规格，与 [[Spec_Driven_Development]] 的 Formal Spec 可机读契约互补无矛盾；与 [[Agent_First_Engineering]]/[[Contract_Driven_Handoffs]] 为编排形态与概念层实例的关系）
@@ -876,3 +928,35 @@
   - [[AI_SDLC]] 反向链接扩至 [[Claude_Security]]/[[Claude_Tag]]/[[Claude_Code]]/[[Claude_Code_Hooks]]/[[Claude_Code_Skills]]/[[Eval_Harness]]/[[AI驱动的CICD]]/[[Agent_Loop]]/[[摘要-ai-native-sdlc-playbook]]/[[摘要-agent-first-engineering]]
   - [[Anthropic]] 新增与 [[Claude_Security]]/[[Claude_Tag]]/[[AI_SDLC]]/[[摘要-ai-native-sdlc-playbook]] 双向链接；[[Claude_Code]] 新增与 [[AI_SDLC]]/[[摘要-ai-native-sdlc-playbook]] 双向链接
 - **归档**: 1 个 Clippings/ 文件 → raw/09-archive/
+
+## [2026-11-09] ingest | 摄入吴恩达《The AI Engineering Skills Map》
+- **变更**: 新增 [[摘要-ai-engineering-skills-map]]（sources）；新增 [[AI_Engineering_Skills]]（concept，四项核心 AI 工程技能框架）；增量更新 [[Andrew_Ng]]（新增技能图谱项目 + 来源）、[[Agentic_Coding]]（新增「作为核心 AI 工程技能」九要素小节）、[[Eval_Harness]]（新增「纪律化 evals 是核心技能」小节）、[[Spec_Driven_Development]]（新增「规范是工程师的新工作重心」小节）、[[Harness_Engineering]]（新增关联链接与来源）；更新 [[index]]（Sources +1、Concepts +1）
+- **冲突**: 无（新框架与既有内容互补——技能 3 是 [[Agentic_Coding]] 的能力清单化；技能 1 的 evals 纪律为 [[Eval_Harness]] 提供能力框架依据；技能 4 与 [[Spec_Driven_Development]] 的规范视角互补；技能 3 的工程控制层对应 [[Harness_Engineering]]）
+- **网络**:
+  - [[摘要-ai-engineering-skills-map]] 链接到 [[AI_Engineering_Skills]]/[[Andrew_Ng]]/[[Agentic_Coding]]/[[Eval_Harness]]/[[Spec_Driven_Development]]/[[Context_Engineering]]/[[RAG]]/[[Harness_Engineering]]/[[AI_SDLC]]
+  - [[AI_Engineering_Skills]] 链接到来源摘要与上述概念，并新增「与三层工程模型的关系」对照表
+  - [[Andrew_Ng]]/[[Agentic_Coding]]/[[Eval_Harness]]/[[Spec_Driven_Development]]/[[Harness_Engineering]] 各新增与 [[AI_Engineering_Skills]]、[[摘要-ai-engineering-skills-map]] 的双向链接
+- **归档**: 1 个 Clippings/ 文件 → raw/09-archive/
+
+## [2026-11-11] sync | 固化浏览器操作方式调研为 synthesis
+- **变更**: 新增 [[Claude-Code与Codex浏览器操作方式对比]]（syntheses，无 raw 源文件，来源为 2026-11-11 会话调研 + 官方文档）；更新 [[Agent_Interfaces]]（关联连接新增反向链接）；更新 [[index]]（Syntheses 章节添加条目）
+- **冲突**: 无（综合 [[Agent_Interfaces]] 三层模型与两家官方文档；与既有 [[Agent_Interfaces]] 中 Codex CUA / Playwright MCP 描述互补，无矛盾）
+- **网络**: 新页面链接到 [[Agent_Interfaces]]/[[Harness_Engineering]]/[[Claude_Code]]/[[Codex]]/[[MCP]]/[[Claude_Code_Harness]]/[[Agent_Loop]]/[[摘要-awesome-agentic-ai-zh-agent-interfaces]]/[[Agent_Benchmark_Landscape]]
+- **归档**: 无（raw/ 为空，无源文件可归档）
+
+## [2026-11-11] lint | 修复了 20 个问题
+- **变更**: 4 个孤儿页面补入链（[[CICD平台对比与AI集成]]、[[DevOpsAI架构师面试深度准备]]、[[Transformer自注意力机制与RNN长序列对比]]、[[伊特萨姆学习法]]）；15 个页面回链标题统一为 `## 关联连接`（AgentParadigms / Developer_Agentic_Workflow / Aider / Cline / Continue_Dev / Cursor / Goose_AI / OpenHands / Repomix / Roo_Code / superpowers_obra / 摘要-awesome-agentic-ai-zh-for-developer / 摘要-devops-ai-architect-xiamen / DevOpsAI架构师JD全景对标分析 / DevOpsAI架构师面试深度准备）；[[伊特萨姆学习法]] 隐藏目录链接改为纯文本
+- **冲突**: 无（3 个"仅并列观点"保持现状：[[AI_Mastery_Compass]]、[[OpenAI_Compatible_API]]、[[摘要-devops-ai-architect-xiamen]]）
+- **校验**: 复跑 lint：内容死链 0、孤儿 0、索引缺失 0、未注册 0、回链标题合规 324/324；`log.md` 保留 27 条历史悬空引用（append-only，不修复）
+
+## [2026-11-11] query | 封闭局域网 + 本地模型下 Web 功能页面自动化测试选型
+- **输出**: 引用 [[Claude-Code与Codex浏览器操作方式对比]]、[[Agent_Interfaces]]、[[Claude_Code_本地模型接入]]、[[Claude_Code_Skills]]、[[AI驱动的CICD]]、[[Eval_Harness]]；即时回答未保存（已询问是否固化为 synthesis）
+
+## [2026-11-11] query | Dashboard 图表页面自动化测试选型补充
+- **输出**: 引用 [[Claude-Code与Codex浏览器操作方式对比]]、[[Vue在效能平台中的应用]]、[[Agent_Interfaces]]、[[Claude_Code_本地模型接入]]、[[AI驱动的CICD]]；即时回答未保存（已询问是否固化为 synthesis）
+
+## [2026-11-11] query | 录制回放式 Dashboard 全功能基线对比方案
+- **输出**: 引用 [[Claude-Code与Codex浏览器操作方式对比]]、[[Agent_Interfaces]]、[[Vue在效能平台中的应用]]、[[Claude_Code_本地模型接入]]、[[Claude_Code_Skills]]、[[AI驱动的CICD]]、[[Eval_Harness]]；即时回答未保存（已询问是否固化为 synthesis）
+
+## [2026-11-12] query | AI 软件开发方法论
+- **输出**: 引用 [[Agentic_Coding]]、[[Harness_Engineering]]、[[Loop_Engineering]]、[[AI_SDLC]]、[[Spec_Driven_Development]]、[[Agent_First_Engineering]]、[[Developer_Agentic_Workflow]]、[[Claude_Code_Workflow]]、[[GSD_Core]]、[[AI_Engineering_Skills]]；即时回答未保存（已询问是否固化为 synthesis）

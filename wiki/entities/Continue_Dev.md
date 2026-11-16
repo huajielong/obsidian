@@ -24,8 +24,7 @@ last_updated: 2026-07-10
 - **CI 自动化**：配合 Claude Code Action 实现 human + AI 双审
 - **适合团队规模 > 5 人**，需要统一 code review 标准
 
-## 关联链接
-
+## 关联连接
 - [[Claude_Code]] — Anthropic AI coding 助理（可与 Continue 配合）
 - [[Cline]] — VS Code autonomous agent（同为 VS Code 生态）
 - [[Roo_Code]] — VS Code multi-mode agent

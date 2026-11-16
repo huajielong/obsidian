@@ -3,7 +3,7 @@ title: "RAG"
 type: concept
 tags: [RAG, retrieval, embedding, vector DB, LLM, 上下文工程]
 sources: [raw/01-articles/06-memory-rag.zh-Hans.md, raw/09-archive/【生成式人工智慧與機器學習導論2025】第１講：一堂課搞懂生成式人工智慧的原理.md]
-last_updated: 2026-08-05
+last_updated: 2026-11-04
 ---
 
 # RAG（Retrieval-Augmented Generation）
@@ -35,7 +35,7 @@ Ingest（加载数据）→ Chunk（分块）→ Embed（向量化）→ Store�
 | **Ingest** | 加载数据（PDF / Web / DB） | [[LlamaIndex]] Loader / docling / MarkItDown |
 | **Chunk** | 将文档切分成小块（500-2000 token） | `RecursiveCharacterTextSplitter` |
 | **Embed** | 将每个 Chunk 转换为 N 维向量 | `sentence-transformers` / OpenAI ada-002 / BGE-M3 |
-| **Store** | 将向量 + 元数据存储进 Vector DB | Chroma / Qdrant / pgvector / Weaviate |
+| **Store** | 将向量 + 元数据存储进 Vector DB | Chroma / Qdrant / pgvector / [[Weaviate]] |
 
 ### 2. 检索生成（每次 Query）
 ```
@@ -77,7 +77,7 @@ Embedding 模型的质量直接决定 RAG 检索的上限——**检索精度 �
 | **text-embedding-3-large** (OpenAI) | 3072 | 8191 | 64.6 | 英文（可泛化） | 商业 API，多维度可调节 | 已有 OpenAI API 的快捷方案 |
 | **text-embedding-3-small** | 1536 | 8191 | 62.3 | 英文 | 低成本高性价比 | 成本敏感场景 |
 | **multilingual-e5-large-instruct** (Microsoft) | 1024 | 512 | 65.3 | 多语言 | 指令感知（Instruct） | 查询意图多样、需要精细控制 |
-| **Cohere Embed v3** | 1024 | 512 | 64.2 | 多语言 | 商业 API，支持压缩模式 | 企业级商业方案 |
+| **[[Cohere]] Embed v3** | 1024 | 512 | 64.2 | 多语言 | 商业 API，支持压缩模式 | 企业级商业方案 |
 | **Jina Embeddings v3** (Jina AI) | 1024 | 8192 | 64.2 | 多语言 | 支持 Task-Specific LoRA Adapter | 需要在同一模型上切换不同检索任务 |
 
 > **MTEB Avg**：取自 [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)（Massive Text Embedding Benchmark），涵盖 58 个数据集、112 种语言。分数越高表示综合检索精度越高。
@@ -195,11 +195,35 @@ Vanilla chunk 会丢失原始文档上下文。Anthropic 提出用 LLM 为每个
 
 **代表性框架**：[[ragas]]（★13.9k，8+ 指标）、TruLens、LangSmith
 
+## 向量数据库 vs 向量索引库
+
+RAG 的 Store 环节常被混为一谈：[[Weaviate]] 是完整的**向量数据库**，而 [[FAISS]]、[[Annoy]] 只是**向量索引库**。
+
+| 维度 | [[Vector_Database]]（如 [[Weaviate]]） | [[Vector_Index]]（如 [[FAISS]] / [[Annoy]]） |
+|------|----------------------------------------|---------------------------------------------|
+| 存储内容 | 向量 + 原文 + 标题 + 元数据 | 仅向量 |
+| 检索方式 | Dense / BM25 / Hybrid | 仅向量相似度 |
+| 条件过滤 / 分页 | 数据库内建 | 应用层自己实现 |
+| 元数据对齐 | 自动 | 手动维护 `meta` 列表并按索引下标回查 |
+| 持久化 | 数据整体持久化 | 索引文件持久化，原文需另存 |
+| 部署形态 | 独立服务进程 | Python/C++ 库 |
+| 适用场景 | 生产 RAG、混合检索、长期知识库 | 海量向量、纯相似度搜索、快速实验 |
+
+**选型口诀**：
+
+- 课程演示 / 小数据集 / 只测相似度 → [[Annoy]]
+- 百万级向量 / 追求速度 → [[FAISS]]
+- RAG / Hybrid（BM25 + 向量）/ 条件过滤 / 不想维护元数据映射 → [[Weaviate]] 这类向量数据库
+
+> 详细对比见 [[Vector_Database]]、[[Vector_Index]] 与 [[摘要-向量数据库与向量索引库]]。
+
 ## 常用工具推荐
 
 | 场景 | 推荐工具 |
 |------|---------|
 | 首次运行 RAG（上手最快） | Chroma + [[LlamaIndex]] |
+| 需要 BM25 + 向量混合检索 / 条件过滤 | [[Weaviate]] |
+| 只做向量相似度、追求极致检索速度 | [[FAISS]] |
 | 企业级 RAG 框架 | Haystack |
 | Production Scale（百万级文档） | Qdrant + [[LlamaIndex]] |
 | 已有 Postgres 环境 | pgvector |
@@ -219,3 +243,10 @@ Vanilla chunk 会丢失原始文档上下文。Anthropic 提出用 LLM 为每个
 - [[摘要-deepseek-ai-search-jd]] — DeepSeek AI 搜索 JD，RAG 技术在大规模搜索系统中的应用实践
 - [[摘要-hung-yi-lee-生成式AI-原理-第1讲]] — 李宏毅课程中 RAG 与 AI 幻觉的视角来源
 - [[AI_Hallucination]] — RAG 所针对的核心问题（减少幻觉）
+- [[Vector_Database]] — 向量数据库概念：Store 环节的完整数据库形态
+- [[Vector_Index]] — 向量索引库概念：只做向量相似度搜索
+- [[Weaviate]] — 支持 BM25/Hybrid/过滤的向量数据库
+- [[FAISS]] — 高性能向量索引库
+- [[Annoy]] — 轻量级向量索引库
+- [[Cohere]] — 文本向量化（Embedding）提供方
+- [[摘要-向量数据库与向量索引库]] — 向量数据库 vs 索引库的课程笔记

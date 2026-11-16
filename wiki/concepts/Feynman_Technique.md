@@ -21,3 +21,4 @@ last_updated: 2026-07-09
 - [[Naval_Rapid_Research_Method]] — 极速研究法第 5 步的理论基础
 - [[Naval_Ravikant]] — 极速研究法的提出者，内嵌费曼技巧
 - [[AI_Mastery_Compass]] — 同为系统性学习方法论框架
+- [[伊特萨姆学习法]] — 费曼技巧在 AI 增强学习中的三问变体

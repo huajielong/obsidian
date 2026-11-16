@@ -6,7 +6,8 @@ sources:
   - https://openai.com/zh-Hans-CN/index/harness-engineering/
   - raw/01-articles/07-multi-agent-production.zh-Hans.md
   - wiki/sources/摘要-awesome-agentic-ai-zh-advanced-concepts.md
-last_updated: 2026-07-10
+  - "raw/09-archive/The AI Engineering Skills Map 人工智能工程技能图谱.md"
+last_updated: 2026-11-09
 ---
 
 # Harness Engineering（驾驭工程）
@@ -416,3 +417,4 @@ Anthropic、OpenAI、Cognition、Hamel Husain 等各自用不同词汇表达同�
 
 - [[多模态理解研究]] — Agent 执行映射：多模态 Agent 的执行逻辑和安全控制是 Harness Engineering 在多模态维度的应用
 - [[摘要-deepseek-agent-infra-jd]] — Agent Infra JD，DSec 沙箱平台是 Harness 层依赖的物理执行环境
+- [[AI_Engineering_Skills]] — 吴恩达 AI 工程技能图谱：技能 1「构建与部署 AI 应用」与技能 3「使用编程智能体」的工程控制层

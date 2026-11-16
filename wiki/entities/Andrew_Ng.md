@@ -6,7 +6,8 @@ sources:
   - "raw/09-archive/AI for everyone 系列教程原声中文版【吴恩达】.md"
   - "raw/09-archive/AI-for-Everyone-吴恩达-p7-35/AI for everyone 系列教程原声中文版【吴恩达】.md"
   - "raw/09-archive/AI-Transformation-Playbook-v8.pdf"
-last_updated: 2026-08-03
+  - "raw/09-archive/The AI Engineering Skills Map 人工智能工程技能图谱.md"
+last_updated: 2026-11-09
 ---
 
 ## 定义
@@ -25,6 +26,7 @@ last_updated: 2026-08-03
   - **AI for Everyone（人人AI）** — 面向**非技术人群**的 AI 入门课，系统讲解 AI 价值、[[Supervised_Learning|监督学习]]、数据、神经网络、[[AI_Project_Workflow|AI 项目]]、[[AI_Transformation_Playbook|公司转型]]与 AI 社会影响；本知识库收录其**完整 35 讲**转录（[[摘要-ai-for-everyone-andrew-ng]]）
   - **AI Transformation Playbook v8（官方原文）** — 通过 [[Landing_AI]] 发布的五步企业 AI 转型方法论（[[摘要-ai-transformation-playbook]]），源于其领导 Google Brain 与百度 AI 集团的实战经验
   - **DeepLearning.AI 短期课程系列** — 聚焦 LLM、RAG、AI Agents 等前沿主题
+  - **The AI Engineering Skills Map（2026-08）** — 基于 1 万+ 招聘帖、数十场专家/招聘官访谈与问卷综合提炼四项核心 AI 工程技能（[[AI_Engineering_Skills]]，见 [[摘要-ai-engineering-skills-map]]）
   - **The Batch 周刊** — AI 行业新闻与技术分析
 - **个人网站**：https://www.andrewng.org
 - **DeepLearning.AI**：https://www.deeplearning.ai
@@ -52,3 +54,5 @@ last_updated: 2026-08-03
 - [[Data_Science]] — 课程术语辨析内容
 - [[摘要-ai-for-everyone-andrew-ng]] — 课程转录来源摘要
 - [[摘要-ai-transformation-playbook]] — 转型手册官方原文来源摘要
+- [[AI_Engineering_Skills]] — 其发布的 AI 工程技能图谱（四项核心技能框架）
+- [[摘要-ai-engineering-skills-map]] — 技能图谱推文来源摘要

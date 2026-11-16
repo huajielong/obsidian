@@ -81,8 +81,7 @@ aider --model anthropic/claude-sonnet-5
 
 ---
 
-## 关联链接
-
+## 关联连接
 - [[Agentic_Coding]] — AI Agent 自主驱动编程的软件开发范式（本框架的上层概念）
 - [[Claude_Code_Workflow]] — Claude Code 开发工作流方法论
 - [[Claude_Code_Skills]] — Claude Code 技能系统（Tier 2 涉及）

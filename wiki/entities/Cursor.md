@@ -23,8 +23,7 @@ Cursor 是编辑器集成的 AI 结对编程工具。在 AI 编辑器类工具�
 - 适合 **多文件重构** 入口级工具：轻量级 refactor 场景
 - 常作为 **Tier 0 → Tier 1** 的起点：Cursor/Copilot → Claude Code
 
-## 关联链接
-
+## 关联连接
 - [[Aider]] — git-aware CLI pair-programmer（更进阶的替代）
 - [[Claude_Code]] — Anthropic 官方 agentic coding 助理（Tier 1 工具）
 - [[Cline]] — VS Code autonomous in-IDE agent（同为 VS Code 生态）

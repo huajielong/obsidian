@@ -2,8 +2,10 @@
 title: "Agentic Coding"
 type: concept
 tags: [AI编程, 软件开发, 范式, AGI]
-sources: [raw/01-articles/万字干货｜AI 时代的 Git 版本管理，你用对了吗？ - 文章 - 开发者社区 - 火山引擎.html]
-last_updated: 2026-07-03
+sources:
+  - "raw/01-articles/万字干货｜AI 时代的 Git 版本管理，你用对了吗？ - 文章 - 开发者社区 - 火山引擎.html"
+  - "raw/09-archive/The AI Engineering Skills Map 人工智能工程技能图谱.md"
+last_updated: 2026-11-09
 ---
 
 ## 定义
@@ -53,6 +55,22 @@ Agentic Coding 打破了传统 Git 的基本假设——"一个开发者的一�
 | 让 AI 在 production code 自由跑 shell | sandbox 限制、permission whitelist |
 | 用 AI 生 test 后不检查 assertion | 跑覆盖率 + 故意改 bug 验证 |
 
+## 作为核心 AI 工程技能
+
+吴恩达在 [[AI_Engineering_Skills|AI 工程技能图谱]] 中将「使用编程智能体」列为四项核心 AI 工程技能之一，并给出该技能的九个要素：
+
+- **心智模型** — 理解 Agent 如何工作、局限在哪、如何绕过
+- **介入尺度** — 知道何时该干预、何时该放手，不浪费时间和 token
+- **上下文管理** — 管理编码智能体的 context
+- **规划 vs 执行** — 在两者之间做权衡
+- **自主闭环** — 提供 verifier / eval，让 Agent 自主完成循环
+- **规范** — 会写清晰的 spec，也知道何时不必写
+- **多智能体编排** — 协调多个 Agent 协同工作
+- **风险边界** — 避免 Agent 误操作生产数据库等事故
+- **持续演进** — 建立例行机制，持续尝试新工具、更新工作流
+
+> 由于 Agentic Coding 演进极快，熟练运用不仅意味着掌握当下最佳实践，还需要拥有持续更新的 routine。
+
 ## 常用工具生态
 
 Agentic Coding 的工具生态按 [[Developer_Agentic_Workflow]] 的 Tier 路径分类：
@@ -83,3 +101,5 @@ Agentic Coding 的工具生态按 [[Developer_Agentic_Workflow]] 的 Tier 路径
 - [[Roo_Code]] — VS Code multi-mode agent（Tier 1-2）
 - [[Continue_Dev]] — CI source-controlled checks（Tier 2-3）
 - [[Repomix]] — codebase 打包工具
+- [[AI_Engineering_Skills]] — 吴恩达技能图谱中的「使用编程智能体」核心技能
+- [[摘要-ai-engineering-skills-map]] — 技能图谱来源摘要

@@ -181,4 +181,5 @@ last_updated: 2026-07-07
 - [[Agent_First_Engineering]] — 与极速研究法同为"7步框架"，但面向 AI 开发流程
 - [[Prompt_Engineering]] — 极速研究法可用来系统学习本领域
 - [[Feynman_Technique]] — 极速研究法第 5 步的理论基础
+- [[伊特萨姆学习法]] — 另一种 AI 增强的极速学习方法论（三问框架）
 - [[Harness_Engineering]] — 将极速研究法的"迭代反馈"理念应用于 AI 智能体控制

@@ -187,6 +187,7 @@ Agent 生成的代码不能在宿主环境直接运行—— Sandbox 提供安�
 
 ## 关联连接
 
+- [[Claude-Code与Codex浏览器操作方式对比]] — Browser Use 层在 Claude Code / Codex 两家工具上的六种实现方式与选型对比（2026-11）
 - [[Harness_Engineering]] — Sandbox 是 Harness Safety Layer 元件；Interface 是 Harness 看不到的外部 IO
 - [[Agent_Loop]] — Computer Use 操作嵌入在 Agent Loop 内
 - [[MCP]] — MCP 是协议，Interface 是行为（互补关系）

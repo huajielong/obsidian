@@ -78,3 +78,4 @@ Harness Engineering ← Agent 编排、工具链集成（Jenkins/GitLab CI/GitHu
 - [[Cost_Optimization]] — CICD Agent 的 Cost/Latency 优化
 - [[AI集群可靠性工程]] — 大规模集群的自动化运维体系
 - [[摘要-devops-ai-architect-xiamen]] — DevOps AI 架构师 JD 中的核心职责
+- [[CICD平台对比与AI集成]] — Jenkins/GitLab CI/GitHub Actions 横向对比与 Agent 集成选型

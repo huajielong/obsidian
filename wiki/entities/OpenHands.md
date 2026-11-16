@@ -19,8 +19,7 @@ last_updated: 2026-07-10
 - **典型场景**: 完整的 issue 解决，而非逐行编码辅助
 - **对比**: 比 Aider / Claude Code 的 human-in-the-loop 更激进
 
-## 关联链接
-
+## 关联连接
 - [[Aider]] — git-native CLI pair-programmer（更保守的 human-in-the-loop）
 - [[Claude_Code]] — Anthropic 官方 coding 助理
 - [[Cline]] — VS Code autonomous in-IDE agent

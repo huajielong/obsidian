@@ -25,8 +25,7 @@ last_updated: 2026-07-10
 - **Code review**: 能审查自己的 diff
 - **Tier 1** 工具：适合从 IDE 起步进阶 CLI agent 的用户
 
-## 关联链接
-
+## 关联连接
 - [[Roo_Code]] — VS Code multi-mode coding agent（同生态对比）
 - [[Claude_Code]] — CLI agent 标杆（非 VS Code 绑定）
 - [[Cursor]] — 编辑器集成的 AI 结对编程（Tier 0）

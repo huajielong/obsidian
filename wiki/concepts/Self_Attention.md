@@ -63,3 +63,4 @@ Attention 仅在每个样本内部（每个 batch 维度内）计算，batch 之
 - [[GPT]] — 基于 Masked Self-Attention 的自回归模型
 - [[Andrej_Karpathy]] — 其教程对 Self-Attention 有深入浅出的讲解
 - [[摘要-gpt-from-scratch]] — 视频中从 v1 到 v4 逐步构建 Self-Attention
+- [[Transformer自注意力机制与RNN长序列对比]] — 与 RNN 长序列建模的横向对比（并行性/长程依赖/O(L²)）

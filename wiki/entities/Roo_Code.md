@@ -27,8 +27,7 @@ VS Code 的 coding agent，采用 **"多种专业模式"** 的设计，与 [[Cli
 | ★ | 23k+ | 61k+ |
 | 定位 | multi-mode 替代方案 | autonomous in-IDE agent |
 
-## 关联链接
-
+## 关联连接
 - [[Cline]] — VS Code autonomous agent（同生态对比）
 - [[Cursor]] — 编辑器集成 AI 工具
 - [[Continue_Dev]] — VS Code CI review 方案

@@ -62,3 +62,4 @@ Transformer 已成为现代 AI 的基石架构，几乎所有主流大语言模�
 - [[GPT]] — Decoder-only 的 Transformer 变体
 - [[Andrej_Karpathy]] — Transformer 教育的核心推广者
 - [[摘要-gpt-from-scratch]] — 视频教程摘要
+- [[Transformer自注意力机制与RNN长序列对比]] — 自注意力与 RNN 长序列建模的横向对比

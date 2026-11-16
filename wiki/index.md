@@ -1,6 +1,8 @@
 # Wiki Index
 
 ## Sources
+- [[摘要-向量数据库与向量索引库]] — 向量数据库与向量索引库的本质区别：Weaviate 完整数据库 vs FAISS/Annoy 仅向量检索，含选型建议与 Cohere 定位
+- [[摘要-annoy-代码逐行讲解]] — Annoy 四步建索引（AnnoyIndex/add_item/build/save）逐行讲解、load/get_nns_by_vector 查询与重要坑
 - [[摘要-llm-tool-calling-practice]] — LLM Tool Calling 动手实践四连：入门对比、Description 边界互斥实验、从零实现 ReAct、多步骤推理链
 - [[摘要-多步骤推理任务-连续-tool-调用]] — 多步骤 Tool Calling 数据依赖链实践：小模型"跳跃"问题与代码层依赖校验
 - [[摘要-awesome-agentic-ai-zh-for-developer]] — Agentic AI 学习路线开发者延伸分支：7 场景分类 × 工具链映射 × Tier 升级路径 × Anti-patterns × 3 个 Workflow Recipe
@@ -12,6 +14,9 @@
 - [[摘要-agent-first-engineering]] — Agent-First Engineering 7 步实操方法论
 - [[摘要-claude-code-boris-cherny]] — Boris Cherny Claude Code + Opus 4.7 最佳实践
 - [[摘要-claude-code-hud]] — claude-hud 终端状态监控插件
+- [[摘要-claude-code-ollama-local-setup]] — Claude Code + Ollama 本地模型五步安装指南：RAM 选型、claude-local 别名与环境变量重定向
+- [[摘要-claude-code-本地模型接入指南]] — 本机 Claude Code 本地模型实施记录：llama.cpp + anthropic-proxy 架构、约 65 tok/s、工具调用验证与故障排查
+- [[摘要-本地模型执行指南]] — 本机本地大模型运行手册：模型决策表、12GB 显存预算、llama.cpp 调优参数与量化三层
 - [[摘要-claude-code-gsd-core]] — GSD Core 全生命周期项目开发框架
 - [[摘要-claude-code-six-levels]] — Claude Code 六层境界：从提示工程师到规模化编排
 - [[摘要-agent-loop-guide]] — Agent Loop 设计从 ReAct 到生产级闭环的完整指南
@@ -75,6 +80,7 @@
 - [[摘要-hung-yi-lee-上下文工程-第2讲]] — 李宏毅讲透 Context Engineering：与 Prompt Engineering 的关系、完整 Context 的组成、三大招数（选择/压缩/Multi-Agent）、超长 context 失效的实验证据（Lost in the Middle / Context Rot）、Gemma 2 9B 工具调用实操
 - [[摘要-hung-yi-lee-deepseek-r1-reasoning]] — 李宏毅讲透 DeepSeek-R1 式"深度思考"（Reasoning）：四种打造推理模型的方法（更强 CoT / 推理工作流 / 模仿学习 / 结果导向 RL）、Test-Time Compute、R1-Zero 与 Aha moment、R1 真实训练流水线
 - [[摘要-ai-native-sdlc-playbook]] — Anthropic AI-Native SDLC Playbook：代码不再是瓶颈 → 六阶段闭环改造、工件链（intent/spec/plan→PR→incident）、治理三层（Skills/Hooks/审批门）+ 领先/滞后指标
+- [[摘要-ai-engineering-skills-map]] — 吴恩达 The AI Engineering Skills Map：基于 1 万+ 招聘帖与数十场访谈提炼四项核心 AI 工程技能（构建部署 AI 应用/软件工程基础/使用编程智能体/塑造构建方案）
 
 ## Entities
 - [[Cursor]] — 编辑器集成 AI 结对编程工具，IDE agent 比较基准
@@ -112,6 +118,9 @@
 - [[ADK]] — Google Agent Development Kit，渐进式披露与 Skill 工厂模式的 Agent 开发框架
 - [[OpenAI]] — GPT 系列模型开发商，OpenAI 兼容 API 标准的制定者
 - [[Ollama]] — 本地大语言模型运行工具，支持 Llama/Qwen 等多种开源模型
+- [[GLM]] — 智谱 AI 大语言模型系列，本指南推荐的本地 Claude Code 模型（glm-4.7-flash / glm-4.7）
+- [[LlamaCpp]] — C/C++ 大模型推理引擎，本机 CUDA 版主力后端，同一 GGUF 比 Ollama 快 6–10 倍
+- [[Anthropic_Proxy]] — Go 单文件代理，把 Anthropic Messages 转成 OpenAI Chat Completions，本机监听 8787
 - [[Qwen]] — 阿里云通义千问开源大语言模型系列
 - [[Llama]] — Meta 开源大语言模型系列
 - [[Hugging_Face]] — 最大的开源模型/数据集平台，Transformers 套件开发者，被誉为"模型的 Facebook"
@@ -145,6 +154,10 @@
 - [[MLflow]] — Databricks 开源的 ML 生命周期管理平台，实验追踪/模型注册/模型部署三件套，Apache 2.0 完全开源
 - [[Micrograd]] — Andrej Karpathy 开发的约 100 行标量 autograd 引擎，展示反向传播核心机制
 - [[Ray]] — UC Berkeley 开源的分布式计算框架（AI 领域的"分布式操作系统"），Ray Train/Serve/Tune/RLlib/AIR 生态
+- [[Weaviate]] — 开源向量数据库，支持原文/元数据存储、BM25、Hybrid 检索与条件过滤
+- [[FAISS]] — Meta 开源高性能向量索引库，只存向量、不存原文与元数据
+- [[Annoy]] — Spotify 开源轻量级向量索引库，小到中等规模、上手最简单；随机投影树森林 + 四步建索引
+- [[Cohere]] — 企业级 AI 公司，Embed 系列负责文本→向量，不做存储与检索
 
 ## Syntheses
 - [[DeepSeek四份JD全景对比]] — DeepSeek 五份招聘 JD（Harness 团队/服务端工程/预训练数据/AI 搜索/Agent Infra）的全方位横向对比：团队定位、技术栈光谱、工程模型归属、工程文化、面试准备关联图
@@ -156,6 +169,7 @@
 - [[DevOpsAI架构师JD全景对标分析]] — DevOps AI 架构师 JD 与知识库已有 5 份 JD 的全景横向对比：技术栈光谱、Harness 8 核心元件覆盖度、行业信号汇总、能力差距诊断、四象限定位图
 - [[DevOpsAI架构师面试深度准备]] — DevOps AI 架构师面试深度准备：伪代码级架构实现（CI Agent/智能排障/LLM Gateway）、工具选型对比（LiteLLM vs 自建）、成本数据参考、面试应答策略
 - [[Transformer自注意力机制与RNN长序列对比]] — Transformer 自注意力机制详解（Q/K/V 通信、公式、关键特性）与 RNN 长序列建模对比（并行计算/长程依赖/梯度问题）及 O(L²) 边界
+- [[Claude-Code与Codex浏览器操作方式对比]] — Claude Code 与 Codex 操作浏览器的六种方式全景：控制深度五层谱系、token/登录态/调试能力横向对比、场景决策树与踩坑清单
 
 ## Concepts
 - [[Frontier研究]] — Frontier 研究体系：超越当前 AI 范式，探索持续学习、自进化、下一代架构与学习算法的前沿研究实践
@@ -166,6 +180,9 @@
 - [[From_NoCode_To_Agent_Paradigm]] — 从传统无代码平台（Zion 类）到 Skill+CLI+Workflow Agent 范式的范式转移分析
 - [[Multi_Agent_System]] — 多 Agent 系统核心概念：Workflow vs Agent / Single vs Multi 分类矩阵，何时该（不该）使用 Multi-agent 的决策框架
 - [[RAG]] — 检索增强生成架构：基础流水线、Embedding 模型选型指南、进阶技巧（GraphRAG/Hybrid Search/Adaptive RAG）、Eval 与工具选型
+- [[Vector_Database]] — 向量数据库：向量 + 原文 + 元数据 + 混合检索 + 过滤 + 持久化的完整系统
+- [[Vector_Index]] — 向量索引库：只负责向量相似度搜索，原文/元数据需应用层自己维护
+- [[近似最近邻检索]] — ANN：以可接受精度损失换取检索速度的高维向量召回范式，Annoy 的随机投影树森林是代表实现
 - [[LightRAG]] — 轻量级 Graph RAG 检索框架（★ 35.1k），增强跨文档实体推理
 - [[ragas]] — 开源 RAG 评估框架，提供 8+ 标准化指标（Retrieval Recall / Faithfulness / Relevance）
 - [[Memory_Agent]] — Agent 记忆系统：Working/Long-term Memory、CoALA 四层分类、三种设计模式与 Production Memory Layer
@@ -254,6 +271,9 @@
 - [[Skill_Factory]] — 元 Skill / Meta Skill，Agent 在运行时动态生成新 Skill 的自我扩展模式
 - [[OpenAI_Compatible_API]] — OpenAI 兼容 API 标准，已成为 LLM 行业的事实标准接口规范
 - [[本地_LLM_推理]] — 在本地硬件上运行大语言模型的数据隐私优先方案
+- [[Claude_Code_本地模型接入]] — 通过 ANTHROPIC_BASE_URL 将 Claude Code 重定向到本地模型，支持 Ollama 直连或 anthropic-proxy + llama.cpp 两条路径
+- [[Anthropic_Compatible_API]] — 以 Anthropic Messages 协议为契约的兼容接口：原生兼容与协议转换代理两种实现
+- [[本地推理性能调优]] — 有限显存下的本地 LLM 调优方法论：后端选择、任务路由、量化三层、MoE 卸载与显存预算
 - [[BPE_Tokenizer]] — 字节对编码分词算法，导致中英文 Token 效率差异的根因
 - [[Temperature_Parameter]] — LLM 温度参数，控制输出确定性与多样性的核心参数
 - [[Model_Fine_Tuning]] — 模型微调，决定模型"性格"和回复风格的关键因素
@@ -279,7 +299,7 @@
 - [[Self_Organizing_Teams]] — 自组织团队：Agent 运行时动态协商分工而非预先分配 Role
 - [[Skills权限管理]] — Skills 全生命周期授权体系：创建/发现/使用/自动加载的权限模型，RBAC/ABAC/ReBAC 三种策略与执行拦截
 - [[Programmable_Skills]] — 可编程 Skill 系统：动态加载、热更新、版本管理、权限管控、生命周期管理等 Skill 工程化治理实践
-- [[Spec_Driven_Development]] — 规范驱动开发：Task 由 Formal Spec（YAML/JSON Schema）定义
+- [[Spec_Driven_Development]] — 规范驱动开发（SDD）：方法论层（Constitution→Specify→Plan→Tasks→Implement，Spec Kit/Kiro）与任务契约层（YAML/JSON Schema/DSPy Signature 定义 Agent 任务）
 - [[Graceful_Degradation]] — 优雅降级路径：Frontier Model 挂掉时回退到便宜 Model 不直接 Crash
 - [[微服务与API网关设计]] — 微服务架构核心模式与 API Gateway 设计，含 Agent 平台的六项特殊要求（流式代理/Tool Schema 动态注册/Function Calling 适配）
 - [[多租户SaaS架构]] — 多租户隔离的数据三种模式与 Agent 平台特有维度（实例隔离/Memory 隔离/Skill 可见范围/资源配额）
@@ -311,3 +331,4 @@
 - [[知识管理]] — 知识管理学科与实践：系统化捕获、组织、存储、共享和应用知识，将零散信息转化为结构化、可复用资产
 - [[伊特萨姆学习法]] — 伊特萨姆三问学习法：MIT 研究生伊特沙姆·阿里提出的 AI 增强学习方法，通过三个关键问题（思维框架/领域格局/鉴别性测试）两天内深度掌握陌生领域
 - [[AI_SDLC]] — AI-Native SDLC 六阶段闭环（Plan→Design→Build→Test→Deploy→Maintain）：工件链 intent.md→spec.md→plan.md→PR→incident、治理三层（Skills/Hooks/审批门）、领先/滞后指标度量
+- [[AI_Engineering_Skills]] — AI 工程技能图谱（吴恩达）：基于万级招聘数据与专家访谈的四项核心技能框架——构建部署 AI 应用 / 软件工程基础 / 使用编程智能体 / 塑造构建方案

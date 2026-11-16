@@ -223,8 +223,7 @@ last_updated: 2026-07-14
 
 ---
 
-## 关联概念
-
+## 关联连接
 ### 上游理论框架
 - [[Harness_Engineering]] — 五种范式本质上是 Harness Engineering 在不同部署环境下的特化
 - [[Agent_Interfaces]] — 不同范式对应的交互界面（Terminal / IDE / Chat / SSH / Physical）
